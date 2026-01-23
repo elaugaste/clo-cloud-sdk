@@ -1,0 +1,6 @@
+package: clo_cloud_sdk
+generate:
+  models: true          # Генерируем структуры Go для всех схем
+  client: true          # Генерируем функции для HTTP-запросов
+  embedded-spec: true   # Вшиваем схему в бинарник (полезно для валидации)
+output: clo_cloud.gen.go
