@@ -29,13 +29,17 @@ jobs:
           go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
 
       - name: Generate SDK
-        run: make generate # Этот таргет теперь включает и update-mod
+        run: make generate
 
       - name: Check for Changes
         id: git_status
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
+          if [ -n "$(git status --porcelain clo_cloud.gen.go go.mod go.sum)" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in SDK or Modules."
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes in generated code."
           fi
 
       - name: Commit and Push Changes
@@ -43,7 +47,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
           git add clo_cloud.gen.go go.mod go.sum
+          
           git commit -m "chore: update sdk and go.mod to version $(jq -r '.info.version' openapi.final.json)"
           git push
 
