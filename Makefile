@@ -42,15 +42,28 @@ generate: update-mod ## 3. Генерация кода и go mod tidy
 	@echo "Success: $(SDK_OUT) generated."
 
 .PHONY: release
-release: generate ## Создание git-тега (требует предварительной генерации)
+release: generate ## Создание git-тега с авто-инкрементом патча
 	@VERSION=$$(jq -r '.info.version' $(SPEC_FIXED)); \
-	if git rev-parse "v$$VERSION" >/dev/null 2>&1; then \
-		echo "Tag v$$VERSION already exists. Skipping."; \
+	TAG_PREFIX="v$$VERSION"; \
+	if ! git rev-parse "$$TAG_PREFIX" >/dev/null 2>&1; then \
+		echo "--- Creating new base tag: $$TAG_PREFIX ---"; \
+		git tag -a "$$TAG_PREFIX" -m "Release $$TAG_PREFIX"; \
+		git push origin "$$TAG_PREFIX"; \
 	else \
-		echo "Creating tag v$$VERSION..."; \
-		git tag -a "v$$VERSION" -m "Release v$$VERSION"; \
-		git push origin "v$$VERSION"; \
+		echo "--- Tag $$TAG_PREFIX already exists. Finding next internal patch... ---"; \
+		LATEST_TAG=$$(git tag -l "$$TAG_PREFIX.*" | sort -V | tail -n1); \
+		if [ -z "$$LATEST_TAG" ]; then \
+			NEXT_PATCH=1; \
+		else \
+			CURRENT_PATCH=$$(echo $$LATEST_TAG | cut -d. -f4); \
+			NEXT_PATCH=$$(($$CURRENT_PATCH + 1)); \
+		fi; \
+		NEW_TAG="$$TAG_PREFIX.$$NEXT_PATCH"; \
+		echo "--- Creating internal patch tag: $$NEW_TAG ---"; \
+		git tag -a "$$NEW_TAG" -m "Internal release $$NEW_TAG"; \
+		git push origin "$$NEW_TAG"; \
 	fi
+
 
 .PHONY: clean-spec
 clean-spec: ## Удаление временного файла спеки

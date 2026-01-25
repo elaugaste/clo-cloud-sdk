@@ -3,24 +3,24 @@ name: Auto-update Go SDK
 on:
   schedule:
     - cron: '0 2 * * *' # Запуск каждый день в 02:00 UTC
-  workflow_dispatch:      # Возможность запустить вручную
+  workflow_dispatch:      # Кнопка для ручного запуска
 
 jobs:
   update-sdk:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Нужно для пуша коммитов и тегов
+      contents: write
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Нужно для проверки существующих тегов
+          fetch-depth: 0
 
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.21'
+          go-version: '1.25'
           cache: true
 
       - name: Install Tools
@@ -34,12 +34,12 @@ jobs:
       - name: Check for Changes
         id: git_status
         run: |
-          if [ -n "$(git status --porcelain clo_cloud.gen.go go.mod go.sum)" ]; then
+          if [ -n "$(git status --porcelain clo_cloud.gen.go go.mod go.sum client.go)" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected in SDK or Modules."
+            echo "Changes detected."
           else
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes in generated code."
+            echo "No changes detected."
           fi
 
       - name: Commit and Push Changes
@@ -48,13 +48,13 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          git add clo_cloud.gen.go go.mod go.sum
-          
-          git commit -m "chore: update sdk and go.mod to version $(jq -r '.info.version' openapi.final.json)"
+          git add .
+          VERSION=$(jq -r '.info.version' openapi.final.json)
+          git commit -m "chore: update sdk to api v$VERSION [skip ci]" || true
           git push
 
       - name: Create and Push Tag
         if: steps.git_status.outputs.changed == 'true'
-        run: make release # Таргет из Makefile создаст тег vX.Y.Z
+        run: make release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}`
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
