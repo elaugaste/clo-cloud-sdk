@@ -1,9 +1,14 @@
 name: Auto-update Go SDK
 
 on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
   schedule:
-    - cron: '0 2 * * *' # Запуск каждый день в 02:00 UTC
-  workflow_dispatch:      # Кнопка для ручного запуска
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   update-sdk:
