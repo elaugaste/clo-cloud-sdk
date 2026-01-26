@@ -198,6 +198,13 @@ type AddressSchema struct {
 	Version          *int        `json:"version,omitempty"`
 }
 
+// ApiError defines model for ApiError.
+type ApiError struct {
+	Code        int    `json:"code"`
+	Description string `json:"description"`
+	Message     string `json:"message"`
+}
+
 // AttachedTo defines model for AttachedTo.
 type AttachedTo struct {
 	Entity string `json:"entity"`
@@ -9039,13 +9046,10 @@ func (c *Client) applyEditors(ctx context.Context, req *http.Request, additional
 	return nil
 }
 
-// ClientWithResponses builds on ClientInterface to offer response payloads
 type ClientWithResponses struct {
 	ClientInterface
 }
 
-// NewClientWithResponses creates a new ClientWithResponses, which wraps
-// Client with return type handling
 func NewClientWithResponses(server string, opts ...ClientOption) (*ClientWithResponses, error) {
 	client, err := NewClient(server, opts...)
 	if err != nil {
@@ -9054,7 +9058,6 @@ func NewClientWithResponses(server string, opts ...ClientOption) (*ClientWithRes
 	return &ClientWithResponses{client}, nil
 }
 
-// WithBaseURL overrides the baseURL.
 func WithBaseURL(baseURL string) ClientOption {
 	return func(c *Client) error {
 		newBaseURL, err := url.Parse(baseURL)
@@ -9066,3282 +9069,137 @@ func WithBaseURL(baseURL string) ClientOption {
 	}
 }
 
-// ClientWithResponsesInterface is the interface specification for the client with responses above.
 type ClientWithResponsesInterface interface {
-	// AddressDeleteV2AddressesObjectIdDeleteWithResponse request
 	AddressDeleteV2AddressesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDeleteV2AddressesObjectIdDeleteResponse, error)
-
-	// AddressAttachV2AddressesObjectIdAttachPostWithBodyWithResponse request with any body
-	AddressAttachV2AddressesObjectIdAttachPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error)
-
 	AddressAttachV2AddressesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error)
-
-	// AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBodyWithResponse request with any body
-	AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error)
-
 	AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithResponse(ctx context.Context, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error)
-
-	// AddressDetachV2AddressesObjectIdDetachPostWithResponse request
 	AddressDetachV2AddressesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetachV2AddressesObjectIdDetachPostResponse, error)
-
-	// AddressDetailV2AddressesObjectIdDetailGetWithResponse request
 	AddressDetailV2AddressesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetailV2AddressesObjectIdDetailGetResponse, error)
-
-	// AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse request
 	AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse, error)
-
-	// AddressEditPtrV2AddressesObjectIdPtrPutWithBodyWithResponse request with any body
-	AddressEditPtrV2AddressesObjectIdPtrPutWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error)
-
 	AddressEditPtrV2AddressesObjectIdPtrPutWithResponse(ctx context.Context, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error)
-
-	// AccountBalanceV2BalanceGetWithResponse request
 	AccountBalanceV2BalanceGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountBalanceV2BalanceGetResponse, error)
-
-	// DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBodyWithResponse request with any body
-	DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error)
-
 	DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithResponse(ctx context.Context, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error)
-
-	// DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse request
 	DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse, error)
-
-	// DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse request
 	DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse, error)
-
-	// DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse request
 	DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse, error)
-
-	// DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse request
 	DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDetailV2DbaasClustersObjectIdGetResponse, error)
-
-	// DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBodyWithResponse request with any body
-	DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error)
-
 	DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithResponse(ctx context.Context, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error)
-
-	// DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBodyWithResponse request with any body
-	DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error)
-
 	DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error)
-
-	// DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse request
 	DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse, error)
-
-	// DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse request
 	DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse, error)
-
-	// DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse request
 	DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse, error)
-
-	// ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse request
 	ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse, error)
-
-	// ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBodyWithResponse request with any body
-	ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error)
-
 	ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithResponse(ctx context.Context, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error)
-
-	// ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse request
 	ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse, error)
-
-	// DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBodyWithResponse request with any body
-	DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error)
-
 	DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error)
-
-	// DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBodyWithResponse request with any body
-	DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error)
-
 	DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error)
-
-	// DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse request
 	DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse, error)
-
-	// DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse request
 	DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse, error)
-
-	// DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse request
 	DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse, error)
-
-	// DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse request
 	DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse, error)
-
-	// ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBodyWithResponse request with any body
-	ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error)
-
 	ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error)
-
-	// DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse request
 	DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse, error)
-
-	// DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse request
 	DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse, error)
-
-	// DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBodyWithResponse request with any body
-	DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error)
-
 	DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error)
-
-	// KeypairDeleteV2KeypairsObjectIdDeleteWithResponse request
 	KeypairDeleteV2KeypairsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDeleteV2KeypairsObjectIdDeleteResponse, error)
-
-	// KeypairDetailV2KeypairsObjectIdDetailGetWithResponse request
 	KeypairDetailV2KeypairsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDetailV2KeypairsObjectIdDetailGetResponse, error)
-
-	// AvailableLicensesListV2LicensesGetWithResponse request
 	AvailableLicensesListV2LicensesGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AvailableLicensesListV2LicensesGetResponse, error)
-
-	// LicenseDeleteV2LicensesObjectIdDeleteWithResponse request
 	LicenseDeleteV2LicensesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDeleteV2LicensesObjectIdDeleteResponse, error)
-
-	// LicenseDetailsV2LicensesObjectIdGetWithResponse request
 	LicenseDetailsV2LicensesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDetailsV2LicensesObjectIdGetResponse, error)
-
-	// LicenseUpdateV2LicensesObjectIdPatchWithBodyWithResponse request with any body
-	LicenseUpdateV2LicensesObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error)
-
 	LicenseUpdateV2LicensesObjectIdPatchWithResponse(ctx context.Context, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error)
-
-	// AccountLimitsV2LimitsGetWithResponse request
 	AccountLimitsV2LimitsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountLimitsV2LimitsGetResponse, error)
-
-	// AccountPatchLimitsV2LimitsPatchWithBodyWithResponse request with any body
-	AccountPatchLimitsV2LimitsPatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AccountPatchLimitsV2LimitsPatchResponse, error)
-
 	AccountPatchLimitsV2LimitsPatchWithResponse(ctx context.Context, body AccountPatchLimitsV2LimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*AccountPatchLimitsV2LimitsPatchResponse, error)
-
-	// AccountProjectsLimitsV2LimitsProjectsGetWithResponse request
 	AccountProjectsLimitsV2LimitsProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountProjectsLimitsV2LimitsProjectsGetResponse, error)
-
-	// RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse request
 	RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse, error)
-
-	// RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse request
 	RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDetailV2LoadbalancersRulesObjectIdGetResponse, error)
-
-	// LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse request
 	LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse, error)
-
-	// LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBodyWithResponse request with any body
-	LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error)
-
 	LoadBalancerRenameV2LoadbalancersObjectIdPatchWithResponse(ctx context.Context, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error)
-
-	// LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBodyWithResponse request with any body
-	LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error)
-
 	LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error)
-
-	// LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse request
 	LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse, error)
-
-	// LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBodyWithResponse request with any body
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error)
-
 	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error)
-
-	// RuleListV2LoadbalancersObjectIdRulesGetWithResponse request
 	RuleListV2LoadbalancersObjectIdRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleListV2LoadbalancersObjectIdRulesGetResponse, error)
-
-	// RuleCreateV2LoadbalancersObjectIdRulesPostWithBodyWithResponse request with any body
-	RuleCreateV2LoadbalancersObjectIdRulesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error)
-
 	RuleCreateV2LoadbalancersObjectIdRulesPostWithResponse(ctx context.Context, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error)
-
-	// LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse request
 	LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse, error)
-
-	// LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse request
 	LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse, error)
-
-	// LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse request
 	LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse, error)
-
-	// LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse request
 	LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse, error)
-
-	// MaintenanceModeStatusV2MaintenanceModeGetWithResponse request
 	MaintenanceModeStatusV2MaintenanceModeGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MaintenanceModeStatusV2MaintenanceModeGetResponse, error)
-
-	// ProjectListV2ProjectsGetWithResponse request
 	ProjectListV2ProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ProjectListV2ProjectsGetResponse, error)
-
-	// ProjectCreateV2ProjectsPostWithBodyWithResponse request with any body
-	ProjectCreateV2ProjectsPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ProjectCreateV2ProjectsPostResponse, error)
-
 	ProjectCreateV2ProjectsPostWithResponse(ctx context.Context, body ProjectCreateV2ProjectsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectCreateV2ProjectsPostResponse, error)
-
-	// ProjectDeleteV2ProjectsObjectIdDeleteWithResponse request
 	ProjectDeleteV2ProjectsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDeleteV2ProjectsObjectIdDeleteResponse, error)
-
-	// ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBodyWithResponse request with any body
-	ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error)
-
 	ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error)
-
-	// ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse request
 	ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse, error)
-
-	// AddressCreateV2ProjectsObjectIdAddressesPostWithBodyWithResponse request with any body
-	AddressCreateV2ProjectsObjectIdAddressesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error)
-
 	AddressCreateV2ProjectsObjectIdAddressesPostWithResponse(ctx context.Context, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error)
-
-	// ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse request
 	ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse, error)
-
-	// ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse request
 	ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse, error)
-
-	// DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse request
 	DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse, error)
-
-	// DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBodyWithResponse request with any body
-	DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error)
-
 	DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithResponse(ctx context.Context, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error)
-
-	// ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse request
 	ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse, error)
-
-	// ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse request
 	ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse, error)
-
-	// ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse request
 	ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse, error)
-
-	// ProjectDetailV2ProjectsObjectIdDetailGetWithResponse request
 	ProjectDetailV2ProjectsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDetailV2ProjectsObjectIdDetailGetResponse, error)
-
-	// ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse request
 	ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectImagesListV2ProjectsObjectIdImagesGetResponse, error)
-
-	// KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse request
 	KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeyPairsListV2ProjectsObjectIdKeypairsGetResponse, error)
-
-	// ImportKeypairV2ProjectsObjectIdKeypairsPostWithBodyWithResponse request with any body
-	ImportKeypairV2ProjectsObjectIdKeypairsPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error)
-
 	ImportKeypairV2ProjectsObjectIdKeypairsPostWithResponse(ctx context.Context, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error)
-
-	// GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBodyWithResponse request with any body
-	GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error)
-
 	GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithResponse(ctx context.Context, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody, reqEditors ...RequestEditorFn) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error)
-
-	// ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse request
 	ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse, error)
-
-	// ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBodyWithResponse request with any body
-	ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error)
-
 	ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error)
-
-	// LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse request
 	LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse, error)
-
-	// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBodyWithResponse request with any body
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error)
-
 	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithResponse(ctx context.Context, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error)
-
-	// ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse request
 	ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse, error)
-
-	// ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse request
 	ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse, error)
-
-	// NetworksListV2ProjectsObjectIdNetworksGetWithResponse request
 	NetworksListV2ProjectsObjectIdNetworksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*NetworksListV2ProjectsObjectIdNetworksGetResponse, error)
-
-	// ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse request
 	ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse, error)
-
-	// ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse request
 	ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRecipesV2ProjectsObjectIdRecipesGetResponse, error)
-
-	// S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse request
 	S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UsersListV2ProjectsObjectIdS3UsersGetResponse, error)
-
-	// S3UserCreateV2ProjectsObjectIdS3UsersPostWithBodyWithResponse request with any body
-	S3UserCreateV2ProjectsObjectIdS3UsersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error)
-
 	S3UserCreateV2ProjectsObjectIdS3UsersPostWithResponse(ctx context.Context, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error)
-
-	// ProjectServerListV2ProjectsObjectIdServersGetWithResponse request
 	ProjectServerListV2ProjectsObjectIdServersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerListV2ProjectsObjectIdServersGetResponse, error)
-
-	// ServerCreateV2ProjectsObjectIdServersPostWithBodyWithResponse request with any body
-	ServerCreateV2ProjectsObjectIdServersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error)
-
 	ServerCreateV2ProjectsObjectIdServersPostWithResponse(ctx context.Context, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error)
-
-	// ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse request
 	ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse, error)
-
-	// SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse request
 	SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse, error)
-
-	// ProjectStartV2ProjectsObjectIdStartPostWithResponse request
 	ProjectStartV2ProjectsObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStartV2ProjectsObjectIdStartPostResponse, error)
-
-	// ProjectStopV2ProjectsObjectIdStopPostWithResponse request
 	ProjectStopV2ProjectsObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStopV2ProjectsObjectIdStopPostResponse, error)
-
-	// ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse request
 	ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse, error)
-
-	// VolumeCreateV2ProjectsObjectIdVolumesPostWithBodyWithResponse request with any body
-	VolumeCreateV2ProjectsObjectIdVolumesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error)
-
 	VolumeCreateV2ProjectsObjectIdVolumesPostWithResponse(ctx context.Context, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error)
-
-	// ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse request
 	ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse, error)
-
-	// VrouterCreateV2ProjectsObjectIdVroutersPostWithBodyWithResponse request with any body
-	VrouterCreateV2ProjectsObjectIdVroutersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error)
-
 	VrouterCreateV2ProjectsObjectIdVroutersPostWithResponse(ctx context.Context, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error)
-
-	// S3UserDeleteV2S3UsersObjectIdDeleteWithResponse request
 	S3UserDeleteV2S3UsersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDeleteV2S3UsersObjectIdDeleteResponse, error)
-
-	// S3UserUpdateV2S3UsersObjectIdPatchWithBodyWithResponse request with any body
-	S3UserUpdateV2S3UsersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error)
-
 	S3UserUpdateV2S3UsersObjectIdPatchWithResponse(ctx context.Context, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error)
-
-	// S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse request
 	S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse, error)
-
-	// S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse request
 	S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse, error)
-
-	// S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse request
 	S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDetailsV2S3UsersObjectIdDetailGetResponse, error)
-
-	// S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBodyWithResponse request with any body
-	S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error)
-
 	S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithResponse(ctx context.Context, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error)
-
-	// S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse request
 	S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserSuspendV2S3UsersObjectIdSuspendPostResponse, error)
-
-	// S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse request
 	S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse, error)
-
-	// ServerDeleteV2ServersObjectIdDeleteWithBodyWithResponse request with any body
-	ServerDeleteV2ServersObjectIdDeleteWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerDeleteV2ServersObjectIdDeleteResponse, error)
-
 	ServerDeleteV2ServersObjectIdDeleteWithResponse(ctx context.Context, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerDeleteV2ServersObjectIdDeleteResponse, error)
-
-	// ServerUpdateV2ServersObjectIdPatchWithBodyWithResponse request with any body
-	ServerUpdateV2ServersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerUpdateV2ServersObjectIdPatchResponse, error)
-
 	ServerUpdateV2ServersObjectIdPatchWithResponse(ctx context.Context, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerUpdateV2ServersObjectIdPatchResponse, error)
-
-	// ServerConsoleV2ServersObjectIdConsolePostWithResponse request
 	ServerConsoleV2ServersObjectIdConsolePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerConsoleV2ServersObjectIdConsolePostResponse, error)
-
-	// ServerDetailV2ServersObjectIdDetailGetWithResponse request
 	ServerDetailV2ServersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerDetailV2ServersObjectIdDetailGetResponse, error)
-
-	// ServerLicensesV2ServersObjectIdLicensesGetWithResponse request
 	ServerLicensesV2ServersObjectIdLicensesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerLicensesV2ServersObjectIdLicensesGetResponse, error)
-
-	// ServerAddLicenseV2ServersObjectIdLicensesPostWithBodyWithResponse request with any body
-	ServerAddLicenseV2ServersObjectIdLicensesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error)
-
 	ServerAddLicenseV2ServersObjectIdLicensesPostWithResponse(ctx context.Context, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error)
-
-	// ServerChangePasswordV2ServersObjectIdPasswordPostWithBodyWithResponse request with any body
-	ServerChangePasswordV2ServersObjectIdPasswordPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error)
-
 	ServerChangePasswordV2ServersObjectIdPasswordPostWithResponse(ctx context.Context, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error)
-
-	// ServerRebootV2ServersObjectIdRebootPostWithResponse request
 	ServerRebootV2ServersObjectIdRebootPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRebootV2ServersObjectIdRebootPostResponse, error)
-
-	// ServerRescueV2ServersObjectIdRescuePostWithResponse request
 	ServerRescueV2ServersObjectIdRescuePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRescueV2ServersObjectIdRescuePostResponse, error)
-
-	// ServerResizeV2ServersObjectIdResizePostWithBodyWithResponse request with any body
-	ServerResizeV2ServersObjectIdResizePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerResizeV2ServersObjectIdResizePostResponse, error)
-
 	ServerResizeV2ServersObjectIdResizePostWithResponse(ctx context.Context, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerResizeV2ServersObjectIdResizePostResponse, error)
-
-	// CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBodyWithResponse request with any body
-	CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error)
-
 	CreateServerSnapshotV2ServersObjectIdSnapshotPostWithResponse(ctx context.Context, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error)
-
-	// ServerStartV2ServersObjectIdStartPostWithResponse request
 	ServerStartV2ServersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStartV2ServersObjectIdStartPostResponse, error)
-
-	// ServerStopV2ServersObjectIdStopPostWithResponse request
 	ServerStopV2ServersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStopV2ServersObjectIdStopPostResponse, error)
-
-	// SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse request
 	SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDeleteV2SnapshotsObjectIdDeleteResponse, error)
-
-	// SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse request
 	SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse, error)
-
-	// SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBodyWithResponse request with any body
-	SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error)
-
 	SnapshotRestoreV2SnapshotsObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error)
-
-	// AccountStatV2StatGetWithResponse request
 	AccountStatV2StatGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountStatV2StatGetResponse, error)
-
-	// VolumeDeleteV2VolumesObjectIdDeleteWithBodyWithResponse request with any body
-	VolumeDeleteV2VolumesObjectIdDeleteWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error)
-
 	VolumeDeleteV2VolumesObjectIdDeleteWithResponse(ctx context.Context, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error)
-
-	// VolumeUpdateV2VolumesObjectIdPatchWithBodyWithResponse request with any body
-	VolumeUpdateV2VolumesObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error)
-
 	VolumeUpdateV2VolumesObjectIdPatchWithResponse(ctx context.Context, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error)
-
-	// VolumeAttachV2VolumesObjectIdAttachPostWithBodyWithResponse request with any body
-	VolumeAttachV2VolumesObjectIdAttachPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error)
-
 	VolumeAttachV2VolumesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error)
-
-	// VolumeDetachV2VolumesObjectIdDetachPostWithBodyWithResponse request with any body
-	VolumeDetachV2VolumesObjectIdDetachPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error)
-
 	VolumeDetachV2VolumesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error)
-
-	// VolumeDetailV2VolumesObjectIdDetailGetWithResponse request
 	VolumeDetailV2VolumesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VolumeDetailV2VolumesObjectIdDetailGetResponse, error)
-
-	// VolumeExtendV2VolumesObjectIdExtendPostWithBodyWithResponse request with any body
-	VolumeExtendV2VolumesObjectIdExtendPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error)
-
 	VolumeExtendV2VolumesObjectIdExtendPostWithResponse(ctx context.Context, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error)
-
-	// VrouterDeleteV2VroutersObjectIdDeleteWithResponse request
 	VrouterDeleteV2VroutersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDeleteV2VroutersObjectIdDeleteResponse, error)
-
-	// VrouterDetailV2VroutersObjectIdGetWithResponse request
 	VrouterDetailV2VroutersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDetailV2VroutersObjectIdGetResponse, error)
-
-	// VrouterStartV2VroutersObjectIdStartPostWithResponse request
 	VrouterStartV2VroutersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStartV2VroutersObjectIdStartPostResponse, error)
-
-	// VrouterStopV2VroutersObjectIdStopPostWithResponse request
 	VrouterStopV2VroutersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStopV2VroutersObjectIdStopPostResponse, error)
 }
 
-type AddressDeleteV2AddressesObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressDeleteV2AddressesObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressDeleteV2AddressesObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AddressAttachV2AddressesObjectIdAttachPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressAttachV2AddressesObjectIdAttachPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressAttachV2AddressesObjectIdAttachPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AddressDetachV2AddressesObjectIdDetachPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressDetachV2AddressesObjectIdDetachPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressDetachV2AddressesObjectIdDetachPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AddressDetailV2AddressesObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *AddressDetailSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressDetailV2AddressesObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressDetailV2AddressesObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AddressEditPtrV2AddressesObjectIdPtrPutResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressEditPtrV2AddressesObjectIdPtrPutResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressEditPtrV2AddressesObjectIdPtrPutResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AccountBalanceV2BalanceGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedAccountBalanceSchema46260ce3
-}
-
-// Status returns HTTPResponse.Status
-func (r AccountBalanceV2BalanceGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AccountBalanceV2BalanceGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedDbaasBackupSchemaFe2230a5
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedBackupDownloadUrlSchemaFe055748
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterDetailV2DbaasClustersObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedDbaasClusterSchema231aca90
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterDetailV2DbaasClustersObjectIdGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterDetailV2DbaasClustersObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchemaCf8a9b8e
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedDbaasClusterConfigSchemaB76b790a
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListDbaasDatababaseSchema4fa94ee6
-}
-
-// Status returns HTTPResponse.Status
-func (r ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchema6cec8e2e
-}
-
-// Status returns HTTPResponse.Status
-func (r ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListDbaasNodeSchema5c2603d5
-}
-
-// Status returns HTTPResponse.Status
-func (r ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedDbaasDatababaseSchemaA793d113
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchema3e9ee2b0
-}
-
-// Status returns HTTPResponse.Status
-func (r ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type KeypairDeleteV2KeypairsObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r KeypairDeleteV2KeypairsObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r KeypairDeleteV2KeypairsObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type KeypairDetailV2KeypairsObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedKeyPairSchema8ec23069
-}
-
-// Status returns HTTPResponse.Status
-func (r KeypairDetailV2KeypairsObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r KeypairDetailV2KeypairsObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AvailableLicensesListV2LicensesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListLicenseOfferSchema10f594e4
-}
-
-// Status returns HTTPResponse.Status
-func (r AvailableLicensesListV2LicensesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AvailableLicensesListV2LicensesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LicenseDeleteV2LicensesObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r LicenseDeleteV2LicensesObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LicenseDeleteV2LicensesObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LicenseDetailsV2LicensesObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedLicenseSchema6d2d43fe
-}
-
-// Status returns HTTPResponse.Status
-func (r LicenseDetailsV2LicensesObjectIdGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LicenseDetailsV2LicensesObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LicenseUpdateV2LicensesObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r LicenseUpdateV2LicensesObjectIdPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LicenseUpdateV2LicensesObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AccountLimitsV2LimitsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *AccountLimitSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r AccountLimitsV2LimitsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AccountLimitsV2LimitsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AccountPatchLimitsV2LimitsPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r AccountPatchLimitsV2LimitsPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AccountPatchLimitsV2LimitsPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AccountProjectsLimitsV2LimitsProjectsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *AccountProjectLimitSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r AccountProjectsLimitsV2LimitsProjectsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AccountProjectsLimitsV2LimitsProjectsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type RuleDetailV2LoadbalancersRulesObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedRuleDetailResponseSchemaB779dd3c
-}
-
-// Status returns HTTPResponse.Status
-func (r RuleDetailV2LoadbalancersRulesObjectIdGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r RuleDetailV2LoadbalancersRulesObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedLBDetailResponseSchema8bf581a7
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type RuleListV2LoadbalancersObjectIdRulesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListRuleDetailResponseSchema67205adf
-}
-
-// Status returns HTTPResponse.Status
-func (r RuleListV2LoadbalancersObjectIdRulesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r RuleListV2LoadbalancersObjectIdRulesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type RuleCreateV2LoadbalancersObjectIdRulesPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchema54289085
-}
-
-// Status returns HTTPResponse.Status
-func (r RuleCreateV2LoadbalancersObjectIdRulesPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r RuleCreateV2LoadbalancersObjectIdRulesPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedLbStatSchema060173fe
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *LocalDiskDetail
-}
-
-// Status returns HTTPResponse.Status
-func (r LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type MaintenanceModeStatusV2MaintenanceModeGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *MaintenanceModeSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r MaintenanceModeStatusV2MaintenanceModeGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r MaintenanceModeStatusV2MaintenanceModeGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectListV2ProjectsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ProjectPagListSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectListV2ProjectsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectListV2ProjectsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectCreateV2ProjectsPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchemaDbed6d9c
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectCreateV2ProjectsPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectCreateV2ProjectsPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectDeleteV2ProjectsObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectDeleteV2ProjectsObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectDeleteV2ProjectsObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagAddressSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AddressCreateV2ProjectsObjectIdAddressesPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *AddressCreateSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r AddressCreateV2ProjectsObjectIdAddressesPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AddressCreateV2ProjectsObjectIdAddressesPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ConsumptionListSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListDbaasBackupSchemaAadcc61f
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListDbaasClusterSchemaF74955db
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchema331908a5
-}
-
-// Status returns HTTPResponse.Status
-func (r DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListDbaasDatababaseSchemaE3be83fa
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListDatastoreSchema10c17892
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagConfigDepSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectDetailV2ProjectsObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedProjectDetailSchemaEbdd1993
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectDetailV2ProjectsObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectDetailV2ProjectsObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectImagesListV2ProjectsObjectIdImagesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagImageSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectImagesListV2ProjectsObjectIdImagesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectImagesListV2ProjectsObjectIdImagesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type KeyPairsListV2ProjectsObjectIdKeypairsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagKeyPairSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r KeyPairsListV2ProjectsObjectIdKeypairsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r KeyPairsListV2ProjectsObjectIdKeypairsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ImportKeypairV2ProjectsObjectIdKeypairsPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedKeyPairSchema8ec23069
-}
-
-// Status returns HTTPResponse.Status
-func (r ImportKeypairV2ProjectsObjectIdKeypairsPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ImportKeypairV2ProjectsObjectIdKeypairsPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedGenerateKeyPairResultSchema368fbb37
-}
-
-// Status returns HTTPResponse.Status
-func (r GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagLimitSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListLBDetailResponseSchemaCdba8dc3
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchema269a7565
-}
-
-// Status returns HTTPResponse.Status
-func (r LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListRuleDetailResponseSchema959a3235
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagLocalDiskListSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type NetworksListV2ProjectsObjectIdNetworksGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *NetworkPagSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r NetworksListV2ProjectsObjectIdNetworksGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r NetworksListV2ProjectsObjectIdNetworksGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *InfrastructureModuleConstantsSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectRecipesV2ProjectsObjectIdRecipesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagRecipeSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectRecipesV2ProjectsObjectIdRecipesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectRecipesV2ProjectsObjectIdRecipesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UsersListV2ProjectsObjectIdS3UsersGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListS3UserSchema495c1a8c
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UsersListV2ProjectsObjectIdS3UsersGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UsersListV2ProjectsObjectIdS3UsersGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UserCreateV2ProjectsObjectIdS3UsersPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchemaCc0245d8
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UserCreateV2ProjectsObjectIdS3UsersPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UserCreateV2ProjectsObjectIdS3UsersPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectServerListV2ProjectsObjectIdServersGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagServersSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectServerListV2ProjectsObjectIdServersGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectServerListV2ProjectsObjectIdServersGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerCreateV2ProjectsObjectIdServersPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchema1aab2d2b
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerCreateV2ProjectsObjectIdServersPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerCreateV2ProjectsObjectIdServersPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagConfigDepSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *SnapshotListSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectStartV2ProjectsObjectIdStartPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectStartV2ProjectsObjectIdStartPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectStartV2ProjectsObjectIdStartPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectStopV2ProjectsObjectIdStopPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectStopV2ProjectsObjectIdStopPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectStopV2ProjectsObjectIdStopPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagVolumeSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VolumeCreateV2ProjectsObjectIdVolumesPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *VolumeCreateSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r VolumeCreateV2ProjectsObjectIdVolumesPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VolumeCreateV2ProjectsObjectIdVolumesPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *PagVroutersSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VrouterCreateV2ProjectsObjectIdVroutersPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *VrouterCreateSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r VrouterCreateV2ProjectsObjectIdVroutersPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VrouterCreateV2ProjectsObjectIdVroutersPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UserDeleteV2S3UsersObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UserDeleteV2S3UsersObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UserDeleteV2S3UsersObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UserUpdateV2S3UsersObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UserUpdateV2S3UsersObjectIdPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UserUpdateV2S3UsersObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedS3UserKeysSchema28ed7005
-}
-
-// Status returns HTTPResponse.Status
-func (r S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedS3UserKeysSchemaAa900ca7
-}
-
-// Status returns HTTPResponse.Status
-func (r S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UserDetailsV2S3UsersObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *DetailedS3UserSchema9d7a7a95
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UserDetailsV2S3UsersObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UserDetailsV2S3UsersObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UserSuspendV2S3UsersObjectIdSuspendPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UserSuspendV2S3UsersObjectIdSuspendPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UserSuspendV2S3UsersObjectIdSuspendPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerDeleteV2ServersObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerDeleteV2ServersObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerDeleteV2ServersObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerUpdateV2ServersObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerUpdateV2ServersObjectIdPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerUpdateV2ServersObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerConsoleV2ServersObjectIdConsolePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ServerConsoleSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerConsoleV2ServersObjectIdConsolePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerConsoleV2ServersObjectIdConsolePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerDetailV2ServersObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ServerDetailSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerDetailV2ServersObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerDetailV2ServersObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerLicensesV2ServersObjectIdLicensesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListLicenseSchemaC6fc32ba
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerLicensesV2ServersObjectIdLicensesGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerLicensesV2ServersObjectIdLicensesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerAddLicenseV2ServersObjectIdLicensesPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON201      *DetailedIdResponseSchema76555418
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerAddLicenseV2ServersObjectIdLicensesPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerAddLicenseV2ServersObjectIdLicensesPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerChangePasswordV2ServersObjectIdPasswordPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerChangePasswordV2ServersObjectIdPasswordPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerChangePasswordV2ServersObjectIdPasswordPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerRebootV2ServersObjectIdRebootPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerRebootV2ServersObjectIdRebootPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerRebootV2ServersObjectIdRebootPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerRescueV2ServersObjectIdRescuePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerRescueV2ServersObjectIdRescuePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerRescueV2ServersObjectIdRescuePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerResizeV2ServersObjectIdResizePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerResizeV2ServersObjectIdResizePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerResizeV2ServersObjectIdResizePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *SnapshotCreateSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerStartV2ServersObjectIdStartPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerStartV2ServersObjectIdStartPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerStartV2ServersObjectIdStartPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ServerStopV2ServersObjectIdStopPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r ServerStopV2ServersObjectIdStopPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ServerStopV2ServersObjectIdStopPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type SnapshotDeleteV2SnapshotsObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r SnapshotDeleteV2SnapshotsObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r SnapshotDeleteV2SnapshotsObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *SnapshotDetailSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *SnapshotRestoreSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type AccountStatV2StatGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *AccountStatSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r AccountStatV2StatGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r AccountStatV2StatGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VolumeDeleteV2VolumesObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r VolumeDeleteV2VolumesObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VolumeDeleteV2VolumesObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VolumeUpdateV2VolumesObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r VolumeUpdateV2VolumesObjectIdPatchResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VolumeUpdateV2VolumesObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VolumeAttachV2VolumesObjectIdAttachPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r VolumeAttachV2VolumesObjectIdAttachPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VolumeAttachV2VolumesObjectIdAttachPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VolumeDetachV2VolumesObjectIdDetachPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r VolumeDetachV2VolumesObjectIdDetachPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VolumeDetachV2VolumesObjectIdDetachPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VolumeDetailV2VolumesObjectIdDetailGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *VolumeDetailSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r VolumeDetailV2VolumesObjectIdDetailGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VolumeDetailV2VolumesObjectIdDetailGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VolumeExtendV2VolumesObjectIdExtendPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r VolumeExtendV2VolumesObjectIdExtendPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VolumeExtendV2VolumesObjectIdExtendPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VrouterDeleteV2VroutersObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-}
-
-// Status returns HTTPResponse.Status
-func (r VrouterDeleteV2VroutersObjectIdDeleteResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VrouterDeleteV2VroutersObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VrouterDetailV2VroutersObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *VrouterDetailSchema
-}
-
-// Status returns HTTPResponse.Status
-func (r VrouterDetailV2VroutersObjectIdGetResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VrouterDetailV2VroutersObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VrouterStartV2VroutersObjectIdStartPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r VrouterStartV2VroutersObjectIdStartPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VrouterStartV2VroutersObjectIdStartPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type VrouterStopV2VroutersObjectIdStopPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON202      *interface{}
-}
-
-// Status returns HTTPResponse.Status
-func (r VrouterStopV2VroutersObjectIdStopPostResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r VrouterStopV2VroutersObjectIdStopPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-// AddressDeleteV2AddressesObjectIdDeleteWithResponse request returning *AddressDeleteV2AddressesObjectIdDeleteResponse
 func (c *ClientWithResponses) AddressDeleteV2AddressesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDeleteV2AddressesObjectIdDeleteResponse, error) {
 	rsp, err := c.AddressDeleteV2AddressesObjectIdDelete(ctx, objectId, reqEditors...)
 	if err != nil {
@@ -12350,1494 +9208,19 @@ func (c *ClientWithResponses) AddressDeleteV2AddressesObjectIdDeleteWithResponse
 	return ParseAddressDeleteV2AddressesObjectIdDeleteResponse(rsp)
 }
 
-// AddressAttachV2AddressesObjectIdAttachPostWithBodyWithResponse request with arbitrary body returning *AddressAttachV2AddressesObjectIdAttachPostResponse
-func (c *ClientWithResponses) AddressAttachV2AddressesObjectIdAttachPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error) {
-	rsp, err := c.AddressAttachV2AddressesObjectIdAttachPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) AddressAttachV2AddressesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error) {
-	rsp, err := c.AddressAttachV2AddressesObjectIdAttachPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp)
-}
-
-// AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBodyWithResponse request with arbitrary body returning *AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse
-func (c *ClientWithResponses) AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error) {
-	rsp, err := c.AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithResponse(ctx context.Context, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error) {
-	rsp, err := c.AddressChangeBandwidthV2AddressesObjectIdBandwidthPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp)
-}
-
-// AddressDetachV2AddressesObjectIdDetachPostWithResponse request returning *AddressDetachV2AddressesObjectIdDetachPostResponse
-func (c *ClientWithResponses) AddressDetachV2AddressesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetachV2AddressesObjectIdDetachPostResponse, error) {
-	rsp, err := c.AddressDetachV2AddressesObjectIdDetachPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressDetachV2AddressesObjectIdDetachPostResponse(rsp)
-}
-
-// AddressDetailV2AddressesObjectIdDetailGetWithResponse request returning *AddressDetailV2AddressesObjectIdDetailGetResponse
-func (c *ClientWithResponses) AddressDetailV2AddressesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetailV2AddressesObjectIdDetailGetResponse, error) {
-	rsp, err := c.AddressDetailV2AddressesObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressDetailV2AddressesObjectIdDetailGetResponse(rsp)
-}
-
-// AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse request returning *AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse
-func (c *ClientWithResponses) AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse, error) {
-	rsp, err := c.AddressSetPrimaryV2AddressesObjectIdPrimaryPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse(rsp)
-}
-
-// AddressEditPtrV2AddressesObjectIdPtrPutWithBodyWithResponse request with arbitrary body returning *AddressEditPtrV2AddressesObjectIdPtrPutResponse
-func (c *ClientWithResponses) AddressEditPtrV2AddressesObjectIdPtrPutWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error) {
-	rsp, err := c.AddressEditPtrV2AddressesObjectIdPtrPutWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp)
-}
-
-func (c *ClientWithResponses) AddressEditPtrV2AddressesObjectIdPtrPutWithResponse(ctx context.Context, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error) {
-	rsp, err := c.AddressEditPtrV2AddressesObjectIdPtrPut(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp)
-}
-
-// AccountBalanceV2BalanceGetWithResponse request returning *AccountBalanceV2BalanceGetResponse
-func (c *ClientWithResponses) AccountBalanceV2BalanceGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountBalanceV2BalanceGetResponse, error) {
-	rsp, err := c.AccountBalanceV2BalanceGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccountBalanceV2BalanceGetResponse(rsp)
-}
-
-// DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBodyWithResponse request with arbitrary body returning *DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse
-func (c *ClientWithResponses) DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error) {
-	rsp, err := c.DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp)
-}
-
-func (c *ClientWithResponses) DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithResponse(ctx context.Context, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error) {
-	rsp, err := c.DbaasBackupDeleteV2DbaasBackupsObjectIdDelete(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp)
-}
-
-// DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse request returning *DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse
-func (c *ClientWithResponses) DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse, error) {
-	rsp, err := c.DbaasBackupDetailV2DbaasBackupsObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasBackupDetailV2DbaasBackupsObjectIdGetResponse(rsp)
-}
-
-// DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse request returning *DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse
-func (c *ClientWithResponses) DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse, error) {
-	rsp, err := c.DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse(rsp)
-}
-
-// DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse request returning *DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse
-func (c *ClientWithResponses) DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse, error) {
-	rsp, err := c.DbaasClusterDeleteV2DbaasClustersObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse(rsp)
-}
-
-// DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse request returning *DbaasClusterDetailV2DbaasClustersObjectIdGetResponse
-func (c *ClientWithResponses) DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDetailV2DbaasClustersObjectIdGetResponse, error) {
-	rsp, err := c.DbaasClusterDetailV2DbaasClustersObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse(rsp)
-}
-
-// DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBodyWithResponse request with arbitrary body returning *DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse
-func (c *ClientWithResponses) DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error) {
-	rsp, err := c.DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithResponse(ctx context.Context, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error) {
-	rsp, err := c.DbaasClusterUpdateV2DbaasClustersObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp)
-}
-
-// DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBodyWithResponse request with arbitrary body returning *DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse
-func (c *ClientWithResponses) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error) {
-	rsp, err := c.DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp)
-}
-
-func (c *ClientWithResponses) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error) {
-	rsp, err := c.DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp)
-}
-
-// DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse request returning *DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse
-func (c *ClientWithResponses) DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse, error) {
-	rsp, err := c.DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse(rsp)
-}
-
-// DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse request returning *DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse
-func (c *ClientWithResponses) DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse, error) {
-	rsp, err := c.DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse(rsp)
-}
-
-// DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse request returning *DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse
-func (c *ClientWithResponses) DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse, error) {
-	rsp, err := c.DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse(rsp)
-}
-
-// ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse request returning *ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse
-func (c *ClientWithResponses) ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse, error) {
-	rsp, err := c.ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse(rsp)
-}
-
-// ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBodyWithResponse request with arbitrary body returning *ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse
-func (c *ClientWithResponses) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error) {
-	rsp, err := c.ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithResponse(ctx context.Context, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error) {
-	rsp, err := c.ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp)
-}
-
-// ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse request returning *ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse
-func (c *ClientWithResponses) ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse, error) {
-	rsp, err := c.ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse(rsp)
-}
-
-// DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBodyWithResponse request with arbitrary body returning *DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse
-func (c *ClientWithResponses) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error) {
-	rsp, err := c.DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error) {
-	rsp, err := c.DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(rsp)
-}
-
-// DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBodyWithResponse request with arbitrary body returning *DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse
-func (c *ClientWithResponses) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error) {
-	rsp, err := c.DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse(rsp)
-}
-
-func (c *ClientWithResponses) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error) {
-	rsp, err := c.DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse(rsp)
-}
-
-// DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse request returning *DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse
-func (c *ClientWithResponses) DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse, error) {
-	rsp, err := c.DbaasClusterStartV2DbaasClustersObjectIdStartPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse(rsp)
-}
-
-// DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse request returning *DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse
-func (c *ClientWithResponses) DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse, error) {
-	rsp, err := c.DbaasClusterStopV2DbaasClustersObjectIdStopPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse(rsp)
-}
-
-// DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse request returning *DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse
-func (c *ClientWithResponses) DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse, error) {
-	rsp, err := c.DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse(rsp)
-}
-
-// DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse request returning *DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse
-func (c *ClientWithResponses) DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse, error) {
-	rsp, err := c.DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse(rsp)
-}
-
-// ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBodyWithResponse request with arbitrary body returning *ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse
-func (c *ClientWithResponses) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error) {
-	rsp, err := c.ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error) {
-	rsp, err := c.ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(rsp)
-}
-
-// DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse request returning *DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse
-func (c *ClientWithResponses) DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse, error) {
-	rsp, err := c.DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse(rsp)
-}
-
-// DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse request returning *DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse
-func (c *ClientWithResponses) DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse, error) {
-	rsp, err := c.DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse(rsp)
-}
-
-// DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBodyWithResponse request with arbitrary body returning *DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse
-func (c *ClientWithResponses) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error) {
-	rsp, err := c.DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(rsp)
-}
-
-func (c *ClientWithResponses) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error) {
-	rsp, err := c.DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(rsp)
-}
-
-// KeypairDeleteV2KeypairsObjectIdDeleteWithResponse request returning *KeypairDeleteV2KeypairsObjectIdDeleteResponse
-func (c *ClientWithResponses) KeypairDeleteV2KeypairsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDeleteV2KeypairsObjectIdDeleteResponse, error) {
-	rsp, err := c.KeypairDeleteV2KeypairsObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse(rsp)
-}
-
-// KeypairDetailV2KeypairsObjectIdDetailGetWithResponse request returning *KeypairDetailV2KeypairsObjectIdDetailGetResponse
-func (c *ClientWithResponses) KeypairDetailV2KeypairsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDetailV2KeypairsObjectIdDetailGetResponse, error) {
-	rsp, err := c.KeypairDetailV2KeypairsObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseKeypairDetailV2KeypairsObjectIdDetailGetResponse(rsp)
-}
-
-// AvailableLicensesListV2LicensesGetWithResponse request returning *AvailableLicensesListV2LicensesGetResponse
-func (c *ClientWithResponses) AvailableLicensesListV2LicensesGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AvailableLicensesListV2LicensesGetResponse, error) {
-	rsp, err := c.AvailableLicensesListV2LicensesGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAvailableLicensesListV2LicensesGetResponse(rsp)
-}
-
-// LicenseDeleteV2LicensesObjectIdDeleteWithResponse request returning *LicenseDeleteV2LicensesObjectIdDeleteResponse
-func (c *ClientWithResponses) LicenseDeleteV2LicensesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDeleteV2LicensesObjectIdDeleteResponse, error) {
-	rsp, err := c.LicenseDeleteV2LicensesObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLicenseDeleteV2LicensesObjectIdDeleteResponse(rsp)
-}
-
-// LicenseDetailsV2LicensesObjectIdGetWithResponse request returning *LicenseDetailsV2LicensesObjectIdGetResponse
-func (c *ClientWithResponses) LicenseDetailsV2LicensesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDetailsV2LicensesObjectIdGetResponse, error) {
-	rsp, err := c.LicenseDetailsV2LicensesObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLicenseDetailsV2LicensesObjectIdGetResponse(rsp)
-}
-
-// LicenseUpdateV2LicensesObjectIdPatchWithBodyWithResponse request with arbitrary body returning *LicenseUpdateV2LicensesObjectIdPatchResponse
-func (c *ClientWithResponses) LicenseUpdateV2LicensesObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error) {
-	rsp, err := c.LicenseUpdateV2LicensesObjectIdPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) LicenseUpdateV2LicensesObjectIdPatchWithResponse(ctx context.Context, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error) {
-	rsp, err := c.LicenseUpdateV2LicensesObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp)
-}
-
-// AccountLimitsV2LimitsGetWithResponse request returning *AccountLimitsV2LimitsGetResponse
-func (c *ClientWithResponses) AccountLimitsV2LimitsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountLimitsV2LimitsGetResponse, error) {
-	rsp, err := c.AccountLimitsV2LimitsGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccountLimitsV2LimitsGetResponse(rsp)
-}
-
-// AccountPatchLimitsV2LimitsPatchWithBodyWithResponse request with arbitrary body returning *AccountPatchLimitsV2LimitsPatchResponse
-func (c *ClientWithResponses) AccountPatchLimitsV2LimitsPatchWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AccountPatchLimitsV2LimitsPatchResponse, error) {
-	rsp, err := c.AccountPatchLimitsV2LimitsPatchWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccountPatchLimitsV2LimitsPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) AccountPatchLimitsV2LimitsPatchWithResponse(ctx context.Context, body AccountPatchLimitsV2LimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*AccountPatchLimitsV2LimitsPatchResponse, error) {
-	rsp, err := c.AccountPatchLimitsV2LimitsPatch(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccountPatchLimitsV2LimitsPatchResponse(rsp)
-}
-
-// AccountProjectsLimitsV2LimitsProjectsGetWithResponse request returning *AccountProjectsLimitsV2LimitsProjectsGetResponse
-func (c *ClientWithResponses) AccountProjectsLimitsV2LimitsProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountProjectsLimitsV2LimitsProjectsGetResponse, error) {
-	rsp, err := c.AccountProjectsLimitsV2LimitsProjectsGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccountProjectsLimitsV2LimitsProjectsGetResponse(rsp)
-}
-
-// RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse request returning *RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse
-func (c *ClientWithResponses) RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse, error) {
-	rsp, err := c.RuleDeleteV2LoadbalancersRulesObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse(rsp)
-}
-
-// RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse request returning *RuleDetailV2LoadbalancersRulesObjectIdGetResponse
-func (c *ClientWithResponses) RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDetailV2LoadbalancersRulesObjectIdGetResponse, error) {
-	rsp, err := c.RuleDetailV2LoadbalancersRulesObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse(rsp)
-}
-
-// LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse request returning *LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse
-func (c *ClientWithResponses) LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse, error) {
-	rsp, err := c.LoadBalancerDeleteV2LoadbalancersObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse(rsp)
-}
-
-// LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBodyWithResponse request with arbitrary body returning *LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse
-func (c *ClientWithResponses) LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error) {
-	rsp, err := c.LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) LoadBalancerRenameV2LoadbalancersObjectIdPatchWithResponse(ctx context.Context, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error) {
-	rsp, err := c.LoadBalancerRenameV2LoadbalancersObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp)
-}
-
-// LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBodyWithResponse request with arbitrary body returning *LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse
-func (c *ClientWithResponses) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error) {
-	rsp, err := c.LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error) {
-	rsp, err := c.LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp)
-}
-
-// LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse request returning *LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse
-func (c *ClientWithResponses) LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse, error) {
-	rsp, err := c.LoadBalancerDetailV2LoadbalancersObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse(rsp)
-}
-
-// LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBodyWithResponse request with arbitrary body returning *LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse
-func (c *ClientWithResponses) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error) {
-	rsp, err := c.LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse(rsp)
-}
-
-func (c *ClientWithResponses) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error) {
-	rsp, err := c.LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse(rsp)
-}
-
-// RuleListV2LoadbalancersObjectIdRulesGetWithResponse request returning *RuleListV2LoadbalancersObjectIdRulesGetResponse
-func (c *ClientWithResponses) RuleListV2LoadbalancersObjectIdRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleListV2LoadbalancersObjectIdRulesGetResponse, error) {
-	rsp, err := c.RuleListV2LoadbalancersObjectIdRulesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRuleListV2LoadbalancersObjectIdRulesGetResponse(rsp)
-}
-
-// RuleCreateV2LoadbalancersObjectIdRulesPostWithBodyWithResponse request with arbitrary body returning *RuleCreateV2LoadbalancersObjectIdRulesPostResponse
-func (c *ClientWithResponses) RuleCreateV2LoadbalancersObjectIdRulesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error) {
-	rsp, err := c.RuleCreateV2LoadbalancersObjectIdRulesPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) RuleCreateV2LoadbalancersObjectIdRulesPostWithResponse(ctx context.Context, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error) {
-	rsp, err := c.RuleCreateV2LoadbalancersObjectIdRulesPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse(rsp)
-}
-
-// LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse request returning *LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse
-func (c *ClientWithResponses) LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse, error) {
-	rsp, err := c.LoadBalancerEnableV2LoadbalancersObjectIdStartPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse(rsp)
-}
-
-// LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse request returning *LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse
-func (c *ClientWithResponses) LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse, error) {
-	rsp, err := c.LoadBalancerStatV2LoadbalancersObjectIdStatGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse(rsp)
-}
-
-// LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse request returning *LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse
-func (c *ClientWithResponses) LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse, error) {
-	rsp, err := c.LoadBalancerStopV2LoadbalancersObjectIdStopPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse(rsp)
-}
-
-// LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse request returning *LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse
-func (c *ClientWithResponses) LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse, error) {
-	rsp, err := c.LocalDiskDetailV2LocalDisksObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse(rsp)
-}
-
-// MaintenanceModeStatusV2MaintenanceModeGetWithResponse request returning *MaintenanceModeStatusV2MaintenanceModeGetResponse
-func (c *ClientWithResponses) MaintenanceModeStatusV2MaintenanceModeGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MaintenanceModeStatusV2MaintenanceModeGetResponse, error) {
-	rsp, err := c.MaintenanceModeStatusV2MaintenanceModeGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseMaintenanceModeStatusV2MaintenanceModeGetResponse(rsp)
-}
-
-// ProjectListV2ProjectsGetWithResponse request returning *ProjectListV2ProjectsGetResponse
-func (c *ClientWithResponses) ProjectListV2ProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ProjectListV2ProjectsGetResponse, error) {
-	rsp, err := c.ProjectListV2ProjectsGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectListV2ProjectsGetResponse(rsp)
-}
-
-// ProjectCreateV2ProjectsPostWithBodyWithResponse request with arbitrary body returning *ProjectCreateV2ProjectsPostResponse
-func (c *ClientWithResponses) ProjectCreateV2ProjectsPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ProjectCreateV2ProjectsPostResponse, error) {
-	rsp, err := c.ProjectCreateV2ProjectsPostWithBody(ctx, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectCreateV2ProjectsPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ProjectCreateV2ProjectsPostWithResponse(ctx context.Context, body ProjectCreateV2ProjectsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectCreateV2ProjectsPostResponse, error) {
-	rsp, err := c.ProjectCreateV2ProjectsPost(ctx, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectCreateV2ProjectsPostResponse(rsp)
-}
-
-// ProjectDeleteV2ProjectsObjectIdDeleteWithResponse request returning *ProjectDeleteV2ProjectsObjectIdDeleteResponse
-func (c *ClientWithResponses) ProjectDeleteV2ProjectsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDeleteV2ProjectsObjectIdDeleteResponse, error) {
-	rsp, err := c.ProjectDeleteV2ProjectsObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectDeleteV2ProjectsObjectIdDeleteResponse(rsp)
-}
-
-// ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBodyWithResponse request with arbitrary body returning *ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse
-func (c *ClientWithResponses) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error) {
-	rsp, err := c.ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error) {
-	rsp, err := c.ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp)
-}
-
-// ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse request returning *ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse
-func (c *ClientWithResponses) ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse, error) {
-	rsp, err := c.ProjectAddressesListV2ProjectsObjectIdAddressesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse(rsp)
-}
-
-// AddressCreateV2ProjectsObjectIdAddressesPostWithBodyWithResponse request with arbitrary body returning *AddressCreateV2ProjectsObjectIdAddressesPostResponse
-func (c *ClientWithResponses) AddressCreateV2ProjectsObjectIdAddressesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error) {
-	rsp, err := c.AddressCreateV2ProjectsObjectIdAddressesPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) AddressCreateV2ProjectsObjectIdAddressesPostWithResponse(ctx context.Context, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error) {
-	rsp, err := c.AddressCreateV2ProjectsObjectIdAddressesPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp)
-}
-
-// ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse request returning *ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse
-func (c *ClientWithResponses) ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse, error) {
-	rsp, err := c.ProjectConsumptionV2ProjectsObjectIdConsumptionGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse(rsp)
-}
-
-// ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse request returning *ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse
-func (c *ClientWithResponses) ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse, error) {
-	rsp, err := c.ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse(rsp)
-}
-
-// DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse request returning *DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse
-func (c *ClientWithResponses) DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse, error) {
-	rsp, err := c.DbaasClustersListV2ProjectsObjectIdDbaasClustersGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse(rsp)
-}
-
-// DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBodyWithResponse request with arbitrary body returning *DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse
-func (c *ClientWithResponses) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error) {
-	rsp, err := c.DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithResponse(ctx context.Context, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error) {
-	rsp, err := c.DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp)
-}
-
-// ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse request returning *ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse
-func (c *ClientWithResponses) ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse, error) {
-	rsp, err := c.ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse(rsp)
-}
-
-// ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse request returning *ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse
-func (c *ClientWithResponses) ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse, error) {
-	rsp, err := c.ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse(rsp)
-}
-
-// ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse request returning *ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse
-func (c *ClientWithResponses) ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse, error) {
-	rsp, err := c.ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse(rsp)
-}
-
-// ProjectDetailV2ProjectsObjectIdDetailGetWithResponse request returning *ProjectDetailV2ProjectsObjectIdDetailGetResponse
-func (c *ClientWithResponses) ProjectDetailV2ProjectsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDetailV2ProjectsObjectIdDetailGetResponse, error) {
-	rsp, err := c.ProjectDetailV2ProjectsObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectDetailV2ProjectsObjectIdDetailGetResponse(rsp)
-}
-
-// ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse request returning *ProjectImagesListV2ProjectsObjectIdImagesGetResponse
-func (c *ClientWithResponses) ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectImagesListV2ProjectsObjectIdImagesGetResponse, error) {
-	rsp, err := c.ProjectImagesListV2ProjectsObjectIdImagesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse(rsp)
-}
-
-// KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse request returning *KeyPairsListV2ProjectsObjectIdKeypairsGetResponse
-func (c *ClientWithResponses) KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeyPairsListV2ProjectsObjectIdKeypairsGetResponse, error) {
-	rsp, err := c.KeyPairsListV2ProjectsObjectIdKeypairsGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse(rsp)
-}
-
-// ImportKeypairV2ProjectsObjectIdKeypairsPostWithBodyWithResponse request with arbitrary body returning *ImportKeypairV2ProjectsObjectIdKeypairsPostResponse
-func (c *ClientWithResponses) ImportKeypairV2ProjectsObjectIdKeypairsPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error) {
-	rsp, err := c.ImportKeypairV2ProjectsObjectIdKeypairsPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ImportKeypairV2ProjectsObjectIdKeypairsPostWithResponse(ctx context.Context, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error) {
-	rsp, err := c.ImportKeypairV2ProjectsObjectIdKeypairsPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp)
-}
-
-// GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBodyWithResponse request with arbitrary body returning *GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse
-func (c *ClientWithResponses) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error) {
-	rsp, err := c.GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp)
-}
-
-func (c *ClientWithResponses) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithResponse(ctx context.Context, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody, reqEditors ...RequestEditorFn) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error) {
-	rsp, err := c.GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp)
-}
-
-// ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse request returning *ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse
-func (c *ClientWithResponses) ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse, error) {
-	rsp, err := c.ProjectLimitsListV2ProjectsObjectIdLimitsGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse(rsp)
-}
-
-// ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBodyWithResponse request with arbitrary body returning *ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse
-func (c *ClientWithResponses) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error) {
-	rsp, err := c.ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error) {
-	rsp, err := c.ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp)
-}
-
-// LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse request returning *LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse
-func (c *ClientWithResponses) LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse, error) {
-	rsp, err := c.LoadBalancerListV2ProjectsObjectIdLoadbalancersGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse(rsp)
-}
-
-// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBodyWithResponse request with arbitrary body returning *LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse
-func (c *ClientWithResponses) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error) {
-	rsp, err := c.LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithResponse(ctx context.Context, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error) {
-	rsp, err := c.LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp)
-}
-
-// ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse request returning *ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse
-func (c *ClientWithResponses) ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse, error) {
-	rsp, err := c.ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse(rsp)
-}
-
-// ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse request returning *ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse
-func (c *ClientWithResponses) ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse, error) {
-	rsp, err := c.ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse(rsp)
-}
-
-// NetworksListV2ProjectsObjectIdNetworksGetWithResponse request returning *NetworksListV2ProjectsObjectIdNetworksGetResponse
-func (c *ClientWithResponses) NetworksListV2ProjectsObjectIdNetworksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*NetworksListV2ProjectsObjectIdNetworksGetResponse, error) {
-	rsp, err := c.NetworksListV2ProjectsObjectIdNetworksGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseNetworksListV2ProjectsObjectIdNetworksGetResponse(rsp)
-}
-
-// ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse request returning *ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse
-func (c *ClientWithResponses) ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse, error) {
-	rsp, err := c.ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse(rsp)
-}
-
-// ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse request returning *ProjectRecipesV2ProjectsObjectIdRecipesGetResponse
-func (c *ClientWithResponses) ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRecipesV2ProjectsObjectIdRecipesGetResponse, error) {
-	rsp, err := c.ProjectRecipesV2ProjectsObjectIdRecipesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse(rsp)
-}
-
-// S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse request returning *S3UsersListV2ProjectsObjectIdS3UsersGetResponse
-func (c *ClientWithResponses) S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UsersListV2ProjectsObjectIdS3UsersGetResponse, error) {
-	rsp, err := c.S3UsersListV2ProjectsObjectIdS3UsersGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse(rsp)
-}
-
-// S3UserCreateV2ProjectsObjectIdS3UsersPostWithBodyWithResponse request with arbitrary body returning *S3UserCreateV2ProjectsObjectIdS3UsersPostResponse
-func (c *ClientWithResponses) S3UserCreateV2ProjectsObjectIdS3UsersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error) {
-	rsp, err := c.S3UserCreateV2ProjectsObjectIdS3UsersPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) S3UserCreateV2ProjectsObjectIdS3UsersPostWithResponse(ctx context.Context, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error) {
-	rsp, err := c.S3UserCreateV2ProjectsObjectIdS3UsersPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp)
-}
-
-// ProjectServerListV2ProjectsObjectIdServersGetWithResponse request returning *ProjectServerListV2ProjectsObjectIdServersGetResponse
-func (c *ClientWithResponses) ProjectServerListV2ProjectsObjectIdServersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerListV2ProjectsObjectIdServersGetResponse, error) {
-	rsp, err := c.ProjectServerListV2ProjectsObjectIdServersGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectServerListV2ProjectsObjectIdServersGetResponse(rsp)
-}
-
-// ServerCreateV2ProjectsObjectIdServersPostWithBodyWithResponse request with arbitrary body returning *ServerCreateV2ProjectsObjectIdServersPostResponse
-func (c *ClientWithResponses) ServerCreateV2ProjectsObjectIdServersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error) {
-	rsp, err := c.ServerCreateV2ProjectsObjectIdServersPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ServerCreateV2ProjectsObjectIdServersPostWithResponse(ctx context.Context, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error) {
-	rsp, err := c.ServerCreateV2ProjectsObjectIdServersPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp)
-}
-
-// ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse request returning *ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse
-func (c *ClientWithResponses) ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse, error) {
-	rsp, err := c.ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse(rsp)
-}
-
-// SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse request returning *SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse
-func (c *ClientWithResponses) SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse, error) {
-	rsp, err := c.SnapshotsListV2ProjectsObjectIdSnapshotsGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse(rsp)
-}
-
-// ProjectStartV2ProjectsObjectIdStartPostWithResponse request returning *ProjectStartV2ProjectsObjectIdStartPostResponse
-func (c *ClientWithResponses) ProjectStartV2ProjectsObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStartV2ProjectsObjectIdStartPostResponse, error) {
-	rsp, err := c.ProjectStartV2ProjectsObjectIdStartPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectStartV2ProjectsObjectIdStartPostResponse(rsp)
-}
-
-// ProjectStopV2ProjectsObjectIdStopPostWithResponse request returning *ProjectStopV2ProjectsObjectIdStopPostResponse
-func (c *ClientWithResponses) ProjectStopV2ProjectsObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStopV2ProjectsObjectIdStopPostResponse, error) {
-	rsp, err := c.ProjectStopV2ProjectsObjectIdStopPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectStopV2ProjectsObjectIdStopPostResponse(rsp)
-}
-
-// ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse request returning *ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse
-func (c *ClientWithResponses) ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse, error) {
-	rsp, err := c.ProjectVolumesListV2ProjectsObjectIdVolumesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse(rsp)
-}
-
-// VolumeCreateV2ProjectsObjectIdVolumesPostWithBodyWithResponse request with arbitrary body returning *VolumeCreateV2ProjectsObjectIdVolumesPostResponse
-func (c *ClientWithResponses) VolumeCreateV2ProjectsObjectIdVolumesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error) {
-	rsp, err := c.VolumeCreateV2ProjectsObjectIdVolumesPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) VolumeCreateV2ProjectsObjectIdVolumesPostWithResponse(ctx context.Context, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error) {
-	rsp, err := c.VolumeCreateV2ProjectsObjectIdVolumesPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp)
-}
-
-// ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse request returning *ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse
-func (c *ClientWithResponses) ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse, error) {
-	rsp, err := c.ProjectVrouterListV2ProjectsObjectIdVroutersGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse(rsp)
-}
-
-// VrouterCreateV2ProjectsObjectIdVroutersPostWithBodyWithResponse request with arbitrary body returning *VrouterCreateV2ProjectsObjectIdVroutersPostResponse
-func (c *ClientWithResponses) VrouterCreateV2ProjectsObjectIdVroutersPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error) {
-	rsp, err := c.VrouterCreateV2ProjectsObjectIdVroutersPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) VrouterCreateV2ProjectsObjectIdVroutersPostWithResponse(ctx context.Context, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error) {
-	rsp, err := c.VrouterCreateV2ProjectsObjectIdVroutersPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp)
-}
-
-// S3UserDeleteV2S3UsersObjectIdDeleteWithResponse request returning *S3UserDeleteV2S3UsersObjectIdDeleteResponse
-func (c *ClientWithResponses) S3UserDeleteV2S3UsersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDeleteV2S3UsersObjectIdDeleteResponse, error) {
-	rsp, err := c.S3UserDeleteV2S3UsersObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse(rsp)
-}
-
-// S3UserUpdateV2S3UsersObjectIdPatchWithBodyWithResponse request with arbitrary body returning *S3UserUpdateV2S3UsersObjectIdPatchResponse
-func (c *ClientWithResponses) S3UserUpdateV2S3UsersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error) {
-	rsp, err := c.S3UserUpdateV2S3UsersObjectIdPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) S3UserUpdateV2S3UsersObjectIdPatchWithResponse(ctx context.Context, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error) {
-	rsp, err := c.S3UserUpdateV2S3UsersObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp)
-}
-
-// S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse request returning *S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse
-func (c *ClientWithResponses) S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse, error) {
-	rsp, err := c.S3GetUserKeysV2S3UsersObjectIdCredentialsGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse(rsp)
-}
-
-// S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse request returning *S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse
-func (c *ClientWithResponses) S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse, error) {
-	rsp, err := c.S3GenUserKeysV2S3UsersObjectIdCredentialsPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse(rsp)
-}
-
-// S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse request returning *S3UserDetailsV2S3UsersObjectIdDetailGetResponse
-func (c *ClientWithResponses) S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDetailsV2S3UsersObjectIdDetailGetResponse, error) {
-	rsp, err := c.S3UserDetailsV2S3UsersObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse(rsp)
-}
-
-// S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBodyWithResponse request with arbitrary body returning *S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse
-func (c *ClientWithResponses) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error) {
-	rsp, err := c.S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse(rsp)
-}
-
-func (c *ClientWithResponses) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithResponse(ctx context.Context, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error) {
-	rsp, err := c.S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse(rsp)
-}
-
-// S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse request returning *S3UserSuspendV2S3UsersObjectIdSuspendPostResponse
-func (c *ClientWithResponses) S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserSuspendV2S3UsersObjectIdSuspendPostResponse, error) {
-	rsp, err := c.S3UserSuspendV2S3UsersObjectIdSuspendPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse(rsp)
-}
-
-// S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse request returning *S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse
-func (c *ClientWithResponses) S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse, error) {
-	rsp, err := c.S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse(rsp)
-}
-
-// ServerDeleteV2ServersObjectIdDeleteWithBodyWithResponse request with arbitrary body returning *ServerDeleteV2ServersObjectIdDeleteResponse
-func (c *ClientWithResponses) ServerDeleteV2ServersObjectIdDeleteWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerDeleteV2ServersObjectIdDeleteResponse, error) {
-	rsp, err := c.ServerDeleteV2ServersObjectIdDeleteWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerDeleteV2ServersObjectIdDeleteResponse(rsp)
-}
-
-func (c *ClientWithResponses) ServerDeleteV2ServersObjectIdDeleteWithResponse(ctx context.Context, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerDeleteV2ServersObjectIdDeleteResponse, error) {
-	rsp, err := c.ServerDeleteV2ServersObjectIdDelete(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerDeleteV2ServersObjectIdDeleteResponse(rsp)
-}
-
-// ServerUpdateV2ServersObjectIdPatchWithBodyWithResponse request with arbitrary body returning *ServerUpdateV2ServersObjectIdPatchResponse
-func (c *ClientWithResponses) ServerUpdateV2ServersObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerUpdateV2ServersObjectIdPatchResponse, error) {
-	rsp, err := c.ServerUpdateV2ServersObjectIdPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerUpdateV2ServersObjectIdPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) ServerUpdateV2ServersObjectIdPatchWithResponse(ctx context.Context, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerUpdateV2ServersObjectIdPatchResponse, error) {
-	rsp, err := c.ServerUpdateV2ServersObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerUpdateV2ServersObjectIdPatchResponse(rsp)
-}
-
-// ServerConsoleV2ServersObjectIdConsolePostWithResponse request returning *ServerConsoleV2ServersObjectIdConsolePostResponse
-func (c *ClientWithResponses) ServerConsoleV2ServersObjectIdConsolePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerConsoleV2ServersObjectIdConsolePostResponse, error) {
-	rsp, err := c.ServerConsoleV2ServersObjectIdConsolePost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerConsoleV2ServersObjectIdConsolePostResponse(rsp)
-}
-
-// ServerDetailV2ServersObjectIdDetailGetWithResponse request returning *ServerDetailV2ServersObjectIdDetailGetResponse
-func (c *ClientWithResponses) ServerDetailV2ServersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerDetailV2ServersObjectIdDetailGetResponse, error) {
-	rsp, err := c.ServerDetailV2ServersObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerDetailV2ServersObjectIdDetailGetResponse(rsp)
-}
-
-// ServerLicensesV2ServersObjectIdLicensesGetWithResponse request returning *ServerLicensesV2ServersObjectIdLicensesGetResponse
-func (c *ClientWithResponses) ServerLicensesV2ServersObjectIdLicensesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerLicensesV2ServersObjectIdLicensesGetResponse, error) {
-	rsp, err := c.ServerLicensesV2ServersObjectIdLicensesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerLicensesV2ServersObjectIdLicensesGetResponse(rsp)
-}
-
-// ServerAddLicenseV2ServersObjectIdLicensesPostWithBodyWithResponse request with arbitrary body returning *ServerAddLicenseV2ServersObjectIdLicensesPostResponse
-func (c *ClientWithResponses) ServerAddLicenseV2ServersObjectIdLicensesPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error) {
-	rsp, err := c.ServerAddLicenseV2ServersObjectIdLicensesPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ServerAddLicenseV2ServersObjectIdLicensesPostWithResponse(ctx context.Context, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error) {
-	rsp, err := c.ServerAddLicenseV2ServersObjectIdLicensesPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp)
-}
-
-// ServerChangePasswordV2ServersObjectIdPasswordPostWithBodyWithResponse request with arbitrary body returning *ServerChangePasswordV2ServersObjectIdPasswordPostResponse
-func (c *ClientWithResponses) ServerChangePasswordV2ServersObjectIdPasswordPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error) {
-	rsp, err := c.ServerChangePasswordV2ServersObjectIdPasswordPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ServerChangePasswordV2ServersObjectIdPasswordPostWithResponse(ctx context.Context, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error) {
-	rsp, err := c.ServerChangePasswordV2ServersObjectIdPasswordPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse(rsp)
-}
-
-// ServerRebootV2ServersObjectIdRebootPostWithResponse request returning *ServerRebootV2ServersObjectIdRebootPostResponse
-func (c *ClientWithResponses) ServerRebootV2ServersObjectIdRebootPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRebootV2ServersObjectIdRebootPostResponse, error) {
-	rsp, err := c.ServerRebootV2ServersObjectIdRebootPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerRebootV2ServersObjectIdRebootPostResponse(rsp)
-}
-
-// ServerRescueV2ServersObjectIdRescuePostWithResponse request returning *ServerRescueV2ServersObjectIdRescuePostResponse
-func (c *ClientWithResponses) ServerRescueV2ServersObjectIdRescuePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRescueV2ServersObjectIdRescuePostResponse, error) {
-	rsp, err := c.ServerRescueV2ServersObjectIdRescuePost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerRescueV2ServersObjectIdRescuePostResponse(rsp)
-}
-
-// ServerResizeV2ServersObjectIdResizePostWithBodyWithResponse request with arbitrary body returning *ServerResizeV2ServersObjectIdResizePostResponse
-func (c *ClientWithResponses) ServerResizeV2ServersObjectIdResizePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServerResizeV2ServersObjectIdResizePostResponse, error) {
-	rsp, err := c.ServerResizeV2ServersObjectIdResizePostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerResizeV2ServersObjectIdResizePostResponse(rsp)
-}
-
-func (c *ClientWithResponses) ServerResizeV2ServersObjectIdResizePostWithResponse(ctx context.Context, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerResizeV2ServersObjectIdResizePostResponse, error) {
-	rsp, err := c.ServerResizeV2ServersObjectIdResizePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerResizeV2ServersObjectIdResizePostResponse(rsp)
-}
-
-// CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBodyWithResponse request with arbitrary body returning *CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse
-func (c *ClientWithResponses) CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error) {
-	rsp, err := c.CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) CreateServerSnapshotV2ServersObjectIdSnapshotPostWithResponse(ctx context.Context, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error) {
-	rsp, err := c.CreateServerSnapshotV2ServersObjectIdSnapshotPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp)
-}
-
-// ServerStartV2ServersObjectIdStartPostWithResponse request returning *ServerStartV2ServersObjectIdStartPostResponse
-func (c *ClientWithResponses) ServerStartV2ServersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStartV2ServersObjectIdStartPostResponse, error) {
-	rsp, err := c.ServerStartV2ServersObjectIdStartPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerStartV2ServersObjectIdStartPostResponse(rsp)
-}
-
-// ServerStopV2ServersObjectIdStopPostWithResponse request returning *ServerStopV2ServersObjectIdStopPostResponse
-func (c *ClientWithResponses) ServerStopV2ServersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStopV2ServersObjectIdStopPostResponse, error) {
-	rsp, err := c.ServerStopV2ServersObjectIdStopPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerStopV2ServersObjectIdStopPostResponse(rsp)
-}
-
-// SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse request returning *SnapshotDeleteV2SnapshotsObjectIdDeleteResponse
-func (c *ClientWithResponses) SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDeleteV2SnapshotsObjectIdDeleteResponse, error) {
-	rsp, err := c.SnapshotDeleteV2SnapshotsObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse(rsp)
-}
-
-// SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse request returning *SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse
-func (c *ClientWithResponses) SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse, error) {
-	rsp, err := c.SnapshotDetailsV2SnapshotsObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse(rsp)
-}
-
-// SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBodyWithResponse request with arbitrary body returning *SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse
-func (c *ClientWithResponses) SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error) {
-	rsp, err := c.SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp)
-}
-
-func (c *ClientWithResponses) SnapshotRestoreV2SnapshotsObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error) {
-	rsp, err := c.SnapshotRestoreV2SnapshotsObjectIdRestorePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp)
-}
-
-// AccountStatV2StatGetWithResponse request returning *AccountStatV2StatGetResponse
-func (c *ClientWithResponses) AccountStatV2StatGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountStatV2StatGetResponse, error) {
-	rsp, err := c.AccountStatV2StatGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAccountStatV2StatGetResponse(rsp)
-}
-
-// VolumeDeleteV2VolumesObjectIdDeleteWithBodyWithResponse request with arbitrary body returning *VolumeDeleteV2VolumesObjectIdDeleteResponse
-func (c *ClientWithResponses) VolumeDeleteV2VolumesObjectIdDeleteWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error) {
-	rsp, err := c.VolumeDeleteV2VolumesObjectIdDeleteWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp)
-}
-
-func (c *ClientWithResponses) VolumeDeleteV2VolumesObjectIdDeleteWithResponse(ctx context.Context, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error) {
-	rsp, err := c.VolumeDeleteV2VolumesObjectIdDelete(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp)
-}
-
-// VolumeUpdateV2VolumesObjectIdPatchWithBodyWithResponse request with arbitrary body returning *VolumeUpdateV2VolumesObjectIdPatchResponse
-func (c *ClientWithResponses) VolumeUpdateV2VolumesObjectIdPatchWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error) {
-	rsp, err := c.VolumeUpdateV2VolumesObjectIdPatchWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeUpdateV2VolumesObjectIdPatchResponse(rsp)
-}
-
-func (c *ClientWithResponses) VolumeUpdateV2VolumesObjectIdPatchWithResponse(ctx context.Context, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error) {
-	rsp, err := c.VolumeUpdateV2VolumesObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeUpdateV2VolumesObjectIdPatchResponse(rsp)
-}
-
-// VolumeAttachV2VolumesObjectIdAttachPostWithBodyWithResponse request with arbitrary body returning *VolumeAttachV2VolumesObjectIdAttachPostResponse
-func (c *ClientWithResponses) VolumeAttachV2VolumesObjectIdAttachPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error) {
-	rsp, err := c.VolumeAttachV2VolumesObjectIdAttachPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) VolumeAttachV2VolumesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error) {
-	rsp, err := c.VolumeAttachV2VolumesObjectIdAttachPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp)
-}
-
-// VolumeDetachV2VolumesObjectIdDetachPostWithBodyWithResponse request with arbitrary body returning *VolumeDetachV2VolumesObjectIdDetachPostResponse
-func (c *ClientWithResponses) VolumeDetachV2VolumesObjectIdDetachPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error) {
-	rsp, err := c.VolumeDetachV2VolumesObjectIdDetachPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) VolumeDetachV2VolumesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error) {
-	rsp, err := c.VolumeDetachV2VolumesObjectIdDetachPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp)
-}
-
-// VolumeDetailV2VolumesObjectIdDetailGetWithResponse request returning *VolumeDetailV2VolumesObjectIdDetailGetResponse
-func (c *ClientWithResponses) VolumeDetailV2VolumesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VolumeDetailV2VolumesObjectIdDetailGetResponse, error) {
-	rsp, err := c.VolumeDetailV2VolumesObjectIdDetailGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeDetailV2VolumesObjectIdDetailGetResponse(rsp)
-}
-
-// VolumeExtendV2VolumesObjectIdExtendPostWithBodyWithResponse request with arbitrary body returning *VolumeExtendV2VolumesObjectIdExtendPostResponse
-func (c *ClientWithResponses) VolumeExtendV2VolumesObjectIdExtendPostWithBodyWithResponse(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error) {
-	rsp, err := c.VolumeExtendV2VolumesObjectIdExtendPostWithBody(ctx, objectId, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp)
-}
-
-func (c *ClientWithResponses) VolumeExtendV2VolumesObjectIdExtendPostWithResponse(ctx context.Context, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error) {
-	rsp, err := c.VolumeExtendV2VolumesObjectIdExtendPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp)
-}
-
-// VrouterDeleteV2VroutersObjectIdDeleteWithResponse request returning *VrouterDeleteV2VroutersObjectIdDeleteResponse
-func (c *ClientWithResponses) VrouterDeleteV2VroutersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDeleteV2VroutersObjectIdDeleteResponse, error) {
-	rsp, err := c.VrouterDeleteV2VroutersObjectIdDelete(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVrouterDeleteV2VroutersObjectIdDeleteResponse(rsp)
-}
-
-// VrouterDetailV2VroutersObjectIdGetWithResponse request returning *VrouterDetailV2VroutersObjectIdGetResponse
-func (c *ClientWithResponses) VrouterDetailV2VroutersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDetailV2VroutersObjectIdGetResponse, error) {
-	rsp, err := c.VrouterDetailV2VroutersObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVrouterDetailV2VroutersObjectIdGetResponse(rsp)
-}
-
-// VrouterStartV2VroutersObjectIdStartPostWithResponse request returning *VrouterStartV2VroutersObjectIdStartPostResponse
-func (c *ClientWithResponses) VrouterStartV2VroutersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStartV2VroutersObjectIdStartPostResponse, error) {
-	rsp, err := c.VrouterStartV2VroutersObjectIdStartPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVrouterStartV2VroutersObjectIdStartPostResponse(rsp)
+type AddressDeleteV2AddressesObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
 }
 
-// VrouterStopV2VroutersObjectIdStopPostWithResponse request returning *VrouterStopV2VroutersObjectIdStopPostResponse
-func (c *ClientWithResponses) VrouterStopV2VroutersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStopV2VroutersObjectIdStopPostResponse, error) {
-	rsp, err := c.VrouterStopV2VroutersObjectIdStopPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
+func (r AddressDeleteV2AddressesObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
 	}
-	return ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp)
+	return 0
 }
 
-// ParseAddressDeleteV2AddressesObjectIdDeleteResponse parses an HTTP response from a AddressDeleteV2AddressesObjectIdDeleteWithResponse call
 func ParseAddressDeleteV2AddressesObjectIdDeleteResponse(rsp *http.Response) (*AddressDeleteV2AddressesObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -13850,10 +9233,47 @@ func ParseAddressDeleteV2AddressesObjectIdDeleteResponse(rsp *http.Response) (*A
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseAddressAttachV2AddressesObjectIdAttachPostResponse parses an HTTP response from a AddressAttachV2AddressesObjectIdAttachPostWithResponse call
+func (c *ClientWithResponses) AddressAttachV2AddressesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error) {
+	rsp, err := c.AddressAttachV2AddressesObjectIdAttachPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp)
+}
+
+type AddressAttachV2AddressesObjectIdAttachPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r AddressAttachV2AddressesObjectIdAttachPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp *http.Response) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -13866,20 +9286,50 @@ func ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp *http.Response)
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse parses an HTTP response from a AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithResponse call
+func (c *ClientWithResponses) AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithResponse(ctx context.Context, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error) {
+	rsp, err := c.AddressChangeBandwidthV2AddressesObjectIdBandwidthPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp)
+}
+
+type AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp *http.Response) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -13892,20 +9342,50 @@ func ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp *ht
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAddressDetachV2AddressesObjectIdDetachPostResponse parses an HTTP response from a AddressDetachV2AddressesObjectIdDetachPostWithResponse call
+func (c *ClientWithResponses) AddressDetachV2AddressesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetachV2AddressesObjectIdDetachPostResponse, error) {
+	rsp, err := c.AddressDetachV2AddressesObjectIdDetachPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddressDetachV2AddressesObjectIdDetachPostResponse(rsp)
+}
+
+type AddressDetachV2AddressesObjectIdDetachPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r AddressDetachV2AddressesObjectIdDetachPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAddressDetachV2AddressesObjectIdDetachPostResponse(rsp *http.Response) (*AddressDetachV2AddressesObjectIdDetachPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -13918,20 +9398,50 @@ func ParseAddressDetachV2AddressesObjectIdDetachPostResponse(rsp *http.Response)
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAddressDetailV2AddressesObjectIdDetailGetResponse parses an HTTP response from a AddressDetailV2AddressesObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) AddressDetailV2AddressesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetailV2AddressesObjectIdDetailGetResponse, error) {
+	rsp, err := c.AddressDetailV2AddressesObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddressDetailV2AddressesObjectIdDetailGetResponse(rsp)
+}
+
+type AddressDetailV2AddressesObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *AddressDetailSchema
+	Error        *ApiError
+}
+
+func (r AddressDetailV2AddressesObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAddressDetailV2AddressesObjectIdDetailGetResponse(rsp *http.Response) (*AddressDetailV2AddressesObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -13944,20 +9454,50 @@ func ParseAddressDetailV2AddressesObjectIdDetailGetResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AddressDetailSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse parses an HTTP response from a AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse call
+func (c *ClientWithResponses) AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse, error) {
+	rsp, err := c.AddressSetPrimaryV2AddressesObjectIdPrimaryPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse(rsp)
+}
+
+type AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse(rsp *http.Response) (*AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -13970,20 +9510,50 @@ func ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse(rsp *http.Resp
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse parses an HTTP response from a AddressEditPtrV2AddressesObjectIdPtrPutWithResponse call
+func (c *ClientWithResponses) AddressEditPtrV2AddressesObjectIdPtrPutWithResponse(ctx context.Context, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error) {
+	rsp, err := c.AddressEditPtrV2AddressesObjectIdPtrPut(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp)
+}
+
+type AddressEditPtrV2AddressesObjectIdPtrPutResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r AddressEditPtrV2AddressesObjectIdPtrPutResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp *http.Response) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -13996,20 +9566,50 @@ func ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAccountBalanceV2BalanceGetResponse parses an HTTP response from a AccountBalanceV2BalanceGetWithResponse call
+func (c *ClientWithResponses) AccountBalanceV2BalanceGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountBalanceV2BalanceGetResponse, error) {
+	rsp, err := c.AccountBalanceV2BalanceGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccountBalanceV2BalanceGetResponse(rsp)
+}
+
+type AccountBalanceV2BalanceGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedAccountBalanceSchema46260ce3
+	Error        *ApiError
+}
+
+func (r AccountBalanceV2BalanceGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAccountBalanceV2BalanceGetResponse(rsp *http.Response) (*AccountBalanceV2BalanceGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14022,20 +9622,49 @@ func ParseAccountBalanceV2BalanceGetResponse(rsp *http.Response) (*AccountBalanc
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedAccountBalanceSchema46260ce3
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse parses an HTTP response from a DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithResponse(ctx context.Context, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error) {
+	rsp, err := c.DbaasBackupDeleteV2DbaasBackupsObjectIdDelete(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp)
+}
+
+type DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp *http.Response) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14048,10 +9677,47 @@ func ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp *http.Respon
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseDbaasBackupDetailV2DbaasBackupsObjectIdGetResponse parses an HTTP response from a DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse call
+func (c *ClientWithResponses) DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse, error) {
+	rsp, err := c.DbaasBackupDetailV2DbaasBackupsObjectIdGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasBackupDetailV2DbaasBackupsObjectIdGetResponse(rsp)
+}
+
+type DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedDbaasBackupSchemaFe2230a5
+	Error        *ApiError
+}
+
+func (r DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasBackupDetailV2DbaasBackupsObjectIdGetResponse(rsp *http.Response) (*DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14064,20 +9730,50 @@ func ParseDbaasBackupDetailV2DbaasBackupsObjectIdGetResponse(rsp *http.Response)
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedDbaasBackupSchemaFe2230a5
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse parses an HTTP response from a DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse call
+func (c *ClientWithResponses) DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse, error) {
+	rsp, err := c.DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse(rsp)
+}
+
+type DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedBackupDownloadUrlSchemaFe055748
+	Error        *ApiError
+}
+
+func (r DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse(rsp *http.Response) (*DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14090,20 +9786,49 @@ func ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse(rsp *htt
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedBackupDownloadUrlSchemaFe055748
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse parses an HTTP response from a DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse, error) {
+	rsp, err := c.DbaasClusterDeleteV2DbaasClustersObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse(rsp)
+}
+
+type DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse(rsp *http.Response) (*DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14116,10 +9841,47 @@ func ParseDbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse(rsp *http.Resp
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse parses an HTTP response from a DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse call
+func (c *ClientWithResponses) DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDetailV2DbaasClustersObjectIdGetResponse, error) {
+	rsp, err := c.DbaasClusterDetailV2DbaasClustersObjectIdGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse(rsp)
+}
+
+type DbaasClusterDetailV2DbaasClustersObjectIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedDbaasClusterSchema231aca90
+	Error        *ApiError
+}
+
+func (r DbaasClusterDetailV2DbaasClustersObjectIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse(rsp *http.Response) (*DbaasClusterDetailV2DbaasClustersObjectIdGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14132,20 +9894,50 @@ func ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse(rsp *http.Respons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedDbaasClusterSchema231aca90
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse parses an HTTP response from a DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithResponse call
+func (c *ClientWithResponses) DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithResponse(ctx context.Context, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error) {
+	rsp, err := c.DbaasClusterUpdateV2DbaasClustersObjectIdPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp)
+}
+
+type DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp *http.Response) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14158,20 +9950,50 @@ func ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp *http.Respo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse parses an HTTP response from a DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithResponse call
+func (c *ClientWithResponses) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error) {
+	rsp, err := c.DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp)
+}
+
+type DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchemaCf8a9b8e
+	Error        *ApiError
+}
+
+func (r DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp *http.Response) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14184,20 +10006,50 @@ func ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchemaCf8a9b8e
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse parses an HTTP response from a DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse call
+func (c *ClientWithResponses) DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse, error) {
+	rsp, err := c.DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse(rsp)
+}
+
+type DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse(rsp *http.Response) (*DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14210,20 +10062,50 @@ func ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostRespo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse parses an HTTP response from a DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse call
+func (c *ClientWithResponses) DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse, error) {
+	rsp, err := c.DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse(rsp)
+}
+
+type DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse(rsp *http.Response) (*DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14236,20 +10118,50 @@ func ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostRespons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse parses an HTTP response from a DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse call
+func (c *ClientWithResponses) DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse, error) {
+	rsp, err := c.DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse(rsp)
+}
+
+type DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedDbaasClusterConfigSchemaB76b790a
+	Error        *ApiError
+}
+
+func (r DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse(rsp *http.Response) (*DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14262,20 +10174,50 @@ func ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse(rsp 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedDbaasClusterConfigSchemaB76b790a
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse parses an HTTP response from a ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse call
+func (c *ClientWithResponses) ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse, error) {
+	rsp, err := c.ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse(rsp)
+}
+
+type ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListDbaasDatababaseSchema4fa94ee6
+	Error        *ApiError
+}
+
+func (r ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse(rsp *http.Response) (*ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14288,20 +10230,50 @@ func ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse(r
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListDbaasDatababaseSchema4fa94ee6
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse parses an HTTP response from a ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithResponse call
+func (c *ClientWithResponses) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithResponse(ctx context.Context, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error) {
+	rsp, err := c.ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp)
+}
+
+type ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema6cec8e2e
+	Error        *ApiError
+}
+
+func (r ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp *http.Response) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14314,20 +10286,50 @@ func ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp *ht
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchema6cec8e2e
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse parses an HTTP response from a ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse call
+func (c *ClientWithResponses) ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse, error) {
+	rsp, err := c.ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse(rsp)
+}
+
+type ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListDbaasNodeSchema5c2603d5
+	Error        *ApiError
+}
+
+func (r ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse(rsp *http.Response) (*ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14340,20 +10342,50 @@ func ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse(rsp *http
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListDbaasNodeSchema5c2603d5
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse parses an HTTP response from a DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithResponse call
+func (c *ClientWithResponses) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error) {
+	rsp, err := c.DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(rsp)
+}
+
+type DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(rsp *http.Response) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14366,20 +10398,50 @@ func ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(r
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse parses an HTTP response from a DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithResponse call
+func (c *ClientWithResponses) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error) {
+	rsp, err := c.DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse(rsp)
+}
+
+type DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse(rsp *http.Response) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14392,20 +10454,50 @@ func ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRespo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse parses an HTTP response from a DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse call
+func (c *ClientWithResponses) DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse, error) {
+	rsp, err := c.DbaasClusterStartV2DbaasClustersObjectIdStartPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse(rsp)
+}
+
+type DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse(rsp *http.Response) (*DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14418,20 +10510,50 @@ func ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse(rsp *http.Re
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse parses an HTTP response from a DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse call
+func (c *ClientWithResponses) DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse, error) {
+	rsp, err := c.DbaasClusterStopV2DbaasClustersObjectIdStopPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse(rsp)
+}
+
+type DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse(rsp *http.Response) (*DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14444,20 +10566,49 @@ func ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse(rsp *http.Resp
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse parses an HTTP response from a DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse, error) {
+	rsp, err := c.DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse(rsp)
+}
+
+type DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse(rsp *http.Response) (*DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14470,10 +10621,47 @@ func ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse(rsp *http.Re
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse parses an HTTP response from a DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse call
+func (c *ClientWithResponses) DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse, error) {
+	rsp, err := c.DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse(rsp)
+}
+
+type DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedDbaasDatababaseSchemaA793d113
+	Error        *ApiError
+}
+
+func (r DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse(rsp *http.Response) (*DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14486,20 +10674,50 @@ func ParseDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse(rsp *http.Respo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedDbaasDatababaseSchemaA793d113
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse parses an HTTP response from a ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithResponse call
+func (c *ClientWithResponses) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error) {
+	rsp, err := c.ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(rsp)
+}
+
+type ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema3e9ee2b0
+	Error        *ApiError
+}
+
+func (r ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(rsp *http.Response) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14512,20 +10730,50 @@ func ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchema3e9ee2b0
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse parses an HTTP response from a DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse call
+func (c *ClientWithResponses) DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse, error) {
+	rsp, err := c.DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse(rsp)
+}
+
+type DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse(rsp *http.Response) (*DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14538,20 +10786,50 @@ func ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostRes
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse parses an HTTP response from a DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse call
+func (c *ClientWithResponses) DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse, error) {
+	rsp, err := c.DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse(rsp)
+}
+
+type DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse(rsp *http.Response) (*DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14564,20 +10842,50 @@ func ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostRespo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse parses an HTTP response from a DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithResponse call
+func (c *ClientWithResponses) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error) {
+	rsp, err := c.DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(rsp)
+}
+
+type DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(rsp *http.Response) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14590,20 +10898,49 @@ func ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(r
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse parses an HTTP response from a KeypairDeleteV2KeypairsObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) KeypairDeleteV2KeypairsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDeleteV2KeypairsObjectIdDeleteResponse, error) {
+	rsp, err := c.KeypairDeleteV2KeypairsObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse(rsp)
+}
+
+type KeypairDeleteV2KeypairsObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r KeypairDeleteV2KeypairsObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse(rsp *http.Response) (*KeypairDeleteV2KeypairsObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14616,10 +10953,47 @@ func ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse(rsp *http.Response) (*Ke
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseKeypairDetailV2KeypairsObjectIdDetailGetResponse parses an HTTP response from a KeypairDetailV2KeypairsObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) KeypairDetailV2KeypairsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDetailV2KeypairsObjectIdDetailGetResponse, error) {
+	rsp, err := c.KeypairDetailV2KeypairsObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseKeypairDetailV2KeypairsObjectIdDetailGetResponse(rsp)
+}
+
+type KeypairDetailV2KeypairsObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedKeyPairSchema8ec23069
+	Error        *ApiError
+}
+
+func (r KeypairDetailV2KeypairsObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseKeypairDetailV2KeypairsObjectIdDetailGetResponse(rsp *http.Response) (*KeypairDetailV2KeypairsObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14632,20 +11006,50 @@ func ParseKeypairDetailV2KeypairsObjectIdDetailGetResponse(rsp *http.Response) (
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedKeyPairSchema8ec23069
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAvailableLicensesListV2LicensesGetResponse parses an HTTP response from a AvailableLicensesListV2LicensesGetWithResponse call
+func (c *ClientWithResponses) AvailableLicensesListV2LicensesGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AvailableLicensesListV2LicensesGetResponse, error) {
+	rsp, err := c.AvailableLicensesListV2LicensesGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAvailableLicensesListV2LicensesGetResponse(rsp)
+}
+
+type AvailableLicensesListV2LicensesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListLicenseOfferSchema10f594e4
+	Error        *ApiError
+}
+
+func (r AvailableLicensesListV2LicensesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAvailableLicensesListV2LicensesGetResponse(rsp *http.Response) (*AvailableLicensesListV2LicensesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14658,20 +11062,49 @@ func ParseAvailableLicensesListV2LicensesGetResponse(rsp *http.Response) (*Avail
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListLicenseOfferSchema10f594e4
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLicenseDeleteV2LicensesObjectIdDeleteResponse parses an HTTP response from a LicenseDeleteV2LicensesObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) LicenseDeleteV2LicensesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDeleteV2LicensesObjectIdDeleteResponse, error) {
+	rsp, err := c.LicenseDeleteV2LicensesObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLicenseDeleteV2LicensesObjectIdDeleteResponse(rsp)
+}
+
+type LicenseDeleteV2LicensesObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r LicenseDeleteV2LicensesObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLicenseDeleteV2LicensesObjectIdDeleteResponse(rsp *http.Response) (*LicenseDeleteV2LicensesObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14684,10 +11117,47 @@ func ParseLicenseDeleteV2LicensesObjectIdDeleteResponse(rsp *http.Response) (*Li
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseLicenseDetailsV2LicensesObjectIdGetResponse parses an HTTP response from a LicenseDetailsV2LicensesObjectIdGetWithResponse call
+func (c *ClientWithResponses) LicenseDetailsV2LicensesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDetailsV2LicensesObjectIdGetResponse, error) {
+	rsp, err := c.LicenseDetailsV2LicensesObjectIdGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLicenseDetailsV2LicensesObjectIdGetResponse(rsp)
+}
+
+type LicenseDetailsV2LicensesObjectIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedLicenseSchema6d2d43fe
+	Error        *ApiError
+}
+
+func (r LicenseDetailsV2LicensesObjectIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLicenseDetailsV2LicensesObjectIdGetResponse(rsp *http.Response) (*LicenseDetailsV2LicensesObjectIdGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14700,20 +11170,50 @@ func ParseLicenseDetailsV2LicensesObjectIdGetResponse(rsp *http.Response) (*Lice
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedLicenseSchema6d2d43fe
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLicenseUpdateV2LicensesObjectIdPatchResponse parses an HTTP response from a LicenseUpdateV2LicensesObjectIdPatchWithResponse call
+func (c *ClientWithResponses) LicenseUpdateV2LicensesObjectIdPatchWithResponse(ctx context.Context, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error) {
+	rsp, err := c.LicenseUpdateV2LicensesObjectIdPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp)
+}
+
+type LicenseUpdateV2LicensesObjectIdPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r LicenseUpdateV2LicensesObjectIdPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp *http.Response) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14726,20 +11226,50 @@ func ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp *http.Response) (*Lic
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAccountLimitsV2LimitsGetResponse parses an HTTP response from a AccountLimitsV2LimitsGetWithResponse call
+func (c *ClientWithResponses) AccountLimitsV2LimitsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountLimitsV2LimitsGetResponse, error) {
+	rsp, err := c.AccountLimitsV2LimitsGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccountLimitsV2LimitsGetResponse(rsp)
+}
+
+type AccountLimitsV2LimitsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *AccountLimitSchema
+	Error        *ApiError
+}
+
+func (r AccountLimitsV2LimitsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAccountLimitsV2LimitsGetResponse(rsp *http.Response) (*AccountLimitsV2LimitsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14752,20 +11282,50 @@ func ParseAccountLimitsV2LimitsGetResponse(rsp *http.Response) (*AccountLimitsV2
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountLimitSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAccountPatchLimitsV2LimitsPatchResponse parses an HTTP response from a AccountPatchLimitsV2LimitsPatchWithResponse call
+func (c *ClientWithResponses) AccountPatchLimitsV2LimitsPatchWithResponse(ctx context.Context, body AccountPatchLimitsV2LimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*AccountPatchLimitsV2LimitsPatchResponse, error) {
+	rsp, err := c.AccountPatchLimitsV2LimitsPatch(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccountPatchLimitsV2LimitsPatchResponse(rsp)
+}
+
+type AccountPatchLimitsV2LimitsPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r AccountPatchLimitsV2LimitsPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAccountPatchLimitsV2LimitsPatchResponse(rsp *http.Response) (*AccountPatchLimitsV2LimitsPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14778,20 +11338,50 @@ func ParseAccountPatchLimitsV2LimitsPatchResponse(rsp *http.Response) (*AccountP
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAccountProjectsLimitsV2LimitsProjectsGetResponse parses an HTTP response from a AccountProjectsLimitsV2LimitsProjectsGetWithResponse call
+func (c *ClientWithResponses) AccountProjectsLimitsV2LimitsProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountProjectsLimitsV2LimitsProjectsGetResponse, error) {
+	rsp, err := c.AccountProjectsLimitsV2LimitsProjectsGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccountProjectsLimitsV2LimitsProjectsGetResponse(rsp)
+}
+
+type AccountProjectsLimitsV2LimitsProjectsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *AccountProjectLimitSchema
+	Error        *ApiError
+}
+
+func (r AccountProjectsLimitsV2LimitsProjectsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAccountProjectsLimitsV2LimitsProjectsGetResponse(rsp *http.Response) (*AccountProjectsLimitsV2LimitsProjectsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14804,20 +11394,49 @@ func ParseAccountProjectsLimitsV2LimitsProjectsGetResponse(rsp *http.Response) (
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountProjectLimitSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse parses an HTTP response from a RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse, error) {
+	rsp, err := c.RuleDeleteV2LoadbalancersRulesObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse(rsp)
+}
+
+type RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse(rsp *http.Response) (*RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14830,10 +11449,47 @@ func ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse(rsp *http.Respons
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse parses an HTTP response from a RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse call
+func (c *ClientWithResponses) RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDetailV2LoadbalancersRulesObjectIdGetResponse, error) {
+	rsp, err := c.RuleDetailV2LoadbalancersRulesObjectIdGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse(rsp)
+}
+
+type RuleDetailV2LoadbalancersRulesObjectIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedRuleDetailResponseSchemaB779dd3c
+	Error        *ApiError
+}
+
+func (r RuleDetailV2LoadbalancersRulesObjectIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse(rsp *http.Response) (*RuleDetailV2LoadbalancersRulesObjectIdGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14846,20 +11502,49 @@ func ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedRuleDetailResponseSchemaB779dd3c
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse parses an HTTP response from a LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse, error) {
+	rsp, err := c.LoadBalancerDeleteV2LoadbalancersObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse(rsp)
+}
+
+type LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse(rsp *http.Response) (*LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14872,10 +11557,47 @@ func ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse(rsp *http.Resp
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse parses an HTTP response from a LoadBalancerRenameV2LoadbalancersObjectIdPatchWithResponse call
+func (c *ClientWithResponses) LoadBalancerRenameV2LoadbalancersObjectIdPatchWithResponse(ctx context.Context, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error) {
+	rsp, err := c.LoadBalancerRenameV2LoadbalancersObjectIdPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp)
+}
+
+type LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp *http.Response) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14888,20 +11610,50 @@ func ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp *http.Respo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse parses an HTTP response from a LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithResponse call
+func (c *ClientWithResponses) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error) {
+	rsp, err := c.LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp)
+}
+
+type LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp *http.Response) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14914,20 +11666,50 @@ func ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp *ht
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse parses an HTTP response from a LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse, error) {
+	rsp, err := c.LoadBalancerDetailV2LoadbalancersObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse(rsp)
+}
+
+type LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedLBDetailResponseSchema8bf581a7
+	Error        *ApiError
+}
+
+func (r LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse(rsp *http.Response) (*LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14940,20 +11722,50 @@ func ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse(rsp *http.R
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedLBDetailResponseSchema8bf581a7
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse parses an HTTP response from a LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithResponse call
+func (c *ClientWithResponses) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error) {
+	rsp, err := c.LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse(rsp)
+}
+
+type LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse(rsp *http.Response) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14966,20 +11778,50 @@ func ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseRuleListV2LoadbalancersObjectIdRulesGetResponse parses an HTTP response from a RuleListV2LoadbalancersObjectIdRulesGetWithResponse call
+func (c *ClientWithResponses) RuleListV2LoadbalancersObjectIdRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleListV2LoadbalancersObjectIdRulesGetResponse, error) {
+	rsp, err := c.RuleListV2LoadbalancersObjectIdRulesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRuleListV2LoadbalancersObjectIdRulesGetResponse(rsp)
+}
+
+type RuleListV2LoadbalancersObjectIdRulesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListRuleDetailResponseSchema67205adf
+	Error        *ApiError
+}
+
+func (r RuleListV2LoadbalancersObjectIdRulesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseRuleListV2LoadbalancersObjectIdRulesGetResponse(rsp *http.Response) (*RuleListV2LoadbalancersObjectIdRulesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -14992,20 +11834,50 @@ func ParseRuleListV2LoadbalancersObjectIdRulesGetResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListRuleDetailResponseSchema67205adf
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse parses an HTTP response from a RuleCreateV2LoadbalancersObjectIdRulesPostWithResponse call
+func (c *ClientWithResponses) RuleCreateV2LoadbalancersObjectIdRulesPostWithResponse(ctx context.Context, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error) {
+	rsp, err := c.RuleCreateV2LoadbalancersObjectIdRulesPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse(rsp)
+}
+
+type RuleCreateV2LoadbalancersObjectIdRulesPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema54289085
+	Error        *ApiError
+}
+
+func (r RuleCreateV2LoadbalancersObjectIdRulesPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse(rsp *http.Response) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15018,20 +11890,50 @@ func ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse(rsp *http.Response)
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchema54289085
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse parses an HTTP response from a LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse call
+func (c *ClientWithResponses) LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse, error) {
+	rsp, err := c.LoadBalancerEnableV2LoadbalancersObjectIdStartPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse(rsp)
+}
+
+type LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse(rsp *http.Response) (*LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15044,20 +11946,50 @@ func ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse(rsp *http.R
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse parses an HTTP response from a LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse call
+func (c *ClientWithResponses) LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse, error) {
+	rsp, err := c.LoadBalancerStatV2LoadbalancersObjectIdStatGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse(rsp)
+}
+
+type LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedLbStatSchema060173fe
+	Error        *ApiError
+}
+
+func (r LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse(rsp *http.Response) (*LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15070,20 +12002,50 @@ func ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse(rsp *http.Respo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedLbStatSchema060173fe
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse parses an HTTP response from a LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse call
+func (c *ClientWithResponses) LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse, error) {
+	rsp, err := c.LoadBalancerStopV2LoadbalancersObjectIdStopPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse(rsp)
+}
+
+type LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse(rsp *http.Response) (*LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15096,20 +12058,50 @@ func ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse(rsp *http.Resp
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse parses an HTTP response from a LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse, error) {
+	rsp, err := c.LocalDiskDetailV2LocalDisksObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse(rsp)
+}
+
+type LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *LocalDiskDetail
+	Error        *ApiError
+}
+
+func (r LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse(rsp *http.Response) (*LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15122,20 +12114,50 @@ func ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse(rsp *http.Respons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest LocalDiskDetail
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseMaintenanceModeStatusV2MaintenanceModeGetResponse parses an HTTP response from a MaintenanceModeStatusV2MaintenanceModeGetWithResponse call
+func (c *ClientWithResponses) MaintenanceModeStatusV2MaintenanceModeGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MaintenanceModeStatusV2MaintenanceModeGetResponse, error) {
+	rsp, err := c.MaintenanceModeStatusV2MaintenanceModeGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseMaintenanceModeStatusV2MaintenanceModeGetResponse(rsp)
+}
+
+type MaintenanceModeStatusV2MaintenanceModeGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *MaintenanceModeSchema
+	Error        *ApiError
+}
+
+func (r MaintenanceModeStatusV2MaintenanceModeGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseMaintenanceModeStatusV2MaintenanceModeGetResponse(rsp *http.Response) (*MaintenanceModeStatusV2MaintenanceModeGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15148,20 +12170,50 @@ func ParseMaintenanceModeStatusV2MaintenanceModeGetResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest MaintenanceModeSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectListV2ProjectsGetResponse parses an HTTP response from a ProjectListV2ProjectsGetWithResponse call
+func (c *ClientWithResponses) ProjectListV2ProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ProjectListV2ProjectsGetResponse, error) {
+	rsp, err := c.ProjectListV2ProjectsGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectListV2ProjectsGetResponse(rsp)
+}
+
+type ProjectListV2ProjectsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ProjectPagListSchema
+	Error        *ApiError
+}
+
+func (r ProjectListV2ProjectsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectListV2ProjectsGetResponse(rsp *http.Response) (*ProjectListV2ProjectsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15174,20 +12226,50 @@ func ParseProjectListV2ProjectsGetResponse(rsp *http.Response) (*ProjectListV2Pr
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ProjectPagListSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectCreateV2ProjectsPostResponse parses an HTTP response from a ProjectCreateV2ProjectsPostWithResponse call
+func (c *ClientWithResponses) ProjectCreateV2ProjectsPostWithResponse(ctx context.Context, body ProjectCreateV2ProjectsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectCreateV2ProjectsPostResponse, error) {
+	rsp, err := c.ProjectCreateV2ProjectsPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectCreateV2ProjectsPostResponse(rsp)
+}
+
+type ProjectCreateV2ProjectsPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchemaDbed6d9c
+	Error        *ApiError
+}
+
+func (r ProjectCreateV2ProjectsPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectCreateV2ProjectsPostResponse(rsp *http.Response) (*ProjectCreateV2ProjectsPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15200,20 +12282,49 @@ func ParseProjectCreateV2ProjectsPostResponse(rsp *http.Response) (*ProjectCreat
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchemaDbed6d9c
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectDeleteV2ProjectsObjectIdDeleteResponse parses an HTTP response from a ProjectDeleteV2ProjectsObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) ProjectDeleteV2ProjectsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDeleteV2ProjectsObjectIdDeleteResponse, error) {
+	rsp, err := c.ProjectDeleteV2ProjectsObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectDeleteV2ProjectsObjectIdDeleteResponse(rsp)
+}
+
+type ProjectDeleteV2ProjectsObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r ProjectDeleteV2ProjectsObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectDeleteV2ProjectsObjectIdDeleteResponse(rsp *http.Response) (*ProjectDeleteV2ProjectsObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15226,10 +12337,47 @@ func ParseProjectDeleteV2ProjectsObjectIdDeleteResponse(rsp *http.Response) (*Pr
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse parses an HTTP response from a ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithResponse call
+func (c *ClientWithResponses) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error) {
+	rsp, err := c.ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp)
+}
+
+type ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp *http.Response) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15242,20 +12390,50 @@ func ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse parses an HTTP response from a ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse call
+func (c *ClientWithResponses) ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse, error) {
+	rsp, err := c.ProjectAddressesListV2ProjectsObjectIdAddressesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse(rsp)
+}
+
+type ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagAddressSchema
+	Error        *ApiError
+}
+
+func (r ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse(rsp *http.Response) (*ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15268,20 +12446,50 @@ func ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse(rsp *http.R
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagAddressSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse parses an HTTP response from a AddressCreateV2ProjectsObjectIdAddressesPostWithResponse call
+func (c *ClientWithResponses) AddressCreateV2ProjectsObjectIdAddressesPostWithResponse(ctx context.Context, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error) {
+	rsp, err := c.AddressCreateV2ProjectsObjectIdAddressesPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp)
+}
+
+type AddressCreateV2ProjectsObjectIdAddressesPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *AddressCreateSchema
+	Error        *ApiError
+}
+
+func (r AddressCreateV2ProjectsObjectIdAddressesPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp *http.Response) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15294,20 +12502,50 @@ func ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp *http.Respons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest AddressCreateSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse parses an HTTP response from a ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse call
+func (c *ClientWithResponses) ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse, error) {
+	rsp, err := c.ProjectConsumptionV2ProjectsObjectIdConsumptionGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse(rsp)
+}
+
+type ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ConsumptionListSchema
+	Error        *ApiError
+}
+
+func (r ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse(rsp *http.Response) (*ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15320,20 +12558,50 @@ func ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse(rsp *http.R
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ConsumptionListSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse parses an HTTP response from a ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse call
+func (c *ClientWithResponses) ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse, error) {
+	rsp, err := c.ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse(rsp)
+}
+
+type ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListDbaasBackupSchemaAadcc61f
+	Error        *ApiError
+}
+
+func (r ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse(rsp *http.Response) (*ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15346,20 +12614,50 @@ func ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse(rsp *http.R
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListDbaasBackupSchemaAadcc61f
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse parses an HTTP response from a DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse call
+func (c *ClientWithResponses) DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse, error) {
+	rsp, err := c.DbaasClustersListV2ProjectsObjectIdDbaasClustersGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse(rsp)
+}
+
+type DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListDbaasClusterSchemaF74955db
+	Error        *ApiError
+}
+
+func (r DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse(rsp *http.Response) (*DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15372,20 +12670,50 @@ func ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse(rsp *http.
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListDbaasClusterSchemaF74955db
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse parses an HTTP response from a DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithResponse call
+func (c *ClientWithResponses) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithResponse(ctx context.Context, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error) {
+	rsp, err := c.DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp)
+}
+
+type DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema331908a5
+	Error        *ApiError
+}
+
+func (r DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp *http.Response) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15398,20 +12726,50 @@ func ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp *htt
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchema331908a5
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse parses an HTTP response from a ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse call
+func (c *ClientWithResponses) ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse, error) {
+	rsp, err := c.ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse(rsp)
+}
+
+type ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListDbaasDatababaseSchemaE3be83fa
+	Error        *ApiError
+}
+
+func (r ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse(rsp *http.Response) (*ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15424,20 +12782,50 @@ func ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse(r
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListDbaasDatababaseSchemaE3be83fa
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse parses an HTTP response from a ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse call
+func (c *ClientWithResponses) ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse, error) {
+	rsp, err := c.ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse(rsp)
+}
+
+type ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListDatastoreSchema10c17892
+	Error        *ApiError
+}
+
+func (r ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse(rsp *http.Response) (*ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15450,20 +12838,50 @@ func ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse(rsp
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListDatastoreSchema10c17892
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse parses an HTTP response from a ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse call
+func (c *ClientWithResponses) ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse, error) {
+	rsp, err := c.ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse(rsp)
+}
+
+type ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagConfigDepSchema
+	Error        *ApiError
+}
+
+func (r ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse(rsp *http.Response) (*ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15476,20 +12894,50 @@ func ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetRespons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagConfigDepSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectDetailV2ProjectsObjectIdDetailGetResponse parses an HTTP response from a ProjectDetailV2ProjectsObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) ProjectDetailV2ProjectsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDetailV2ProjectsObjectIdDetailGetResponse, error) {
+	rsp, err := c.ProjectDetailV2ProjectsObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectDetailV2ProjectsObjectIdDetailGetResponse(rsp)
+}
+
+type ProjectDetailV2ProjectsObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedProjectDetailSchemaEbdd1993
+	Error        *ApiError
+}
+
+func (r ProjectDetailV2ProjectsObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectDetailV2ProjectsObjectIdDetailGetResponse(rsp *http.Response) (*ProjectDetailV2ProjectsObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15502,20 +12950,50 @@ func ParseProjectDetailV2ProjectsObjectIdDetailGetResponse(rsp *http.Response) (
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedProjectDetailSchemaEbdd1993
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse parses an HTTP response from a ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse call
+func (c *ClientWithResponses) ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectImagesListV2ProjectsObjectIdImagesGetResponse, error) {
+	rsp, err := c.ProjectImagesListV2ProjectsObjectIdImagesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse(rsp)
+}
+
+type ProjectImagesListV2ProjectsObjectIdImagesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagImageSchema
+	Error        *ApiError
+}
+
+func (r ProjectImagesListV2ProjectsObjectIdImagesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse(rsp *http.Response) (*ProjectImagesListV2ProjectsObjectIdImagesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15528,20 +13006,50 @@ func ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse(rsp *http.Respons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagImageSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse parses an HTTP response from a KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse call
+func (c *ClientWithResponses) KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeyPairsListV2ProjectsObjectIdKeypairsGetResponse, error) {
+	rsp, err := c.KeyPairsListV2ProjectsObjectIdKeypairsGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse(rsp)
+}
+
+type KeyPairsListV2ProjectsObjectIdKeypairsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagKeyPairSchema
+	Error        *ApiError
+}
+
+func (r KeyPairsListV2ProjectsObjectIdKeypairsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse(rsp *http.Response) (*KeyPairsListV2ProjectsObjectIdKeypairsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15554,20 +13062,50 @@ func ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagKeyPairSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse parses an HTTP response from a ImportKeypairV2ProjectsObjectIdKeypairsPostWithResponse call
+func (c *ClientWithResponses) ImportKeypairV2ProjectsObjectIdKeypairsPostWithResponse(ctx context.Context, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error) {
+	rsp, err := c.ImportKeypairV2ProjectsObjectIdKeypairsPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp)
+}
+
+type ImportKeypairV2ProjectsObjectIdKeypairsPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedKeyPairSchema8ec23069
+	Error        *ApiError
+}
+
+func (r ImportKeypairV2ProjectsObjectIdKeypairsPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp *http.Response) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15580,20 +13118,50 @@ func ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp *http.Response
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedKeyPairSchema8ec23069
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse parses an HTTP response from a GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithResponse call
+func (c *ClientWithResponses) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithResponse(ctx context.Context, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody, reqEditors ...RequestEditorFn) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error) {
+	rsp, err := c.GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp)
+}
+
+type GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedGenerateKeyPairResultSchema368fbb37
+	Error        *ApiError
+}
+
+func (r GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp *http.Response) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15606,20 +13174,50 @@ func ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp *htt
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedGenerateKeyPairResultSchema368fbb37
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse parses an HTTP response from a ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse call
+func (c *ClientWithResponses) ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse, error) {
+	rsp, err := c.ProjectLimitsListV2ProjectsObjectIdLimitsGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse(rsp)
+}
+
+type ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagLimitSchema
+	Error        *ApiError
+}
+
+func (r ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse(rsp *http.Response) (*ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15632,20 +13230,50 @@ func ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse(rsp *http.Respons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagLimitSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse parses an HTTP response from a ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithResponse call
+func (c *ClientWithResponses) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error) {
+	rsp, err := c.ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp)
+}
+
+type ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp *http.Response) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15658,20 +13286,50 @@ func ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp *http.Resp
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse parses an HTTP response from a LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse call
+func (c *ClientWithResponses) LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse, error) {
+	rsp, err := c.LoadBalancerListV2ProjectsObjectIdLoadbalancersGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse(rsp)
+}
+
+type LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListLBDetailResponseSchemaCdba8dc3
+	Error        *ApiError
+}
+
+func (r LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse(rsp *http.Response) (*LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15684,20 +13342,50 @@ func ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse(rsp *http.R
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListLBDetailResponseSchemaCdba8dc3
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse parses an HTTP response from a LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithResponse call
+func (c *ClientWithResponses) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithResponse(ctx context.Context, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error) {
+	rsp, err := c.LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp)
+}
+
+type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema269a7565
+	Error        *ApiError
+}
+
+func (r LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp *http.Response) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15710,20 +13398,50 @@ func ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp *htt
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchema269a7565
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse parses an HTTP response from a ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse call
+func (c *ClientWithResponses) ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse, error) {
+	rsp, err := c.ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse(rsp)
+}
+
+type ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListRuleDetailResponseSchema959a3235
+	Error        *ApiError
+}
+
+func (r ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse(rsp *http.Response) (*ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15736,20 +13454,50 @@ func ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse(rsp *ht
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListRuleDetailResponseSchema959a3235
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse parses an HTTP response from a ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse call
+func (c *ClientWithResponses) ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse, error) {
+	rsp, err := c.ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse(rsp)
+}
+
+type ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagLocalDiskListSchema
+	Error        *ApiError
+}
+
+func (r ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse(rsp *http.Response) (*ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15762,20 +13510,50 @@ func ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse(rsp *http
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagLocalDiskListSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseNetworksListV2ProjectsObjectIdNetworksGetResponse parses an HTTP response from a NetworksListV2ProjectsObjectIdNetworksGetWithResponse call
+func (c *ClientWithResponses) NetworksListV2ProjectsObjectIdNetworksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*NetworksListV2ProjectsObjectIdNetworksGetResponse, error) {
+	rsp, err := c.NetworksListV2ProjectsObjectIdNetworksGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseNetworksListV2ProjectsObjectIdNetworksGetResponse(rsp)
+}
+
+type NetworksListV2ProjectsObjectIdNetworksGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *NetworkPagSchema
+	Error        *ApiError
+}
+
+func (r NetworksListV2ProjectsObjectIdNetworksGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseNetworksListV2ProjectsObjectIdNetworksGetResponse(rsp *http.Response) (*NetworksListV2ProjectsObjectIdNetworksGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15788,20 +13566,50 @@ func ParseNetworksListV2ProjectsObjectIdNetworksGetResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest NetworkPagSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse parses an HTTP response from a ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse call
+func (c *ClientWithResponses) ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse, error) {
+	rsp, err := c.ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse(rsp)
+}
+
+type ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *InfrastructureModuleConstantsSchema
+	Error        *ApiError
+}
+
+func (r ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse(rsp *http.Response) (*ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15814,20 +13622,50 @@ func ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetRespons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest InfrastructureModuleConstantsSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse parses an HTTP response from a ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse call
+func (c *ClientWithResponses) ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRecipesV2ProjectsObjectIdRecipesGetResponse, error) {
+	rsp, err := c.ProjectRecipesV2ProjectsObjectIdRecipesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse(rsp)
+}
+
+type ProjectRecipesV2ProjectsObjectIdRecipesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagRecipeSchema
+	Error        *ApiError
+}
+
+func (r ProjectRecipesV2ProjectsObjectIdRecipesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse(rsp *http.Response) (*ProjectRecipesV2ProjectsObjectIdRecipesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15840,20 +13678,50 @@ func ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse(rsp *http.Response)
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagRecipeSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse parses an HTTP response from a S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse call
+func (c *ClientWithResponses) S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UsersListV2ProjectsObjectIdS3UsersGetResponse, error) {
+	rsp, err := c.S3UsersListV2ProjectsObjectIdS3UsersGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse(rsp)
+}
+
+type S3UsersListV2ProjectsObjectIdS3UsersGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListS3UserSchema495c1a8c
+	Error        *ApiError
+}
+
+func (r S3UsersListV2ProjectsObjectIdS3UsersGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse(rsp *http.Response) (*S3UsersListV2ProjectsObjectIdS3UsersGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15866,20 +13734,50 @@ func ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListS3UserSchema495c1a8c
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse parses an HTTP response from a S3UserCreateV2ProjectsObjectIdS3UsersPostWithResponse call
+func (c *ClientWithResponses) S3UserCreateV2ProjectsObjectIdS3UsersPostWithResponse(ctx context.Context, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error) {
+	rsp, err := c.S3UserCreateV2ProjectsObjectIdS3UsersPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp)
+}
+
+type S3UserCreateV2ProjectsObjectIdS3UsersPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchemaCc0245d8
+	Error        *ApiError
+}
+
+func (r S3UserCreateV2ProjectsObjectIdS3UsersPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp *http.Response) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15892,20 +13790,50 @@ func ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchemaCc0245d8
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectServerListV2ProjectsObjectIdServersGetResponse parses an HTTP response from a ProjectServerListV2ProjectsObjectIdServersGetWithResponse call
+func (c *ClientWithResponses) ProjectServerListV2ProjectsObjectIdServersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerListV2ProjectsObjectIdServersGetResponse, error) {
+	rsp, err := c.ProjectServerListV2ProjectsObjectIdServersGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectServerListV2ProjectsObjectIdServersGetResponse(rsp)
+}
+
+type ProjectServerListV2ProjectsObjectIdServersGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagServersSchema
+	Error        *ApiError
+}
+
+func (r ProjectServerListV2ProjectsObjectIdServersGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectServerListV2ProjectsObjectIdServersGetResponse(rsp *http.Response) (*ProjectServerListV2ProjectsObjectIdServersGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15918,20 +13846,50 @@ func ParseProjectServerListV2ProjectsObjectIdServersGetResponse(rsp *http.Respon
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagServersSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerCreateV2ProjectsObjectIdServersPostResponse parses an HTTP response from a ServerCreateV2ProjectsObjectIdServersPostWithResponse call
+func (c *ClientWithResponses) ServerCreateV2ProjectsObjectIdServersPostWithResponse(ctx context.Context, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error) {
+	rsp, err := c.ServerCreateV2ProjectsObjectIdServersPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp)
+}
+
+type ServerCreateV2ProjectsObjectIdServersPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema1aab2d2b
+	Error        *ApiError
+}
+
+func (r ServerCreateV2ProjectsObjectIdServersPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp *http.Response) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15944,20 +13902,50 @@ func ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchema1aab2d2b
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse parses an HTTP response from a ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse call
+func (c *ClientWithResponses) ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse, error) {
+	rsp, err := c.ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse(rsp)
+}
+
+type ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagConfigDepSchema
+	Error        *ApiError
+}
+
+func (r ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse(rsp *http.Response) (*ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15970,20 +13958,50 @@ func ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResp
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagConfigDepSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse parses an HTTP response from a SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse call
+func (c *ClientWithResponses) SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse, error) {
+	rsp, err := c.SnapshotsListV2ProjectsObjectIdSnapshotsGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse(rsp)
+}
+
+type SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *SnapshotListSchema
+	Error        *ApiError
+}
+
+func (r SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse(rsp *http.Response) (*SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -15996,20 +14014,50 @@ func ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse(rsp *http.Response
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SnapshotListSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectStartV2ProjectsObjectIdStartPostResponse parses an HTTP response from a ProjectStartV2ProjectsObjectIdStartPostWithResponse call
+func (c *ClientWithResponses) ProjectStartV2ProjectsObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStartV2ProjectsObjectIdStartPostResponse, error) {
+	rsp, err := c.ProjectStartV2ProjectsObjectIdStartPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectStartV2ProjectsObjectIdStartPostResponse(rsp)
+}
+
+type ProjectStartV2ProjectsObjectIdStartPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ProjectStartV2ProjectsObjectIdStartPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectStartV2ProjectsObjectIdStartPostResponse(rsp *http.Response) (*ProjectStartV2ProjectsObjectIdStartPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16022,20 +14070,50 @@ func ParseProjectStartV2ProjectsObjectIdStartPostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectStopV2ProjectsObjectIdStopPostResponse parses an HTTP response from a ProjectStopV2ProjectsObjectIdStopPostWithResponse call
+func (c *ClientWithResponses) ProjectStopV2ProjectsObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStopV2ProjectsObjectIdStopPostResponse, error) {
+	rsp, err := c.ProjectStopV2ProjectsObjectIdStopPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectStopV2ProjectsObjectIdStopPostResponse(rsp)
+}
+
+type ProjectStopV2ProjectsObjectIdStopPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ProjectStopV2ProjectsObjectIdStopPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectStopV2ProjectsObjectIdStopPostResponse(rsp *http.Response) (*ProjectStopV2ProjectsObjectIdStopPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16048,20 +14126,50 @@ func ParseProjectStopV2ProjectsObjectIdStopPostResponse(rsp *http.Response) (*Pr
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse parses an HTTP response from a ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse call
+func (c *ClientWithResponses) ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse, error) {
+	rsp, err := c.ProjectVolumesListV2ProjectsObjectIdVolumesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse(rsp)
+}
+
+type ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagVolumeSchema
+	Error        *ApiError
+}
+
+func (r ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse(rsp *http.Response) (*ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16074,20 +14182,50 @@ func ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse(rsp *http.Respo
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagVolumeSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse parses an HTTP response from a VolumeCreateV2ProjectsObjectIdVolumesPostWithResponse call
+func (c *ClientWithResponses) VolumeCreateV2ProjectsObjectIdVolumesPostWithResponse(ctx context.Context, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error) {
+	rsp, err := c.VolumeCreateV2ProjectsObjectIdVolumesPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp)
+}
+
+type VolumeCreateV2ProjectsObjectIdVolumesPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *VolumeCreateSchema
+	Error        *ApiError
+}
+
+func (r VolumeCreateV2ProjectsObjectIdVolumesPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp *http.Response) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16100,20 +14238,50 @@ func ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest VolumeCreateSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse parses an HTTP response from a ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse call
+func (c *ClientWithResponses) ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse, error) {
+	rsp, err := c.ProjectVrouterListV2ProjectsObjectIdVroutersGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse(rsp)
+}
+
+type ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *PagVroutersSchema
+	Error        *ApiError
+}
+
+func (r ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse(rsp *http.Response) (*ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16126,20 +14294,50 @@ func ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse(rsp *http.Resp
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest PagVroutersSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse parses an HTTP response from a VrouterCreateV2ProjectsObjectIdVroutersPostWithResponse call
+func (c *ClientWithResponses) VrouterCreateV2ProjectsObjectIdVroutersPostWithResponse(ctx context.Context, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error) {
+	rsp, err := c.VrouterCreateV2ProjectsObjectIdVroutersPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp)
+}
+
+type VrouterCreateV2ProjectsObjectIdVroutersPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *VrouterCreateSchema
+	Error        *ApiError
+}
+
+func (r VrouterCreateV2ProjectsObjectIdVroutersPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp *http.Response) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16152,20 +14350,49 @@ func ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp *http.Response
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest VrouterCreateSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse parses an HTTP response from a S3UserDeleteV2S3UsersObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) S3UserDeleteV2S3UsersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDeleteV2S3UsersObjectIdDeleteResponse, error) {
+	rsp, err := c.S3UserDeleteV2S3UsersObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse(rsp)
+}
+
+type S3UserDeleteV2S3UsersObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r S3UserDeleteV2S3UsersObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse(rsp *http.Response) (*S3UserDeleteV2S3UsersObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16178,10 +14405,47 @@ func ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse(rsp *http.Response) (*S3Us
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseS3UserUpdateV2S3UsersObjectIdPatchResponse parses an HTTP response from a S3UserUpdateV2S3UsersObjectIdPatchWithResponse call
+func (c *ClientWithResponses) S3UserUpdateV2S3UsersObjectIdPatchWithResponse(ctx context.Context, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error) {
+	rsp, err := c.S3UserUpdateV2S3UsersObjectIdPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp)
+}
+
+type S3UserUpdateV2S3UsersObjectIdPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r S3UserUpdateV2S3UsersObjectIdPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp *http.Response) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16194,20 +14458,50 @@ func ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp *http.Response) (*S3Use
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse parses an HTTP response from a S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse call
+func (c *ClientWithResponses) S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse, error) {
+	rsp, err := c.S3GetUserKeysV2S3UsersObjectIdCredentialsGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse(rsp)
+}
+
+type S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedS3UserKeysSchema28ed7005
+	Error        *ApiError
+}
+
+func (r S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse(rsp *http.Response) (*S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16220,20 +14514,50 @@ func ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse(rsp *http.Respons
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedS3UserKeysSchema28ed7005
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse parses an HTTP response from a S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse call
+func (c *ClientWithResponses) S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse, error) {
+	rsp, err := c.S3GenUserKeysV2S3UsersObjectIdCredentialsPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse(rsp)
+}
+
+type S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedS3UserKeysSchemaAa900ca7
+	Error        *ApiError
+}
+
+func (r S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse(rsp *http.Response) (*S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16246,20 +14570,50 @@ func ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse(rsp *http.Respon
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedS3UserKeysSchemaAa900ca7
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse parses an HTTP response from a S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDetailsV2S3UsersObjectIdDetailGetResponse, error) {
+	rsp, err := c.S3UserDetailsV2S3UsersObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse(rsp)
+}
+
+type S3UserDetailsV2S3UsersObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedS3UserSchema9d7a7a95
+	Error        *ApiError
+}
+
+func (r S3UserDetailsV2S3UsersObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse(rsp *http.Response) (*S3UserDetailsV2S3UsersObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16272,20 +14626,50 @@ func ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest DetailedS3UserSchema9d7a7a95
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse parses an HTTP response from a S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithResponse call
+func (c *ClientWithResponses) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithResponse(ctx context.Context, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error) {
+	rsp, err := c.S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse(rsp)
+}
+
+type S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse(rsp *http.Response) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16298,20 +14682,50 @@ func ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse(rsp *http.Response
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse parses an HTTP response from a S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse call
+func (c *ClientWithResponses) S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserSuspendV2S3UsersObjectIdSuspendPostResponse, error) {
+	rsp, err := c.S3UserSuspendV2S3UsersObjectIdSuspendPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse(rsp)
+}
+
+type S3UserSuspendV2S3UsersObjectIdSuspendPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r S3UserSuspendV2S3UsersObjectIdSuspendPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse(rsp *http.Response) (*S3UserSuspendV2S3UsersObjectIdSuspendPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16324,20 +14738,50 @@ func ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse parses an HTTP response from a S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse call
+func (c *ClientWithResponses) S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse, error) {
+	rsp, err := c.S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse(rsp)
+}
+
+type S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse(rsp *http.Response) (*S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16350,20 +14794,49 @@ func ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse(rsp *http.Respon
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerDeleteV2ServersObjectIdDeleteResponse parses an HTTP response from a ServerDeleteV2ServersObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) ServerDeleteV2ServersObjectIdDeleteWithResponse(ctx context.Context, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerDeleteV2ServersObjectIdDeleteResponse, error) {
+	rsp, err := c.ServerDeleteV2ServersObjectIdDelete(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerDeleteV2ServersObjectIdDeleteResponse(rsp)
+}
+
+type ServerDeleteV2ServersObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r ServerDeleteV2ServersObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerDeleteV2ServersObjectIdDeleteResponse(rsp *http.Response) (*ServerDeleteV2ServersObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16376,10 +14849,47 @@ func ParseServerDeleteV2ServersObjectIdDeleteResponse(rsp *http.Response) (*Serv
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseServerUpdateV2ServersObjectIdPatchResponse parses an HTTP response from a ServerUpdateV2ServersObjectIdPatchWithResponse call
+func (c *ClientWithResponses) ServerUpdateV2ServersObjectIdPatchWithResponse(ctx context.Context, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerUpdateV2ServersObjectIdPatchResponse, error) {
+	rsp, err := c.ServerUpdateV2ServersObjectIdPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerUpdateV2ServersObjectIdPatchResponse(rsp)
+}
+
+type ServerUpdateV2ServersObjectIdPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerUpdateV2ServersObjectIdPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerUpdateV2ServersObjectIdPatchResponse(rsp *http.Response) (*ServerUpdateV2ServersObjectIdPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16392,20 +14902,50 @@ func ParseServerUpdateV2ServersObjectIdPatchResponse(rsp *http.Response) (*Serve
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerConsoleV2ServersObjectIdConsolePostResponse parses an HTTP response from a ServerConsoleV2ServersObjectIdConsolePostWithResponse call
+func (c *ClientWithResponses) ServerConsoleV2ServersObjectIdConsolePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerConsoleV2ServersObjectIdConsolePostResponse, error) {
+	rsp, err := c.ServerConsoleV2ServersObjectIdConsolePost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerConsoleV2ServersObjectIdConsolePostResponse(rsp)
+}
+
+type ServerConsoleV2ServersObjectIdConsolePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ServerConsoleSchema
+	Error        *ApiError
+}
+
+func (r ServerConsoleV2ServersObjectIdConsolePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerConsoleV2ServersObjectIdConsolePostResponse(rsp *http.Response) (*ServerConsoleV2ServersObjectIdConsolePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16418,20 +14958,50 @@ func ParseServerConsoleV2ServersObjectIdConsolePostResponse(rsp *http.Response) 
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ServerConsoleSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerDetailV2ServersObjectIdDetailGetResponse parses an HTTP response from a ServerDetailV2ServersObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) ServerDetailV2ServersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerDetailV2ServersObjectIdDetailGetResponse, error) {
+	rsp, err := c.ServerDetailV2ServersObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerDetailV2ServersObjectIdDetailGetResponse(rsp)
+}
+
+type ServerDetailV2ServersObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ServerDetailSchema
+	Error        *ApiError
+}
+
+func (r ServerDetailV2ServersObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerDetailV2ServersObjectIdDetailGetResponse(rsp *http.Response) (*ServerDetailV2ServersObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16444,20 +15014,50 @@ func ParseServerDetailV2ServersObjectIdDetailGetResponse(rsp *http.Response) (*S
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ServerDetailSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerLicensesV2ServersObjectIdLicensesGetResponse parses an HTTP response from a ServerLicensesV2ServersObjectIdLicensesGetWithResponse call
+func (c *ClientWithResponses) ServerLicensesV2ServersObjectIdLicensesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerLicensesV2ServersObjectIdLicensesGetResponse, error) {
+	rsp, err := c.ServerLicensesV2ServersObjectIdLicensesGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerLicensesV2ServersObjectIdLicensesGetResponse(rsp)
+}
+
+type ServerLicensesV2ServersObjectIdLicensesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *ListLicenseSchemaC6fc32ba
+	Error        *ApiError
+}
+
+func (r ServerLicensesV2ServersObjectIdLicensesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerLicensesV2ServersObjectIdLicensesGetResponse(rsp *http.Response) (*ServerLicensesV2ServersObjectIdLicensesGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16470,20 +15070,50 @@ func ParseServerLicensesV2ServersObjectIdLicensesGetResponse(rsp *http.Response)
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListLicenseSchemaC6fc32ba
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse parses an HTTP response from a ServerAddLicenseV2ServersObjectIdLicensesPostWithResponse call
+func (c *ClientWithResponses) ServerAddLicenseV2ServersObjectIdLicensesPostWithResponse(ctx context.Context, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error) {
+	rsp, err := c.ServerAddLicenseV2ServersObjectIdLicensesPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp)
+}
+
+type ServerAddLicenseV2ServersObjectIdLicensesPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema76555418
+	Error        *ApiError
+}
+
+func (r ServerAddLicenseV2ServersObjectIdLicensesPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp *http.Response) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16496,20 +15126,50 @@ func ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp *http.Respon
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest DetailedIdResponseSchema76555418
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse parses an HTTP response from a ServerChangePasswordV2ServersObjectIdPasswordPostWithResponse call
+func (c *ClientWithResponses) ServerChangePasswordV2ServersObjectIdPasswordPostWithResponse(ctx context.Context, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error) {
+	rsp, err := c.ServerChangePasswordV2ServersObjectIdPasswordPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse(rsp)
+}
+
+type ServerChangePasswordV2ServersObjectIdPasswordPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerChangePasswordV2ServersObjectIdPasswordPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse(rsp *http.Response) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16522,20 +15182,50 @@ func ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse(rsp *http.Re
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerRebootV2ServersObjectIdRebootPostResponse parses an HTTP response from a ServerRebootV2ServersObjectIdRebootPostWithResponse call
+func (c *ClientWithResponses) ServerRebootV2ServersObjectIdRebootPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRebootV2ServersObjectIdRebootPostResponse, error) {
+	rsp, err := c.ServerRebootV2ServersObjectIdRebootPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerRebootV2ServersObjectIdRebootPostResponse(rsp)
+}
+
+type ServerRebootV2ServersObjectIdRebootPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerRebootV2ServersObjectIdRebootPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerRebootV2ServersObjectIdRebootPostResponse(rsp *http.Response) (*ServerRebootV2ServersObjectIdRebootPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16548,20 +15238,50 @@ func ParseServerRebootV2ServersObjectIdRebootPostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerRescueV2ServersObjectIdRescuePostResponse parses an HTTP response from a ServerRescueV2ServersObjectIdRescuePostWithResponse call
+func (c *ClientWithResponses) ServerRescueV2ServersObjectIdRescuePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRescueV2ServersObjectIdRescuePostResponse, error) {
+	rsp, err := c.ServerRescueV2ServersObjectIdRescuePost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerRescueV2ServersObjectIdRescuePostResponse(rsp)
+}
+
+type ServerRescueV2ServersObjectIdRescuePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerRescueV2ServersObjectIdRescuePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerRescueV2ServersObjectIdRescuePostResponse(rsp *http.Response) (*ServerRescueV2ServersObjectIdRescuePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16574,20 +15294,50 @@ func ParseServerRescueV2ServersObjectIdRescuePostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerResizeV2ServersObjectIdResizePostResponse parses an HTTP response from a ServerResizeV2ServersObjectIdResizePostWithResponse call
+func (c *ClientWithResponses) ServerResizeV2ServersObjectIdResizePostWithResponse(ctx context.Context, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerResizeV2ServersObjectIdResizePostResponse, error) {
+	rsp, err := c.ServerResizeV2ServersObjectIdResizePost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerResizeV2ServersObjectIdResizePostResponse(rsp)
+}
+
+type ServerResizeV2ServersObjectIdResizePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerResizeV2ServersObjectIdResizePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerResizeV2ServersObjectIdResizePostResponse(rsp *http.Response) (*ServerResizeV2ServersObjectIdResizePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16600,20 +15350,50 @@ func ParseServerResizeV2ServersObjectIdResizePostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse parses an HTTP response from a CreateServerSnapshotV2ServersObjectIdSnapshotPostWithResponse call
+func (c *ClientWithResponses) CreateServerSnapshotV2ServersObjectIdSnapshotPostWithResponse(ctx context.Context, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error) {
+	rsp, err := c.CreateServerSnapshotV2ServersObjectIdSnapshotPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp)
+}
+
+type CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *SnapshotCreateSchema
+	Error        *ApiError
+}
+
+func (r CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp *http.Response) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16626,20 +15406,50 @@ func ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp *http.Re
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest SnapshotCreateSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerStartV2ServersObjectIdStartPostResponse parses an HTTP response from a ServerStartV2ServersObjectIdStartPostWithResponse call
+func (c *ClientWithResponses) ServerStartV2ServersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStartV2ServersObjectIdStartPostResponse, error) {
+	rsp, err := c.ServerStartV2ServersObjectIdStartPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerStartV2ServersObjectIdStartPostResponse(rsp)
+}
+
+type ServerStartV2ServersObjectIdStartPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerStartV2ServersObjectIdStartPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerStartV2ServersObjectIdStartPostResponse(rsp *http.Response) (*ServerStartV2ServersObjectIdStartPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16652,20 +15462,50 @@ func ParseServerStartV2ServersObjectIdStartPostResponse(rsp *http.Response) (*Se
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseServerStopV2ServersObjectIdStopPostResponse parses an HTTP response from a ServerStopV2ServersObjectIdStopPostWithResponse call
+func (c *ClientWithResponses) ServerStopV2ServersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStopV2ServersObjectIdStopPostResponse, error) {
+	rsp, err := c.ServerStopV2ServersObjectIdStopPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerStopV2ServersObjectIdStopPostResponse(rsp)
+}
+
+type ServerStopV2ServersObjectIdStopPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerStopV2ServersObjectIdStopPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseServerStopV2ServersObjectIdStopPostResponse(rsp *http.Response) (*ServerStopV2ServersObjectIdStopPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16678,20 +15518,49 @@ func ParseServerStopV2ServersObjectIdStopPostResponse(rsp *http.Response) (*Serv
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse parses an HTTP response from a SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDeleteV2SnapshotsObjectIdDeleteResponse, error) {
+	rsp, err := c.SnapshotDeleteV2SnapshotsObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse(rsp)
+}
+
+type SnapshotDeleteV2SnapshotsObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r SnapshotDeleteV2SnapshotsObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse(rsp *http.Response) (*SnapshotDeleteV2SnapshotsObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16704,10 +15573,47 @@ func ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse parses an HTTP response from a SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse, error) {
+	rsp, err := c.SnapshotDetailsV2SnapshotsObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse(rsp)
+}
+
+type SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *SnapshotDetailSchema
+	Error        *ApiError
+}
+
+func (r SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse(rsp *http.Response) (*SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16720,20 +15626,50 @@ func ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse(rsp *http.Response
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest SnapshotDetailSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse parses an HTTP response from a SnapshotRestoreV2SnapshotsObjectIdRestorePostWithResponse call
+func (c *ClientWithResponses) SnapshotRestoreV2SnapshotsObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error) {
+	rsp, err := c.SnapshotRestoreV2SnapshotsObjectIdRestorePost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp)
+}
+
+type SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *SnapshotRestoreSchema
+	Error        *ApiError
+}
+
+func (r SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp *http.Response) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16746,20 +15682,50 @@ func ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp *http.Respon
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest SnapshotRestoreSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseAccountStatV2StatGetResponse parses an HTTP response from a AccountStatV2StatGetWithResponse call
+func (c *ClientWithResponses) AccountStatV2StatGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountStatV2StatGetResponse, error) {
+	rsp, err := c.AccountStatV2StatGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccountStatV2StatGetResponse(rsp)
+}
+
+type AccountStatV2StatGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *AccountStatSchema
+	Error        *ApiError
+}
+
+func (r AccountStatV2StatGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseAccountStatV2StatGetResponse(rsp *http.Response) (*AccountStatV2StatGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16772,20 +15738,49 @@ func ParseAccountStatV2StatGetResponse(rsp *http.Response) (*AccountStatV2StatGe
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest AccountStatSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVolumeDeleteV2VolumesObjectIdDeleteResponse parses an HTTP response from a VolumeDeleteV2VolumesObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) VolumeDeleteV2VolumesObjectIdDeleteWithResponse(ctx context.Context, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error) {
+	rsp, err := c.VolumeDeleteV2VolumesObjectIdDelete(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp)
+}
+
+type VolumeDeleteV2VolumesObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r VolumeDeleteV2VolumesObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp *http.Response) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16798,10 +15793,47 @@ func ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp *http.Response) (*Volu
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseVolumeUpdateV2VolumesObjectIdPatchResponse parses an HTTP response from a VolumeUpdateV2VolumesObjectIdPatchWithResponse call
+func (c *ClientWithResponses) VolumeUpdateV2VolumesObjectIdPatchWithResponse(ctx context.Context, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error) {
+	rsp, err := c.VolumeUpdateV2VolumesObjectIdPatch(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeUpdateV2VolumesObjectIdPatchResponse(rsp)
+}
+
+type VolumeUpdateV2VolumesObjectIdPatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r VolumeUpdateV2VolumesObjectIdPatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVolumeUpdateV2VolumesObjectIdPatchResponse(rsp *http.Response) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16814,20 +15846,50 @@ func ParseVolumeUpdateV2VolumesObjectIdPatchResponse(rsp *http.Response) (*Volum
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVolumeAttachV2VolumesObjectIdAttachPostResponse parses an HTTP response from a VolumeAttachV2VolumesObjectIdAttachPostWithResponse call
+func (c *ClientWithResponses) VolumeAttachV2VolumesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error) {
+	rsp, err := c.VolumeAttachV2VolumesObjectIdAttachPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp)
+}
+
+type VolumeAttachV2VolumesObjectIdAttachPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r VolumeAttachV2VolumesObjectIdAttachPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp *http.Response) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16840,20 +15902,50 @@ func ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVolumeDetachV2VolumesObjectIdDetachPostResponse parses an HTTP response from a VolumeDetachV2VolumesObjectIdDetachPostWithResponse call
+func (c *ClientWithResponses) VolumeDetachV2VolumesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error) {
+	rsp, err := c.VolumeDetachV2VolumesObjectIdDetachPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp)
+}
+
+type VolumeDetachV2VolumesObjectIdDetachPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r VolumeDetachV2VolumesObjectIdDetachPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp *http.Response) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16866,20 +15958,50 @@ func ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVolumeDetailV2VolumesObjectIdDetailGetResponse parses an HTTP response from a VolumeDetailV2VolumesObjectIdDetailGetWithResponse call
+func (c *ClientWithResponses) VolumeDetailV2VolumesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VolumeDetailV2VolumesObjectIdDetailGetResponse, error) {
+	rsp, err := c.VolumeDetailV2VolumesObjectIdDetailGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeDetailV2VolumesObjectIdDetailGetResponse(rsp)
+}
+
+type VolumeDetailV2VolumesObjectIdDetailGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *VolumeDetailSchema
+	Error        *ApiError
+}
+
+func (r VolumeDetailV2VolumesObjectIdDetailGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVolumeDetailV2VolumesObjectIdDetailGetResponse(rsp *http.Response) (*VolumeDetailV2VolumesObjectIdDetailGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16892,20 +16014,50 @@ func ParseVolumeDetailV2VolumesObjectIdDetailGetResponse(rsp *http.Response) (*V
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest VolumeDetailSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVolumeExtendV2VolumesObjectIdExtendPostResponse parses an HTTP response from a VolumeExtendV2VolumesObjectIdExtendPostWithResponse call
+func (c *ClientWithResponses) VolumeExtendV2VolumesObjectIdExtendPostWithResponse(ctx context.Context, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error) {
+	rsp, err := c.VolumeExtendV2VolumesObjectIdExtendPost(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp)
+}
+
+type VolumeExtendV2VolumesObjectIdExtendPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r VolumeExtendV2VolumesObjectIdExtendPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp *http.Response) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16918,20 +16070,49 @@ func ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVrouterDeleteV2VroutersObjectIdDeleteResponse parses an HTTP response from a VrouterDeleteV2VroutersObjectIdDeleteWithResponse call
+func (c *ClientWithResponses) VrouterDeleteV2VroutersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDeleteV2VroutersObjectIdDeleteResponse, error) {
+	rsp, err := c.VrouterDeleteV2VroutersObjectIdDelete(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVrouterDeleteV2VroutersObjectIdDeleteResponse(rsp)
+}
+
+type VrouterDeleteV2VroutersObjectIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r VrouterDeleteV2VroutersObjectIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVrouterDeleteV2VroutersObjectIdDeleteResponse(rsp *http.Response) (*VrouterDeleteV2VroutersObjectIdDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16944,10 +16125,47 @@ func ParseVrouterDeleteV2VroutersObjectIdDeleteResponse(rsp *http.Response) (*Vr
 		HTTPResponse: rsp,
 	}
 
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
 	return response, nil
 }
 
-// ParseVrouterDetailV2VroutersObjectIdGetResponse parses an HTTP response from a VrouterDetailV2VroutersObjectIdGetWithResponse call
+func (c *ClientWithResponses) VrouterDetailV2VroutersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDetailV2VroutersObjectIdGetResponse, error) {
+	rsp, err := c.VrouterDetailV2VroutersObjectIdGet(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVrouterDetailV2VroutersObjectIdGetResponse(rsp)
+}
+
+type VrouterDetailV2VroutersObjectIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *VrouterDetailSchema
+	Error        *ApiError
+}
+
+func (r VrouterDetailV2VroutersObjectIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVrouterDetailV2VroutersObjectIdGetResponse(rsp *http.Response) (*VrouterDetailV2VroutersObjectIdGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16960,20 +16178,50 @@ func ParseVrouterDetailV2VroutersObjectIdGetResponse(rsp *http.Response) (*Vrout
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest VrouterDetailSchema
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVrouterStartV2VroutersObjectIdStartPostResponse parses an HTTP response from a VrouterStartV2VroutersObjectIdStartPostWithResponse call
+func (c *ClientWithResponses) VrouterStartV2VroutersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStartV2VroutersObjectIdStartPostResponse, error) {
+	rsp, err := c.VrouterStartV2VroutersObjectIdStartPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVrouterStartV2VroutersObjectIdStartPostResponse(rsp)
+}
+
+type VrouterStartV2VroutersObjectIdStartPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r VrouterStartV2VroutersObjectIdStartPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVrouterStartV2VroutersObjectIdStartPostResponse(rsp *http.Response) (*VrouterStartV2VroutersObjectIdStartPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -16986,20 +16234,50 @@ func ParseVrouterStartV2VroutersObjectIdStartPostResponse(rsp *http.Response) (*
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
 }
 
-// ParseVrouterStopV2VroutersObjectIdStopPostResponse parses an HTTP response from a VrouterStopV2VroutersObjectIdStopPostWithResponse call
+func (c *ClientWithResponses) VrouterStopV2VroutersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStopV2VroutersObjectIdStopPostResponse, error) {
+	rsp, err := c.VrouterStopV2VroutersObjectIdStopPost(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp)
+}
+
+type VrouterStopV2VroutersObjectIdStopPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r VrouterStopV2VroutersObjectIdStopPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 func ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp *http.Response) (*VrouterStopV2VroutersObjectIdStopPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
@@ -17012,14 +16290,23 @@ func ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp *http.Response) (*Vr
 		HTTPResponse: rsp,
 	}
 
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest interface{}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
 
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
 	}
 
 	return response, nil
@@ -17028,204 +16315,208 @@ func ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp *http.Response) (*Vr
 // Base64 encoded, gzipped, json marshaled Swagger object
 var swaggerSpec = []string{
 
-	"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",
+	"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",
 }
 
 // GetSwagger returns the content of the embedded swagger specification file
