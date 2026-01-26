@@ -7,44 +7,37 @@ on:
       - 'README.md'
       - '.gitignore'
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
-  update-sdk:
+  build-and-release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.25'
-          cache: true
-
-      - name: Install Tools
-        run: |
-          sudo apt-get install -y jq
-          go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
+          go-version: '1.23'
 
       - name: Generate SDK
-        run: make generate
+        run: make all
 
       - name: Check for Changes
         id: git_status
         run: |
           if [ -n "$(git status --porcelain clo_cloud.gen.go go.mod go.sum client.go)" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected."
+            echo "Changes detected by CI generation."
           else
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes detected."
+            echo "No generation changes detected."
           fi
 
       - name: Commit and Push Changes
@@ -52,14 +45,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git add .
-          VERSION=$(jq -r '.info.version' openapi.final.json)
-          git commit -m "chore: update sdk to api v$VERSION [skip ci]" || true
+          git add clo_cloud.gen.go go.mod go.sum client.go
+          git commit -m "chore: auto-update sdk generation [skip ci]"
           git push
 
-      - name: Create and Push Tag
-        if: steps.git_status.outputs.changed == 'true'
+      - name: Release Patch Version
+        if: success() && github.ref == 'refs/heads/main'
         run: make release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

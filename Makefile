@@ -42,27 +42,32 @@ generate: update-mod ## 3. Генерация кода и go mod tidy
 	@echo "Success: $(SDK_OUT) generated."
 
 .PHONY: release
-release: generate ## Создание git-тега с авто-инкрементом патча
-	@VERSION=$$(jq -r '.info.version' $(SPEC_FIXED)); \
-	TAG_PREFIX="v$$VERSION"; \
-	if ! git rev-parse "$$TAG_PREFIX" >/dev/null 2>&1; then \
-		echo "--- Creating new base tag: $$TAG_PREFIX ---"; \
-		git tag -a "$$TAG_PREFIX" -m "Release $$TAG_PREFIX"; \
-		git push origin "$$TAG_PREFIX"; \
+release: generate ## Создание инкрементального тега (v0.1.0.X)
+	@echo "--- Determining next version ---"
+	@# 1. Получаем базовую версию из спеки (например, 0.1.0)
+	@BASE_VERSION=$$(jq -r '.info.version' $(SPEC_FIXED)); \
+	echo "Base version from spec: $$BASE_VERSION"; \
+	\
+	# 2. Ищем самый свежий тег, который начинается с этой версии (v0.1.0.*)
+	LATEST_TAG=$$(git tag -l "v$$BASE_VERSION.*" | sort -V | tail -n1); \
+	\
+	if [ -z "$$LATEST_TAG" ]; then \
+		# 3a. Если тегов нет — начинаем с .1
+		NEW_TAG="v$$BASE_VERSION.1"; \
+		echo "No existing tags for $$BASE_VERSION. Starting with $$NEW_TAG"; \
 	else \
-		echo "--- Tag $$TAG_PREFIX already exists. Finding next internal patch... ---"; \
-		LATEST_TAG=$$(git tag -l "$$TAG_PREFIX.*" | sort -V | tail -n1); \
-		if [ -z "$$LATEST_TAG" ]; then \
-			NEXT_PATCH=1; \
-		else \
-			CURRENT_PATCH=$$(echo $$LATEST_TAG | cut -d. -f4); \
-			NEXT_PATCH=$$(($$CURRENT_PATCH + 1)); \
-		fi; \
-		NEW_TAG="$$TAG_PREFIX.$$NEXT_PATCH"; \
-		echo "--- Creating internal patch tag: $$NEW_TAG ---"; \
-		git tag -a "$$NEW_TAG" -m "Internal release $$NEW_TAG"; \
-		git push origin "$$NEW_TAG"; \
-	fi
+		# 3b. Если теги есть — берем последний сегмент и прибавляем 1
+		echo "Found latest tag: $$LATEST_TAG"; \
+		LAST_NUM=$$(echo $$LATEST_TAG | awk -F. '{print $$NF}'); \
+		NEXT_NUM=$$(($$LAST_NUM + 1)); \
+		NEW_TAG="v$$BASE_VERSION.$$NEXT_NUM"; \
+		echo "Incrementing to $$NEW_TAG"; \
+	fi; \
+	\
+	# 4. Создаем и пушим тег
+	echo "--- Creating release: $$NEW_TAG ---"; \
+	git tag -a "$$NEW_TAG" -m "Auto-release $$NEW_TAG"; \
+	git push origin "$$NEW_TAG"
 
 
 .PHONY: clean-spec
