@@ -1805,9 +1805,9 @@ func NewClient(server string, opts ...ClientOption) (*Client, error) {
 	return &client, nil
 }
 
-// WithHTTPClient allows overriding the default Doer, which is
+// WithHTTPClientDoer allows overriding the default Doer, which is
 // automatically created using http.Client. This is useful for tests.
-func WithHTTPClient(doer HttpRequestDoer) ClientOption {
+func WithHTTPClientDoer(doer HttpRequestDoer) ClientOption {
 	return func(c *Client) error {
 		c.Client = doer
 		return nil

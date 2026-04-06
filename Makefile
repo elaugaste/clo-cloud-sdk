@@ -38,6 +38,7 @@ update-mod: fetch-and-fix ## 2. Обновление go.mod (если мажор
 generate: update-mod ## 3. Генерация кода и go mod tidy
 	@echo "--- [3/3] Generating Go SDK ---"
 	@$(OAPI_CODEGEN) -config $(CONFIG) $(SPEC_FIXED)
+	@sed -i 's/WithHTTPClient/WithHTTPClientDoer/g' $(SDK_OUT)
 	@go mod tidy
 	@echo "Success: $(SDK_OUT) generated."
 

@@ -19,17 +19,24 @@ func NewCLOClient(token string, opts ...Option) (ClientWithResponsesInterface, e
 		opt(config)
 	}
 
-	httpClient := &http.Client{
-		Timeout: config.timeout,
-		Transport: &LoggingRoundTripper{
-			Proxied: http.DefaultTransport,
-			Logger:  config.logger,
-		},
+	httpClient := config.httpClient
+	if httpClient == nil {
+		httpClient = &http.Client{
+			Timeout: config.timeout,
+		}
+	}
+
+	httpClient.Transport = &LoggingRoundTripper{
+		Proxied: httpClient.Transport,
+		Logger:  config.logger,
+	}
+	if httpClient.Transport.(*LoggingRoundTripper).Proxied == nil {
+		httpClient.Transport.(*LoggingRoundTripper).Proxied = http.DefaultTransport
 	}
 
 	return NewClientWithResponses(
 		config.baseURL,
-		WithHTTPClient(httpClient),
+		WithHTTPClientDoer(httpClient),
 		WithRequestEditorFn(withAuthToken(token)),
 	)
 }
@@ -77,9 +84,10 @@ type Logger interface {
 }
 
 type clientConfig struct {
-	baseURL string
-	timeout time.Duration
-	logger  *slog.Logger
+	baseURL    string
+	timeout    time.Duration
+	logger     *slog.Logger
+	httpClient *http.Client
 }
 
 type Option func(*clientConfig)
@@ -90,6 +98,10 @@ func WithTimeout(t time.Duration) Option {
 
 func WithLogger(l *slog.Logger) Option {
 	return func(c *clientConfig) { c.logger = l }
+}
+
+func WithHTTPClient(client *http.Client) Option {
+	return func(c *clientConfig) { c.httpClient = client }
 }
 
 func withAuthToken(token string) RequestEditorFn {

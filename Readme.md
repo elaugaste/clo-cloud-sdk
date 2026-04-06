@@ -17,9 +17,13 @@ func main() {
 	cloProject := "your-project-id-here"
 
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	customClient := &http.Client{
+		Timeout: 45 * time.Second,
+	}
+
 	client, _ := clo_cloud_sdk.NewCLOClient(cloToken,
 		clo_cloud_sdk.WithLogger(logger),
-		clo_cloud_sdk.WithTimeout(30*time.Second),
+		clo_cloud_sdk.WithHTTPClient(customClient),
 	)
 
 	ctx := context.Background()
