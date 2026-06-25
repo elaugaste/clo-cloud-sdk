@@ -68,200 +68,200 @@ func (e TargetEntityType) Valid() bool {
 	}
 }
 
-// Defines values for AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps.
+// Defines values for AddressAttachJSONBodyBandwidthMaxMbps.
 const (
-	AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbpsN100  AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps = 100
-	AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbpsN1024 AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps = 1024
+	AddressAttachJSONBodyBandwidthMaxMbpsN100  AddressAttachJSONBodyBandwidthMaxMbps = 100
+	AddressAttachJSONBodyBandwidthMaxMbpsN1024 AddressAttachJSONBodyBandwidthMaxMbps = 1024
 )
 
-// Valid indicates whether the value is a known member of the AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps enum.
-func (e AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps) Valid() bool {
+// Valid indicates whether the value is a known member of the AddressAttachJSONBodyBandwidthMaxMbps enum.
+func (e AddressAttachJSONBodyBandwidthMaxMbps) Valid() bool {
 	switch e {
-	case AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbpsN100:
+	case AddressAttachJSONBodyBandwidthMaxMbpsN100:
 		return true
-	case AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbpsN1024:
+	case AddressAttachJSONBodyBandwidthMaxMbpsN1024:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps.
+// Defines values for AddressChangeBandwidthJSONBodyBandwidthMaxMbps.
 const (
-	AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbpsN100  AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps = 100
-	AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbpsN1024 AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps = 1024
+	AddressChangeBandwidthJSONBodyBandwidthMaxMbpsN100  AddressChangeBandwidthJSONBodyBandwidthMaxMbps = 100
+	AddressChangeBandwidthJSONBodyBandwidthMaxMbpsN1024 AddressChangeBandwidthJSONBodyBandwidthMaxMbps = 1024
 )
 
-// Valid indicates whether the value is a known member of the AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps enum.
-func (e AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps) Valid() bool {
+// Valid indicates whether the value is a known member of the AddressChangeBandwidthJSONBodyBandwidthMaxMbps enum.
+func (e AddressChangeBandwidthJSONBodyBandwidthMaxMbps) Valid() bool {
 	switch e {
-	case AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbpsN100:
+	case AddressChangeBandwidthJSONBodyBandwidthMaxMbpsN100:
 		return true
-	case AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbpsN1024:
+	case AddressChangeBandwidthJSONBodyBandwidthMaxMbpsN1024:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm.
+// Defines values for LoadBalancerUpdateJSONBodyAlgorithm.
 const (
-	LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithmLEASTCONNECTIONS LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm = "LEAST_CONNECTIONS"
-	LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithmROUNDROBIN       LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm = "ROUND_ROBIN"
+	LoadBalancerUpdateJSONBodyAlgorithmLEASTCONNECTIONS LoadBalancerUpdateJSONBodyAlgorithm = "LEAST_CONNECTIONS"
+	LoadBalancerUpdateJSONBodyAlgorithmROUNDROBIN       LoadBalancerUpdateJSONBodyAlgorithm = "ROUND_ROBIN"
 )
 
-// Valid indicates whether the value is a known member of the LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm enum.
-func (e LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm) Valid() bool {
+// Valid indicates whether the value is a known member of the LoadBalancerUpdateJSONBodyAlgorithm enum.
+func (e LoadBalancerUpdateJSONBodyAlgorithm) Valid() bool {
 	switch e {
-	case LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithmLEASTCONNECTIONS:
+	case LoadBalancerUpdateJSONBodyAlgorithmLEASTCONNECTIONS:
 		return true
-	case LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithmROUNDROBIN:
+	case LoadBalancerUpdateJSONBodyAlgorithmROUNDROBIN:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod.
+// Defines values for LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod.
 const (
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodCONNECT LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "CONNECT"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodDELETE  LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "DELETE"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodGET     LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "GET"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodHEAD    LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "HEAD"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodOPTIONS LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "OPTIONS"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodPOST    LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "POST"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodPUT     LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "PUT"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodTRACE   LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod = "TRACE"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodCONNECT LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "CONNECT"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodDELETE  LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "DELETE"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodGET     LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "GET"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodHEAD    LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "HEAD"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodOPTIONS LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "OPTIONS"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodPOST    LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "POST"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodPUT     LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "PUT"
+	LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodTRACE   LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod = "TRACE"
 )
 
-// Valid indicates whether the value is a known member of the LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod enum.
-func (e LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod) Valid() bool {
+// Valid indicates whether the value is a known member of the LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod enum.
+func (e LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod) Valid() bool {
 	switch e {
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodCONNECT:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodCONNECT:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodDELETE:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodDELETE:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodGET:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodGET:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodHEAD:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodHEAD:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodOPTIONS:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodOPTIONS:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodPOST:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodPOST:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodPUT:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodPUT:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethodTRACE:
+	case LoadBalancerUpdateHealthmonitorJSONBodyHttpMethodTRACE:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType.
+// Defines values for LoadBalancerUpdateHealthmonitorJSONBodyType.
 const (
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyTypeHTTP LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType = "HTTP"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyTypePING LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType = "PING"
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyTypeTCP  LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType = "TCP"
+	LoadBalancerUpdateHealthmonitorJSONBodyTypeHTTP LoadBalancerUpdateHealthmonitorJSONBodyType = "HTTP"
+	LoadBalancerUpdateHealthmonitorJSONBodyTypePING LoadBalancerUpdateHealthmonitorJSONBodyType = "PING"
+	LoadBalancerUpdateHealthmonitorJSONBodyTypeTCP  LoadBalancerUpdateHealthmonitorJSONBodyType = "TCP"
 )
 
-// Valid indicates whether the value is a known member of the LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType enum.
-func (e LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType) Valid() bool {
+// Valid indicates whether the value is a known member of the LoadBalancerUpdateHealthmonitorJSONBodyType enum.
+func (e LoadBalancerUpdateHealthmonitorJSONBodyType) Valid() bool {
 	switch e {
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyTypeHTTP:
+	case LoadBalancerUpdateHealthmonitorJSONBodyTypeHTTP:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyTypePING:
+	case LoadBalancerUpdateHealthmonitorJSONBodyTypePING:
 		return true
-	case LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyTypeTCP:
+	case LoadBalancerUpdateHealthmonitorJSONBodyTypeTCP:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm.
+// Defines values for LoadBalancerCreateJSONBodyAlgorithm.
 const (
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithmLEASTCONNECTIONS LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm = "LEAST_CONNECTIONS"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithmROUNDROBIN       LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm = "ROUND_ROBIN"
+	LoadBalancerCreateJSONBodyAlgorithmLEASTCONNECTIONS LoadBalancerCreateJSONBodyAlgorithm = "LEAST_CONNECTIONS"
+	LoadBalancerCreateJSONBodyAlgorithmROUNDROBIN       LoadBalancerCreateJSONBodyAlgorithm = "ROUND_ROBIN"
 )
 
-// Valid indicates whether the value is a known member of the LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm enum.
-func (e LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm) Valid() bool {
+// Valid indicates whether the value is a known member of the LoadBalancerCreateJSONBodyAlgorithm enum.
+func (e LoadBalancerCreateJSONBodyAlgorithm) Valid() bool {
 	switch e {
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithmLEASTCONNECTIONS:
+	case LoadBalancerCreateJSONBodyAlgorithmLEASTCONNECTIONS:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithmROUNDROBIN:
+	case LoadBalancerCreateJSONBodyAlgorithmROUNDROBIN:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod.
+// Defines values for LoadBalancerCreateJSONBodyHealthmonitorHttpMethod.
 const (
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodCONNECT LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "CONNECT"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodDELETE  LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "DELETE"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodGET     LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "GET"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodHEAD    LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "HEAD"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodOPTIONS LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "OPTIONS"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodPOST    LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "POST"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodPUT     LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "PUT"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodTRACE   LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod = "TRACE"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodCONNECT LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "CONNECT"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodDELETE  LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "DELETE"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodGET     LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "GET"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodHEAD    LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "HEAD"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodOPTIONS LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "OPTIONS"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodPOST    LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "POST"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodPUT     LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "PUT"
+	LoadBalancerCreateJSONBodyHealthmonitorHttpMethodTRACE   LoadBalancerCreateJSONBodyHealthmonitorHttpMethod = "TRACE"
 )
 
-// Valid indicates whether the value is a known member of the LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod enum.
-func (e LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod) Valid() bool {
+// Valid indicates whether the value is a known member of the LoadBalancerCreateJSONBodyHealthmonitorHttpMethod enum.
+func (e LoadBalancerCreateJSONBodyHealthmonitorHttpMethod) Valid() bool {
 	switch e {
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodCONNECT:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodCONNECT:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodDELETE:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodDELETE:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodGET:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodGET:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodHEAD:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodHEAD:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodOPTIONS:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodOPTIONS:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodPOST:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodPOST:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodPUT:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodPUT:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethodTRACE:
+	case LoadBalancerCreateJSONBodyHealthmonitorHttpMethodTRACE:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType.
+// Defines values for LoadBalancerCreateJSONBodyHealthmonitorType.
 const (
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorTypeHTTP LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType = "HTTP"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorTypePING LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType = "PING"
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorTypeTCP  LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType = "TCP"
+	LoadBalancerCreateJSONBodyHealthmonitorTypeHTTP LoadBalancerCreateJSONBodyHealthmonitorType = "HTTP"
+	LoadBalancerCreateJSONBodyHealthmonitorTypePING LoadBalancerCreateJSONBodyHealthmonitorType = "PING"
+	LoadBalancerCreateJSONBodyHealthmonitorTypeTCP  LoadBalancerCreateJSONBodyHealthmonitorType = "TCP"
 )
 
-// Valid indicates whether the value is a known member of the LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType enum.
-func (e LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType) Valid() bool {
+// Valid indicates whether the value is a known member of the LoadBalancerCreateJSONBodyHealthmonitorType enum.
+func (e LoadBalancerCreateJSONBodyHealthmonitorType) Valid() bool {
 	switch e {
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorTypeHTTP:
+	case LoadBalancerCreateJSONBodyHealthmonitorTypeHTTP:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorTypePING:
+	case LoadBalancerCreateJSONBodyHealthmonitorTypePING:
 		return true
-	case LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorTypeTCP:
+	case LoadBalancerCreateJSONBodyHealthmonitorTypeTCP:
 		return true
 	default:
 		return false
 	}
 }
 
-// Defines values for ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps.
+// Defines values for ServerCreateJSONBodyAddressesBandwidthMaxMbps.
 const (
-	N100  ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps = 100
-	N1024 ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps = 1024
+	N100  ServerCreateJSONBodyAddressesBandwidthMaxMbps = 100
+	N1024 ServerCreateJSONBodyAddressesBandwidthMaxMbps = 1024
 )
 
-// Valid indicates whether the value is a known member of the ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps enum.
-func (e ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps) Valid() bool {
+// Valid indicates whether the value is a known member of the ServerCreateJSONBodyAddressesBandwidthMaxMbps enum.
+func (e ServerCreateJSONBodyAddressesBandwidthMaxMbps) Valid() bool {
 	switch e {
 	case N100:
 		return true
@@ -510,133 +510,133 @@ type Dependendcies struct {
 	Value        int `json:"value"`
 }
 
-// DetailedAccountBalanceSchema0cebb0e1 defines model for DetailedAccountBalanceSchema_0cebb0e1.
-type DetailedAccountBalanceSchema0cebb0e1 struct {
+// DetailedAccountBalanceSchema7c8cadbe defines model for DetailedAccountBalanceSchema_7c8cadbe.
+type DetailedAccountBalanceSchema7c8cadbe struct {
 	Result *AccountBalanceSchema `json:"result,omitempty"`
 }
 
-// DetailedBackupDownloadUrlSchema9bd1bd6a defines model for DetailedBackupDownloadUrlSchema_9bd1bd6a.
-type DetailedBackupDownloadUrlSchema9bd1bd6a struct {
+// DetailedBackupDownloadUrlSchemaF78c6a4b defines model for DetailedBackupDownloadUrlSchema_f78c6a4b.
+type DetailedBackupDownloadUrlSchemaF78c6a4b struct {
 	Result *BackupDownloadUrlSchema `json:"result,omitempty"`
 }
 
-// DetailedDbaasBackupSchemaFec792e7 defines model for DetailedDbaasBackupSchema_fec792e7.
-type DetailedDbaasBackupSchemaFec792e7 struct {
+// DetailedDbaasBackupSchemaA094e18d defines model for DetailedDbaasBackupSchema_a094e18d.
+type DetailedDbaasBackupSchemaA094e18d struct {
 	Result *DbaasBackupSchema `json:"result,omitempty"`
 }
 
-// DetailedDbaasClusterConfigSchema3488dcef defines model for DetailedDbaasClusterConfigSchema_3488dcef.
-type DetailedDbaasClusterConfigSchema3488dcef struct {
+// DetailedDbaasClusterConfigSchemaEdf28995 defines model for DetailedDbaasClusterConfigSchema_edf28995.
+type DetailedDbaasClusterConfigSchemaEdf28995 struct {
 	Result *DbaasClusterConfigSchema `json:"result,omitempty"`
 }
 
-// DetailedDbaasClusterSchemaFb9d2327 defines model for DetailedDbaasClusterSchema_fb9d2327.
-type DetailedDbaasClusterSchemaFb9d2327 struct {
+// DetailedDbaasClusterSchema2a4cf989 defines model for DetailedDbaasClusterSchema_2a4cf989.
+type DetailedDbaasClusterSchema2a4cf989 struct {
 	Result *DbaasClusterSchema `json:"result,omitempty"`
 }
 
-// DetailedDbaasDatababaseSchemaFf786256 defines model for DetailedDbaasDatababaseSchema_ff786256.
-type DetailedDbaasDatababaseSchemaFf786256 struct {
+// DetailedDbaasDatababaseSchemaE6463f5e defines model for DetailedDbaasDatababaseSchema_e6463f5e.
+type DetailedDbaasDatababaseSchemaE6463f5e struct {
 	Result *DbaasDatababaseSchema `json:"result,omitempty"`
 }
 
-// DetailedGenerateKeyPairResultSchema7928ce50 defines model for DetailedGenerateKeyPairResultSchema_7928ce50.
-type DetailedGenerateKeyPairResultSchema7928ce50 struct {
+// DetailedGenerateKeyPairResultSchema147caebc defines model for DetailedGenerateKeyPairResultSchema_147caebc.
+type DetailedGenerateKeyPairResultSchema147caebc struct {
 	Result *GenerateKeyPairResultSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchema0a9b1941 defines model for DetailedIdResponseSchema_0a9b1941.
-type DetailedIdResponseSchema0a9b1941 struct {
+// DetailedIdResponseSchema09a874d7 defines model for DetailedIdResponseSchema_09a874d7.
+type DetailedIdResponseSchema09a874d7 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchema0acd718c defines model for DetailedIdResponseSchema_0acd718c.
-type DetailedIdResponseSchema0acd718c struct {
+// DetailedIdResponseSchema0aec132d defines model for DetailedIdResponseSchema_0aec132d.
+type DetailedIdResponseSchema0aec132d struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchema1035337f defines model for DetailedIdResponseSchema_1035337f.
-type DetailedIdResponseSchema1035337f struct {
+// DetailedIdResponseSchema1784c707 defines model for DetailedIdResponseSchema_1784c707.
+type DetailedIdResponseSchema1784c707 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchema73385074 defines model for DetailedIdResponseSchema_73385074.
-type DetailedIdResponseSchema73385074 struct {
+// DetailedIdResponseSchema3c73bf68 defines model for DetailedIdResponseSchema_3c73bf68.
+type DetailedIdResponseSchema3c73bf68 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchema7e940415 defines model for DetailedIdResponseSchema_7e940415.
-type DetailedIdResponseSchema7e940415 struct {
+// DetailedIdResponseSchema696e1e75 defines model for DetailedIdResponseSchema_696e1e75.
+type DetailedIdResponseSchema696e1e75 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchema8ae3c570 defines model for DetailedIdResponseSchema_8ae3c570.
-type DetailedIdResponseSchema8ae3c570 struct {
+// DetailedIdResponseSchema78aae167 defines model for DetailedIdResponseSchema_78aae167.
+type DetailedIdResponseSchema78aae167 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchemaA087d46f defines model for DetailedIdResponseSchema_a087d46f.
-type DetailedIdResponseSchemaA087d46f struct {
+// DetailedIdResponseSchema8efd2784 defines model for DetailedIdResponseSchema_8efd2784.
+type DetailedIdResponseSchema8efd2784 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchemaA611f722 defines model for DetailedIdResponseSchema_a611f722.
-type DetailedIdResponseSchemaA611f722 struct {
+// DetailedIdResponseSchema8fbfe237 defines model for DetailedIdResponseSchema_8fbfe237.
+type DetailedIdResponseSchema8fbfe237 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchemaC0672ad4 defines model for DetailedIdResponseSchema_c0672ad4.
-type DetailedIdResponseSchemaC0672ad4 struct {
+// DetailedIdResponseSchemaDd5ee8b3 defines model for DetailedIdResponseSchema_dd5ee8b3.
+type DetailedIdResponseSchemaDd5ee8b3 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedIdResponseSchemaE6186b20 defines model for DetailedIdResponseSchema_e6186b20.
-type DetailedIdResponseSchemaE6186b20 struct {
+// DetailedIdResponseSchemaEe532b76 defines model for DetailedIdResponseSchema_ee532b76.
+type DetailedIdResponseSchemaEe532b76 struct {
 	Result *IdResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedKeyPairSchema0db25129 defines model for DetailedKeyPairSchema_0db25129.
-type DetailedKeyPairSchema0db25129 struct {
+// DetailedKeyPairSchema75478e11 defines model for DetailedKeyPairSchema_75478e11.
+type DetailedKeyPairSchema75478e11 struct {
 	Result *KeyPairSchema `json:"result,omitempty"`
 }
 
-// DetailedLBDetailResponseSchema14754508 defines model for DetailedLBDetailResponseSchema_14754508.
-type DetailedLBDetailResponseSchema14754508 struct {
+// DetailedLBDetailResponseSchema722a18c9 defines model for DetailedLBDetailResponseSchema_722a18c9.
+type DetailedLBDetailResponseSchema722a18c9 struct {
 	Result *LBDetailResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedLbStatSchema79b0bf7e defines model for DetailedLbStatSchema_79b0bf7e.
-type DetailedLbStatSchema79b0bf7e struct {
+// DetailedLbStatSchemaEb895b37 defines model for DetailedLbStatSchema_eb895b37.
+type DetailedLbStatSchemaEb895b37 struct {
 	Result *LbStatSchema `json:"result,omitempty"`
 }
 
-// DetailedLicenseSchema806d7f04 defines model for DetailedLicenseSchema_806d7f04.
-type DetailedLicenseSchema806d7f04 struct {
+// DetailedLicenseSchema197f98f0 defines model for DetailedLicenseSchema_197f98f0.
+type DetailedLicenseSchema197f98f0 struct {
 	Result *LicenseSchema `json:"result,omitempty"`
 }
 
-// DetailedProjectDetailSchemaC7b06a50 defines model for DetailedProjectDetailSchema_c7b06a50.
-type DetailedProjectDetailSchemaC7b06a50 struct {
+// DetailedProjectDetailSchema6750ad21 defines model for DetailedProjectDetailSchema_6750ad21.
+type DetailedProjectDetailSchema6750ad21 struct {
 	Result *ProjectDetailSchema `json:"result,omitempty"`
 }
 
-// DetailedRuleDetailResponseSchema63197e94 defines model for DetailedRuleDetailResponseSchema_63197e94.
-type DetailedRuleDetailResponseSchema63197e94 struct {
+// DetailedRuleDetailResponseSchema4139a827 defines model for DetailedRuleDetailResponseSchema_4139a827.
+type DetailedRuleDetailResponseSchema4139a827 struct {
 	Result *RuleDetailResponseSchema `json:"result,omitempty"`
 }
 
-// DetailedS3UserCreateKeysSchemaA2b3cc37 defines model for DetailedS3UserCreateKeysSchema_a2b3cc37.
-type DetailedS3UserCreateKeysSchemaA2b3cc37 struct {
+// DetailedS3UserCreateKeysSchema996da7c3 defines model for DetailedS3UserCreateKeysSchema_996da7c3.
+type DetailedS3UserCreateKeysSchema996da7c3 struct {
 	Result *S3UserCreateKeysSchema `json:"result,omitempty"`
 }
 
-// DetailedS3UserKeysSchema79256a43 defines model for DetailedS3UserKeysSchema_79256a43.
-type DetailedS3UserKeysSchema79256a43 struct {
+// DetailedS3UserKeysSchema2d249d34 defines model for DetailedS3UserKeysSchema_2d249d34.
+type DetailedS3UserKeysSchema2d249d34 struct {
 	Result *S3UserKeysSchema `json:"result,omitempty"`
 }
 
-// DetailedS3UserSchema251e8d08 defines model for DetailedS3UserSchema_251e8d08.
-type DetailedS3UserSchema251e8d08 struct {
+// DetailedS3UserSchemaDdd36844 defines model for DetailedS3UserSchema_ddd36844.
+type DetailedS3UserSchemaDdd36844 struct {
 	Result *S3UserSchema `json:"result,omitempty"`
 }
 
@@ -757,74 +757,74 @@ type LimitSchema struct {
 // LimitType An enumeration.
 type LimitType string
 
-// ListDatastoreSchemaA76a7a1f defines model for ListDatastoreSchema_a76a7a1f.
-type ListDatastoreSchemaA76a7a1f struct {
+// ListDatastoreSchema38dae804 defines model for ListDatastoreSchema_38dae804.
+type ListDatastoreSchema38dae804 struct {
 	Count  int                `json:"count"`
 	Result *[]DatastoreSchema `json:"result,omitempty"`
 }
 
-// ListDbaasBackupSchema55a05448 defines model for ListDbaasBackupSchema_55a05448.
-type ListDbaasBackupSchema55a05448 struct {
+// ListDbaasBackupSchema88abb12e defines model for ListDbaasBackupSchema_88abb12e.
+type ListDbaasBackupSchema88abb12e struct {
 	Count  int                  `json:"count"`
 	Result *[]DbaasBackupSchema `json:"result,omitempty"`
 }
 
-// ListDbaasClusterSchemaC7663de7 defines model for ListDbaasClusterSchema_c7663de7.
-type ListDbaasClusterSchemaC7663de7 struct {
+// ListDbaasClusterSchemaF981f78f defines model for ListDbaasClusterSchema_f981f78f.
+type ListDbaasClusterSchemaF981f78f struct {
 	Count  int                   `json:"count"`
 	Result *[]DbaasClusterSchema `json:"result,omitempty"`
 }
 
-// ListDbaasDatababaseSchema4b64795b defines model for ListDbaasDatababaseSchema_4b64795b.
-type ListDbaasDatababaseSchema4b64795b struct {
+// ListDbaasDatababaseSchema66a062ec defines model for ListDbaasDatababaseSchema_66a062ec.
+type ListDbaasDatababaseSchema66a062ec struct {
 	Count  int                      `json:"count"`
 	Result *[]DbaasDatababaseSchema `json:"result,omitempty"`
 }
 
-// ListDbaasDatababaseSchemaC48c1d98 defines model for ListDbaasDatababaseSchema_c48c1d98.
-type ListDbaasDatababaseSchemaC48c1d98 struct {
+// ListDbaasDatababaseSchema8a7a8b6e defines model for ListDbaasDatababaseSchema_8a7a8b6e.
+type ListDbaasDatababaseSchema8a7a8b6e struct {
 	Count  int                      `json:"count"`
 	Result *[]DbaasDatababaseSchema `json:"result,omitempty"`
 }
 
-// ListDbaasNodeSchema25e9fcb0 defines model for ListDbaasNodeSchema_25e9fcb0.
-type ListDbaasNodeSchema25e9fcb0 struct {
+// ListDbaasNodeSchema3e7edb61 defines model for ListDbaasNodeSchema_3e7edb61.
+type ListDbaasNodeSchema3e7edb61 struct {
 	Count  int                `json:"count"`
 	Result *[]DbaasNodeSchema `json:"result,omitempty"`
 }
 
-// ListLBDetailResponseSchemaFfb0ce29 defines model for ListLBDetailResponseSchema_ffb0ce29.
-type ListLBDetailResponseSchemaFfb0ce29 struct {
+// ListLBDetailResponseSchemaF07a3241 defines model for ListLBDetailResponseSchema_f07a3241.
+type ListLBDetailResponseSchemaF07a3241 struct {
 	Count  int                       `json:"count"`
 	Result *[]LBDetailResponseSchema `json:"result,omitempty"`
 }
 
-// ListLicenseOfferSchema772e4362 defines model for ListLicenseOfferSchema_772e4362.
-type ListLicenseOfferSchema772e4362 struct {
+// ListLicenseOfferSchema6e8e56e8 defines model for ListLicenseOfferSchema_6e8e56e8.
+type ListLicenseOfferSchema6e8e56e8 struct {
 	Count  int                   `json:"count"`
 	Result *[]LicenseOfferSchema `json:"result,omitempty"`
 }
 
-// ListLicenseSchema8c57589c defines model for ListLicenseSchema_8c57589c.
-type ListLicenseSchema8c57589c struct {
+// ListLicenseSchema976458bc defines model for ListLicenseSchema_976458bc.
+type ListLicenseSchema976458bc struct {
 	Count  int              `json:"count"`
 	Result *[]LicenseSchema `json:"result,omitempty"`
 }
 
-// ListRuleDetailResponseSchema252f0553 defines model for ListRuleDetailResponseSchema_252f0553.
-type ListRuleDetailResponseSchema252f0553 struct {
+// ListRuleDetailResponseSchema63184eff defines model for ListRuleDetailResponseSchema_63184eff.
+type ListRuleDetailResponseSchema63184eff struct {
 	Count  int                         `json:"count"`
 	Result *[]RuleDetailResponseSchema `json:"result,omitempty"`
 }
 
-// ListRuleDetailResponseSchemaA17dbd98 defines model for ListRuleDetailResponseSchema_a17dbd98.
-type ListRuleDetailResponseSchemaA17dbd98 struct {
+// ListRuleDetailResponseSchemaF5b6e92c defines model for ListRuleDetailResponseSchema_f5b6e92c.
+type ListRuleDetailResponseSchemaF5b6e92c struct {
 	Count  int                         `json:"count"`
 	Result *[]RuleDetailResponseSchema `json:"result,omitempty"`
 }
 
-// ListS3UserSchemaB2f79585 defines model for ListS3UserSchema_b2f79585.
-type ListS3UserSchemaB2f79585 struct {
+// ListS3UserSchema33ee8b7f defines model for ListS3UserSchema_33ee8b7f.
+type ListS3UserSchema33ee8b7f struct {
 	Count  int             `json:"count"`
 	Result *[]S3UserSchema `json:"result,omitempty"`
 }
@@ -992,9 +992,9 @@ type S3UserKeysSchema struct {
 
 // S3UserSchema defines model for S3UserSchema.
 type S3UserSchema struct {
-	BucketsMax    *int            `json:"buckets_max,omitempty"`
 	CanonicalName string          `json:"canonical_name"`
 	Id            string          `json:"id"`
+	MaxBuckets    *int            `json:"max_buckets,omitempty"`
 	Name          string          `json:"name"`
 	Project       string          `json:"project"`
 	Quotas        []S3QuotaSchema `json:"quotas"`
@@ -1233,80 +1233,80 @@ type SchemasResponseV2VolumeVolumeSchemaRecipeSchema struct {
 // bearerAuthContextKey is the context key for bearerAuth security scheme
 type bearerAuthContextKey string
 
-// AddressAttachV2AddressesObjectIdAttachPostJSONBody defines parameters for AddressAttachV2AddressesObjectIdAttachPost.
-type AddressAttachV2AddressesObjectIdAttachPostJSONBody struct {
-	BandwidthMaxMbps *AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps `json:"bandwidth_max_mbps,omitempty"`
-	Entity           string                                                              `json:"entity"`
-	Id               string                                                              `json:"id"`
+// AddressAttachJSONBody defines parameters for AddressAttach.
+type AddressAttachJSONBody struct {
+	BandwidthMaxMbps *AddressAttachJSONBodyBandwidthMaxMbps `json:"bandwidth_max_mbps,omitempty"`
+	Entity           string                                 `json:"entity"`
+	Id               string                                 `json:"id"`
 }
 
-// AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps defines parameters for AddressAttachV2AddressesObjectIdAttachPost.
-type AddressAttachV2AddressesObjectIdAttachPostJSONBodyBandwidthMaxMbps int
+// AddressAttachJSONBodyBandwidthMaxMbps defines parameters for AddressAttach.
+type AddressAttachJSONBodyBandwidthMaxMbps int
 
-// AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBody defines parameters for AddressChangeBandwidthV2AddressesObjectIdBandwidthPost.
-type AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBody struct {
-	BandwidthMaxMbps *AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps `json:"bandwidth_max_mbps,omitempty"`
+// AddressChangeBandwidthJSONBody defines parameters for AddressChangeBandwidth.
+type AddressChangeBandwidthJSONBody struct {
+	BandwidthMaxMbps *AddressChangeBandwidthJSONBodyBandwidthMaxMbps `json:"bandwidth_max_mbps,omitempty"`
 }
 
-// AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps defines parameters for AddressChangeBandwidthV2AddressesObjectIdBandwidthPost.
-type AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBodyBandwidthMaxMbps int
+// AddressChangeBandwidthJSONBodyBandwidthMaxMbps defines parameters for AddressChangeBandwidth.
+type AddressChangeBandwidthJSONBodyBandwidthMaxMbps int
 
-// AddressEditPtrV2AddressesObjectIdPtrPutJSONBody defines parameters for AddressEditPtrV2AddressesObjectIdPtrPut.
-type AddressEditPtrV2AddressesObjectIdPtrPutJSONBody struct {
+// AddressEditPtrJSONBody defines parameters for AddressEditPtr.
+type AddressEditPtrJSONBody struct {
 	Value string `json:"value"`
 }
 
-// DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONBody defines parameters for DbaasBackupDeleteV2DbaasBackupsObjectIdDelete.
-type DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONBody struct {
+// DbaasBackupDeleteJSONBody defines parameters for DbaasBackupDelete.
+type DbaasBackupDeleteJSONBody struct {
 	Force *bool `json:"force,omitempty"`
 }
 
-// DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONBody defines parameters for DbaasClusterUpdateV2DbaasClustersObjectIdPatch.
-type DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONBody struct {
+// DbaasClusterUpdateJSONBody defines parameters for DbaasClusterUpdate.
+type DbaasClusterUpdateJSONBody struct {
 	Name string `json:"name"`
 }
 
-// DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONBody defines parameters for DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost.
-type DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONBody struct {
+// DbaasClusterBackupJSONBody defines parameters for DbaasClusterBackup.
+type DbaasClusterBackupJSONBody struct {
 	Name string `json:"name"`
 }
 
-// ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONBody defines parameters for ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost.
-type ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONBody struct {
+// ClusterAddDatabaseJSONBody defines parameters for ClusterAddDatabase.
+type ClusterAddDatabaseJSONBody struct {
 	AdminPassword string `json:"admin_password"`
 	AdminUsername string `json:"admin_username"`
 	Name          string `json:"name"`
 }
 
-// DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONBody defines parameters for DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost.
-type DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONBody struct {
+// DbaasClusterResizeJSONBody defines parameters for DbaasClusterResize.
+type DbaasClusterResizeJSONBody struct {
 	Ram   int `json:"ram"`
 	Vcpus int `json:"vcpus"`
 }
 
-// DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONBody defines parameters for DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost.
-type DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONBody struct {
+// DbaasClusterResizeStorageJSONBody defines parameters for DbaasClusterResizeStorage.
+type DbaasClusterResizeStorageJSONBody struct {
 	NewSize int `json:"new_size"`
 }
 
-// ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONBody defines parameters for ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost.
-type ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONBody struct {
+// ClusterDatabaseBackupJSONBody defines parameters for ClusterDatabaseBackup.
+type ClusterDatabaseBackupJSONBody struct {
 	Name string `json:"name"`
 }
 
-// DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONBody defines parameters for DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost.
-type DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONBody struct {
+// DbaasRestoreAdminPasswordJSONBody defines parameters for DbaasRestoreAdminPassword.
+type DbaasRestoreAdminPasswordJSONBody struct {
 	Password string `json:"password"`
 }
 
-// LicenseUpdateV2LicensesObjectIdPatchJSONBody defines parameters for LicenseUpdateV2LicensesObjectIdPatch.
-type LicenseUpdateV2LicensesObjectIdPatchJSONBody struct {
+// LicenseUpdateJSONBody defines parameters for LicenseUpdate.
+type LicenseUpdateJSONBody struct {
 	Name  string `json:"name"`
 	Value *int   `json:"value,omitempty"`
 }
 
-// AccountPatchLimitsV2LimitsPatchJSONBody defines parameters for AccountPatchLimitsV2LimitsPatch.
-type AccountPatchLimitsV2LimitsPatchJSONBody struct {
+// AccountPatchLimitsJSONBody defines parameters for AccountPatchLimits.
+type AccountPatchLimitsJSONBody struct {
 	Addresses     *map[string]int `json:"addresses,omitempty"`
 	DbaasClusters *map[string]int `json:"dbaas-clusters,omitempty"`
 	DiskSpace     *map[string]int `json:"disk-space,omitempty"`
@@ -1315,50 +1315,50 @@ type AccountPatchLimitsV2LimitsPatchJSONBody struct {
 	Servers       *map[string]int `json:"servers,omitempty"`
 }
 
-// LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONBody defines parameters for LoadBalancerRenameV2LoadbalancersObjectIdPatch.
-type LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONBody struct {
+// LoadBalancerRenameJSONBody defines parameters for LoadBalancerRename.
+type LoadBalancerRenameJSONBody struct {
 	Name string `json:"name"`
 }
 
-// LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBody defines parameters for LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost.
-type LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBody struct {
-	Algorithm          *LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm `json:"algorithm,omitempty"`
-	SessionPersistence *bool                                                                    `json:"session_persistence,omitempty"`
+// LoadBalancerUpdateJSONBody defines parameters for LoadBalancerUpdate.
+type LoadBalancerUpdateJSONBody struct {
+	Algorithm          *LoadBalancerUpdateJSONBodyAlgorithm `json:"algorithm,omitempty"`
+	SessionPersistence *bool                                `json:"session_persistence,omitempty"`
 }
 
-// LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm defines parameters for LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost.
-type LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBodyAlgorithm string
+// LoadBalancerUpdateJSONBodyAlgorithm defines parameters for LoadBalancerUpdate.
+type LoadBalancerUpdateJSONBodyAlgorithm string
 
-// LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBody defines parameters for LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut.
-type LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBody struct {
+// LoadBalancerUpdateHealthmonitorJSONBody defines parameters for LoadBalancerUpdateHealthmonitor.
+type LoadBalancerUpdateHealthmonitorJSONBody struct {
 	Delay         int     `json:"delay"`
 	ExpectedCodes *string `json:"expected_codes,omitempty"`
 
 	// HttpMethod An enumeration.
-	HttpMethod *LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod `json:"http_method,omitempty"`
-	MaxRetries int                                                                                       `json:"max_retries"`
-	Timeout    int                                                                                       `json:"timeout"`
+	HttpMethod *LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod `json:"http_method,omitempty"`
+	MaxRetries int                                                `json:"max_retries"`
+	Timeout    int                                                `json:"timeout"`
 
 	// Type An enumeration.
-	Type    LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType `json:"type"`
-	UrlPath *string                                                                            `json:"url_path,omitempty"`
+	Type    LoadBalancerUpdateHealthmonitorJSONBodyType `json:"type"`
+	UrlPath *string                                     `json:"url_path,omitempty"`
 }
 
-// LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod defines parameters for LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut.
-type LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyHttpMethod string
+// LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod defines parameters for LoadBalancerUpdateHealthmonitor.
+type LoadBalancerUpdateHealthmonitorJSONBodyHttpMethod string
 
-// LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType defines parameters for LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut.
-type LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBodyType string
+// LoadBalancerUpdateHealthmonitorJSONBodyType defines parameters for LoadBalancerUpdateHealthmonitor.
+type LoadBalancerUpdateHealthmonitorJSONBodyType string
 
-// RuleCreateV2LoadbalancersObjectIdRulesPostJSONBody defines parameters for RuleCreateV2LoadbalancersObjectIdRulesPost.
-type RuleCreateV2LoadbalancersObjectIdRulesPostJSONBody struct {
+// RuleCreateJSONBody defines parameters for RuleCreate.
+type RuleCreateJSONBody struct {
 	AddressId            string `json:"address_id"`
 	ExternalProtocolPort int    `json:"external_protocol_port"`
 	InternalProtocolPort int    `json:"internal_protocol_port"`
 }
 
-// ProjectCreateV2ProjectsPostJSONBody defines parameters for ProjectCreateV2ProjectsPost.
-type ProjectCreateV2ProjectsPostJSONBody struct {
+// ProjectCreateJSONBody defines parameters for ProjectCreate.
+type ProjectCreateJSONBody struct {
 	Description *string `json:"description,omitempty"`
 
 	// DisplayName Project name. Allowed characters: letters, numbers, hyphen (-), underscore (_), and dot (.)
@@ -1366,21 +1366,21 @@ type ProjectCreateV2ProjectsPostJSONBody struct {
 	LimitName   *int    `json:"limit_name,omitempty"`
 }
 
-// ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONBody defines parameters for ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch.
-type ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONBody struct {
+// ProjectPatchDisplayNameDescriptionJSONBody defines parameters for ProjectPatchDisplayNameDescription.
+type ProjectPatchDisplayNameDescriptionJSONBody struct {
 	Description *string `json:"description,omitempty"`
 
 	// DisplayName Project name. Allowed characters: letters, numbers, hyphen (-), underscore (_), and dot (.)
 	DisplayName *string `json:"display_name,omitempty"`
 }
 
-// AddressCreateV2ProjectsObjectIdAddressesPostJSONBody defines parameters for AddressCreateV2ProjectsObjectIdAddressesPost.
-type AddressCreateV2ProjectsObjectIdAddressesPostJSONBody struct {
+// AddressCreateJSONBody defines parameters for AddressCreate.
+type AddressCreateJSONBody struct {
 	DdosProtection *bool `json:"ddos_protection,omitempty"`
 }
 
-// DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONBody defines parameters for DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost.
-type DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONBody struct {
+// DbaasClusterCreateJSONBody defines parameters for DbaasClusterCreate.
+type DbaasClusterCreateJSONBody struct {
 	Address *struct {
 		DdosProtection *bool   `json:"ddos_protection,omitempty"`
 		Id             *string `json:"id,omitempty"`
@@ -1400,19 +1400,19 @@ type DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONBody struct {
 	StorageSize int    `json:"storage_size"`
 }
 
-// ImportKeypairV2ProjectsObjectIdKeypairsPostJSONBody defines parameters for ImportKeypairV2ProjectsObjectIdKeypairsPost.
-type ImportKeypairV2ProjectsObjectIdKeypairsPostJSONBody struct {
+// ImportKeypairJSONBody defines parameters for ImportKeypair.
+type ImportKeypairJSONBody struct {
 	Name      string `json:"name"`
 	PublicKey string `json:"public_key"`
 }
 
-// GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONBody defines parameters for GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost.
-type GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONBody struct {
+// GenerateKeypairJSONBody defines parameters for GenerateKeypair.
+type GenerateKeypairJSONBody struct {
 	Name string `json:"name"`
 }
 
-// ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONBody defines parameters for ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch.
-type ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONBody struct {
+// ProjectPatchLimitsJSONBody defines parameters for ProjectPatchLimits.
+type ProjectPatchLimitsJSONBody struct {
 	Addresses     *int `json:"addresses,omitempty"`
 	DbaasClusters *int `json:"dbaas-clusters,omitempty"`
 	DiskSpace     *int `json:"disk-space,omitempty"`
@@ -1421,25 +1421,25 @@ type ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONBody struct {
 	Servers       *int `json:"servers,omitempty"`
 }
 
-// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBody defines parameters for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost.
-type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBody struct {
+// LoadBalancerCreateJSONBody defines parameters for LoadBalancerCreate.
+type LoadBalancerCreateJSONBody struct {
 	Address *struct {
 		DdosProtection *bool   `json:"ddos_protection,omitempty"`
 		Id             *string `json:"id,omitempty"`
 	} `json:"address,omitempty"`
-	Algorithm     *LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm `json:"algorithm,omitempty"`
+	Algorithm     *LoadBalancerCreateJSONBodyAlgorithm `json:"algorithm,omitempty"`
 	Healthmonitor struct {
 		Delay         int     `json:"delay"`
 		ExpectedCodes *string `json:"expected_codes,omitempty"`
 
 		// HttpMethod An enumeration.
-		HttpMethod *LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod `json:"http_method,omitempty"`
-		MaxRetries int                                                                                   `json:"max_retries"`
-		Timeout    int                                                                                   `json:"timeout"`
+		HttpMethod *LoadBalancerCreateJSONBodyHealthmonitorHttpMethod `json:"http_method,omitempty"`
+		MaxRetries int                                                `json:"max_retries"`
+		Timeout    int                                                `json:"timeout"`
 
 		// Type An enumeration.
-		Type    LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType `json:"type"`
-		UrlPath *string                                                                        `json:"url_path,omitempty"`
+		Type    LoadBalancerCreateJSONBodyHealthmonitorType `json:"type"`
+		UrlPath *string                                     `json:"url_path,omitempty"`
 	} `json:"healthmonitor"`
 	Name  string `json:"name"`
 	Rules *[]struct {
@@ -1450,17 +1450,17 @@ type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBody struct {
 	SessionPersistence *bool `json:"session_persistence,omitempty"`
 }
 
-// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm defines parameters for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost.
-type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyAlgorithm string
+// LoadBalancerCreateJSONBodyAlgorithm defines parameters for LoadBalancerCreate.
+type LoadBalancerCreateJSONBodyAlgorithm string
 
-// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod defines parameters for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost.
-type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorHttpMethod string
+// LoadBalancerCreateJSONBodyHealthmonitorHttpMethod defines parameters for LoadBalancerCreate.
+type LoadBalancerCreateJSONBodyHealthmonitorHttpMethod string
 
-// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType defines parameters for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost.
-type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBodyHealthmonitorType string
+// LoadBalancerCreateJSONBodyHealthmonitorType defines parameters for LoadBalancerCreate.
+type LoadBalancerCreateJSONBodyHealthmonitorType string
 
-// S3UserCreateV2ProjectsObjectIdS3UsersPostJSONBody defines parameters for S3UserCreateV2ProjectsObjectIdS3UsersPost.
-type S3UserCreateV2ProjectsObjectIdS3UsersPostJSONBody struct {
+// S3UserCreateJSONBody defines parameters for S3UserCreate.
+type S3UserCreateJSONBody struct {
 	BucketQuota *struct {
 		MaxObjects *int `json:"max_objects,omitempty"`
 		MaxSize    *int `json:"max_size,omitempty"`
@@ -1475,14 +1475,14 @@ type S3UserCreateV2ProjectsObjectIdS3UsersPostJSONBody struct {
 	} `json:"user_quota"`
 }
 
-// ServerCreateV2ProjectsObjectIdServersPostJSONBody defines parameters for ServerCreateV2ProjectsObjectIdServersPost.
-type ServerCreateV2ProjectsObjectIdServersPostJSONBody struct {
+// ServerCreateJSONBody defines parameters for ServerCreate.
+type ServerCreateJSONBody struct {
 	Addresses *[]struct {
-		AddressId        *string                                                                     `json:"address_id,omitempty"`
-		BandwidthMaxMbps *ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps `json:"bandwidth_max_mbps,omitempty"`
-		DdosProtection   *bool                                                                       `json:"ddos_protection,omitempty"`
-		External         *bool                                                                       `json:"external,omitempty"`
-		Version          *int                                                                        `json:"version,omitempty"`
+		AddressId        *string                                        `json:"address_id,omitempty"`
+		BandwidthMaxMbps *ServerCreateJSONBodyAddressesBandwidthMaxMbps `json:"bandwidth_max_mbps,omitempty"`
+		DdosProtection   *bool                                          `json:"ddos_protection,omitempty"`
+		External         *bool                                          `json:"external,omitempty"`
+		Version          *int                                           `json:"version,omitempty"`
 	} `json:"addresses,omitempty"`
 	Flavor struct {
 		CpuType *string `json:"cpu_type,omitempty"`
@@ -1506,29 +1506,29 @@ type ServerCreateV2ProjectsObjectIdServersPostJSONBody struct {
 	Volume   *string `json:"volume,omitempty"`
 }
 
-// ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps defines parameters for ServerCreateV2ProjectsObjectIdServersPost.
-type ServerCreateV2ProjectsObjectIdServersPostJSONBodyAddressesBandwidthMaxMbps int
+// ServerCreateJSONBodyAddressesBandwidthMaxMbps defines parameters for ServerCreate.
+type ServerCreateJSONBodyAddressesBandwidthMaxMbps int
 
-// VolumeCreateV2ProjectsObjectIdVolumesPostJSONBody defines parameters for VolumeCreateV2ProjectsObjectIdVolumesPost.
-type VolumeCreateV2ProjectsObjectIdVolumesPostJSONBody struct {
+// VolumeCreateJSONBody defines parameters for VolumeCreate.
+type VolumeCreateJSONBody struct {
 	Autorename *bool  `json:"autorename,omitempty"`
 	Name       string `json:"name"`
 	Size       int    `json:"size"`
 }
 
-// VrouterCreateV2ProjectsObjectIdVroutersPostJSONBody defines parameters for VrouterCreateV2ProjectsObjectIdVroutersPost.
-type VrouterCreateV2ProjectsObjectIdVroutersPostJSONBody struct {
+// VrouterCreateJSONBody defines parameters for VrouterCreate.
+type VrouterCreateJSONBody struct {
 	Name            string    `json:"name"`
 	PrivateNetworks *[]string `json:"private_networks,omitempty"`
 }
 
-// S3UserUpdateV2S3UsersObjectIdPatchJSONBody defines parameters for S3UserUpdateV2S3UsersObjectIdPatch.
-type S3UserUpdateV2S3UsersObjectIdPatchJSONBody struct {
+// S3UserUpdateJSONBody defines parameters for S3UserUpdate.
+type S3UserUpdateJSONBody struct {
 	Name string `json:"name"`
 }
 
-// S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONBody defines parameters for S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut.
-type S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONBody struct {
+// S3UserUpdateQuotaJSONBody defines parameters for S3UserUpdateQuota.
+type S3UserUpdateQuotaJSONBody struct {
 	BucketQuota *struct {
 		MaxObjects *int `json:"max_objects,omitempty"`
 		MaxSize    *int `json:"max_size,omitempty"`
@@ -1540,242 +1540,242 @@ type S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONBody struct {
 	} `json:"user_quota,omitempty"`
 }
 
-// ServerDeleteV2ServersObjectIdDeleteJSONBody defines parameters for ServerDeleteV2ServersObjectIdDelete.
-type ServerDeleteV2ServersObjectIdDeleteJSONBody struct {
-	ClearFstab      *bool                                                        `json:"clear_fstab,omitempty"`
-	DeleteAddresses *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses `json:"delete_addresses,omitempty"`
-	DeleteVolumes   *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes   `json:"delete_volumes,omitempty"`
+// ServerDeleteJSONBody defines parameters for ServerDelete.
+type ServerDeleteJSONBody struct {
+	ClearFstab      *bool                                 `json:"clear_fstab,omitempty"`
+	DeleteAddresses *ServerDeleteJSONBody_DeleteAddresses `json:"delete_addresses,omitempty"`
+	DeleteVolumes   *ServerDeleteJSONBody_DeleteVolumes   `json:"delete_volumes,omitempty"`
 }
 
-// ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0 defines parameters for ServerDeleteV2ServersObjectIdDelete.
-type ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0 = []string
+// ServerDeleteJSONBodyDeleteAddresses0 defines parameters for ServerDelete.
+type ServerDeleteJSONBodyDeleteAddresses0 = []string
 
-// ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1 defines parameters for ServerDeleteV2ServersObjectIdDelete.
-type ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1 = string
+// ServerDeleteJSONBodyDeleteAddresses1 defines parameters for ServerDelete.
+type ServerDeleteJSONBodyDeleteAddresses1 = string
 
-// ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses defines parameters for ServerDeleteV2ServersObjectIdDelete.
-type ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses struct {
+// ServerDeleteJSONBody_DeleteAddresses defines parameters for ServerDelete.
+type ServerDeleteJSONBody_DeleteAddresses struct {
 	union json.RawMessage
 }
 
-// ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0 defines parameters for ServerDeleteV2ServersObjectIdDelete.
-type ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0 = []string
+// ServerDeleteJSONBodyDeleteVolumes0 defines parameters for ServerDelete.
+type ServerDeleteJSONBodyDeleteVolumes0 = []string
 
-// ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1 defines parameters for ServerDeleteV2ServersObjectIdDelete.
-type ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1 = string
+// ServerDeleteJSONBodyDeleteVolumes1 defines parameters for ServerDelete.
+type ServerDeleteJSONBodyDeleteVolumes1 = string
 
-// ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes defines parameters for ServerDeleteV2ServersObjectIdDelete.
-type ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes struct {
+// ServerDeleteJSONBody_DeleteVolumes defines parameters for ServerDelete.
+type ServerDeleteJSONBody_DeleteVolumes struct {
 	union json.RawMessage
 }
 
-// ServerUpdateV2ServersObjectIdPatchJSONBody defines parameters for ServerUpdateV2ServersObjectIdPatch.
-type ServerUpdateV2ServersObjectIdPatchJSONBody struct {
+// ServerUpdateJSONBody defines parameters for ServerUpdate.
+type ServerUpdateJSONBody struct {
 	Name *string `json:"name,omitempty"`
 }
 
-// ServerAddLicenseV2ServersObjectIdLicensesPostJSONBody defines parameters for ServerAddLicenseV2ServersObjectIdLicensesPost.
-type ServerAddLicenseV2ServersObjectIdLicensesPostJSONBody struct {
+// ServerAddLicenseJSONBody defines parameters for ServerAddLicense.
+type ServerAddLicenseJSONBody struct {
 	Addon string `json:"addon"`
 	Name  string `json:"name"`
 	Value *int   `json:"value,omitempty"`
 }
 
-// ServerChangePasswordV2ServersObjectIdPasswordPostJSONBody defines parameters for ServerChangePasswordV2ServersObjectIdPasswordPost.
-type ServerChangePasswordV2ServersObjectIdPasswordPostJSONBody struct {
+// ServerChangePasswordJSONBody defines parameters for ServerChangePassword.
+type ServerChangePasswordJSONBody struct {
 	Password string `json:"password"`
 }
 
-// ServerResizeV2ServersObjectIdResizePostJSONBody defines parameters for ServerResizeV2ServersObjectIdResizePost.
-type ServerResizeV2ServersObjectIdResizePostJSONBody struct {
+// ServerResizeJSONBody defines parameters for ServerResize.
+type ServerResizeJSONBody struct {
 	Ram   int `json:"ram"`
 	Vcpus int `json:"vcpus"`
 }
 
-// CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONBody defines parameters for CreateServerSnapshotV2ServersObjectIdSnapshotPost.
-type CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONBody struct {
+// CreateServerSnapshotJSONBody defines parameters for CreateServerSnapshot.
+type CreateServerSnapshotJSONBody struct {
 	Name string `json:"name"`
 }
 
-// SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONBody defines parameters for SnapshotRestoreV2SnapshotsObjectIdRestorePost.
-type SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONBody struct {
+// SnapshotRestoreJSONBody defines parameters for SnapshotRestore.
+type SnapshotRestoreJSONBody struct {
 	Name string `json:"name"`
 }
 
-// VolumeDeleteV2VolumesObjectIdDeleteJSONBody defines parameters for VolumeDeleteV2VolumesObjectIdDelete.
-type VolumeDeleteV2VolumesObjectIdDeleteJSONBody struct {
+// VolumeDeleteJSONBody defines parameters for VolumeDelete.
+type VolumeDeleteJSONBody struct {
 	ClearFstab *bool `json:"clear_fstab,omitempty"`
 	Force      *bool `json:"force,omitempty"`
 }
 
-// VolumeUpdateV2VolumesObjectIdPatchJSONBody defines parameters for VolumeUpdateV2VolumesObjectIdPatch.
-type VolumeUpdateV2VolumesObjectIdPatchJSONBody struct {
+// VolumeUpdateJSONBody defines parameters for VolumeUpdate.
+type VolumeUpdateJSONBody struct {
 	Description *string `json:"description,omitempty"`
 	Name        *string `json:"name,omitempty"`
 }
 
-// VolumeAttachV2VolumesObjectIdAttachPostJSONBody defines parameters for VolumeAttachV2VolumesObjectIdAttachPost.
-type VolumeAttachV2VolumesObjectIdAttachPostJSONBody struct {
+// VolumeAttachJSONBody defines parameters for VolumeAttach.
+type VolumeAttachJSONBody struct {
 	ServerId string `json:"server_id"`
 }
 
-// VolumeDetachV2VolumesObjectIdDetachPostJSONBody defines parameters for VolumeDetachV2VolumesObjectIdDetachPost.
-type VolumeDetachV2VolumesObjectIdDetachPostJSONBody struct {
+// VolumeDetachJSONBody defines parameters for VolumeDetach.
+type VolumeDetachJSONBody struct {
 	ClearFstab *bool `json:"clear_fstab,omitempty"`
 	Force      *bool `json:"force,omitempty"`
 }
 
-// VolumeExtendV2VolumesObjectIdExtendPostJSONBody defines parameters for VolumeExtendV2VolumesObjectIdExtendPost.
-type VolumeExtendV2VolumesObjectIdExtendPostJSONBody struct {
+// VolumeExtendJSONBody defines parameters for VolumeExtend.
+type VolumeExtendJSONBody struct {
 	NewSize      int   `json:"new_size"`
 	RebootServer *bool `json:"reboot_server,omitempty"`
 }
 
-// AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody defines body for AddressAttachV2AddressesObjectIdAttachPost for application/json ContentType.
-type AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody AddressAttachV2AddressesObjectIdAttachPostJSONBody
+// AddressAttachJSONRequestBody defines body for AddressAttach for application/json ContentType.
+type AddressAttachJSONRequestBody AddressAttachJSONBody
 
-// AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody defines body for AddressChangeBandwidthV2AddressesObjectIdBandwidthPost for application/json ContentType.
-type AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONBody
+// AddressChangeBandwidthJSONRequestBody defines body for AddressChangeBandwidth for application/json ContentType.
+type AddressChangeBandwidthJSONRequestBody AddressChangeBandwidthJSONBody
 
-// AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody defines body for AddressEditPtrV2AddressesObjectIdPtrPut for application/json ContentType.
-type AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody AddressEditPtrV2AddressesObjectIdPtrPutJSONBody
+// AddressEditPtrJSONRequestBody defines body for AddressEditPtr for application/json ContentType.
+type AddressEditPtrJSONRequestBody AddressEditPtrJSONBody
 
-// DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody defines body for DbaasBackupDeleteV2DbaasBackupsObjectIdDelete for application/json ContentType.
-type DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONBody
+// DbaasBackupDeleteJSONRequestBody defines body for DbaasBackupDelete for application/json ContentType.
+type DbaasBackupDeleteJSONRequestBody DbaasBackupDeleteJSONBody
 
-// DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody defines body for DbaasClusterUpdateV2DbaasClustersObjectIdPatch for application/json ContentType.
-type DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONBody
+// DbaasClusterUpdateJSONRequestBody defines body for DbaasClusterUpdate for application/json ContentType.
+type DbaasClusterUpdateJSONRequestBody DbaasClusterUpdateJSONBody
 
-// DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody defines body for DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost for application/json ContentType.
-type DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONBody
+// DbaasClusterBackupJSONRequestBody defines body for DbaasClusterBackup for application/json ContentType.
+type DbaasClusterBackupJSONRequestBody DbaasClusterBackupJSONBody
 
-// ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody defines body for ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost for application/json ContentType.
-type ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONBody
+// ClusterAddDatabaseJSONRequestBody defines body for ClusterAddDatabase for application/json ContentType.
+type ClusterAddDatabaseJSONRequestBody ClusterAddDatabaseJSONBody
 
-// DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody defines body for DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost for application/json ContentType.
-type DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONBody
+// DbaasClusterResizeJSONRequestBody defines body for DbaasClusterResize for application/json ContentType.
+type DbaasClusterResizeJSONRequestBody DbaasClusterResizeJSONBody
 
-// DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody defines body for DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost for application/json ContentType.
-type DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONBody
+// DbaasClusterResizeStorageJSONRequestBody defines body for DbaasClusterResizeStorage for application/json ContentType.
+type DbaasClusterResizeStorageJSONRequestBody DbaasClusterResizeStorageJSONBody
 
-// ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody defines body for ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost for application/json ContentType.
-type ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONBody
+// ClusterDatabaseBackupJSONRequestBody defines body for ClusterDatabaseBackup for application/json ContentType.
+type ClusterDatabaseBackupJSONRequestBody ClusterDatabaseBackupJSONBody
 
-// DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody defines body for DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost for application/json ContentType.
-type DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONBody
+// DbaasRestoreAdminPasswordJSONRequestBody defines body for DbaasRestoreAdminPassword for application/json ContentType.
+type DbaasRestoreAdminPasswordJSONRequestBody DbaasRestoreAdminPasswordJSONBody
 
-// LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody defines body for LicenseUpdateV2LicensesObjectIdPatch for application/json ContentType.
-type LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody LicenseUpdateV2LicensesObjectIdPatchJSONBody
+// LicenseUpdateJSONRequestBody defines body for LicenseUpdate for application/json ContentType.
+type LicenseUpdateJSONRequestBody LicenseUpdateJSONBody
 
-// AccountPatchLimitsV2LimitsPatchJSONRequestBody defines body for AccountPatchLimitsV2LimitsPatch for application/json ContentType.
-type AccountPatchLimitsV2LimitsPatchJSONRequestBody AccountPatchLimitsV2LimitsPatchJSONBody
+// AccountPatchLimitsJSONRequestBody defines body for AccountPatchLimits for application/json ContentType.
+type AccountPatchLimitsJSONRequestBody AccountPatchLimitsJSONBody
 
-// LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody defines body for LoadBalancerRenameV2LoadbalancersObjectIdPatch for application/json ContentType.
-type LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONBody
+// LoadBalancerRenameJSONRequestBody defines body for LoadBalancerRename for application/json ContentType.
+type LoadBalancerRenameJSONRequestBody LoadBalancerRenameJSONBody
 
-// LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody defines body for LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost for application/json ContentType.
-type LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONBody
+// LoadBalancerUpdateJSONRequestBody defines body for LoadBalancerUpdate for application/json ContentType.
+type LoadBalancerUpdateJSONRequestBody LoadBalancerUpdateJSONBody
 
-// LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody defines body for LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut for application/json ContentType.
-type LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONBody
+// LoadBalancerUpdateHealthmonitorJSONRequestBody defines body for LoadBalancerUpdateHealthmonitor for application/json ContentType.
+type LoadBalancerUpdateHealthmonitorJSONRequestBody LoadBalancerUpdateHealthmonitorJSONBody
 
-// RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody defines body for RuleCreateV2LoadbalancersObjectIdRulesPost for application/json ContentType.
-type RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody RuleCreateV2LoadbalancersObjectIdRulesPostJSONBody
+// RuleCreateJSONRequestBody defines body for RuleCreate for application/json ContentType.
+type RuleCreateJSONRequestBody RuleCreateJSONBody
 
-// ProjectCreateV2ProjectsPostJSONRequestBody defines body for ProjectCreateV2ProjectsPost for application/json ContentType.
-type ProjectCreateV2ProjectsPostJSONRequestBody ProjectCreateV2ProjectsPostJSONBody
+// ProjectCreateJSONRequestBody defines body for ProjectCreate for application/json ContentType.
+type ProjectCreateJSONRequestBody ProjectCreateJSONBody
 
-// ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody defines body for ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch for application/json ContentType.
-type ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONBody
+// ProjectPatchDisplayNameDescriptionJSONRequestBody defines body for ProjectPatchDisplayNameDescription for application/json ContentType.
+type ProjectPatchDisplayNameDescriptionJSONRequestBody ProjectPatchDisplayNameDescriptionJSONBody
 
-// AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody defines body for AddressCreateV2ProjectsObjectIdAddressesPost for application/json ContentType.
-type AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody AddressCreateV2ProjectsObjectIdAddressesPostJSONBody
+// AddressCreateJSONRequestBody defines body for AddressCreate for application/json ContentType.
+type AddressCreateJSONRequestBody AddressCreateJSONBody
 
-// DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody defines body for DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost for application/json ContentType.
-type DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONBody
+// DbaasClusterCreateJSONRequestBody defines body for DbaasClusterCreate for application/json ContentType.
+type DbaasClusterCreateJSONRequestBody DbaasClusterCreateJSONBody
 
-// ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody defines body for ImportKeypairV2ProjectsObjectIdKeypairsPost for application/json ContentType.
-type ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody ImportKeypairV2ProjectsObjectIdKeypairsPostJSONBody
+// ImportKeypairJSONRequestBody defines body for ImportKeypair for application/json ContentType.
+type ImportKeypairJSONRequestBody ImportKeypairJSONBody
 
-// GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody defines body for GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost for application/json ContentType.
-type GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONBody
+// GenerateKeypairJSONRequestBody defines body for GenerateKeypair for application/json ContentType.
+type GenerateKeypairJSONRequestBody GenerateKeypairJSONBody
 
-// ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody defines body for ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch for application/json ContentType.
-type ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONBody
+// ProjectPatchLimitsJSONRequestBody defines body for ProjectPatchLimits for application/json ContentType.
+type ProjectPatchLimitsJSONRequestBody ProjectPatchLimitsJSONBody
 
-// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody defines body for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost for application/json ContentType.
-type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONBody
+// LoadBalancerCreateJSONRequestBody defines body for LoadBalancerCreate for application/json ContentType.
+type LoadBalancerCreateJSONRequestBody LoadBalancerCreateJSONBody
 
-// S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody defines body for S3UserCreateV2ProjectsObjectIdS3UsersPost for application/json ContentType.
-type S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody S3UserCreateV2ProjectsObjectIdS3UsersPostJSONBody
+// S3UserCreateJSONRequestBody defines body for S3UserCreate for application/json ContentType.
+type S3UserCreateJSONRequestBody S3UserCreateJSONBody
 
-// ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody defines body for ServerCreateV2ProjectsObjectIdServersPost for application/json ContentType.
-type ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody ServerCreateV2ProjectsObjectIdServersPostJSONBody
+// ServerCreateJSONRequestBody defines body for ServerCreate for application/json ContentType.
+type ServerCreateJSONRequestBody ServerCreateJSONBody
 
-// VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody defines body for VolumeCreateV2ProjectsObjectIdVolumesPost for application/json ContentType.
-type VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody VolumeCreateV2ProjectsObjectIdVolumesPostJSONBody
+// VolumeCreateJSONRequestBody defines body for VolumeCreate for application/json ContentType.
+type VolumeCreateJSONRequestBody VolumeCreateJSONBody
 
-// VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody defines body for VrouterCreateV2ProjectsObjectIdVroutersPost for application/json ContentType.
-type VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody VrouterCreateV2ProjectsObjectIdVroutersPostJSONBody
+// VrouterCreateJSONRequestBody defines body for VrouterCreate for application/json ContentType.
+type VrouterCreateJSONRequestBody VrouterCreateJSONBody
 
-// S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody defines body for S3UserUpdateV2S3UsersObjectIdPatch for application/json ContentType.
-type S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody S3UserUpdateV2S3UsersObjectIdPatchJSONBody
+// S3UserUpdateJSONRequestBody defines body for S3UserUpdate for application/json ContentType.
+type S3UserUpdateJSONRequestBody S3UserUpdateJSONBody
 
-// S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody defines body for S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut for application/json ContentType.
-type S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONBody
+// S3UserUpdateQuotaJSONRequestBody defines body for S3UserUpdateQuota for application/json ContentType.
+type S3UserUpdateQuotaJSONRequestBody S3UserUpdateQuotaJSONBody
 
-// ServerDeleteV2ServersObjectIdDeleteJSONRequestBody defines body for ServerDeleteV2ServersObjectIdDelete for application/json ContentType.
-type ServerDeleteV2ServersObjectIdDeleteJSONRequestBody ServerDeleteV2ServersObjectIdDeleteJSONBody
+// ServerDeleteJSONRequestBody defines body for ServerDelete for application/json ContentType.
+type ServerDeleteJSONRequestBody ServerDeleteJSONBody
 
-// ServerUpdateV2ServersObjectIdPatchJSONRequestBody defines body for ServerUpdateV2ServersObjectIdPatch for application/json ContentType.
-type ServerUpdateV2ServersObjectIdPatchJSONRequestBody ServerUpdateV2ServersObjectIdPatchJSONBody
+// ServerUpdateJSONRequestBody defines body for ServerUpdate for application/json ContentType.
+type ServerUpdateJSONRequestBody ServerUpdateJSONBody
 
-// ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody defines body for ServerAddLicenseV2ServersObjectIdLicensesPost for application/json ContentType.
-type ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody ServerAddLicenseV2ServersObjectIdLicensesPostJSONBody
+// ServerAddLicenseJSONRequestBody defines body for ServerAddLicense for application/json ContentType.
+type ServerAddLicenseJSONRequestBody ServerAddLicenseJSONBody
 
-// ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody defines body for ServerChangePasswordV2ServersObjectIdPasswordPost for application/json ContentType.
-type ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody ServerChangePasswordV2ServersObjectIdPasswordPostJSONBody
+// ServerChangePasswordJSONRequestBody defines body for ServerChangePassword for application/json ContentType.
+type ServerChangePasswordJSONRequestBody ServerChangePasswordJSONBody
 
-// ServerResizeV2ServersObjectIdResizePostJSONRequestBody defines body for ServerResizeV2ServersObjectIdResizePost for application/json ContentType.
-type ServerResizeV2ServersObjectIdResizePostJSONRequestBody ServerResizeV2ServersObjectIdResizePostJSONBody
+// ServerResizeJSONRequestBody defines body for ServerResize for application/json ContentType.
+type ServerResizeJSONRequestBody ServerResizeJSONBody
 
-// CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody defines body for CreateServerSnapshotV2ServersObjectIdSnapshotPost for application/json ContentType.
-type CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONBody
+// CreateServerSnapshotJSONRequestBody defines body for CreateServerSnapshot for application/json ContentType.
+type CreateServerSnapshotJSONRequestBody CreateServerSnapshotJSONBody
 
-// SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody defines body for SnapshotRestoreV2SnapshotsObjectIdRestorePost for application/json ContentType.
-type SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONBody
+// SnapshotRestoreJSONRequestBody defines body for SnapshotRestore for application/json ContentType.
+type SnapshotRestoreJSONRequestBody SnapshotRestoreJSONBody
 
-// VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody defines body for VolumeDeleteV2VolumesObjectIdDelete for application/json ContentType.
-type VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody VolumeDeleteV2VolumesObjectIdDeleteJSONBody
+// VolumeDeleteJSONRequestBody defines body for VolumeDelete for application/json ContentType.
+type VolumeDeleteJSONRequestBody VolumeDeleteJSONBody
 
-// VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody defines body for VolumeUpdateV2VolumesObjectIdPatch for application/json ContentType.
-type VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody VolumeUpdateV2VolumesObjectIdPatchJSONBody
+// VolumeUpdateJSONRequestBody defines body for VolumeUpdate for application/json ContentType.
+type VolumeUpdateJSONRequestBody VolumeUpdateJSONBody
 
-// VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody defines body for VolumeAttachV2VolumesObjectIdAttachPost for application/json ContentType.
-type VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody VolumeAttachV2VolumesObjectIdAttachPostJSONBody
+// VolumeAttachJSONRequestBody defines body for VolumeAttach for application/json ContentType.
+type VolumeAttachJSONRequestBody VolumeAttachJSONBody
 
-// VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody defines body for VolumeDetachV2VolumesObjectIdDetachPost for application/json ContentType.
-type VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody VolumeDetachV2VolumesObjectIdDetachPostJSONBody
+// VolumeDetachJSONRequestBody defines body for VolumeDetach for application/json ContentType.
+type VolumeDetachJSONRequestBody VolumeDetachJSONBody
 
-// VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody defines body for VolumeExtendV2VolumesObjectIdExtendPost for application/json ContentType.
-type VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody VolumeExtendV2VolumesObjectIdExtendPostJSONBody
+// VolumeExtendJSONRequestBody defines body for VolumeExtend for application/json ContentType.
+type VolumeExtendJSONRequestBody VolumeExtendJSONBody
 
-// AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0 returns the union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses as a ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0
-func (t ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0() (ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0, error) {
-	var body ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0
+// AsServerDeleteJSONBodyDeleteAddresses0 returns the union data inside the ServerDeleteJSONBody_DeleteAddresses as a ServerDeleteJSONBodyDeleteAddresses0
+func (t ServerDeleteJSONBody_DeleteAddresses) AsServerDeleteJSONBodyDeleteAddresses0() (ServerDeleteJSONBodyDeleteAddresses0, error) {
+	var body ServerDeleteJSONBodyDeleteAddresses0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0 overwrites any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses as the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0) error {
+// FromServerDeleteJSONBodyDeleteAddresses0 overwrites any union data inside the ServerDeleteJSONBody_DeleteAddresses as the provided ServerDeleteJSONBodyDeleteAddresses0
+func (t *ServerDeleteJSONBody_DeleteAddresses) FromServerDeleteJSONBodyDeleteAddresses0(v ServerDeleteJSONBodyDeleteAddresses0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0 performs a merge with any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses, using the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses0) error {
+// MergeServerDeleteJSONBodyDeleteAddresses0 performs a merge with any union data inside the ServerDeleteJSONBody_DeleteAddresses, using the provided ServerDeleteJSONBodyDeleteAddresses0
+func (t *ServerDeleteJSONBody_DeleteAddresses) MergeServerDeleteJSONBodyDeleteAddresses0(v ServerDeleteJSONBodyDeleteAddresses0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -1786,22 +1786,22 @@ func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) MergeServe
 	return err
 }
 
-// AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1 returns the union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses as a ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1
-func (t ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1() (ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1, error) {
-	var body ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1
+// AsServerDeleteJSONBodyDeleteAddresses1 returns the union data inside the ServerDeleteJSONBody_DeleteAddresses as a ServerDeleteJSONBodyDeleteAddresses1
+func (t ServerDeleteJSONBody_DeleteAddresses) AsServerDeleteJSONBodyDeleteAddresses1() (ServerDeleteJSONBodyDeleteAddresses1, error) {
+	var body ServerDeleteJSONBodyDeleteAddresses1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1 overwrites any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses as the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1) error {
+// FromServerDeleteJSONBodyDeleteAddresses1 overwrites any union data inside the ServerDeleteJSONBody_DeleteAddresses as the provided ServerDeleteJSONBodyDeleteAddresses1
+func (t *ServerDeleteJSONBody_DeleteAddresses) FromServerDeleteJSONBodyDeleteAddresses1(v ServerDeleteJSONBodyDeleteAddresses1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1 performs a merge with any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses, using the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteAddresses1) error {
+// MergeServerDeleteJSONBodyDeleteAddresses1 performs a merge with any union data inside the ServerDeleteJSONBody_DeleteAddresses, using the provided ServerDeleteJSONBodyDeleteAddresses1
+func (t *ServerDeleteJSONBody_DeleteAddresses) MergeServerDeleteJSONBodyDeleteAddresses1(v ServerDeleteJSONBodyDeleteAddresses1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -1812,32 +1812,32 @@ func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) MergeServe
 	return err
 }
 
-func (t ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) MarshalJSON() ([]byte, error) {
+func (t ServerDeleteJSONBody_DeleteAddresses) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteAddresses) UnmarshalJSON(b []byte) error {
+func (t *ServerDeleteJSONBody_DeleteAddresses) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
 
-// AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0 returns the union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes as a ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0
-func (t ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0() (ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0, error) {
-	var body ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0
+// AsServerDeleteJSONBodyDeleteVolumes0 returns the union data inside the ServerDeleteJSONBody_DeleteVolumes as a ServerDeleteJSONBodyDeleteVolumes0
+func (t ServerDeleteJSONBody_DeleteVolumes) AsServerDeleteJSONBodyDeleteVolumes0() (ServerDeleteJSONBodyDeleteVolumes0, error) {
+	var body ServerDeleteJSONBodyDeleteVolumes0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0 overwrites any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes as the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0) error {
+// FromServerDeleteJSONBodyDeleteVolumes0 overwrites any union data inside the ServerDeleteJSONBody_DeleteVolumes as the provided ServerDeleteJSONBodyDeleteVolumes0
+func (t *ServerDeleteJSONBody_DeleteVolumes) FromServerDeleteJSONBodyDeleteVolumes0(v ServerDeleteJSONBodyDeleteVolumes0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0 performs a merge with any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes, using the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes0) error {
+// MergeServerDeleteJSONBodyDeleteVolumes0 performs a merge with any union data inside the ServerDeleteJSONBody_DeleteVolumes, using the provided ServerDeleteJSONBodyDeleteVolumes0
+func (t *ServerDeleteJSONBody_DeleteVolumes) MergeServerDeleteJSONBodyDeleteVolumes0(v ServerDeleteJSONBodyDeleteVolumes0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -1848,22 +1848,22 @@ func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) MergeServerD
 	return err
 }
 
-// AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1 returns the union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes as a ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1
-func (t ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) AsServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1() (ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1, error) {
-	var body ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1
+// AsServerDeleteJSONBodyDeleteVolumes1 returns the union data inside the ServerDeleteJSONBody_DeleteVolumes as a ServerDeleteJSONBodyDeleteVolumes1
+func (t ServerDeleteJSONBody_DeleteVolumes) AsServerDeleteJSONBodyDeleteVolumes1() (ServerDeleteJSONBodyDeleteVolumes1, error) {
+	var body ServerDeleteJSONBodyDeleteVolumes1
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1 overwrites any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes as the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) FromServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1) error {
+// FromServerDeleteJSONBodyDeleteVolumes1 overwrites any union data inside the ServerDeleteJSONBody_DeleteVolumes as the provided ServerDeleteJSONBodyDeleteVolumes1
+func (t *ServerDeleteJSONBody_DeleteVolumes) FromServerDeleteJSONBodyDeleteVolumes1(v ServerDeleteJSONBodyDeleteVolumes1) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1 performs a merge with any union data inside the ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes, using the provided ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) MergeServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1(v ServerDeleteV2ServersObjectIdDeleteJSONBodyDeleteVolumes1) error {
+// MergeServerDeleteJSONBodyDeleteVolumes1 performs a merge with any union data inside the ServerDeleteJSONBody_DeleteVolumes, using the provided ServerDeleteJSONBodyDeleteVolumes1
+func (t *ServerDeleteJSONBody_DeleteVolumes) MergeServerDeleteJSONBodyDeleteVolumes1(v ServerDeleteJSONBodyDeleteVolumes1) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -1874,12 +1874,12 @@ func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) MergeServerD
 	return err
 }
 
-func (t ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) MarshalJSON() ([]byte, error) {
+func (t ServerDeleteJSONBody_DeleteVolumes) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *ServerDeleteV2ServersObjectIdDeleteJSONBody_DeleteVolumes) UnmarshalJSON(b []byte) error {
+func (t *ServerDeleteJSONBody_DeleteVolumes) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -1957,479 +1957,479 @@ func WithRequestEditorFn(fn RequestEditorFn) ClientOption {
 
 // The interface specification for the client above.
 type ClientInterface interface {
-	// AddressDeleteV2AddressesObjectIdDelete request
-	AddressDeleteV2AddressesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressDelete request
+	AddressDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AddressAttachV2AddressesObjectIdAttachPostWithBody request with any body
-	AddressAttachV2AddressesObjectIdAttachPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressAttachWithBody request with any body
+	AddressAttachWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	AddressAttachV2AddressesObjectIdAttachPost(ctx context.Context, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	AddressAttach(ctx context.Context, objectId string, body AddressAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBody request with any body
-	AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressChangeBandwidthWithBody request with any body
+	AddressChangeBandwidthWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	AddressChangeBandwidthV2AddressesObjectIdBandwidthPost(ctx context.Context, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	AddressChangeBandwidth(ctx context.Context, objectId string, body AddressChangeBandwidthJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AddressDetachV2AddressesObjectIdDetachPost request
-	AddressDetachV2AddressesObjectIdDetachPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressDetach request
+	AddressDetach(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AddressDetailV2AddressesObjectIdDetailGet request
-	AddressDetailV2AddressesObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressDetail request
+	AddressDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AddressSetPrimaryV2AddressesObjectIdPrimaryPost request
-	AddressSetPrimaryV2AddressesObjectIdPrimaryPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressSetPrimary request
+	AddressSetPrimary(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AddressEditPtrV2AddressesObjectIdPtrPutWithBody request with any body
-	AddressEditPtrV2AddressesObjectIdPtrPutWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressEditPtrWithBody request with any body
+	AddressEditPtrWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	AddressEditPtrV2AddressesObjectIdPtrPut(ctx context.Context, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	AddressEditPtr(ctx context.Context, objectId string, body AddressEditPtrJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AccountBalanceV2BalanceGet request
-	AccountBalanceV2BalanceGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AccountBalance request
+	AccountBalance(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBody request with any body
-	DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasBackupDeleteWithBody request with any body
+	DbaasBackupDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	DbaasBackupDeleteV2DbaasBackupsObjectIdDelete(ctx context.Context, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DbaasBackupDelete(ctx context.Context, objectId string, body DbaasBackupDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasBackupDetailV2DbaasBackupsObjectIdGet request
-	DbaasBackupDetailV2DbaasBackupsObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasBackupDetail request
+	DbaasBackupDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost request
-	DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasBackupDownload request
+	DbaasBackupDownload(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterDeleteV2DbaasClustersObjectIdDelete request
-	DbaasClusterDeleteV2DbaasClustersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterDelete request
+	DbaasClusterDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterDetailV2DbaasClustersObjectIdGet request
-	DbaasClusterDetailV2DbaasClustersObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterDetail request
+	DbaasClusterDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBody request with any body
-	DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterUpdateWithBody request with any body
+	DbaasClusterUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	DbaasClusterUpdateV2DbaasClustersObjectIdPatch(ctx context.Context, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DbaasClusterUpdate(ctx context.Context, objectId string, body DbaasClusterUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBody request with any body
-	DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterBackupWithBody request with any body
+	DbaasClusterBackupWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost(ctx context.Context, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DbaasClusterBackup(ctx context.Context, objectId string, body DbaasClusterBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePost request
-	DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterBackupDisable request
+	DbaasClusterBackupDisable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost request
-	DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterBackupEnable request
+	DbaasClusterBackupEnable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet request
-	DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterConfig request
+	DbaasClusterConfig(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet request
-	ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ClusterDbaasDatabasesList request
+	ClusterDbaasDatabasesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBody request with any body
-	ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ClusterAddDatabaseWithBody request with any body
+	ClusterAddDatabaseWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost(ctx context.Context, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ClusterAddDatabase(ctx context.Context, objectId string, body ClusterAddDatabaseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet request
-	ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ClusterDbaasNodesList request
+	ClusterDbaasNodesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBody request with any body
-	DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterResizeWithBody request with any body
+	DbaasClusterResizeWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost(ctx context.Context, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DbaasClusterResize(ctx context.Context, objectId string, body DbaasClusterResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBody request with any body
-	DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterResizeStorageWithBody request with any body
+	DbaasClusterResizeStorageWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost(ctx context.Context, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DbaasClusterResizeStorage(ctx context.Context, objectId string, body DbaasClusterResizeStorageJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterStartV2DbaasClustersObjectIdStartPost request
-	DbaasClusterStartV2DbaasClustersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterStart request
+	DbaasClusterStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterStopV2DbaasClustersObjectIdStopPost request
-	DbaasClusterStopV2DbaasClustersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterStop request
+	DbaasClusterStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete request
-	DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasDatabaseDelete request
+	DbaasDatabaseDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet request
-	DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasDatabaseDetail request
+	DbaasDatabaseDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBody request with any body
-	ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ClusterDatabaseBackupWithBody request with any body
+	ClusterDatabaseBackupWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost(ctx context.Context, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ClusterDatabaseBackup(ctx context.Context, objectId string, body ClusterDatabaseBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePost request
-	DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasDatabaseBackupDisable request
+	DbaasDatabaseBackupDisable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePost request
-	DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasDatabaseBackupEnable request
+	DbaasDatabaseBackupEnable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBody request with any body
-	DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasRestoreAdminPasswordWithBody request with any body
+	DbaasRestoreAdminPasswordWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DbaasRestoreAdminPassword(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// KeypairDeleteV2KeypairsObjectIdDelete request
-	KeypairDeleteV2KeypairsObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// KeypairDelete request
+	KeypairDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// KeypairDetailV2KeypairsObjectIdDetailGet request
-	KeypairDetailV2KeypairsObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// KeypairDetail request
+	KeypairDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AvailableLicensesListV2LicensesGet request
-	AvailableLicensesListV2LicensesGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AvailableLicensesList request
+	AvailableLicensesList(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LicenseDeleteV2LicensesObjectIdDelete request
-	LicenseDeleteV2LicensesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LicenseDelete request
+	LicenseDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LicenseDetailsV2LicensesObjectIdGet request
-	LicenseDetailsV2LicensesObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LicenseDetails request
+	LicenseDetails(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LicenseUpdateV2LicensesObjectIdPatchWithBody request with any body
-	LicenseUpdateV2LicensesObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LicenseUpdateWithBody request with any body
+	LicenseUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	LicenseUpdateV2LicensesObjectIdPatch(ctx context.Context, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	LicenseUpdate(ctx context.Context, objectId string, body LicenseUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AccountLimitsV2LimitsGet request
-	AccountLimitsV2LimitsGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AccountLimits request
+	AccountLimits(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AccountPatchLimitsV2LimitsPatchWithBody request with any body
-	AccountPatchLimitsV2LimitsPatchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AccountPatchLimitsWithBody request with any body
+	AccountPatchLimitsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	AccountPatchLimitsV2LimitsPatch(ctx context.Context, body AccountPatchLimitsV2LimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	AccountPatchLimits(ctx context.Context, body AccountPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AccountProjectsLimitsV2LimitsProjectsGet request
-	AccountProjectsLimitsV2LimitsProjectsGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AccountProjectsLimits request
+	AccountProjectsLimits(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// RuleDeleteV2LoadbalancersRulesObjectIdDelete request
-	RuleDeleteV2LoadbalancersRulesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// RuleDelete request
+	RuleDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// RuleDetailV2LoadbalancersRulesObjectIdGet request
-	RuleDetailV2LoadbalancersRulesObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// RuleDetail request
+	RuleDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerDeleteV2LoadbalancersObjectIdDelete request
-	LoadBalancerDeleteV2LoadbalancersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerDelete request
+	LoadBalancerDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBody request with any body
-	LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerRenameWithBody request with any body
+	LoadBalancerRenameWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	LoadBalancerRenameV2LoadbalancersObjectIdPatch(ctx context.Context, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	LoadBalancerRename(ctx context.Context, objectId string, body LoadBalancerRenameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBody request with any body
-	LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerUpdateWithBody request with any body
+	LoadBalancerUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost(ctx context.Context, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	LoadBalancerUpdate(ctx context.Context, objectId string, body LoadBalancerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerDetailV2LoadbalancersObjectIdDetailGet request
-	LoadBalancerDetailV2LoadbalancersObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerDetail request
+	LoadBalancerDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBody request with any body
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerUpdateHealthmonitorWithBody request with any body
+	LoadBalancerUpdateHealthmonitorWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	LoadBalancerUpdateHealthmonitor(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// RuleListV2LoadbalancersObjectIdRulesGet request
-	RuleListV2LoadbalancersObjectIdRulesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// RuleList request
+	RuleList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// RuleCreateV2LoadbalancersObjectIdRulesPostWithBody request with any body
-	RuleCreateV2LoadbalancersObjectIdRulesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// RuleCreateWithBody request with any body
+	RuleCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	RuleCreateV2LoadbalancersObjectIdRulesPost(ctx context.Context, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	RuleCreate(ctx context.Context, objectId string, body RuleCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerEnableV2LoadbalancersObjectIdStartPost request
-	LoadBalancerEnableV2LoadbalancersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerEnable request
+	LoadBalancerEnable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerStatV2LoadbalancersObjectIdStatGet request
-	LoadBalancerStatV2LoadbalancersObjectIdStatGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerStat request
+	LoadBalancerStat(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerStopV2LoadbalancersObjectIdStopPost request
-	LoadBalancerStopV2LoadbalancersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerStop request
+	LoadBalancerStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LocalDiskDetailV2LocalDisksObjectIdDetailGet request
-	LocalDiskDetailV2LocalDisksObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LocalDiskDetail request
+	LocalDiskDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// MaintenanceModeStatusV2MaintenanceModeGet request
-	MaintenanceModeStatusV2MaintenanceModeGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// MaintenanceModeStatus request
+	MaintenanceModeStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectListV2ProjectsGet request
-	ProjectListV2ProjectsGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectList request
+	ProjectList(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectCreateV2ProjectsPostWithBody request with any body
-	ProjectCreateV2ProjectsPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectCreateWithBody request with any body
+	ProjectCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ProjectCreateV2ProjectsPost(ctx context.Context, body ProjectCreateV2ProjectsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ProjectCreate(ctx context.Context, body ProjectCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectDeleteV2ProjectsObjectIdDelete request
-	ProjectDeleteV2ProjectsObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectDelete request
+	ProjectDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBody request with any body
-	ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectPatchDisplayNameDescriptionWithBody request with any body
+	ProjectPatchDisplayNameDescriptionWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ProjectPatchDisplayNameDescription(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectAddressesListV2ProjectsObjectIdAddressesGet request
-	ProjectAddressesListV2ProjectsObjectIdAddressesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectAddressesList request
+	ProjectAddressesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AddressCreateV2ProjectsObjectIdAddressesPostWithBody request with any body
-	AddressCreateV2ProjectsObjectIdAddressesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AddressCreateWithBody request with any body
+	AddressCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	AddressCreateV2ProjectsObjectIdAddressesPost(ctx context.Context, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	AddressCreate(ctx context.Context, objectId string, body AddressCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectConsumptionV2ProjectsObjectIdConsumptionGet request
-	ProjectConsumptionV2ProjectsObjectIdConsumptionGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectConsumption request
+	ProjectConsumption(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet request
-	ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectBackupList request
+	ProjectBackupList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClustersListV2ProjectsObjectIdDbaasClustersGet request
-	DbaasClustersListV2ProjectsObjectIdDbaasClustersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClustersList request
+	DbaasClustersList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBody request with any body
-	DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// DbaasClusterCreateWithBody request with any body
+	DbaasClusterCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost(ctx context.Context, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DbaasClusterCreate(ctx context.Context, objectId string, body DbaasClusterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet request
-	ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectDbaasDatabasesList request
+	ProjectDbaasDatabasesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet request
-	ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectDbaasDatastores request
+	ProjectDbaasDatastores(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet request
-	ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectDbaasConfigDep request
+	ProjectDbaasConfigDep(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectDetailV2ProjectsObjectIdDetailGet request
-	ProjectDetailV2ProjectsObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectDetail request
+	ProjectDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectImagesListV2ProjectsObjectIdImagesGet request
-	ProjectImagesListV2ProjectsObjectIdImagesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectImagesList request
+	ProjectImagesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// KeyPairsListV2ProjectsObjectIdKeypairsGet request
-	KeyPairsListV2ProjectsObjectIdKeypairsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// KeyPairsList request
+	KeyPairsList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ImportKeypairV2ProjectsObjectIdKeypairsPostWithBody request with any body
-	ImportKeypairV2ProjectsObjectIdKeypairsPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ImportKeypairWithBody request with any body
+	ImportKeypairWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ImportKeypairV2ProjectsObjectIdKeypairsPost(ctx context.Context, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ImportKeypair(ctx context.Context, objectId string, body ImportKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBody request with any body
-	GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// GenerateKeypairWithBody request with any body
+	GenerateKeypairWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost(ctx context.Context, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	GenerateKeypair(ctx context.Context, objectId string, body GenerateKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectLimitsListV2ProjectsObjectIdLimitsGet request
-	ProjectLimitsListV2ProjectsObjectIdLimitsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectLimitsList request
+	ProjectLimitsList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBody request with any body
-	ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectPatchLimitsWithBody request with any body
+	ProjectPatchLimitsWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch(ctx context.Context, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ProjectPatchLimits(ctx context.Context, objectId string, body ProjectPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerListV2ProjectsObjectIdLoadbalancersGet request
-	LoadBalancerListV2ProjectsObjectIdLoadbalancersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerList request
+	LoadBalancerList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBody request with any body
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// LoadBalancerCreateWithBody request with any body
+	LoadBalancerCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost(ctx context.Context, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	LoadBalancerCreate(ctx context.Context, objectId string, body LoadBalancerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet request
-	ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectRuleList request
+	ProjectRuleList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet request
-	ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectLocalDisksList request
+	ProjectLocalDisksList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// NetworksListV2ProjectsObjectIdNetworksGet request
-	NetworksListV2ProjectsObjectIdNetworksGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// NetworksList request
+	NetworksList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet request
-	ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectInfrastructureModuleConstants request
+	ProjectInfrastructureModuleConstants(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectRecipesV2ProjectsObjectIdRecipesGet request
-	ProjectRecipesV2ProjectsObjectIdRecipesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectRecipes request
+	ProjectRecipes(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UsersListV2ProjectsObjectIdS3UsersGet request
-	S3UsersListV2ProjectsObjectIdS3UsersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UsersList request
+	S3UsersList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UserCreateV2ProjectsObjectIdS3UsersPostWithBody request with any body
-	S3UserCreateV2ProjectsObjectIdS3UsersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UserCreateWithBody request with any body
+	S3UserCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	S3UserCreateV2ProjectsObjectIdS3UsersPost(ctx context.Context, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	S3UserCreate(ctx context.Context, objectId string, body S3UserCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectServerListV2ProjectsObjectIdServersGet request
-	ProjectServerListV2ProjectsObjectIdServersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectServerList request
+	ProjectServerList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerCreateV2ProjectsObjectIdServersPostWithBody request with any body
-	ServerCreateV2ProjectsObjectIdServersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerCreateWithBody request with any body
+	ServerCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ServerCreateV2ProjectsObjectIdServersPost(ctx context.Context, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ServerCreate(ctx context.Context, objectId string, body ServerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGet request
-	ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectServerConfigDep request
+	ProjectServerConfigDep(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SnapshotsListV2ProjectsObjectIdSnapshotsGet request
-	SnapshotsListV2ProjectsObjectIdSnapshotsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// SnapshotsList request
+	SnapshotsList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectStartV2ProjectsObjectIdStartPost request
-	ProjectStartV2ProjectsObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectStart request
+	ProjectStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectStopV2ProjectsObjectIdStopPost request
-	ProjectStopV2ProjectsObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectStop request
+	ProjectStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectVolumesListV2ProjectsObjectIdVolumesGet request
-	ProjectVolumesListV2ProjectsObjectIdVolumesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectVolumesList request
+	ProjectVolumesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VolumeCreateV2ProjectsObjectIdVolumesPostWithBody request with any body
-	VolumeCreateV2ProjectsObjectIdVolumesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VolumeCreateWithBody request with any body
+	VolumeCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	VolumeCreateV2ProjectsObjectIdVolumesPost(ctx context.Context, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	VolumeCreate(ctx context.Context, objectId string, body VolumeCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ProjectVrouterListV2ProjectsObjectIdVroutersGet request
-	ProjectVrouterListV2ProjectsObjectIdVroutersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ProjectVrouterList request
+	ProjectVrouterList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VrouterCreateV2ProjectsObjectIdVroutersPostWithBody request with any body
-	VrouterCreateV2ProjectsObjectIdVroutersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VrouterCreateWithBody request with any body
+	VrouterCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	VrouterCreateV2ProjectsObjectIdVroutersPost(ctx context.Context, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	VrouterCreate(ctx context.Context, objectId string, body VrouterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UserDeleteV2S3UsersObjectIdDelete request
-	S3UserDeleteV2S3UsersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UserDelete request
+	S3UserDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UserUpdateV2S3UsersObjectIdPatchWithBody request with any body
-	S3UserUpdateV2S3UsersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UserUpdateWithBody request with any body
+	S3UserUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	S3UserUpdateV2S3UsersObjectIdPatch(ctx context.Context, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	S3UserUpdate(ctx context.Context, objectId string, body S3UserUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3GetUserKeysV2S3UsersObjectIdCredentialsGet request
-	S3GetUserKeysV2S3UsersObjectIdCredentialsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3GetUserKeys request
+	S3GetUserKeys(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3GenUserKeysV2S3UsersObjectIdCredentialsPost request
-	S3GenUserKeysV2S3UsersObjectIdCredentialsPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3GenUserKeys request
+	S3GenUserKeys(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UserDetailsV2S3UsersObjectIdDetailGet request
-	S3UserDetailsV2S3UsersObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UserDetails request
+	S3UserDetails(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBody request with any body
-	S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UserUpdateQuotaWithBody request with any body
+	S3UserUpdateQuotaWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut(ctx context.Context, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	S3UserUpdateQuota(ctx context.Context, objectId string, body S3UserUpdateQuotaJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UserSuspendV2S3UsersObjectIdSuspendPost request
-	S3UserSuspendV2S3UsersObjectIdSuspendPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UserSuspend request
+	S3UserSuspend(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost request
-	S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// S3UserUnsuspend request
+	S3UserUnsuspend(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerDeleteV2ServersObjectIdDeleteWithBody request with any body
-	ServerDeleteV2ServersObjectIdDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerDeleteWithBody request with any body
+	ServerDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ServerDeleteV2ServersObjectIdDelete(ctx context.Context, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ServerDelete(ctx context.Context, objectId string, body ServerDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerUpdateV2ServersObjectIdPatchWithBody request with any body
-	ServerUpdateV2ServersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerUpdateWithBody request with any body
+	ServerUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ServerUpdateV2ServersObjectIdPatch(ctx context.Context, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ServerUpdate(ctx context.Context, objectId string, body ServerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerConsoleV2ServersObjectIdConsolePost request
-	ServerConsoleV2ServersObjectIdConsolePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerConsole request
+	ServerConsole(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerDetailV2ServersObjectIdDetailGet request
-	ServerDetailV2ServersObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerDetail request
+	ServerDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerLicensesV2ServersObjectIdLicensesGet request
-	ServerLicensesV2ServersObjectIdLicensesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerLicenses request
+	ServerLicenses(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerAddLicenseV2ServersObjectIdLicensesPostWithBody request with any body
-	ServerAddLicenseV2ServersObjectIdLicensesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerAddLicenseWithBody request with any body
+	ServerAddLicenseWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ServerAddLicenseV2ServersObjectIdLicensesPost(ctx context.Context, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ServerAddLicense(ctx context.Context, objectId string, body ServerAddLicenseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerChangePasswordV2ServersObjectIdPasswordPostWithBody request with any body
-	ServerChangePasswordV2ServersObjectIdPasswordPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerChangePasswordWithBody request with any body
+	ServerChangePasswordWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ServerChangePasswordV2ServersObjectIdPasswordPost(ctx context.Context, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ServerChangePassword(ctx context.Context, objectId string, body ServerChangePasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerRebootV2ServersObjectIdRebootPost request
-	ServerRebootV2ServersObjectIdRebootPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerReboot request
+	ServerReboot(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerRescueV2ServersObjectIdRescuePost request
-	ServerRescueV2ServersObjectIdRescuePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerRescue request
+	ServerRescue(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerResizeV2ServersObjectIdResizePostWithBody request with any body
-	ServerResizeV2ServersObjectIdResizePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerResizeWithBody request with any body
+	ServerResizeWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	ServerResizeV2ServersObjectIdResizePost(ctx context.Context, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	ServerResize(ctx context.Context, objectId string, body ServerResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBody request with any body
-	CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// CreateServerSnapshotWithBody request with any body
+	CreateServerSnapshotWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	CreateServerSnapshotV2ServersObjectIdSnapshotPost(ctx context.Context, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	CreateServerSnapshot(ctx context.Context, objectId string, body CreateServerSnapshotJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerStartV2ServersObjectIdStartPost request
-	ServerStartV2ServersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerStart request
+	ServerStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ServerStopV2ServersObjectIdStopPost request
-	ServerStopV2ServersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// ServerStop request
+	ServerStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SnapshotDeleteV2SnapshotsObjectIdDelete request
-	SnapshotDeleteV2SnapshotsObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// SnapshotDelete request
+	SnapshotDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SnapshotDetailsV2SnapshotsObjectIdDetailGet request
-	SnapshotDetailsV2SnapshotsObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// SnapshotDetails request
+	SnapshotDetails(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBody request with any body
-	SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// SnapshotRestoreWithBody request with any body
+	SnapshotRestoreWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	SnapshotRestoreV2SnapshotsObjectIdRestorePost(ctx context.Context, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	SnapshotRestore(ctx context.Context, objectId string, body SnapshotRestoreJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// AccountStatV2StatGet request
-	AccountStatV2StatGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// AccountStat request
+	AccountStat(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VolumeDeleteV2VolumesObjectIdDeleteWithBody request with any body
-	VolumeDeleteV2VolumesObjectIdDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VolumeDeleteWithBody request with any body
+	VolumeDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	VolumeDeleteV2VolumesObjectIdDelete(ctx context.Context, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	VolumeDelete(ctx context.Context, objectId string, body VolumeDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VolumeUpdateV2VolumesObjectIdPatchWithBody request with any body
-	VolumeUpdateV2VolumesObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VolumeUpdateWithBody request with any body
+	VolumeUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	VolumeUpdateV2VolumesObjectIdPatch(ctx context.Context, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	VolumeUpdate(ctx context.Context, objectId string, body VolumeUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VolumeAttachV2VolumesObjectIdAttachPostWithBody request with any body
-	VolumeAttachV2VolumesObjectIdAttachPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VolumeAttachWithBody request with any body
+	VolumeAttachWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	VolumeAttachV2VolumesObjectIdAttachPost(ctx context.Context, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	VolumeAttach(ctx context.Context, objectId string, body VolumeAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VolumeDetachV2VolumesObjectIdDetachPostWithBody request with any body
-	VolumeDetachV2VolumesObjectIdDetachPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VolumeDetachWithBody request with any body
+	VolumeDetachWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	VolumeDetachV2VolumesObjectIdDetachPost(ctx context.Context, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	VolumeDetach(ctx context.Context, objectId string, body VolumeDetachJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VolumeDetailV2VolumesObjectIdDetailGet request
-	VolumeDetailV2VolumesObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VolumeDetail request
+	VolumeDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VolumeExtendV2VolumesObjectIdExtendPostWithBody request with any body
-	VolumeExtendV2VolumesObjectIdExtendPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VolumeExtendWithBody request with any body
+	VolumeExtendWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	VolumeExtendV2VolumesObjectIdExtendPost(ctx context.Context, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	VolumeExtend(ctx context.Context, objectId string, body VolumeExtendJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VrouterDeleteV2VroutersObjectIdDelete request
-	VrouterDeleteV2VroutersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VrouterDelete request
+	VrouterDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VrouterDetailV2VroutersObjectIdGet request
-	VrouterDetailV2VroutersObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VrouterDetail request
+	VrouterDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VrouterStartV2VroutersObjectIdStartPost request
-	VrouterStartV2VroutersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VrouterStart request
+	VrouterStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// VrouterStopV2VroutersObjectIdStopPost request
-	VrouterStopV2VroutersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// VrouterStop request
+	VrouterStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 }
 
-func (c *Client) AddressDeleteV2AddressesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressDeleteV2AddressesObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) AddressDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2440,8 +2440,8 @@ func (c *Client) AddressDeleteV2AddressesObjectIdDelete(ctx context.Context, obj
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressAttachV2AddressesObjectIdAttachPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressAttachV2AddressesObjectIdAttachPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) AddressAttachWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressAttachRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2452,8 +2452,8 @@ func (c *Client) AddressAttachV2AddressesObjectIdAttachPostWithBody(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressAttachV2AddressesObjectIdAttachPost(ctx context.Context, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressAttachV2AddressesObjectIdAttachPostRequest(c.Server, objectId, body)
+func (c *Client) AddressAttach(ctx context.Context, objectId string, body AddressAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressAttachRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2464,8 +2464,8 @@ func (c *Client) AddressAttachV2AddressesObjectIdAttachPost(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) AddressChangeBandwidthWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressChangeBandwidthRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2476,8 +2476,8 @@ func (c *Client) AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithBody(
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressChangeBandwidthV2AddressesObjectIdBandwidthPost(ctx context.Context, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequest(c.Server, objectId, body)
+func (c *Client) AddressChangeBandwidth(ctx context.Context, objectId string, body AddressChangeBandwidthJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressChangeBandwidthRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2488,8 +2488,8 @@ func (c *Client) AddressChangeBandwidthV2AddressesObjectIdBandwidthPost(ctx cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressDetachV2AddressesObjectIdDetachPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressDetachV2AddressesObjectIdDetachPostRequest(c.Server, objectId)
+func (c *Client) AddressDetach(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressDetachRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2500,8 +2500,8 @@ func (c *Client) AddressDetachV2AddressesObjectIdDetachPost(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressDetailV2AddressesObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressDetailV2AddressesObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) AddressDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2512,8 +2512,8 @@ func (c *Client) AddressDetailV2AddressesObjectIdDetailGet(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressSetPrimaryV2AddressesObjectIdPrimaryPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressSetPrimaryV2AddressesObjectIdPrimaryPostRequest(c.Server, objectId)
+func (c *Client) AddressSetPrimary(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressSetPrimaryRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2524,8 +2524,8 @@ func (c *Client) AddressSetPrimaryV2AddressesObjectIdPrimaryPost(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressEditPtrV2AddressesObjectIdPtrPutWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressEditPtrV2AddressesObjectIdPtrPutRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) AddressEditPtrWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressEditPtrRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2536,8 +2536,8 @@ func (c *Client) AddressEditPtrV2AddressesObjectIdPtrPutWithBody(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressEditPtrV2AddressesObjectIdPtrPut(ctx context.Context, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressEditPtrV2AddressesObjectIdPtrPutRequest(c.Server, objectId, body)
+func (c *Client) AddressEditPtr(ctx context.Context, objectId string, body AddressEditPtrJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressEditPtrRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2548,8 +2548,8 @@ func (c *Client) AddressEditPtrV2AddressesObjectIdPtrPut(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) AccountBalanceV2BalanceGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccountBalanceV2BalanceGetRequest(c.Server)
+func (c *Client) AccountBalance(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccountBalanceRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -2560,8 +2560,8 @@ func (c *Client) AccountBalanceV2BalanceGet(ctx context.Context, reqEditors ...R
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) DbaasBackupDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasBackupDeleteRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2572,8 +2572,8 @@ func (c *Client) DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasBackupDeleteV2DbaasBackupsObjectIdDelete(ctx context.Context, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequest(c.Server, objectId, body)
+func (c *Client) DbaasBackupDelete(ctx context.Context, objectId string, body DbaasBackupDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasBackupDeleteRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2584,8 +2584,8 @@ func (c *Client) DbaasBackupDeleteV2DbaasBackupsObjectIdDelete(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasBackupDetailV2DbaasBackupsObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasBackupDetailV2DbaasBackupsObjectIdGetRequest(c.Server, objectId)
+func (c *Client) DbaasBackupDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasBackupDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2596,8 +2596,8 @@ func (c *Client) DbaasBackupDetailV2DbaasBackupsObjectIdGet(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostRequest(c.Server, objectId)
+func (c *Client) DbaasBackupDownload(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasBackupDownloadRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2608,8 +2608,8 @@ func (c *Client) DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost(ctx conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterDeleteV2DbaasClustersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterDeleteV2DbaasClustersObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) DbaasClusterDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2620,8 +2620,8 @@ func (c *Client) DbaasClusterDeleteV2DbaasClustersObjectIdDelete(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterDetailV2DbaasClustersObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterDetailV2DbaasClustersObjectIdGetRequest(c.Server, objectId)
+func (c *Client) DbaasClusterDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2632,8 +2632,8 @@ func (c *Client) DbaasClusterDetailV2DbaasClustersObjectIdGet(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) DbaasClusterUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterUpdateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2644,8 +2644,8 @@ func (c *Client) DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithBody(ctx cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterUpdateV2DbaasClustersObjectIdPatch(ctx context.Context, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequest(c.Server, objectId, body)
+func (c *Client) DbaasClusterUpdate(ctx context.Context, objectId string, body DbaasClusterUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterUpdateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2656,8 +2656,8 @@ func (c *Client) DbaasClusterUpdateV2DbaasClustersObjectIdPatch(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) DbaasClusterBackupWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterBackupRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2668,8 +2668,8 @@ func (c *Client) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithBo
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost(ctx context.Context, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequest(c.Server, objectId, body)
+func (c *Client) DbaasClusterBackup(ctx context.Context, objectId string, body DbaasClusterBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterBackupRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2680,8 +2680,8 @@ func (c *Client) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost(ctx c
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostRequest(c.Server, objectId)
+func (c *Client) DbaasClusterBackupDisable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterBackupDisableRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2692,8 +2692,8 @@ func (c *Client) DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePo
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostRequest(c.Server, objectId)
+func (c *Client) DbaasClusterBackupEnable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterBackupEnableRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2704,8 +2704,8 @@ func (c *Client) DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetRequest(c.Server, objectId)
+func (c *Client) DbaasClusterConfig(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterConfigRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2716,8 +2716,8 @@ func (c *Client) DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet(ctx c
 	return c.Client.Do(req)
 }
 
-func (c *Client) ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetRequest(c.Server, objectId)
+func (c *Client) ClusterDbaasDatabasesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewClusterDbaasDatabasesListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2728,8 +2728,8 @@ func (c *Client) ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet(ct
 	return c.Client.Do(req)
 }
 
-func (c *Client) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ClusterAddDatabaseWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewClusterAddDatabaseRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2740,8 +2740,8 @@ func (c *Client) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithBody(
 	return c.Client.Do(req)
 }
 
-func (c *Client) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost(ctx context.Context, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequest(c.Server, objectId, body)
+func (c *Client) ClusterAddDatabase(ctx context.Context, objectId string, body ClusterAddDatabaseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewClusterAddDatabaseRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2752,8 +2752,8 @@ func (c *Client) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost(ctx cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetRequest(c.Server, objectId)
+func (c *Client) ClusterDbaasNodesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewClusterDbaasNodesListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2764,8 +2764,8 @@ func (c *Client) ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet(ctx contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) DbaasClusterResizeWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterResizeRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2776,8 +2776,8 @@ func (c *Client) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWit
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost(ctx context.Context, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequest(c.Server, objectId, body)
+func (c *Client) DbaasClusterResize(ctx context.Context, objectId string, body DbaasClusterResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterResizeRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2788,8 +2788,8 @@ func (c *Client) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost(ct
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) DbaasClusterResizeStorageWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterResizeStorageRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2800,8 +2800,8 @@ func (c *Client) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePo
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost(ctx context.Context, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequest(c.Server, objectId, body)
+func (c *Client) DbaasClusterResizeStorage(ctx context.Context, objectId string, body DbaasClusterResizeStorageJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterResizeStorageRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2812,8 +2812,8 @@ func (c *Client) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePo
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterStartV2DbaasClustersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterStartV2DbaasClustersObjectIdStartPostRequest(c.Server, objectId)
+func (c *Client) DbaasClusterStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterStartRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2824,8 +2824,8 @@ func (c *Client) DbaasClusterStartV2DbaasClustersObjectIdStartPost(ctx context.C
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterStopV2DbaasClustersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterStopV2DbaasClustersObjectIdStopPostRequest(c.Server, objectId)
+func (c *Client) DbaasClusterStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterStopRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2836,8 +2836,8 @@ func (c *Client) DbaasClusterStopV2DbaasClustersObjectIdStopPost(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) DbaasDatabaseDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasDatabaseDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2848,8 +2848,8 @@ func (c *Client) DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete(ctx context.C
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetRequest(c.Server, objectId)
+func (c *Client) DbaasDatabaseDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasDatabaseDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2860,8 +2860,8 @@ func (c *Client) DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ClusterDatabaseBackupWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewClusterDatabaseBackupRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2872,8 +2872,8 @@ func (c *Client) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWi
 	return c.Client.Do(req)
 }
 
-func (c *Client) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost(ctx context.Context, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequest(c.Server, objectId, body)
+func (c *Client) ClusterDatabaseBackup(ctx context.Context, objectId string, body ClusterDatabaseBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewClusterDatabaseBackupRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2884,8 +2884,8 @@ func (c *Client) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost(c
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostRequest(c.Server, objectId)
+func (c *Client) DbaasDatabaseBackupDisable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasDatabaseBackupDisableRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2896,8 +2896,8 @@ func (c *Client) DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisable
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostRequest(c.Server, objectId)
+func (c *Client) DbaasDatabaseBackupEnable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasDatabaseBackupEnableRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2908,8 +2908,8 @@ func (c *Client) DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePo
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) DbaasRestoreAdminPasswordWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasRestoreAdminPasswordRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2920,8 +2920,8 @@ func (c *Client) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWit
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequest(c.Server, objectId, body)
+func (c *Client) DbaasRestoreAdminPassword(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasRestoreAdminPasswordRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -2932,8 +2932,8 @@ func (c *Client) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost(ct
 	return c.Client.Do(req)
 }
 
-func (c *Client) KeypairDeleteV2KeypairsObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewKeypairDeleteV2KeypairsObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) KeypairDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewKeypairDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2944,8 +2944,8 @@ func (c *Client) KeypairDeleteV2KeypairsObjectIdDelete(ctx context.Context, obje
 	return c.Client.Do(req)
 }
 
-func (c *Client) KeypairDetailV2KeypairsObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewKeypairDetailV2KeypairsObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) KeypairDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewKeypairDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2956,8 +2956,8 @@ func (c *Client) KeypairDetailV2KeypairsObjectIdDetailGet(ctx context.Context, o
 	return c.Client.Do(req)
 }
 
-func (c *Client) AvailableLicensesListV2LicensesGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAvailableLicensesListV2LicensesGetRequest(c.Server)
+func (c *Client) AvailableLicensesList(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAvailableLicensesListRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -2968,8 +2968,8 @@ func (c *Client) AvailableLicensesListV2LicensesGet(ctx context.Context, reqEdit
 	return c.Client.Do(req)
 }
 
-func (c *Client) LicenseDeleteV2LicensesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLicenseDeleteV2LicensesObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) LicenseDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLicenseDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2980,8 +2980,8 @@ func (c *Client) LicenseDeleteV2LicensesObjectIdDelete(ctx context.Context, obje
 	return c.Client.Do(req)
 }
 
-func (c *Client) LicenseDetailsV2LicensesObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLicenseDetailsV2LicensesObjectIdGetRequest(c.Server, objectId)
+func (c *Client) LicenseDetails(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLicenseDetailsRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -2992,8 +2992,8 @@ func (c *Client) LicenseDetailsV2LicensesObjectIdGet(ctx context.Context, object
 	return c.Client.Do(req)
 }
 
-func (c *Client) LicenseUpdateV2LicensesObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLicenseUpdateV2LicensesObjectIdPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) LicenseUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLicenseUpdateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3004,8 +3004,8 @@ func (c *Client) LicenseUpdateV2LicensesObjectIdPatchWithBody(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) LicenseUpdateV2LicensesObjectIdPatch(ctx context.Context, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLicenseUpdateV2LicensesObjectIdPatchRequest(c.Server, objectId, body)
+func (c *Client) LicenseUpdate(ctx context.Context, objectId string, body LicenseUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLicenseUpdateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3016,8 +3016,8 @@ func (c *Client) LicenseUpdateV2LicensesObjectIdPatch(ctx context.Context, objec
 	return c.Client.Do(req)
 }
 
-func (c *Client) AccountLimitsV2LimitsGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccountLimitsV2LimitsGetRequest(c.Server)
+func (c *Client) AccountLimits(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccountLimitsRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -3028,8 +3028,8 @@ func (c *Client) AccountLimitsV2LimitsGet(ctx context.Context, reqEditors ...Req
 	return c.Client.Do(req)
 }
 
-func (c *Client) AccountPatchLimitsV2LimitsPatchWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccountPatchLimitsV2LimitsPatchRequestWithBody(c.Server, contentType, body)
+func (c *Client) AccountPatchLimitsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccountPatchLimitsRequestWithBody(c.Server, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3040,8 +3040,8 @@ func (c *Client) AccountPatchLimitsV2LimitsPatchWithBody(ctx context.Context, co
 	return c.Client.Do(req)
 }
 
-func (c *Client) AccountPatchLimitsV2LimitsPatch(ctx context.Context, body AccountPatchLimitsV2LimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccountPatchLimitsV2LimitsPatchRequest(c.Server, body)
+func (c *Client) AccountPatchLimits(ctx context.Context, body AccountPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccountPatchLimitsRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3052,8 +3052,8 @@ func (c *Client) AccountPatchLimitsV2LimitsPatch(ctx context.Context, body Accou
 	return c.Client.Do(req)
 }
 
-func (c *Client) AccountProjectsLimitsV2LimitsProjectsGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccountProjectsLimitsV2LimitsProjectsGetRequest(c.Server)
+func (c *Client) AccountProjectsLimits(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccountProjectsLimitsRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -3064,8 +3064,8 @@ func (c *Client) AccountProjectsLimitsV2LimitsProjectsGet(ctx context.Context, r
 	return c.Client.Do(req)
 }
 
-func (c *Client) RuleDeleteV2LoadbalancersRulesObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRuleDeleteV2LoadbalancersRulesObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) RuleDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRuleDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3076,8 +3076,8 @@ func (c *Client) RuleDeleteV2LoadbalancersRulesObjectIdDelete(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) RuleDetailV2LoadbalancersRulesObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRuleDetailV2LoadbalancersRulesObjectIdGetRequest(c.Server, objectId)
+func (c *Client) RuleDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRuleDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3088,8 +3088,8 @@ func (c *Client) RuleDetailV2LoadbalancersRulesObjectIdGet(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerDeleteV2LoadbalancersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerDeleteV2LoadbalancersObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) LoadBalancerDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3100,8 +3100,8 @@ func (c *Client) LoadBalancerDeleteV2LoadbalancersObjectIdDelete(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) LoadBalancerRenameWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerRenameRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3112,8 +3112,8 @@ func (c *Client) LoadBalancerRenameV2LoadbalancersObjectIdPatchWithBody(ctx cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerRenameV2LoadbalancersObjectIdPatch(ctx context.Context, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequest(c.Server, objectId, body)
+func (c *Client) LoadBalancerRename(ctx context.Context, objectId string, body LoadBalancerRenameJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerRenameRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3124,8 +3124,8 @@ func (c *Client) LoadBalancerRenameV2LoadbalancersObjectIdPatch(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) LoadBalancerUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerUpdateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3136,8 +3136,8 @@ func (c *Client) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithBody(
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost(ctx context.Context, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequest(c.Server, objectId, body)
+func (c *Client) LoadBalancerUpdate(ctx context.Context, objectId string, body LoadBalancerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerUpdateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3148,8 +3148,8 @@ func (c *Client) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost(ctx cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerDetailV2LoadbalancersObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerDetailV2LoadbalancersObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) LoadBalancerDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3160,8 +3160,8 @@ func (c *Client) LoadBalancerDetailV2LoadbalancersObjectIdDetailGet(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) LoadBalancerUpdateHealthmonitorWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerUpdateHealthmonitorRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3172,8 +3172,8 @@ func (c *Client) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmon
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRequest(c.Server, objectId, body)
+func (c *Client) LoadBalancerUpdateHealthmonitor(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerUpdateHealthmonitorRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3184,8 +3184,8 @@ func (c *Client) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmon
 	return c.Client.Do(req)
 }
 
-func (c *Client) RuleListV2LoadbalancersObjectIdRulesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRuleListV2LoadbalancersObjectIdRulesGetRequest(c.Server, objectId)
+func (c *Client) RuleList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRuleListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3196,8 +3196,8 @@ func (c *Client) RuleListV2LoadbalancersObjectIdRulesGet(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) RuleCreateV2LoadbalancersObjectIdRulesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRuleCreateV2LoadbalancersObjectIdRulesPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) RuleCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRuleCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3208,8 +3208,8 @@ func (c *Client) RuleCreateV2LoadbalancersObjectIdRulesPostWithBody(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) RuleCreateV2LoadbalancersObjectIdRulesPost(ctx context.Context, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRuleCreateV2LoadbalancersObjectIdRulesPostRequest(c.Server, objectId, body)
+func (c *Client) RuleCreate(ctx context.Context, objectId string, body RuleCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRuleCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3220,8 +3220,8 @@ func (c *Client) RuleCreateV2LoadbalancersObjectIdRulesPost(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerEnableV2LoadbalancersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerEnableV2LoadbalancersObjectIdStartPostRequest(c.Server, objectId)
+func (c *Client) LoadBalancerEnable(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerEnableRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3232,8 +3232,8 @@ func (c *Client) LoadBalancerEnableV2LoadbalancersObjectIdStartPost(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerStatV2LoadbalancersObjectIdStatGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerStatV2LoadbalancersObjectIdStatGetRequest(c.Server, objectId)
+func (c *Client) LoadBalancerStat(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerStatRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3244,8 +3244,8 @@ func (c *Client) LoadBalancerStatV2LoadbalancersObjectIdStatGet(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerStopV2LoadbalancersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerStopV2LoadbalancersObjectIdStopPostRequest(c.Server, objectId)
+func (c *Client) LoadBalancerStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerStopRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3256,8 +3256,8 @@ func (c *Client) LoadBalancerStopV2LoadbalancersObjectIdStopPost(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) LocalDiskDetailV2LocalDisksObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLocalDiskDetailV2LocalDisksObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) LocalDiskDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLocalDiskDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3268,8 +3268,8 @@ func (c *Client) LocalDiskDetailV2LocalDisksObjectIdDetailGet(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) MaintenanceModeStatusV2MaintenanceModeGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMaintenanceModeStatusV2MaintenanceModeGetRequest(c.Server)
+func (c *Client) MaintenanceModeStatus(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewMaintenanceModeStatusRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -3280,8 +3280,8 @@ func (c *Client) MaintenanceModeStatusV2MaintenanceModeGet(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectListV2ProjectsGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectListV2ProjectsGetRequest(c.Server)
+func (c *Client) ProjectList(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectListRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -3292,8 +3292,8 @@ func (c *Client) ProjectListV2ProjectsGet(ctx context.Context, reqEditors ...Req
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectCreateV2ProjectsPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectCreateV2ProjectsPostRequestWithBody(c.Server, contentType, body)
+func (c *Client) ProjectCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectCreateRequestWithBody(c.Server, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3304,8 +3304,8 @@ func (c *Client) ProjectCreateV2ProjectsPostWithBody(ctx context.Context, conten
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectCreateV2ProjectsPost(ctx context.Context, body ProjectCreateV2ProjectsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectCreateV2ProjectsPostRequest(c.Server, body)
+func (c *Client) ProjectCreate(ctx context.Context, body ProjectCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectCreateRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3316,8 +3316,8 @@ func (c *Client) ProjectCreateV2ProjectsPost(ctx context.Context, body ProjectCr
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectDeleteV2ProjectsObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectDeleteV2ProjectsObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) ProjectDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3328,8 +3328,8 @@ func (c *Client) ProjectDeleteV2ProjectsObjectIdDelete(ctx context.Context, obje
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ProjectPatchDisplayNameDescriptionWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectPatchDisplayNameDescriptionRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3340,8 +3340,8 @@ func (c *Client) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithBo
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequest(c.Server, objectId, body)
+func (c *Client) ProjectPatchDisplayNameDescription(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectPatchDisplayNameDescriptionRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3352,8 +3352,8 @@ func (c *Client) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch(ctx c
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectAddressesListV2ProjectsObjectIdAddressesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectAddressesListV2ProjectsObjectIdAddressesGetRequest(c.Server, objectId)
+func (c *Client) ProjectAddressesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectAddressesListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3364,8 +3364,8 @@ func (c *Client) ProjectAddressesListV2ProjectsObjectIdAddressesGet(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressCreateV2ProjectsObjectIdAddressesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressCreateV2ProjectsObjectIdAddressesPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) AddressCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3376,8 +3376,8 @@ func (c *Client) AddressCreateV2ProjectsObjectIdAddressesPostWithBody(ctx contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddressCreateV2ProjectsObjectIdAddressesPost(ctx context.Context, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddressCreateV2ProjectsObjectIdAddressesPostRequest(c.Server, objectId, body)
+func (c *Client) AddressCreate(ctx context.Context, objectId string, body AddressCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddressCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3388,8 +3388,8 @@ func (c *Client) AddressCreateV2ProjectsObjectIdAddressesPost(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectConsumptionV2ProjectsObjectIdConsumptionGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectConsumptionV2ProjectsObjectIdConsumptionGetRequest(c.Server, objectId)
+func (c *Client) ProjectConsumption(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectConsumptionRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3400,8 +3400,8 @@ func (c *Client) ProjectConsumptionV2ProjectsObjectIdConsumptionGet(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectBackupListV2ProjectsObjectIdDbaasBackupsGetRequest(c.Server, objectId)
+func (c *Client) ProjectBackupList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectBackupListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3412,8 +3412,8 @@ func (c *Client) ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClustersListV2ProjectsObjectIdDbaasClustersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClustersListV2ProjectsObjectIdDbaasClustersGetRequest(c.Server, objectId)
+func (c *Client) DbaasClustersList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClustersListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3424,8 +3424,8 @@ func (c *Client) DbaasClustersListV2ProjectsObjectIdDbaasClustersGet(ctx context
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) DbaasClusterCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3436,8 +3436,8 @@ func (c *Client) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithBody(c
 	return c.Client.Do(req)
 }
 
-func (c *Client) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost(ctx context.Context, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequest(c.Server, objectId, body)
+func (c *Client) DbaasClusterCreate(ctx context.Context, objectId string, body DbaasClusterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDbaasClusterCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3448,8 +3448,8 @@ func (c *Client) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost(ctx conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetRequest(c.Server, objectId)
+func (c *Client) ProjectDbaasDatabasesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectDbaasDatabasesListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3460,8 +3460,8 @@ func (c *Client) ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet(ct
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetRequest(c.Server, objectId)
+func (c *Client) ProjectDbaasDatastores(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectDbaasDatastoresRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3472,8 +3472,8 @@ func (c *Client) ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet(ctx 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetRequest(c.Server, objectId)
+func (c *Client) ProjectDbaasConfigDep(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectDbaasConfigDepRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3484,8 +3484,8 @@ func (c *Client) ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectDetailV2ProjectsObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectDetailV2ProjectsObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) ProjectDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3496,8 +3496,8 @@ func (c *Client) ProjectDetailV2ProjectsObjectIdDetailGet(ctx context.Context, o
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectImagesListV2ProjectsObjectIdImagesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectImagesListV2ProjectsObjectIdImagesGetRequest(c.Server, objectId)
+func (c *Client) ProjectImagesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectImagesListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3508,8 +3508,8 @@ func (c *Client) ProjectImagesListV2ProjectsObjectIdImagesGet(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) KeyPairsListV2ProjectsObjectIdKeypairsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewKeyPairsListV2ProjectsObjectIdKeypairsGetRequest(c.Server, objectId)
+func (c *Client) KeyPairsList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewKeyPairsListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3520,8 +3520,8 @@ func (c *Client) KeyPairsListV2ProjectsObjectIdKeypairsGet(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ImportKeypairV2ProjectsObjectIdKeypairsPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewImportKeypairV2ProjectsObjectIdKeypairsPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ImportKeypairWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewImportKeypairRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3532,8 +3532,8 @@ func (c *Client) ImportKeypairV2ProjectsObjectIdKeypairsPostWithBody(ctx context
 	return c.Client.Do(req)
 }
 
-func (c *Client) ImportKeypairV2ProjectsObjectIdKeypairsPost(ctx context.Context, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewImportKeypairV2ProjectsObjectIdKeypairsPostRequest(c.Server, objectId, body)
+func (c *Client) ImportKeypair(ctx context.Context, objectId string, body ImportKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewImportKeypairRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3544,8 +3544,8 @@ func (c *Client) ImportKeypairV2ProjectsObjectIdKeypairsPost(ctx context.Context
 	return c.Client.Do(req)
 }
 
-func (c *Client) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) GenerateKeypairWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGenerateKeypairRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3556,8 +3556,8 @@ func (c *Client) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithBody(c
 	return c.Client.Do(req)
 }
 
-func (c *Client) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost(ctx context.Context, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequest(c.Server, objectId, body)
+func (c *Client) GenerateKeypair(ctx context.Context, objectId string, body GenerateKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGenerateKeypairRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3568,8 +3568,8 @@ func (c *Client) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost(ctx conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectLimitsListV2ProjectsObjectIdLimitsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectLimitsListV2ProjectsObjectIdLimitsGetRequest(c.Server, objectId)
+func (c *Client) ProjectLimitsList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectLimitsListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3580,8 +3580,8 @@ func (c *Client) ProjectLimitsListV2ProjectsObjectIdLimitsGet(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ProjectPatchLimitsWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectPatchLimitsRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3592,8 +3592,8 @@ func (c *Client) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithBody(ctx con
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch(ctx context.Context, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequest(c.Server, objectId, body)
+func (c *Client) ProjectPatchLimits(ctx context.Context, objectId string, body ProjectPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectPatchLimitsRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3604,8 +3604,8 @@ func (c *Client) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerListV2ProjectsObjectIdLoadbalancersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerListV2ProjectsObjectIdLoadbalancersGetRequest(c.Server, objectId)
+func (c *Client) LoadBalancerList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3616,8 +3616,8 @@ func (c *Client) LoadBalancerListV2ProjectsObjectIdLoadbalancersGet(ctx context.
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) LoadBalancerCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3628,8 +3628,8 @@ func (c *Client) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithBody(c
 	return c.Client.Do(req)
 }
 
-func (c *Client) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost(ctx context.Context, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequest(c.Server, objectId, body)
+func (c *Client) LoadBalancerCreate(ctx context.Context, objectId string, body LoadBalancerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLoadBalancerCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3640,8 +3640,8 @@ func (c *Client) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost(ctx conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetRequest(c.Server, objectId)
+func (c *Client) ProjectRuleList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectRuleListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3652,8 +3652,8 @@ func (c *Client) ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet(ctx cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetRequest(c.Server, objectId)
+func (c *Client) ProjectLocalDisksList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectLocalDisksListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3664,8 +3664,8 @@ func (c *Client) ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet(ctx contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) NetworksListV2ProjectsObjectIdNetworksGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewNetworksListV2ProjectsObjectIdNetworksGetRequest(c.Server, objectId)
+func (c *Client) NetworksList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewNetworksListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3676,8 +3676,8 @@ func (c *Client) NetworksListV2ProjectsObjectIdNetworksGet(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetRequest(c.Server, objectId)
+func (c *Client) ProjectInfrastructureModuleConstants(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectInfrastructureModuleConstantsRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3688,8 +3688,8 @@ func (c *Client) ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectRecipesV2ProjectsObjectIdRecipesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectRecipesV2ProjectsObjectIdRecipesGetRequest(c.Server, objectId)
+func (c *Client) ProjectRecipes(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectRecipesRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3700,8 +3700,8 @@ func (c *Client) ProjectRecipesV2ProjectsObjectIdRecipesGet(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UsersListV2ProjectsObjectIdS3UsersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UsersListV2ProjectsObjectIdS3UsersGetRequest(c.Server, objectId)
+func (c *Client) S3UsersList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UsersListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3712,8 +3712,8 @@ func (c *Client) S3UsersListV2ProjectsObjectIdS3UsersGet(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserCreateV2ProjectsObjectIdS3UsersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) S3UserCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3724,8 +3724,8 @@ func (c *Client) S3UserCreateV2ProjectsObjectIdS3UsersPostWithBody(ctx context.C
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserCreateV2ProjectsObjectIdS3UsersPost(ctx context.Context, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequest(c.Server, objectId, body)
+func (c *Client) S3UserCreate(ctx context.Context, objectId string, body S3UserCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3736,8 +3736,8 @@ func (c *Client) S3UserCreateV2ProjectsObjectIdS3UsersPost(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectServerListV2ProjectsObjectIdServersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectServerListV2ProjectsObjectIdServersGetRequest(c.Server, objectId)
+func (c *Client) ProjectServerList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectServerListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3748,8 +3748,8 @@ func (c *Client) ProjectServerListV2ProjectsObjectIdServersGet(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerCreateV2ProjectsObjectIdServersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerCreateV2ProjectsObjectIdServersPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ServerCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3760,8 +3760,8 @@ func (c *Client) ServerCreateV2ProjectsObjectIdServersPostWithBody(ctx context.C
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerCreateV2ProjectsObjectIdServersPost(ctx context.Context, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerCreateV2ProjectsObjectIdServersPostRequest(c.Server, objectId, body)
+func (c *Client) ServerCreate(ctx context.Context, objectId string, body ServerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3772,8 +3772,8 @@ func (c *Client) ServerCreateV2ProjectsObjectIdServersPost(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetRequest(c.Server, objectId)
+func (c *Client) ProjectServerConfigDep(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectServerConfigDepRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3784,8 +3784,8 @@ func (c *Client) ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResources
 	return c.Client.Do(req)
 }
 
-func (c *Client) SnapshotsListV2ProjectsObjectIdSnapshotsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSnapshotsListV2ProjectsObjectIdSnapshotsGetRequest(c.Server, objectId)
+func (c *Client) SnapshotsList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSnapshotsListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3796,8 +3796,8 @@ func (c *Client) SnapshotsListV2ProjectsObjectIdSnapshotsGet(ctx context.Context
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectStartV2ProjectsObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectStartV2ProjectsObjectIdStartPostRequest(c.Server, objectId)
+func (c *Client) ProjectStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectStartRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3808,8 +3808,8 @@ func (c *Client) ProjectStartV2ProjectsObjectIdStartPost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectStopV2ProjectsObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectStopV2ProjectsObjectIdStopPostRequest(c.Server, objectId)
+func (c *Client) ProjectStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectStopRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3820,8 +3820,8 @@ func (c *Client) ProjectStopV2ProjectsObjectIdStopPost(ctx context.Context, obje
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectVolumesListV2ProjectsObjectIdVolumesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectVolumesListV2ProjectsObjectIdVolumesGetRequest(c.Server, objectId)
+func (c *Client) ProjectVolumesList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectVolumesListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3832,8 +3832,8 @@ func (c *Client) ProjectVolumesListV2ProjectsObjectIdVolumesGet(ctx context.Cont
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeCreateV2ProjectsObjectIdVolumesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeCreateV2ProjectsObjectIdVolumesPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) VolumeCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3844,8 +3844,8 @@ func (c *Client) VolumeCreateV2ProjectsObjectIdVolumesPostWithBody(ctx context.C
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeCreateV2ProjectsObjectIdVolumesPost(ctx context.Context, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeCreateV2ProjectsObjectIdVolumesPostRequest(c.Server, objectId, body)
+func (c *Client) VolumeCreate(ctx context.Context, objectId string, body VolumeCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3856,8 +3856,8 @@ func (c *Client) VolumeCreateV2ProjectsObjectIdVolumesPost(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ProjectVrouterListV2ProjectsObjectIdVroutersGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewProjectVrouterListV2ProjectsObjectIdVroutersGetRequest(c.Server, objectId)
+func (c *Client) ProjectVrouterList(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProjectVrouterListRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3868,8 +3868,8 @@ func (c *Client) ProjectVrouterListV2ProjectsObjectIdVroutersGet(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) VrouterCreateV2ProjectsObjectIdVroutersPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVrouterCreateV2ProjectsObjectIdVroutersPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) VrouterCreateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVrouterCreateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3880,8 +3880,8 @@ func (c *Client) VrouterCreateV2ProjectsObjectIdVroutersPostWithBody(ctx context
 	return c.Client.Do(req)
 }
 
-func (c *Client) VrouterCreateV2ProjectsObjectIdVroutersPost(ctx context.Context, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVrouterCreateV2ProjectsObjectIdVroutersPostRequest(c.Server, objectId, body)
+func (c *Client) VrouterCreate(ctx context.Context, objectId string, body VrouterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVrouterCreateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3892,8 +3892,8 @@ func (c *Client) VrouterCreateV2ProjectsObjectIdVroutersPost(ctx context.Context
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserDeleteV2S3UsersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserDeleteV2S3UsersObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) S3UserDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3904,8 +3904,8 @@ func (c *Client) S3UserDeleteV2S3UsersObjectIdDelete(ctx context.Context, object
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserUpdateV2S3UsersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserUpdateV2S3UsersObjectIdPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) S3UserUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserUpdateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3916,8 +3916,8 @@ func (c *Client) S3UserUpdateV2S3UsersObjectIdPatchWithBody(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserUpdateV2S3UsersObjectIdPatch(ctx context.Context, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserUpdateV2S3UsersObjectIdPatchRequest(c.Server, objectId, body)
+func (c *Client) S3UserUpdate(ctx context.Context, objectId string, body S3UserUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserUpdateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3928,8 +3928,8 @@ func (c *Client) S3UserUpdateV2S3UsersObjectIdPatch(ctx context.Context, objectI
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3GetUserKeysV2S3UsersObjectIdCredentialsGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3GetUserKeysV2S3UsersObjectIdCredentialsGetRequest(c.Server, objectId)
+func (c *Client) S3GetUserKeys(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3GetUserKeysRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3940,8 +3940,8 @@ func (c *Client) S3GetUserKeysV2S3UsersObjectIdCredentialsGet(ctx context.Contex
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3GenUserKeysV2S3UsersObjectIdCredentialsPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3GenUserKeysV2S3UsersObjectIdCredentialsPostRequest(c.Server, objectId)
+func (c *Client) S3GenUserKeys(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3GenUserKeysRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3952,8 +3952,8 @@ func (c *Client) S3GenUserKeysV2S3UsersObjectIdCredentialsPost(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserDetailsV2S3UsersObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserDetailsV2S3UsersObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) S3UserDetails(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserDetailsRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -3964,8 +3964,8 @@ func (c *Client) S3UserDetailsV2S3UsersObjectIdDetailGet(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) S3UserUpdateQuotaWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserUpdateQuotaRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3976,8 +3976,8 @@ func (c *Client) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithBody(ctx context
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut(ctx context.Context, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequest(c.Server, objectId, body)
+func (c *Client) S3UserUpdateQuota(ctx context.Context, objectId string, body S3UserUpdateQuotaJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserUpdateQuotaRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -3988,8 +3988,8 @@ func (c *Client) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut(ctx context.Context
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserSuspendV2S3UsersObjectIdSuspendPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserSuspendV2S3UsersObjectIdSuspendPostRequest(c.Server, objectId)
+func (c *Client) S3UserSuspend(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserSuspendRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4000,8 +4000,8 @@ func (c *Client) S3UserSuspendV2S3UsersObjectIdSuspendPost(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostRequest(c.Server, objectId)
+func (c *Client) S3UserUnsuspend(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewS3UserUnsuspendRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4012,8 +4012,8 @@ func (c *Client) S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerDeleteV2ServersObjectIdDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerDeleteV2ServersObjectIdDeleteRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ServerDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerDeleteRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4024,8 +4024,8 @@ func (c *Client) ServerDeleteV2ServersObjectIdDeleteWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerDeleteV2ServersObjectIdDelete(ctx context.Context, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerDeleteV2ServersObjectIdDeleteRequest(c.Server, objectId, body)
+func (c *Client) ServerDelete(ctx context.Context, objectId string, body ServerDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerDeleteRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4036,8 +4036,8 @@ func (c *Client) ServerDeleteV2ServersObjectIdDelete(ctx context.Context, object
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerUpdateV2ServersObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerUpdateV2ServersObjectIdPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ServerUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerUpdateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4048,8 +4048,8 @@ func (c *Client) ServerUpdateV2ServersObjectIdPatchWithBody(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerUpdateV2ServersObjectIdPatch(ctx context.Context, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerUpdateV2ServersObjectIdPatchRequest(c.Server, objectId, body)
+func (c *Client) ServerUpdate(ctx context.Context, objectId string, body ServerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerUpdateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4060,8 +4060,8 @@ func (c *Client) ServerUpdateV2ServersObjectIdPatch(ctx context.Context, objectI
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerConsoleV2ServersObjectIdConsolePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerConsoleV2ServersObjectIdConsolePostRequest(c.Server, objectId)
+func (c *Client) ServerConsole(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerConsoleRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4072,8 +4072,8 @@ func (c *Client) ServerConsoleV2ServersObjectIdConsolePost(ctx context.Context, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerDetailV2ServersObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerDetailV2ServersObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) ServerDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4084,8 +4084,8 @@ func (c *Client) ServerDetailV2ServersObjectIdDetailGet(ctx context.Context, obj
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerLicensesV2ServersObjectIdLicensesGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerLicensesV2ServersObjectIdLicensesGetRequest(c.Server, objectId)
+func (c *Client) ServerLicenses(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerLicensesRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4096,8 +4096,8 @@ func (c *Client) ServerLicensesV2ServersObjectIdLicensesGet(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerAddLicenseV2ServersObjectIdLicensesPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerAddLicenseV2ServersObjectIdLicensesPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ServerAddLicenseWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerAddLicenseRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4108,8 +4108,8 @@ func (c *Client) ServerAddLicenseV2ServersObjectIdLicensesPostWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerAddLicenseV2ServersObjectIdLicensesPost(ctx context.Context, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerAddLicenseV2ServersObjectIdLicensesPostRequest(c.Server, objectId, body)
+func (c *Client) ServerAddLicense(ctx context.Context, objectId string, body ServerAddLicenseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerAddLicenseRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4120,8 +4120,8 @@ func (c *Client) ServerAddLicenseV2ServersObjectIdLicensesPost(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerChangePasswordV2ServersObjectIdPasswordPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerChangePasswordV2ServersObjectIdPasswordPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ServerChangePasswordWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerChangePasswordRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4132,8 +4132,8 @@ func (c *Client) ServerChangePasswordV2ServersObjectIdPasswordPostWithBody(ctx c
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerChangePasswordV2ServersObjectIdPasswordPost(ctx context.Context, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerChangePasswordV2ServersObjectIdPasswordPostRequest(c.Server, objectId, body)
+func (c *Client) ServerChangePassword(ctx context.Context, objectId string, body ServerChangePasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerChangePasswordRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4144,8 +4144,8 @@ func (c *Client) ServerChangePasswordV2ServersObjectIdPasswordPost(ctx context.C
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerRebootV2ServersObjectIdRebootPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerRebootV2ServersObjectIdRebootPostRequest(c.Server, objectId)
+func (c *Client) ServerReboot(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerRebootRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4156,8 +4156,8 @@ func (c *Client) ServerRebootV2ServersObjectIdRebootPost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerRescueV2ServersObjectIdRescuePost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerRescueV2ServersObjectIdRescuePostRequest(c.Server, objectId)
+func (c *Client) ServerRescue(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerRescueRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4168,8 +4168,8 @@ func (c *Client) ServerRescueV2ServersObjectIdRescuePost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerResizeV2ServersObjectIdResizePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerResizeV2ServersObjectIdResizePostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) ServerResizeWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerResizeRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4180,8 +4180,8 @@ func (c *Client) ServerResizeV2ServersObjectIdResizePostWithBody(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerResizeV2ServersObjectIdResizePost(ctx context.Context, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerResizeV2ServersObjectIdResizePostRequest(c.Server, objectId, body)
+func (c *Client) ServerResize(ctx context.Context, objectId string, body ServerResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerResizeRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4192,8 +4192,8 @@ func (c *Client) ServerResizeV2ServersObjectIdResizePost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) CreateServerSnapshotWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateServerSnapshotRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4204,8 +4204,8 @@ func (c *Client) CreateServerSnapshotV2ServersObjectIdSnapshotPostWithBody(ctx c
 	return c.Client.Do(req)
 }
 
-func (c *Client) CreateServerSnapshotV2ServersObjectIdSnapshotPost(ctx context.Context, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequest(c.Server, objectId, body)
+func (c *Client) CreateServerSnapshot(ctx context.Context, objectId string, body CreateServerSnapshotJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateServerSnapshotRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4216,8 +4216,8 @@ func (c *Client) CreateServerSnapshotV2ServersObjectIdSnapshotPost(ctx context.C
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerStartV2ServersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerStartV2ServersObjectIdStartPostRequest(c.Server, objectId)
+func (c *Client) ServerStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerStartRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4228,8 +4228,8 @@ func (c *Client) ServerStartV2ServersObjectIdStartPost(ctx context.Context, obje
 	return c.Client.Do(req)
 }
 
-func (c *Client) ServerStopV2ServersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewServerStopV2ServersObjectIdStopPostRequest(c.Server, objectId)
+func (c *Client) ServerStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewServerStopRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4240,8 +4240,8 @@ func (c *Client) ServerStopV2ServersObjectIdStopPost(ctx context.Context, object
 	return c.Client.Do(req)
 }
 
-func (c *Client) SnapshotDeleteV2SnapshotsObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSnapshotDeleteV2SnapshotsObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) SnapshotDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSnapshotDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4252,8 +4252,8 @@ func (c *Client) SnapshotDeleteV2SnapshotsObjectIdDelete(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) SnapshotDetailsV2SnapshotsObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSnapshotDetailsV2SnapshotsObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) SnapshotDetails(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSnapshotDetailsRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4264,8 +4264,8 @@ func (c *Client) SnapshotDetailsV2SnapshotsObjectIdDetailGet(ctx context.Context
 	return c.Client.Do(req)
 }
 
-func (c *Client) SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) SnapshotRestoreWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSnapshotRestoreRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4276,8 +4276,8 @@ func (c *Client) SnapshotRestoreV2SnapshotsObjectIdRestorePostWithBody(ctx conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) SnapshotRestoreV2SnapshotsObjectIdRestorePost(ctx context.Context, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequest(c.Server, objectId, body)
+func (c *Client) SnapshotRestore(ctx context.Context, objectId string, body SnapshotRestoreJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSnapshotRestoreRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4288,8 +4288,8 @@ func (c *Client) SnapshotRestoreV2SnapshotsObjectIdRestorePost(ctx context.Conte
 	return c.Client.Do(req)
 }
 
-func (c *Client) AccountStatV2StatGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAccountStatV2StatGetRequest(c.Server)
+func (c *Client) AccountStat(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccountStatRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -4300,8 +4300,8 @@ func (c *Client) AccountStatV2StatGet(ctx context.Context, reqEditors ...Request
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeDeleteV2VolumesObjectIdDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeDeleteV2VolumesObjectIdDeleteRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) VolumeDeleteWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeDeleteRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4312,8 +4312,8 @@ func (c *Client) VolumeDeleteV2VolumesObjectIdDeleteWithBody(ctx context.Context
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeDeleteV2VolumesObjectIdDelete(ctx context.Context, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeDeleteV2VolumesObjectIdDeleteRequest(c.Server, objectId, body)
+func (c *Client) VolumeDelete(ctx context.Context, objectId string, body VolumeDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeDeleteRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4324,8 +4324,8 @@ func (c *Client) VolumeDeleteV2VolumesObjectIdDelete(ctx context.Context, object
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeUpdateV2VolumesObjectIdPatchWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeUpdateV2VolumesObjectIdPatchRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) VolumeUpdateWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeUpdateRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4336,8 +4336,8 @@ func (c *Client) VolumeUpdateV2VolumesObjectIdPatchWithBody(ctx context.Context,
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeUpdateV2VolumesObjectIdPatch(ctx context.Context, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeUpdateV2VolumesObjectIdPatchRequest(c.Server, objectId, body)
+func (c *Client) VolumeUpdate(ctx context.Context, objectId string, body VolumeUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeUpdateRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4348,8 +4348,8 @@ func (c *Client) VolumeUpdateV2VolumesObjectIdPatch(ctx context.Context, objectI
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeAttachV2VolumesObjectIdAttachPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeAttachV2VolumesObjectIdAttachPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) VolumeAttachWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeAttachRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4360,8 +4360,8 @@ func (c *Client) VolumeAttachV2VolumesObjectIdAttachPostWithBody(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeAttachV2VolumesObjectIdAttachPost(ctx context.Context, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeAttachV2VolumesObjectIdAttachPostRequest(c.Server, objectId, body)
+func (c *Client) VolumeAttach(ctx context.Context, objectId string, body VolumeAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeAttachRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4372,8 +4372,8 @@ func (c *Client) VolumeAttachV2VolumesObjectIdAttachPost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeDetachV2VolumesObjectIdDetachPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeDetachV2VolumesObjectIdDetachPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) VolumeDetachWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeDetachRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4384,8 +4384,8 @@ func (c *Client) VolumeDetachV2VolumesObjectIdDetachPostWithBody(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeDetachV2VolumesObjectIdDetachPost(ctx context.Context, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeDetachV2VolumesObjectIdDetachPostRequest(c.Server, objectId, body)
+func (c *Client) VolumeDetach(ctx context.Context, objectId string, body VolumeDetachJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeDetachRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4396,8 +4396,8 @@ func (c *Client) VolumeDetachV2VolumesObjectIdDetachPost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeDetailV2VolumesObjectIdDetailGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeDetailV2VolumesObjectIdDetailGetRequest(c.Server, objectId)
+func (c *Client) VolumeDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4408,8 +4408,8 @@ func (c *Client) VolumeDetailV2VolumesObjectIdDetailGet(ctx context.Context, obj
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeExtendV2VolumesObjectIdExtendPostWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeExtendV2VolumesObjectIdExtendPostRequestWithBody(c.Server, objectId, contentType, body)
+func (c *Client) VolumeExtendWithBody(ctx context.Context, objectId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeExtendRequestWithBody(c.Server, objectId, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4420,8 +4420,8 @@ func (c *Client) VolumeExtendV2VolumesObjectIdExtendPostWithBody(ctx context.Con
 	return c.Client.Do(req)
 }
 
-func (c *Client) VolumeExtendV2VolumesObjectIdExtendPost(ctx context.Context, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVolumeExtendV2VolumesObjectIdExtendPostRequest(c.Server, objectId, body)
+func (c *Client) VolumeExtend(ctx context.Context, objectId string, body VolumeExtendJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVolumeExtendRequest(c.Server, objectId, body)
 	if err != nil {
 		return nil, err
 	}
@@ -4432,8 +4432,8 @@ func (c *Client) VolumeExtendV2VolumesObjectIdExtendPost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) VrouterDeleteV2VroutersObjectIdDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVrouterDeleteV2VroutersObjectIdDeleteRequest(c.Server, objectId)
+func (c *Client) VrouterDelete(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVrouterDeleteRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4444,8 +4444,8 @@ func (c *Client) VrouterDeleteV2VroutersObjectIdDelete(ctx context.Context, obje
 	return c.Client.Do(req)
 }
 
-func (c *Client) VrouterDetailV2VroutersObjectIdGet(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVrouterDetailV2VroutersObjectIdGetRequest(c.Server, objectId)
+func (c *Client) VrouterDetail(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVrouterDetailRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4456,8 +4456,8 @@ func (c *Client) VrouterDetailV2VroutersObjectIdGet(ctx context.Context, objectI
 	return c.Client.Do(req)
 }
 
-func (c *Client) VrouterStartV2VroutersObjectIdStartPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVrouterStartV2VroutersObjectIdStartPostRequest(c.Server, objectId)
+func (c *Client) VrouterStart(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVrouterStartRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4468,8 +4468,8 @@ func (c *Client) VrouterStartV2VroutersObjectIdStartPost(ctx context.Context, ob
 	return c.Client.Do(req)
 }
 
-func (c *Client) VrouterStopV2VroutersObjectIdStopPost(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewVrouterStopV2VroutersObjectIdStopPostRequest(c.Server, objectId)
+func (c *Client) VrouterStop(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVrouterStopRequest(c.Server, objectId)
 	if err != nil {
 		return nil, err
 	}
@@ -4480,8 +4480,8 @@ func (c *Client) VrouterStopV2VroutersObjectIdStopPost(ctx context.Context, obje
 	return c.Client.Do(req)
 }
 
-// NewAddressDeleteV2AddressesObjectIdDeleteRequest generates requests for AddressDeleteV2AddressesObjectIdDelete
-func NewAddressDeleteV2AddressesObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewAddressDeleteRequest generates requests for AddressDelete
+func NewAddressDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4514,19 +4514,19 @@ func NewAddressDeleteV2AddressesObjectIdDeleteRequest(server string, objectId st
 	return req, nil
 }
 
-// NewAddressAttachV2AddressesObjectIdAttachPostRequest calls the generic AddressAttachV2AddressesObjectIdAttachPost builder with application/json body
-func NewAddressAttachV2AddressesObjectIdAttachPostRequest(server string, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody) (*http.Request, error) {
+// NewAddressAttachRequest calls the generic AddressAttach builder with application/json body
+func NewAddressAttachRequest(server string, objectId string, body AddressAttachJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewAddressAttachV2AddressesObjectIdAttachPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewAddressAttachRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewAddressAttachV2AddressesObjectIdAttachPostRequestWithBody generates requests for AddressAttachV2AddressesObjectIdAttachPost with any type of body
-func NewAddressAttachV2AddressesObjectIdAttachPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewAddressAttachRequestWithBody generates requests for AddressAttach with any type of body
+func NewAddressAttachRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4561,19 +4561,19 @@ func NewAddressAttachV2AddressesObjectIdAttachPostRequestWithBody(server string,
 	return req, nil
 }
 
-// NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequest calls the generic AddressChangeBandwidthV2AddressesObjectIdBandwidthPost builder with application/json body
-func NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequest(server string, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody) (*http.Request, error) {
+// NewAddressChangeBandwidthRequest calls the generic AddressChangeBandwidth builder with application/json body
+func NewAddressChangeBandwidthRequest(server string, objectId string, body AddressChangeBandwidthJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewAddressChangeBandwidthRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequestWithBody generates requests for AddressChangeBandwidthV2AddressesObjectIdBandwidthPost with any type of body
-func NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewAddressChangeBandwidthRequestWithBody generates requests for AddressChangeBandwidth with any type of body
+func NewAddressChangeBandwidthRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4608,8 +4608,8 @@ func NewAddressChangeBandwidthV2AddressesObjectIdBandwidthPostRequestWithBody(se
 	return req, nil
 }
 
-// NewAddressDetachV2AddressesObjectIdDetachPostRequest generates requests for AddressDetachV2AddressesObjectIdDetachPost
-func NewAddressDetachV2AddressesObjectIdDetachPostRequest(server string, objectId string) (*http.Request, error) {
+// NewAddressDetachRequest generates requests for AddressDetach
+func NewAddressDetachRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4642,8 +4642,8 @@ func NewAddressDetachV2AddressesObjectIdDetachPostRequest(server string, objectI
 	return req, nil
 }
 
-// NewAddressDetailV2AddressesObjectIdDetailGetRequest generates requests for AddressDetailV2AddressesObjectIdDetailGet
-func NewAddressDetailV2AddressesObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewAddressDetailRequest generates requests for AddressDetail
+func NewAddressDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4676,8 +4676,8 @@ func NewAddressDetailV2AddressesObjectIdDetailGetRequest(server string, objectId
 	return req, nil
 }
 
-// NewAddressSetPrimaryV2AddressesObjectIdPrimaryPostRequest generates requests for AddressSetPrimaryV2AddressesObjectIdPrimaryPost
-func NewAddressSetPrimaryV2AddressesObjectIdPrimaryPostRequest(server string, objectId string) (*http.Request, error) {
+// NewAddressSetPrimaryRequest generates requests for AddressSetPrimary
+func NewAddressSetPrimaryRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4710,19 +4710,19 @@ func NewAddressSetPrimaryV2AddressesObjectIdPrimaryPostRequest(server string, ob
 	return req, nil
 }
 
-// NewAddressEditPtrV2AddressesObjectIdPtrPutRequest calls the generic AddressEditPtrV2AddressesObjectIdPtrPut builder with application/json body
-func NewAddressEditPtrV2AddressesObjectIdPtrPutRequest(server string, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody) (*http.Request, error) {
+// NewAddressEditPtrRequest calls the generic AddressEditPtr builder with application/json body
+func NewAddressEditPtrRequest(server string, objectId string, body AddressEditPtrJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewAddressEditPtrV2AddressesObjectIdPtrPutRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewAddressEditPtrRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewAddressEditPtrV2AddressesObjectIdPtrPutRequestWithBody generates requests for AddressEditPtrV2AddressesObjectIdPtrPut with any type of body
-func NewAddressEditPtrV2AddressesObjectIdPtrPutRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewAddressEditPtrRequestWithBody generates requests for AddressEditPtr with any type of body
+func NewAddressEditPtrRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4757,8 +4757,8 @@ func NewAddressEditPtrV2AddressesObjectIdPtrPutRequestWithBody(server string, ob
 	return req, nil
 }
 
-// NewAccountBalanceV2BalanceGetRequest generates requests for AccountBalanceV2BalanceGet
-func NewAccountBalanceV2BalanceGetRequest(server string) (*http.Request, error) {
+// NewAccountBalanceRequest generates requests for AccountBalance
+func NewAccountBalanceRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -4784,19 +4784,19 @@ func NewAccountBalanceV2BalanceGetRequest(server string) (*http.Request, error) 
 	return req, nil
 }
 
-// NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequest calls the generic DbaasBackupDeleteV2DbaasBackupsObjectIdDelete builder with application/json body
-func NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequest(server string, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody) (*http.Request, error) {
+// NewDbaasBackupDeleteRequest calls the generic DbaasBackupDelete builder with application/json body
+func NewDbaasBackupDeleteRequest(server string, objectId string, body DbaasBackupDeleteJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewDbaasBackupDeleteRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequestWithBody generates requests for DbaasBackupDeleteV2DbaasBackupsObjectIdDelete with any type of body
-func NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewDbaasBackupDeleteRequestWithBody generates requests for DbaasBackupDelete with any type of body
+func NewDbaasBackupDeleteRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4831,8 +4831,8 @@ func NewDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteRequestWithBody(server stri
 	return req, nil
 }
 
-// NewDbaasBackupDetailV2DbaasBackupsObjectIdGetRequest generates requests for DbaasBackupDetailV2DbaasBackupsObjectIdGet
-func NewDbaasBackupDetailV2DbaasBackupsObjectIdGetRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasBackupDetailRequest generates requests for DbaasBackupDetail
+func NewDbaasBackupDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4865,8 +4865,8 @@ func NewDbaasBackupDetailV2DbaasBackupsObjectIdGetRequest(server string, objectI
 	return req, nil
 }
 
-// NewDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostRequest generates requests for DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost
-func NewDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasBackupDownloadRequest generates requests for DbaasBackupDownload
+func NewDbaasBackupDownloadRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4899,8 +4899,8 @@ func NewDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostRequest(server stri
 	return req, nil
 }
 
-// NewDbaasClusterDeleteV2DbaasClustersObjectIdDeleteRequest generates requests for DbaasClusterDeleteV2DbaasClustersObjectIdDelete
-func NewDbaasClusterDeleteV2DbaasClustersObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClusterDeleteRequest generates requests for DbaasClusterDelete
+func NewDbaasClusterDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4933,8 +4933,8 @@ func NewDbaasClusterDeleteV2DbaasClustersObjectIdDeleteRequest(server string, ob
 	return req, nil
 }
 
-// NewDbaasClusterDetailV2DbaasClustersObjectIdGetRequest generates requests for DbaasClusterDetailV2DbaasClustersObjectIdGet
-func NewDbaasClusterDetailV2DbaasClustersObjectIdGetRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClusterDetailRequest generates requests for DbaasClusterDetail
+func NewDbaasClusterDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -4967,19 +4967,19 @@ func NewDbaasClusterDetailV2DbaasClustersObjectIdGetRequest(server string, objec
 	return req, nil
 }
 
-// NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequest calls the generic DbaasClusterUpdateV2DbaasClustersObjectIdPatch builder with application/json body
-func NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequest(server string, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody) (*http.Request, error) {
+// NewDbaasClusterUpdateRequest calls the generic DbaasClusterUpdate builder with application/json body
+func NewDbaasClusterUpdateRequest(server string, objectId string, body DbaasClusterUpdateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewDbaasClusterUpdateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequestWithBody generates requests for DbaasClusterUpdateV2DbaasClustersObjectIdPatch with any type of body
-func NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewDbaasClusterUpdateRequestWithBody generates requests for DbaasClusterUpdate with any type of body
+func NewDbaasClusterUpdateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5014,19 +5014,19 @@ func NewDbaasClusterUpdateV2DbaasClustersObjectIdPatchRequestWithBody(server str
 	return req, nil
 }
 
-// NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequest calls the generic DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost builder with application/json body
-func NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequest(server string, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody) (*http.Request, error) {
+// NewDbaasClusterBackupRequest calls the generic DbaasClusterBackup builder with application/json body
+func NewDbaasClusterBackupRequest(server string, objectId string, body DbaasClusterBackupJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewDbaasClusterBackupRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequestWithBody generates requests for DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost with any type of body
-func NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewDbaasClusterBackupRequestWithBody generates requests for DbaasClusterBackup with any type of body
+func NewDbaasClusterBackupRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5061,8 +5061,8 @@ func NewDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostRequestWithBody
 	return req, nil
 }
 
-// NewDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostRequest generates requests for DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePost
-func NewDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClusterBackupDisableRequest generates requests for DbaasClusterBackupDisable
+func NewDbaasClusterBackupDisableRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5095,8 +5095,8 @@ func NewDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostRequest
 	return req, nil
 }
 
-// NewDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostRequest generates requests for DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost
-func NewDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClusterBackupEnableRequest generates requests for DbaasClusterBackupEnable
+func NewDbaasClusterBackupEnableRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5129,8 +5129,8 @@ func NewDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostRequest(s
 	return req, nil
 }
 
-// NewDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetRequest generates requests for DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet
-func NewDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClusterConfigRequest generates requests for DbaasClusterConfig
+func NewDbaasClusterConfigRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5163,8 +5163,8 @@ func NewDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetRequest(server 
 	return req, nil
 }
 
-// NewClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetRequest generates requests for ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet
-func NewClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewClusterDbaasDatabasesListRequest generates requests for ClusterDbaasDatabasesList
+func NewClusterDbaasDatabasesListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5197,19 +5197,19 @@ func NewClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetRequest(serv
 	return req, nil
 }
 
-// NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequest calls the generic ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost builder with application/json body
-func NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequest(server string, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody) (*http.Request, error) {
+// NewClusterAddDatabaseRequest calls the generic ClusterAddDatabase builder with application/json body
+func NewClusterAddDatabaseRequest(server string, objectId string, body ClusterAddDatabaseJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewClusterAddDatabaseRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequestWithBody generates requests for ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost with any type of body
-func NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewClusterAddDatabaseRequestWithBody generates requests for ClusterAddDatabase with any type of body
+func NewClusterAddDatabaseRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5244,8 +5244,8 @@ func NewClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostRequestWithBody(se
 	return req, nil
 }
 
-// NewClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetRequest generates requests for ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet
-func NewClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewClusterDbaasNodesListRequest generates requests for ClusterDbaasNodesList
+func NewClusterDbaasNodesListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5278,19 +5278,19 @@ func NewClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetRequest(server strin
 	return req, nil
 }
 
-// NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequest calls the generic DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost builder with application/json body
-func NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequest(server string, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody) (*http.Request, error) {
+// NewDbaasClusterResizeRequest calls the generic DbaasClusterResize builder with application/json body
+func NewDbaasClusterResizeRequest(server string, objectId string, body DbaasClusterResizeJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewDbaasClusterResizeRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequestWithBody generates requests for DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost with any type of body
-func NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewDbaasClusterResizeRequestWithBody generates requests for DbaasClusterResize with any type of body
+func NewDbaasClusterResizeRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5325,19 +5325,19 @@ func NewDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostRequestWithB
 	return req, nil
 }
 
-// NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequest calls the generic DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost builder with application/json body
-func NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequest(server string, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody) (*http.Request, error) {
+// NewDbaasClusterResizeStorageRequest calls the generic DbaasClusterResizeStorage builder with application/json body
+func NewDbaasClusterResizeStorageRequest(server string, objectId string, body DbaasClusterResizeStorageJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewDbaasClusterResizeStorageRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequestWithBody generates requests for DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost with any type of body
-func NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewDbaasClusterResizeStorageRequestWithBody generates requests for DbaasClusterResizeStorage with any type of body
+func NewDbaasClusterResizeStorageRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5372,8 +5372,8 @@ func NewDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRequest
 	return req, nil
 }
 
-// NewDbaasClusterStartV2DbaasClustersObjectIdStartPostRequest generates requests for DbaasClusterStartV2DbaasClustersObjectIdStartPost
-func NewDbaasClusterStartV2DbaasClustersObjectIdStartPostRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClusterStartRequest generates requests for DbaasClusterStart
+func NewDbaasClusterStartRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5406,8 +5406,8 @@ func NewDbaasClusterStartV2DbaasClustersObjectIdStartPostRequest(server string, 
 	return req, nil
 }
 
-// NewDbaasClusterStopV2DbaasClustersObjectIdStopPostRequest generates requests for DbaasClusterStopV2DbaasClustersObjectIdStopPost
-func NewDbaasClusterStopV2DbaasClustersObjectIdStopPostRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClusterStopRequest generates requests for DbaasClusterStop
+func NewDbaasClusterStopRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5440,8 +5440,8 @@ func NewDbaasClusterStopV2DbaasClustersObjectIdStopPostRequest(server string, ob
 	return req, nil
 }
 
-// NewDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteRequest generates requests for DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete
-func NewDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasDatabaseDeleteRequest generates requests for DbaasDatabaseDelete
+func NewDbaasDatabaseDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5474,8 +5474,8 @@ func NewDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteRequest(server string, 
 	return req, nil
 }
 
-// NewDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetRequest generates requests for DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet
-func NewDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasDatabaseDetailRequest generates requests for DbaasDatabaseDetail
+func NewDbaasDatabaseDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5508,19 +5508,19 @@ func NewDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetRequest(server string, obj
 	return req, nil
 }
 
-// NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequest calls the generic ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost builder with application/json body
-func NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequest(server string, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody) (*http.Request, error) {
+// NewClusterDatabaseBackupRequest calls the generic ClusterDatabaseBackup builder with application/json body
+func NewClusterDatabaseBackupRequest(server string, objectId string, body ClusterDatabaseBackupJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewClusterDatabaseBackupRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequestWithBody generates requests for ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost with any type of body
-func NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewClusterDatabaseBackupRequestWithBody generates requests for ClusterDatabaseBackup with any type of body
+func NewClusterDatabaseBackupRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5555,8 +5555,8 @@ func NewClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostRequestWith
 	return req, nil
 }
 
-// NewDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostRequest generates requests for DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePost
-func NewDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasDatabaseBackupDisableRequest generates requests for DbaasDatabaseBackupDisable
+func NewDbaasDatabaseBackupDisableRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5589,8 +5589,8 @@ func NewDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostReque
 	return req, nil
 }
 
-// NewDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostRequest generates requests for DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePost
-func NewDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasDatabaseBackupEnableRequest generates requests for DbaasDatabaseBackupEnable
+func NewDbaasDatabaseBackupEnableRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5623,19 +5623,19 @@ func NewDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostRequest
 	return req, nil
 }
 
-// NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequest calls the generic DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost builder with application/json body
-func NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequest(server string, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody) (*http.Request, error) {
+// NewDbaasRestoreAdminPasswordRequest calls the generic DbaasRestoreAdminPassword builder with application/json body
+func NewDbaasRestoreAdminPasswordRequest(server string, objectId string, body DbaasRestoreAdminPasswordJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewDbaasRestoreAdminPasswordRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequestWithBody generates requests for DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost with any type of body
-func NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewDbaasRestoreAdminPasswordRequestWithBody generates requests for DbaasRestoreAdminPassword with any type of body
+func NewDbaasRestoreAdminPasswordRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5670,8 +5670,8 @@ func NewDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostRequestWithB
 	return req, nil
 }
 
-// NewKeypairDeleteV2KeypairsObjectIdDeleteRequest generates requests for KeypairDeleteV2KeypairsObjectIdDelete
-func NewKeypairDeleteV2KeypairsObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewKeypairDeleteRequest generates requests for KeypairDelete
+func NewKeypairDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5704,8 +5704,8 @@ func NewKeypairDeleteV2KeypairsObjectIdDeleteRequest(server string, objectId str
 	return req, nil
 }
 
-// NewKeypairDetailV2KeypairsObjectIdDetailGetRequest generates requests for KeypairDetailV2KeypairsObjectIdDetailGet
-func NewKeypairDetailV2KeypairsObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewKeypairDetailRequest generates requests for KeypairDetail
+func NewKeypairDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5738,8 +5738,8 @@ func NewKeypairDetailV2KeypairsObjectIdDetailGetRequest(server string, objectId 
 	return req, nil
 }
 
-// NewAvailableLicensesListV2LicensesGetRequest generates requests for AvailableLicensesListV2LicensesGet
-func NewAvailableLicensesListV2LicensesGetRequest(server string) (*http.Request, error) {
+// NewAvailableLicensesListRequest generates requests for AvailableLicensesList
+func NewAvailableLicensesListRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -5765,8 +5765,8 @@ func NewAvailableLicensesListV2LicensesGetRequest(server string) (*http.Request,
 	return req, nil
 }
 
-// NewLicenseDeleteV2LicensesObjectIdDeleteRequest generates requests for LicenseDeleteV2LicensesObjectIdDelete
-func NewLicenseDeleteV2LicensesObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewLicenseDeleteRequest generates requests for LicenseDelete
+func NewLicenseDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5799,8 +5799,8 @@ func NewLicenseDeleteV2LicensesObjectIdDeleteRequest(server string, objectId str
 	return req, nil
 }
 
-// NewLicenseDetailsV2LicensesObjectIdGetRequest generates requests for LicenseDetailsV2LicensesObjectIdGet
-func NewLicenseDetailsV2LicensesObjectIdGetRequest(server string, objectId string) (*http.Request, error) {
+// NewLicenseDetailsRequest generates requests for LicenseDetails
+func NewLicenseDetailsRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5833,19 +5833,19 @@ func NewLicenseDetailsV2LicensesObjectIdGetRequest(server string, objectId strin
 	return req, nil
 }
 
-// NewLicenseUpdateV2LicensesObjectIdPatchRequest calls the generic LicenseUpdateV2LicensesObjectIdPatch builder with application/json body
-func NewLicenseUpdateV2LicensesObjectIdPatchRequest(server string, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody) (*http.Request, error) {
+// NewLicenseUpdateRequest calls the generic LicenseUpdate builder with application/json body
+func NewLicenseUpdateRequest(server string, objectId string, body LicenseUpdateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewLicenseUpdateV2LicensesObjectIdPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewLicenseUpdateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewLicenseUpdateV2LicensesObjectIdPatchRequestWithBody generates requests for LicenseUpdateV2LicensesObjectIdPatch with any type of body
-func NewLicenseUpdateV2LicensesObjectIdPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewLicenseUpdateRequestWithBody generates requests for LicenseUpdate with any type of body
+func NewLicenseUpdateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -5880,8 +5880,8 @@ func NewLicenseUpdateV2LicensesObjectIdPatchRequestWithBody(server string, objec
 	return req, nil
 }
 
-// NewAccountLimitsV2LimitsGetRequest generates requests for AccountLimitsV2LimitsGet
-func NewAccountLimitsV2LimitsGetRequest(server string) (*http.Request, error) {
+// NewAccountLimitsRequest generates requests for AccountLimits
+func NewAccountLimitsRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -5907,19 +5907,19 @@ func NewAccountLimitsV2LimitsGetRequest(server string) (*http.Request, error) {
 	return req, nil
 }
 
-// NewAccountPatchLimitsV2LimitsPatchRequest calls the generic AccountPatchLimitsV2LimitsPatch builder with application/json body
-func NewAccountPatchLimitsV2LimitsPatchRequest(server string, body AccountPatchLimitsV2LimitsPatchJSONRequestBody) (*http.Request, error) {
+// NewAccountPatchLimitsRequest calls the generic AccountPatchLimits builder with application/json body
+func NewAccountPatchLimitsRequest(server string, body AccountPatchLimitsJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewAccountPatchLimitsV2LimitsPatchRequestWithBody(server, "application/json", bodyReader)
+	return NewAccountPatchLimitsRequestWithBody(server, "application/json", bodyReader)
 }
 
-// NewAccountPatchLimitsV2LimitsPatchRequestWithBody generates requests for AccountPatchLimitsV2LimitsPatch with any type of body
-func NewAccountPatchLimitsV2LimitsPatchRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+// NewAccountPatchLimitsRequestWithBody generates requests for AccountPatchLimits with any type of body
+func NewAccountPatchLimitsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -5947,8 +5947,8 @@ func NewAccountPatchLimitsV2LimitsPatchRequestWithBody(server string, contentTyp
 	return req, nil
 }
 
-// NewAccountProjectsLimitsV2LimitsProjectsGetRequest generates requests for AccountProjectsLimitsV2LimitsProjectsGet
-func NewAccountProjectsLimitsV2LimitsProjectsGetRequest(server string) (*http.Request, error) {
+// NewAccountProjectsLimitsRequest generates requests for AccountProjectsLimits
+func NewAccountProjectsLimitsRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -5974,8 +5974,8 @@ func NewAccountProjectsLimitsV2LimitsProjectsGetRequest(server string) (*http.Re
 	return req, nil
 }
 
-// NewRuleDeleteV2LoadbalancersRulesObjectIdDeleteRequest generates requests for RuleDeleteV2LoadbalancersRulesObjectIdDelete
-func NewRuleDeleteV2LoadbalancersRulesObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewRuleDeleteRequest generates requests for RuleDelete
+func NewRuleDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6008,8 +6008,8 @@ func NewRuleDeleteV2LoadbalancersRulesObjectIdDeleteRequest(server string, objec
 	return req, nil
 }
 
-// NewRuleDetailV2LoadbalancersRulesObjectIdGetRequest generates requests for RuleDetailV2LoadbalancersRulesObjectIdGet
-func NewRuleDetailV2LoadbalancersRulesObjectIdGetRequest(server string, objectId string) (*http.Request, error) {
+// NewRuleDetailRequest generates requests for RuleDetail
+func NewRuleDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6042,8 +6042,8 @@ func NewRuleDetailV2LoadbalancersRulesObjectIdGetRequest(server string, objectId
 	return req, nil
 }
 
-// NewLoadBalancerDeleteV2LoadbalancersObjectIdDeleteRequest generates requests for LoadBalancerDeleteV2LoadbalancersObjectIdDelete
-func NewLoadBalancerDeleteV2LoadbalancersObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewLoadBalancerDeleteRequest generates requests for LoadBalancerDelete
+func NewLoadBalancerDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6076,19 +6076,19 @@ func NewLoadBalancerDeleteV2LoadbalancersObjectIdDeleteRequest(server string, ob
 	return req, nil
 }
 
-// NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequest calls the generic LoadBalancerRenameV2LoadbalancersObjectIdPatch builder with application/json body
-func NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequest(server string, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody) (*http.Request, error) {
+// NewLoadBalancerRenameRequest calls the generic LoadBalancerRename builder with application/json body
+func NewLoadBalancerRenameRequest(server string, objectId string, body LoadBalancerRenameJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewLoadBalancerRenameRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequestWithBody generates requests for LoadBalancerRenameV2LoadbalancersObjectIdPatch with any type of body
-func NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewLoadBalancerRenameRequestWithBody generates requests for LoadBalancerRename with any type of body
+func NewLoadBalancerRenameRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6123,19 +6123,19 @@ func NewLoadBalancerRenameV2LoadbalancersObjectIdPatchRequestWithBody(server str
 	return req, nil
 }
 
-// NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequest calls the generic LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost builder with application/json body
-func NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequest(server string, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody) (*http.Request, error) {
+// NewLoadBalancerUpdateRequest calls the generic LoadBalancerUpdate builder with application/json body
+func NewLoadBalancerUpdateRequest(server string, objectId string, body LoadBalancerUpdateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewLoadBalancerUpdateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequestWithBody generates requests for LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost with any type of body
-func NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewLoadBalancerUpdateRequestWithBody generates requests for LoadBalancerUpdate with any type of body
+func NewLoadBalancerUpdateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6170,8 +6170,8 @@ func NewLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostRequestWithBody(se
 	return req, nil
 }
 
-// NewLoadBalancerDetailV2LoadbalancersObjectIdDetailGetRequest generates requests for LoadBalancerDetailV2LoadbalancersObjectIdDetailGet
-func NewLoadBalancerDetailV2LoadbalancersObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewLoadBalancerDetailRequest generates requests for LoadBalancerDetail
+func NewLoadBalancerDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6204,19 +6204,19 @@ func NewLoadBalancerDetailV2LoadbalancersObjectIdDetailGetRequest(server string,
 	return req, nil
 }
 
-// NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRequest calls the generic LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut builder with application/json body
-func NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRequest(server string, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody) (*http.Request, error) {
+// NewLoadBalancerUpdateHealthmonitorRequest calls the generic LoadBalancerUpdateHealthmonitor builder with application/json body
+func NewLoadBalancerUpdateHealthmonitorRequest(server string, objectId string, body LoadBalancerUpdateHealthmonitorJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewLoadBalancerUpdateHealthmonitorRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRequestWithBody generates requests for LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut with any type of body
-func NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewLoadBalancerUpdateHealthmonitorRequestWithBody generates requests for LoadBalancerUpdateHealthmonitor with any type of body
+func NewLoadBalancerUpdateHealthmonitorRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6251,8 +6251,8 @@ func NewLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutRe
 	return req, nil
 }
 
-// NewRuleListV2LoadbalancersObjectIdRulesGetRequest generates requests for RuleListV2LoadbalancersObjectIdRulesGet
-func NewRuleListV2LoadbalancersObjectIdRulesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewRuleListRequest generates requests for RuleList
+func NewRuleListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6285,19 +6285,19 @@ func NewRuleListV2LoadbalancersObjectIdRulesGetRequest(server string, objectId s
 	return req, nil
 }
 
-// NewRuleCreateV2LoadbalancersObjectIdRulesPostRequest calls the generic RuleCreateV2LoadbalancersObjectIdRulesPost builder with application/json body
-func NewRuleCreateV2LoadbalancersObjectIdRulesPostRequest(server string, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody) (*http.Request, error) {
+// NewRuleCreateRequest calls the generic RuleCreate builder with application/json body
+func NewRuleCreateRequest(server string, objectId string, body RuleCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewRuleCreateV2LoadbalancersObjectIdRulesPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewRuleCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewRuleCreateV2LoadbalancersObjectIdRulesPostRequestWithBody generates requests for RuleCreateV2LoadbalancersObjectIdRulesPost with any type of body
-func NewRuleCreateV2LoadbalancersObjectIdRulesPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewRuleCreateRequestWithBody generates requests for RuleCreate with any type of body
+func NewRuleCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6332,8 +6332,8 @@ func NewRuleCreateV2LoadbalancersObjectIdRulesPostRequestWithBody(server string,
 	return req, nil
 }
 
-// NewLoadBalancerEnableV2LoadbalancersObjectIdStartPostRequest generates requests for LoadBalancerEnableV2LoadbalancersObjectIdStartPost
-func NewLoadBalancerEnableV2LoadbalancersObjectIdStartPostRequest(server string, objectId string) (*http.Request, error) {
+// NewLoadBalancerEnableRequest generates requests for LoadBalancerEnable
+func NewLoadBalancerEnableRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6366,8 +6366,8 @@ func NewLoadBalancerEnableV2LoadbalancersObjectIdStartPostRequest(server string,
 	return req, nil
 }
 
-// NewLoadBalancerStatV2LoadbalancersObjectIdStatGetRequest generates requests for LoadBalancerStatV2LoadbalancersObjectIdStatGet
-func NewLoadBalancerStatV2LoadbalancersObjectIdStatGetRequest(server string, objectId string) (*http.Request, error) {
+// NewLoadBalancerStatRequest generates requests for LoadBalancerStat
+func NewLoadBalancerStatRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6400,8 +6400,8 @@ func NewLoadBalancerStatV2LoadbalancersObjectIdStatGetRequest(server string, obj
 	return req, nil
 }
 
-// NewLoadBalancerStopV2LoadbalancersObjectIdStopPostRequest generates requests for LoadBalancerStopV2LoadbalancersObjectIdStopPost
-func NewLoadBalancerStopV2LoadbalancersObjectIdStopPostRequest(server string, objectId string) (*http.Request, error) {
+// NewLoadBalancerStopRequest generates requests for LoadBalancerStop
+func NewLoadBalancerStopRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6434,8 +6434,8 @@ func NewLoadBalancerStopV2LoadbalancersObjectIdStopPostRequest(server string, ob
 	return req, nil
 }
 
-// NewLocalDiskDetailV2LocalDisksObjectIdDetailGetRequest generates requests for LocalDiskDetailV2LocalDisksObjectIdDetailGet
-func NewLocalDiskDetailV2LocalDisksObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewLocalDiskDetailRequest generates requests for LocalDiskDetail
+func NewLocalDiskDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6468,8 +6468,8 @@ func NewLocalDiskDetailV2LocalDisksObjectIdDetailGetRequest(server string, objec
 	return req, nil
 }
 
-// NewMaintenanceModeStatusV2MaintenanceModeGetRequest generates requests for MaintenanceModeStatusV2MaintenanceModeGet
-func NewMaintenanceModeStatusV2MaintenanceModeGetRequest(server string) (*http.Request, error) {
+// NewMaintenanceModeStatusRequest generates requests for MaintenanceModeStatus
+func NewMaintenanceModeStatusRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -6495,8 +6495,8 @@ func NewMaintenanceModeStatusV2MaintenanceModeGetRequest(server string) (*http.R
 	return req, nil
 }
 
-// NewProjectListV2ProjectsGetRequest generates requests for ProjectListV2ProjectsGet
-func NewProjectListV2ProjectsGetRequest(server string) (*http.Request, error) {
+// NewProjectListRequest generates requests for ProjectList
+func NewProjectListRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -6522,19 +6522,19 @@ func NewProjectListV2ProjectsGetRequest(server string) (*http.Request, error) {
 	return req, nil
 }
 
-// NewProjectCreateV2ProjectsPostRequest calls the generic ProjectCreateV2ProjectsPost builder with application/json body
-func NewProjectCreateV2ProjectsPostRequest(server string, body ProjectCreateV2ProjectsPostJSONRequestBody) (*http.Request, error) {
+// NewProjectCreateRequest calls the generic ProjectCreate builder with application/json body
+func NewProjectCreateRequest(server string, body ProjectCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewProjectCreateV2ProjectsPostRequestWithBody(server, "application/json", bodyReader)
+	return NewProjectCreateRequestWithBody(server, "application/json", bodyReader)
 }
 
-// NewProjectCreateV2ProjectsPostRequestWithBody generates requests for ProjectCreateV2ProjectsPost with any type of body
-func NewProjectCreateV2ProjectsPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+// NewProjectCreateRequestWithBody generates requests for ProjectCreate with any type of body
+func NewProjectCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -6562,8 +6562,8 @@ func NewProjectCreateV2ProjectsPostRequestWithBody(server string, contentType st
 	return req, nil
 }
 
-// NewProjectDeleteV2ProjectsObjectIdDeleteRequest generates requests for ProjectDeleteV2ProjectsObjectIdDelete
-func NewProjectDeleteV2ProjectsObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectDeleteRequest generates requests for ProjectDelete
+func NewProjectDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6596,19 +6596,19 @@ func NewProjectDeleteV2ProjectsObjectIdDeleteRequest(server string, objectId str
 	return req, nil
 }
 
-// NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequest calls the generic ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch builder with application/json body
-func NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequest(server string, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody) (*http.Request, error) {
+// NewProjectPatchDisplayNameDescriptionRequest calls the generic ProjectPatchDisplayNameDescription builder with application/json body
+func NewProjectPatchDisplayNameDescriptionRequest(server string, objectId string, body ProjectPatchDisplayNameDescriptionJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewProjectPatchDisplayNameDescriptionRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequestWithBody generates requests for ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch with any type of body
-func NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewProjectPatchDisplayNameDescriptionRequestWithBody generates requests for ProjectPatchDisplayNameDescription with any type of body
+func NewProjectPatchDisplayNameDescriptionRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6643,8 +6643,8 @@ func NewProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchRequestWithBody
 	return req, nil
 }
 
-// NewProjectAddressesListV2ProjectsObjectIdAddressesGetRequest generates requests for ProjectAddressesListV2ProjectsObjectIdAddressesGet
-func NewProjectAddressesListV2ProjectsObjectIdAddressesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectAddressesListRequest generates requests for ProjectAddressesList
+func NewProjectAddressesListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6677,19 +6677,19 @@ func NewProjectAddressesListV2ProjectsObjectIdAddressesGetRequest(server string,
 	return req, nil
 }
 
-// NewAddressCreateV2ProjectsObjectIdAddressesPostRequest calls the generic AddressCreateV2ProjectsObjectIdAddressesPost builder with application/json body
-func NewAddressCreateV2ProjectsObjectIdAddressesPostRequest(server string, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody) (*http.Request, error) {
+// NewAddressCreateRequest calls the generic AddressCreate builder with application/json body
+func NewAddressCreateRequest(server string, objectId string, body AddressCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewAddressCreateV2ProjectsObjectIdAddressesPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewAddressCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewAddressCreateV2ProjectsObjectIdAddressesPostRequestWithBody generates requests for AddressCreateV2ProjectsObjectIdAddressesPost with any type of body
-func NewAddressCreateV2ProjectsObjectIdAddressesPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewAddressCreateRequestWithBody generates requests for AddressCreate with any type of body
+func NewAddressCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6724,8 +6724,8 @@ func NewAddressCreateV2ProjectsObjectIdAddressesPostRequestWithBody(server strin
 	return req, nil
 }
 
-// NewProjectConsumptionV2ProjectsObjectIdConsumptionGetRequest generates requests for ProjectConsumptionV2ProjectsObjectIdConsumptionGet
-func NewProjectConsumptionV2ProjectsObjectIdConsumptionGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectConsumptionRequest generates requests for ProjectConsumption
+func NewProjectConsumptionRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6758,8 +6758,8 @@ func NewProjectConsumptionV2ProjectsObjectIdConsumptionGetRequest(server string,
 	return req, nil
 }
 
-// NewProjectBackupListV2ProjectsObjectIdDbaasBackupsGetRequest generates requests for ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet
-func NewProjectBackupListV2ProjectsObjectIdDbaasBackupsGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectBackupListRequest generates requests for ProjectBackupList
+func NewProjectBackupListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6792,8 +6792,8 @@ func NewProjectBackupListV2ProjectsObjectIdDbaasBackupsGetRequest(server string,
 	return req, nil
 }
 
-// NewDbaasClustersListV2ProjectsObjectIdDbaasClustersGetRequest generates requests for DbaasClustersListV2ProjectsObjectIdDbaasClustersGet
-func NewDbaasClustersListV2ProjectsObjectIdDbaasClustersGetRequest(server string, objectId string) (*http.Request, error) {
+// NewDbaasClustersListRequest generates requests for DbaasClustersList
+func NewDbaasClustersListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6826,19 +6826,19 @@ func NewDbaasClustersListV2ProjectsObjectIdDbaasClustersGetRequest(server string
 	return req, nil
 }
 
-// NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequest calls the generic DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost builder with application/json body
-func NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequest(server string, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody) (*http.Request, error) {
+// NewDbaasClusterCreateRequest calls the generic DbaasClusterCreate builder with application/json body
+func NewDbaasClusterCreateRequest(server string, objectId string, body DbaasClusterCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewDbaasClusterCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequestWithBody generates requests for DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost with any type of body
-func NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewDbaasClusterCreateRequestWithBody generates requests for DbaasClusterCreate with any type of body
+func NewDbaasClusterCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6873,8 +6873,8 @@ func NewDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostRequestWithBody(ser
 	return req, nil
 }
 
-// NewProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetRequest generates requests for ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet
-func NewProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectDbaasDatabasesListRequest generates requests for ProjectDbaasDatabasesList
+func NewProjectDbaasDatabasesListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6907,8 +6907,8 @@ func NewProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetRequest(serv
 	return req, nil
 }
 
-// NewProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetRequest generates requests for ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet
-func NewProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectDbaasDatastoresRequest generates requests for ProjectDbaasDatastores
+func NewProjectDbaasDatastoresRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6941,8 +6941,8 @@ func NewProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetRequest(server
 	return req, nil
 }
 
-// NewProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetRequest generates requests for ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet
-func NewProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectDbaasConfigDepRequest generates requests for ProjectDbaasConfigDep
+func NewProjectDbaasConfigDepRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -6975,8 +6975,8 @@ func NewProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetRequest(s
 	return req, nil
 }
 
-// NewProjectDetailV2ProjectsObjectIdDetailGetRequest generates requests for ProjectDetailV2ProjectsObjectIdDetailGet
-func NewProjectDetailV2ProjectsObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectDetailRequest generates requests for ProjectDetail
+func NewProjectDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7009,8 +7009,8 @@ func NewProjectDetailV2ProjectsObjectIdDetailGetRequest(server string, objectId 
 	return req, nil
 }
 
-// NewProjectImagesListV2ProjectsObjectIdImagesGetRequest generates requests for ProjectImagesListV2ProjectsObjectIdImagesGet
-func NewProjectImagesListV2ProjectsObjectIdImagesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectImagesListRequest generates requests for ProjectImagesList
+func NewProjectImagesListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7043,8 +7043,8 @@ func NewProjectImagesListV2ProjectsObjectIdImagesGetRequest(server string, objec
 	return req, nil
 }
 
-// NewKeyPairsListV2ProjectsObjectIdKeypairsGetRequest generates requests for KeyPairsListV2ProjectsObjectIdKeypairsGet
-func NewKeyPairsListV2ProjectsObjectIdKeypairsGetRequest(server string, objectId string) (*http.Request, error) {
+// NewKeyPairsListRequest generates requests for KeyPairsList
+func NewKeyPairsListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7077,19 +7077,19 @@ func NewKeyPairsListV2ProjectsObjectIdKeypairsGetRequest(server string, objectId
 	return req, nil
 }
 
-// NewImportKeypairV2ProjectsObjectIdKeypairsPostRequest calls the generic ImportKeypairV2ProjectsObjectIdKeypairsPost builder with application/json body
-func NewImportKeypairV2ProjectsObjectIdKeypairsPostRequest(server string, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody) (*http.Request, error) {
+// NewImportKeypairRequest calls the generic ImportKeypair builder with application/json body
+func NewImportKeypairRequest(server string, objectId string, body ImportKeypairJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewImportKeypairV2ProjectsObjectIdKeypairsPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewImportKeypairRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewImportKeypairV2ProjectsObjectIdKeypairsPostRequestWithBody generates requests for ImportKeypairV2ProjectsObjectIdKeypairsPost with any type of body
-func NewImportKeypairV2ProjectsObjectIdKeypairsPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewImportKeypairRequestWithBody generates requests for ImportKeypair with any type of body
+func NewImportKeypairRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7124,19 +7124,19 @@ func NewImportKeypairV2ProjectsObjectIdKeypairsPostRequestWithBody(server string
 	return req, nil
 }
 
-// NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequest calls the generic GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost builder with application/json body
-func NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequest(server string, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody) (*http.Request, error) {
+// NewGenerateKeypairRequest calls the generic GenerateKeypair builder with application/json body
+func NewGenerateKeypairRequest(server string, objectId string, body GenerateKeypairJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewGenerateKeypairRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequestWithBody generates requests for GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost with any type of body
-func NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewGenerateKeypairRequestWithBody generates requests for GenerateKeypair with any type of body
+func NewGenerateKeypairRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7171,8 +7171,8 @@ func NewGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostRequestWithBody(ser
 	return req, nil
 }
 
-// NewProjectLimitsListV2ProjectsObjectIdLimitsGetRequest generates requests for ProjectLimitsListV2ProjectsObjectIdLimitsGet
-func NewProjectLimitsListV2ProjectsObjectIdLimitsGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectLimitsListRequest generates requests for ProjectLimitsList
+func NewProjectLimitsListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7205,19 +7205,19 @@ func NewProjectLimitsListV2ProjectsObjectIdLimitsGetRequest(server string, objec
 	return req, nil
 }
 
-// NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequest calls the generic ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch builder with application/json body
-func NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequest(server string, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody) (*http.Request, error) {
+// NewProjectPatchLimitsRequest calls the generic ProjectPatchLimits builder with application/json body
+func NewProjectPatchLimitsRequest(server string, objectId string, body ProjectPatchLimitsJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewProjectPatchLimitsRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequestWithBody generates requests for ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch with any type of body
-func NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewProjectPatchLimitsRequestWithBody generates requests for ProjectPatchLimits with any type of body
+func NewProjectPatchLimitsRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7252,8 +7252,8 @@ func NewProjectPatchLimitsV2ProjectsObjectIdLimitsPatchRequestWithBody(server st
 	return req, nil
 }
 
-// NewLoadBalancerListV2ProjectsObjectIdLoadbalancersGetRequest generates requests for LoadBalancerListV2ProjectsObjectIdLoadbalancersGet
-func NewLoadBalancerListV2ProjectsObjectIdLoadbalancersGetRequest(server string, objectId string) (*http.Request, error) {
+// NewLoadBalancerListRequest generates requests for LoadBalancerList
+func NewLoadBalancerListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7286,19 +7286,19 @@ func NewLoadBalancerListV2ProjectsObjectIdLoadbalancersGetRequest(server string,
 	return req, nil
 }
 
-// NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequest calls the generic LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost builder with application/json body
-func NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequest(server string, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody) (*http.Request, error) {
+// NewLoadBalancerCreateRequest calls the generic LoadBalancerCreate builder with application/json body
+func NewLoadBalancerCreateRequest(server string, objectId string, body LoadBalancerCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewLoadBalancerCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequestWithBody generates requests for LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost with any type of body
-func NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewLoadBalancerCreateRequestWithBody generates requests for LoadBalancerCreate with any type of body
+func NewLoadBalancerCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7333,8 +7333,8 @@ func NewLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostRequestWithBody(ser
 	return req, nil
 }
 
-// NewProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetRequest generates requests for ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet
-func NewProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectRuleListRequest generates requests for ProjectRuleList
+func NewProjectRuleListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7367,8 +7367,8 @@ func NewProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetRequest(server str
 	return req, nil
 }
 
-// NewProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetRequest generates requests for ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet
-func NewProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectLocalDisksListRequest generates requests for ProjectLocalDisksList
+func NewProjectLocalDisksListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7401,8 +7401,8 @@ func NewProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetRequest(server strin
 	return req, nil
 }
 
-// NewNetworksListV2ProjectsObjectIdNetworksGetRequest generates requests for NetworksListV2ProjectsObjectIdNetworksGet
-func NewNetworksListV2ProjectsObjectIdNetworksGetRequest(server string, objectId string) (*http.Request, error) {
+// NewNetworksListRequest generates requests for NetworksList
+func NewNetworksListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7435,8 +7435,8 @@ func NewNetworksListV2ProjectsObjectIdNetworksGetRequest(server string, objectId
 	return req, nil
 }
 
-// NewProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetRequest generates requests for ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet
-func NewProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectInfrastructureModuleConstantsRequest generates requests for ProjectInfrastructureModuleConstants
+func NewProjectInfrastructureModuleConstantsRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7469,8 +7469,8 @@ func NewProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetRequest(s
 	return req, nil
 }
 
-// NewProjectRecipesV2ProjectsObjectIdRecipesGetRequest generates requests for ProjectRecipesV2ProjectsObjectIdRecipesGet
-func NewProjectRecipesV2ProjectsObjectIdRecipesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectRecipesRequest generates requests for ProjectRecipes
+func NewProjectRecipesRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7503,8 +7503,8 @@ func NewProjectRecipesV2ProjectsObjectIdRecipesGetRequest(server string, objectI
 	return req, nil
 }
 
-// NewS3UsersListV2ProjectsObjectIdS3UsersGetRequest generates requests for S3UsersListV2ProjectsObjectIdS3UsersGet
-func NewS3UsersListV2ProjectsObjectIdS3UsersGetRequest(server string, objectId string) (*http.Request, error) {
+// NewS3UsersListRequest generates requests for S3UsersList
+func NewS3UsersListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7537,19 +7537,19 @@ func NewS3UsersListV2ProjectsObjectIdS3UsersGetRequest(server string, objectId s
 	return req, nil
 }
 
-// NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequest calls the generic S3UserCreateV2ProjectsObjectIdS3UsersPost builder with application/json body
-func NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequest(server string, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody) (*http.Request, error) {
+// NewS3UserCreateRequest calls the generic S3UserCreate builder with application/json body
+func NewS3UserCreateRequest(server string, objectId string, body S3UserCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewS3UserCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequestWithBody generates requests for S3UserCreateV2ProjectsObjectIdS3UsersPost with any type of body
-func NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewS3UserCreateRequestWithBody generates requests for S3UserCreate with any type of body
+func NewS3UserCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7584,8 +7584,8 @@ func NewS3UserCreateV2ProjectsObjectIdS3UsersPostRequestWithBody(server string, 
 	return req, nil
 }
 
-// NewProjectServerListV2ProjectsObjectIdServersGetRequest generates requests for ProjectServerListV2ProjectsObjectIdServersGet
-func NewProjectServerListV2ProjectsObjectIdServersGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectServerListRequest generates requests for ProjectServerList
+func NewProjectServerListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7618,19 +7618,19 @@ func NewProjectServerListV2ProjectsObjectIdServersGetRequest(server string, obje
 	return req, nil
 }
 
-// NewServerCreateV2ProjectsObjectIdServersPostRequest calls the generic ServerCreateV2ProjectsObjectIdServersPost builder with application/json body
-func NewServerCreateV2ProjectsObjectIdServersPostRequest(server string, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody) (*http.Request, error) {
+// NewServerCreateRequest calls the generic ServerCreate builder with application/json body
+func NewServerCreateRequest(server string, objectId string, body ServerCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewServerCreateV2ProjectsObjectIdServersPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewServerCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewServerCreateV2ProjectsObjectIdServersPostRequestWithBody generates requests for ServerCreateV2ProjectsObjectIdServersPost with any type of body
-func NewServerCreateV2ProjectsObjectIdServersPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewServerCreateRequestWithBody generates requests for ServerCreate with any type of body
+func NewServerCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7665,8 +7665,8 @@ func NewServerCreateV2ProjectsObjectIdServersPostRequestWithBody(server string, 
 	return req, nil
 }
 
-// NewProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetRequest generates requests for ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGet
-func NewProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectServerConfigDepRequest generates requests for ProjectServerConfigDep
+func NewProjectServerConfigDepRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7699,8 +7699,8 @@ func NewProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetReques
 	return req, nil
 }
 
-// NewSnapshotsListV2ProjectsObjectIdSnapshotsGetRequest generates requests for SnapshotsListV2ProjectsObjectIdSnapshotsGet
-func NewSnapshotsListV2ProjectsObjectIdSnapshotsGetRequest(server string, objectId string) (*http.Request, error) {
+// NewSnapshotsListRequest generates requests for SnapshotsList
+func NewSnapshotsListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7733,8 +7733,8 @@ func NewSnapshotsListV2ProjectsObjectIdSnapshotsGetRequest(server string, object
 	return req, nil
 }
 
-// NewProjectStartV2ProjectsObjectIdStartPostRequest generates requests for ProjectStartV2ProjectsObjectIdStartPost
-func NewProjectStartV2ProjectsObjectIdStartPostRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectStartRequest generates requests for ProjectStart
+func NewProjectStartRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7767,8 +7767,8 @@ func NewProjectStartV2ProjectsObjectIdStartPostRequest(server string, objectId s
 	return req, nil
 }
 
-// NewProjectStopV2ProjectsObjectIdStopPostRequest generates requests for ProjectStopV2ProjectsObjectIdStopPost
-func NewProjectStopV2ProjectsObjectIdStopPostRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectStopRequest generates requests for ProjectStop
+func NewProjectStopRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7801,8 +7801,8 @@ func NewProjectStopV2ProjectsObjectIdStopPostRequest(server string, objectId str
 	return req, nil
 }
 
-// NewProjectVolumesListV2ProjectsObjectIdVolumesGetRequest generates requests for ProjectVolumesListV2ProjectsObjectIdVolumesGet
-func NewProjectVolumesListV2ProjectsObjectIdVolumesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectVolumesListRequest generates requests for ProjectVolumesList
+func NewProjectVolumesListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7835,19 +7835,19 @@ func NewProjectVolumesListV2ProjectsObjectIdVolumesGetRequest(server string, obj
 	return req, nil
 }
 
-// NewVolumeCreateV2ProjectsObjectIdVolumesPostRequest calls the generic VolumeCreateV2ProjectsObjectIdVolumesPost builder with application/json body
-func NewVolumeCreateV2ProjectsObjectIdVolumesPostRequest(server string, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody) (*http.Request, error) {
+// NewVolumeCreateRequest calls the generic VolumeCreate builder with application/json body
+func NewVolumeCreateRequest(server string, objectId string, body VolumeCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewVolumeCreateV2ProjectsObjectIdVolumesPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewVolumeCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewVolumeCreateV2ProjectsObjectIdVolumesPostRequestWithBody generates requests for VolumeCreateV2ProjectsObjectIdVolumesPost with any type of body
-func NewVolumeCreateV2ProjectsObjectIdVolumesPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewVolumeCreateRequestWithBody generates requests for VolumeCreate with any type of body
+func NewVolumeCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7882,8 +7882,8 @@ func NewVolumeCreateV2ProjectsObjectIdVolumesPostRequestWithBody(server string, 
 	return req, nil
 }
 
-// NewProjectVrouterListV2ProjectsObjectIdVroutersGetRequest generates requests for ProjectVrouterListV2ProjectsObjectIdVroutersGet
-func NewProjectVrouterListV2ProjectsObjectIdVroutersGetRequest(server string, objectId string) (*http.Request, error) {
+// NewProjectVrouterListRequest generates requests for ProjectVrouterList
+func NewProjectVrouterListRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7916,19 +7916,19 @@ func NewProjectVrouterListV2ProjectsObjectIdVroutersGetRequest(server string, ob
 	return req, nil
 }
 
-// NewVrouterCreateV2ProjectsObjectIdVroutersPostRequest calls the generic VrouterCreateV2ProjectsObjectIdVroutersPost builder with application/json body
-func NewVrouterCreateV2ProjectsObjectIdVroutersPostRequest(server string, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody) (*http.Request, error) {
+// NewVrouterCreateRequest calls the generic VrouterCreate builder with application/json body
+func NewVrouterCreateRequest(server string, objectId string, body VrouterCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewVrouterCreateV2ProjectsObjectIdVroutersPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewVrouterCreateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewVrouterCreateV2ProjectsObjectIdVroutersPostRequestWithBody generates requests for VrouterCreateV2ProjectsObjectIdVroutersPost with any type of body
-func NewVrouterCreateV2ProjectsObjectIdVroutersPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewVrouterCreateRequestWithBody generates requests for VrouterCreate with any type of body
+func NewVrouterCreateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7963,8 +7963,8 @@ func NewVrouterCreateV2ProjectsObjectIdVroutersPostRequestWithBody(server string
 	return req, nil
 }
 
-// NewS3UserDeleteV2S3UsersObjectIdDeleteRequest generates requests for S3UserDeleteV2S3UsersObjectIdDelete
-func NewS3UserDeleteV2S3UsersObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewS3UserDeleteRequest generates requests for S3UserDelete
+func NewS3UserDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -7997,19 +7997,19 @@ func NewS3UserDeleteV2S3UsersObjectIdDeleteRequest(server string, objectId strin
 	return req, nil
 }
 
-// NewS3UserUpdateV2S3UsersObjectIdPatchRequest calls the generic S3UserUpdateV2S3UsersObjectIdPatch builder with application/json body
-func NewS3UserUpdateV2S3UsersObjectIdPatchRequest(server string, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody) (*http.Request, error) {
+// NewS3UserUpdateRequest calls the generic S3UserUpdate builder with application/json body
+func NewS3UserUpdateRequest(server string, objectId string, body S3UserUpdateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewS3UserUpdateV2S3UsersObjectIdPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewS3UserUpdateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewS3UserUpdateV2S3UsersObjectIdPatchRequestWithBody generates requests for S3UserUpdateV2S3UsersObjectIdPatch with any type of body
-func NewS3UserUpdateV2S3UsersObjectIdPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewS3UserUpdateRequestWithBody generates requests for S3UserUpdate with any type of body
+func NewS3UserUpdateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8044,8 +8044,8 @@ func NewS3UserUpdateV2S3UsersObjectIdPatchRequestWithBody(server string, objectI
 	return req, nil
 }
 
-// NewS3GetUserKeysV2S3UsersObjectIdCredentialsGetRequest generates requests for S3GetUserKeysV2S3UsersObjectIdCredentialsGet
-func NewS3GetUserKeysV2S3UsersObjectIdCredentialsGetRequest(server string, objectId string) (*http.Request, error) {
+// NewS3GetUserKeysRequest generates requests for S3GetUserKeys
+func NewS3GetUserKeysRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8078,8 +8078,8 @@ func NewS3GetUserKeysV2S3UsersObjectIdCredentialsGetRequest(server string, objec
 	return req, nil
 }
 
-// NewS3GenUserKeysV2S3UsersObjectIdCredentialsPostRequest generates requests for S3GenUserKeysV2S3UsersObjectIdCredentialsPost
-func NewS3GenUserKeysV2S3UsersObjectIdCredentialsPostRequest(server string, objectId string) (*http.Request, error) {
+// NewS3GenUserKeysRequest generates requests for S3GenUserKeys
+func NewS3GenUserKeysRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8112,8 +8112,8 @@ func NewS3GenUserKeysV2S3UsersObjectIdCredentialsPostRequest(server string, obje
 	return req, nil
 }
 
-// NewS3UserDetailsV2S3UsersObjectIdDetailGetRequest generates requests for S3UserDetailsV2S3UsersObjectIdDetailGet
-func NewS3UserDetailsV2S3UsersObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewS3UserDetailsRequest generates requests for S3UserDetails
+func NewS3UserDetailsRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8146,19 +8146,19 @@ func NewS3UserDetailsV2S3UsersObjectIdDetailGetRequest(server string, objectId s
 	return req, nil
 }
 
-// NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequest calls the generic S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut builder with application/json body
-func NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequest(server string, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody) (*http.Request, error) {
+// NewS3UserUpdateQuotaRequest calls the generic S3UserUpdateQuota builder with application/json body
+func NewS3UserUpdateQuotaRequest(server string, objectId string, body S3UserUpdateQuotaJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewS3UserUpdateQuotaRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequestWithBody generates requests for S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut with any type of body
-func NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewS3UserUpdateQuotaRequestWithBody generates requests for S3UserUpdateQuota with any type of body
+func NewS3UserUpdateQuotaRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8193,8 +8193,8 @@ func NewS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutRequestWithBody(server string
 	return req, nil
 }
 
-// NewS3UserSuspendV2S3UsersObjectIdSuspendPostRequest generates requests for S3UserSuspendV2S3UsersObjectIdSuspendPost
-func NewS3UserSuspendV2S3UsersObjectIdSuspendPostRequest(server string, objectId string) (*http.Request, error) {
+// NewS3UserSuspendRequest generates requests for S3UserSuspend
+func NewS3UserSuspendRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8227,8 +8227,8 @@ func NewS3UserSuspendV2S3UsersObjectIdSuspendPostRequest(server string, objectId
 	return req, nil
 }
 
-// NewS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostRequest generates requests for S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost
-func NewS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostRequest(server string, objectId string) (*http.Request, error) {
+// NewS3UserUnsuspendRequest generates requests for S3UserUnsuspend
+func NewS3UserUnsuspendRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8261,19 +8261,19 @@ func NewS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostRequest(server string, obje
 	return req, nil
 }
 
-// NewServerDeleteV2ServersObjectIdDeleteRequest calls the generic ServerDeleteV2ServersObjectIdDelete builder with application/json body
-func NewServerDeleteV2ServersObjectIdDeleteRequest(server string, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody) (*http.Request, error) {
+// NewServerDeleteRequest calls the generic ServerDelete builder with application/json body
+func NewServerDeleteRequest(server string, objectId string, body ServerDeleteJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewServerDeleteV2ServersObjectIdDeleteRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewServerDeleteRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewServerDeleteV2ServersObjectIdDeleteRequestWithBody generates requests for ServerDeleteV2ServersObjectIdDelete with any type of body
-func NewServerDeleteV2ServersObjectIdDeleteRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewServerDeleteRequestWithBody generates requests for ServerDelete with any type of body
+func NewServerDeleteRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8308,19 +8308,19 @@ func NewServerDeleteV2ServersObjectIdDeleteRequestWithBody(server string, object
 	return req, nil
 }
 
-// NewServerUpdateV2ServersObjectIdPatchRequest calls the generic ServerUpdateV2ServersObjectIdPatch builder with application/json body
-func NewServerUpdateV2ServersObjectIdPatchRequest(server string, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody) (*http.Request, error) {
+// NewServerUpdateRequest calls the generic ServerUpdate builder with application/json body
+func NewServerUpdateRequest(server string, objectId string, body ServerUpdateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewServerUpdateV2ServersObjectIdPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewServerUpdateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewServerUpdateV2ServersObjectIdPatchRequestWithBody generates requests for ServerUpdateV2ServersObjectIdPatch with any type of body
-func NewServerUpdateV2ServersObjectIdPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewServerUpdateRequestWithBody generates requests for ServerUpdate with any type of body
+func NewServerUpdateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8355,8 +8355,8 @@ func NewServerUpdateV2ServersObjectIdPatchRequestWithBody(server string, objectI
 	return req, nil
 }
 
-// NewServerConsoleV2ServersObjectIdConsolePostRequest generates requests for ServerConsoleV2ServersObjectIdConsolePost
-func NewServerConsoleV2ServersObjectIdConsolePostRequest(server string, objectId string) (*http.Request, error) {
+// NewServerConsoleRequest generates requests for ServerConsole
+func NewServerConsoleRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8389,8 +8389,8 @@ func NewServerConsoleV2ServersObjectIdConsolePostRequest(server string, objectId
 	return req, nil
 }
 
-// NewServerDetailV2ServersObjectIdDetailGetRequest generates requests for ServerDetailV2ServersObjectIdDetailGet
-func NewServerDetailV2ServersObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewServerDetailRequest generates requests for ServerDetail
+func NewServerDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8423,8 +8423,8 @@ func NewServerDetailV2ServersObjectIdDetailGetRequest(server string, objectId st
 	return req, nil
 }
 
-// NewServerLicensesV2ServersObjectIdLicensesGetRequest generates requests for ServerLicensesV2ServersObjectIdLicensesGet
-func NewServerLicensesV2ServersObjectIdLicensesGetRequest(server string, objectId string) (*http.Request, error) {
+// NewServerLicensesRequest generates requests for ServerLicenses
+func NewServerLicensesRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8457,19 +8457,19 @@ func NewServerLicensesV2ServersObjectIdLicensesGetRequest(server string, objectI
 	return req, nil
 }
 
-// NewServerAddLicenseV2ServersObjectIdLicensesPostRequest calls the generic ServerAddLicenseV2ServersObjectIdLicensesPost builder with application/json body
-func NewServerAddLicenseV2ServersObjectIdLicensesPostRequest(server string, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody) (*http.Request, error) {
+// NewServerAddLicenseRequest calls the generic ServerAddLicense builder with application/json body
+func NewServerAddLicenseRequest(server string, objectId string, body ServerAddLicenseJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewServerAddLicenseV2ServersObjectIdLicensesPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewServerAddLicenseRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewServerAddLicenseV2ServersObjectIdLicensesPostRequestWithBody generates requests for ServerAddLicenseV2ServersObjectIdLicensesPost with any type of body
-func NewServerAddLicenseV2ServersObjectIdLicensesPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewServerAddLicenseRequestWithBody generates requests for ServerAddLicense with any type of body
+func NewServerAddLicenseRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8504,19 +8504,19 @@ func NewServerAddLicenseV2ServersObjectIdLicensesPostRequestWithBody(server stri
 	return req, nil
 }
 
-// NewServerChangePasswordV2ServersObjectIdPasswordPostRequest calls the generic ServerChangePasswordV2ServersObjectIdPasswordPost builder with application/json body
-func NewServerChangePasswordV2ServersObjectIdPasswordPostRequest(server string, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody) (*http.Request, error) {
+// NewServerChangePasswordRequest calls the generic ServerChangePassword builder with application/json body
+func NewServerChangePasswordRequest(server string, objectId string, body ServerChangePasswordJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewServerChangePasswordV2ServersObjectIdPasswordPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewServerChangePasswordRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewServerChangePasswordV2ServersObjectIdPasswordPostRequestWithBody generates requests for ServerChangePasswordV2ServersObjectIdPasswordPost with any type of body
-func NewServerChangePasswordV2ServersObjectIdPasswordPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewServerChangePasswordRequestWithBody generates requests for ServerChangePassword with any type of body
+func NewServerChangePasswordRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8551,8 +8551,8 @@ func NewServerChangePasswordV2ServersObjectIdPasswordPostRequestWithBody(server 
 	return req, nil
 }
 
-// NewServerRebootV2ServersObjectIdRebootPostRequest generates requests for ServerRebootV2ServersObjectIdRebootPost
-func NewServerRebootV2ServersObjectIdRebootPostRequest(server string, objectId string) (*http.Request, error) {
+// NewServerRebootRequest generates requests for ServerReboot
+func NewServerRebootRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8585,8 +8585,8 @@ func NewServerRebootV2ServersObjectIdRebootPostRequest(server string, objectId s
 	return req, nil
 }
 
-// NewServerRescueV2ServersObjectIdRescuePostRequest generates requests for ServerRescueV2ServersObjectIdRescuePost
-func NewServerRescueV2ServersObjectIdRescuePostRequest(server string, objectId string) (*http.Request, error) {
+// NewServerRescueRequest generates requests for ServerRescue
+func NewServerRescueRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8619,19 +8619,19 @@ func NewServerRescueV2ServersObjectIdRescuePostRequest(server string, objectId s
 	return req, nil
 }
 
-// NewServerResizeV2ServersObjectIdResizePostRequest calls the generic ServerResizeV2ServersObjectIdResizePost builder with application/json body
-func NewServerResizeV2ServersObjectIdResizePostRequest(server string, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody) (*http.Request, error) {
+// NewServerResizeRequest calls the generic ServerResize builder with application/json body
+func NewServerResizeRequest(server string, objectId string, body ServerResizeJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewServerResizeV2ServersObjectIdResizePostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewServerResizeRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewServerResizeV2ServersObjectIdResizePostRequestWithBody generates requests for ServerResizeV2ServersObjectIdResizePost with any type of body
-func NewServerResizeV2ServersObjectIdResizePostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewServerResizeRequestWithBody generates requests for ServerResize with any type of body
+func NewServerResizeRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8666,19 +8666,19 @@ func NewServerResizeV2ServersObjectIdResizePostRequestWithBody(server string, ob
 	return req, nil
 }
 
-// NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequest calls the generic CreateServerSnapshotV2ServersObjectIdSnapshotPost builder with application/json body
-func NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequest(server string, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody) (*http.Request, error) {
+// NewCreateServerSnapshotRequest calls the generic CreateServerSnapshot builder with application/json body
+func NewCreateServerSnapshotRequest(server string, objectId string, body CreateServerSnapshotJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewCreateServerSnapshotRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequestWithBody generates requests for CreateServerSnapshotV2ServersObjectIdSnapshotPost with any type of body
-func NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewCreateServerSnapshotRequestWithBody generates requests for CreateServerSnapshot with any type of body
+func NewCreateServerSnapshotRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8713,8 +8713,8 @@ func NewCreateServerSnapshotV2ServersObjectIdSnapshotPostRequestWithBody(server 
 	return req, nil
 }
 
-// NewServerStartV2ServersObjectIdStartPostRequest generates requests for ServerStartV2ServersObjectIdStartPost
-func NewServerStartV2ServersObjectIdStartPostRequest(server string, objectId string) (*http.Request, error) {
+// NewServerStartRequest generates requests for ServerStart
+func NewServerStartRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8747,8 +8747,8 @@ func NewServerStartV2ServersObjectIdStartPostRequest(server string, objectId str
 	return req, nil
 }
 
-// NewServerStopV2ServersObjectIdStopPostRequest generates requests for ServerStopV2ServersObjectIdStopPost
-func NewServerStopV2ServersObjectIdStopPostRequest(server string, objectId string) (*http.Request, error) {
+// NewServerStopRequest generates requests for ServerStop
+func NewServerStopRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8781,8 +8781,8 @@ func NewServerStopV2ServersObjectIdStopPostRequest(server string, objectId strin
 	return req, nil
 }
 
-// NewSnapshotDeleteV2SnapshotsObjectIdDeleteRequest generates requests for SnapshotDeleteV2SnapshotsObjectIdDelete
-func NewSnapshotDeleteV2SnapshotsObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewSnapshotDeleteRequest generates requests for SnapshotDelete
+func NewSnapshotDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8815,8 +8815,8 @@ func NewSnapshotDeleteV2SnapshotsObjectIdDeleteRequest(server string, objectId s
 	return req, nil
 }
 
-// NewSnapshotDetailsV2SnapshotsObjectIdDetailGetRequest generates requests for SnapshotDetailsV2SnapshotsObjectIdDetailGet
-func NewSnapshotDetailsV2SnapshotsObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewSnapshotDetailsRequest generates requests for SnapshotDetails
+func NewSnapshotDetailsRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8849,19 +8849,19 @@ func NewSnapshotDetailsV2SnapshotsObjectIdDetailGetRequest(server string, object
 	return req, nil
 }
 
-// NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequest calls the generic SnapshotRestoreV2SnapshotsObjectIdRestorePost builder with application/json body
-func NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequest(server string, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody) (*http.Request, error) {
+// NewSnapshotRestoreRequest calls the generic SnapshotRestore builder with application/json body
+func NewSnapshotRestoreRequest(server string, objectId string, body SnapshotRestoreJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewSnapshotRestoreRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequestWithBody generates requests for SnapshotRestoreV2SnapshotsObjectIdRestorePost with any type of body
-func NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewSnapshotRestoreRequestWithBody generates requests for SnapshotRestore with any type of body
+func NewSnapshotRestoreRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8896,8 +8896,8 @@ func NewSnapshotRestoreV2SnapshotsObjectIdRestorePostRequestWithBody(server stri
 	return req, nil
 }
 
-// NewAccountStatV2StatGetRequest generates requests for AccountStatV2StatGet
-func NewAccountStatV2StatGetRequest(server string) (*http.Request, error) {
+// NewAccountStatRequest generates requests for AccountStat
+func NewAccountStatRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -8923,19 +8923,19 @@ func NewAccountStatV2StatGetRequest(server string) (*http.Request, error) {
 	return req, nil
 }
 
-// NewVolumeDeleteV2VolumesObjectIdDeleteRequest calls the generic VolumeDeleteV2VolumesObjectIdDelete builder with application/json body
-func NewVolumeDeleteV2VolumesObjectIdDeleteRequest(server string, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody) (*http.Request, error) {
+// NewVolumeDeleteRequest calls the generic VolumeDelete builder with application/json body
+func NewVolumeDeleteRequest(server string, objectId string, body VolumeDeleteJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewVolumeDeleteV2VolumesObjectIdDeleteRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewVolumeDeleteRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewVolumeDeleteV2VolumesObjectIdDeleteRequestWithBody generates requests for VolumeDeleteV2VolumesObjectIdDelete with any type of body
-func NewVolumeDeleteV2VolumesObjectIdDeleteRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewVolumeDeleteRequestWithBody generates requests for VolumeDelete with any type of body
+func NewVolumeDeleteRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -8970,19 +8970,19 @@ func NewVolumeDeleteV2VolumesObjectIdDeleteRequestWithBody(server string, object
 	return req, nil
 }
 
-// NewVolumeUpdateV2VolumesObjectIdPatchRequest calls the generic VolumeUpdateV2VolumesObjectIdPatch builder with application/json body
-func NewVolumeUpdateV2VolumesObjectIdPatchRequest(server string, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody) (*http.Request, error) {
+// NewVolumeUpdateRequest calls the generic VolumeUpdate builder with application/json body
+func NewVolumeUpdateRequest(server string, objectId string, body VolumeUpdateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewVolumeUpdateV2VolumesObjectIdPatchRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewVolumeUpdateRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewVolumeUpdateV2VolumesObjectIdPatchRequestWithBody generates requests for VolumeUpdateV2VolumesObjectIdPatch with any type of body
-func NewVolumeUpdateV2VolumesObjectIdPatchRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewVolumeUpdateRequestWithBody generates requests for VolumeUpdate with any type of body
+func NewVolumeUpdateRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9017,19 +9017,19 @@ func NewVolumeUpdateV2VolumesObjectIdPatchRequestWithBody(server string, objectI
 	return req, nil
 }
 
-// NewVolumeAttachV2VolumesObjectIdAttachPostRequest calls the generic VolumeAttachV2VolumesObjectIdAttachPost builder with application/json body
-func NewVolumeAttachV2VolumesObjectIdAttachPostRequest(server string, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody) (*http.Request, error) {
+// NewVolumeAttachRequest calls the generic VolumeAttach builder with application/json body
+func NewVolumeAttachRequest(server string, objectId string, body VolumeAttachJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewVolumeAttachV2VolumesObjectIdAttachPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewVolumeAttachRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewVolumeAttachV2VolumesObjectIdAttachPostRequestWithBody generates requests for VolumeAttachV2VolumesObjectIdAttachPost with any type of body
-func NewVolumeAttachV2VolumesObjectIdAttachPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewVolumeAttachRequestWithBody generates requests for VolumeAttach with any type of body
+func NewVolumeAttachRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9064,19 +9064,19 @@ func NewVolumeAttachV2VolumesObjectIdAttachPostRequestWithBody(server string, ob
 	return req, nil
 }
 
-// NewVolumeDetachV2VolumesObjectIdDetachPostRequest calls the generic VolumeDetachV2VolumesObjectIdDetachPost builder with application/json body
-func NewVolumeDetachV2VolumesObjectIdDetachPostRequest(server string, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody) (*http.Request, error) {
+// NewVolumeDetachRequest calls the generic VolumeDetach builder with application/json body
+func NewVolumeDetachRequest(server string, objectId string, body VolumeDetachJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewVolumeDetachV2VolumesObjectIdDetachPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewVolumeDetachRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewVolumeDetachV2VolumesObjectIdDetachPostRequestWithBody generates requests for VolumeDetachV2VolumesObjectIdDetachPost with any type of body
-func NewVolumeDetachV2VolumesObjectIdDetachPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewVolumeDetachRequestWithBody generates requests for VolumeDetach with any type of body
+func NewVolumeDetachRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9111,8 +9111,8 @@ func NewVolumeDetachV2VolumesObjectIdDetachPostRequestWithBody(server string, ob
 	return req, nil
 }
 
-// NewVolumeDetailV2VolumesObjectIdDetailGetRequest generates requests for VolumeDetailV2VolumesObjectIdDetailGet
-func NewVolumeDetailV2VolumesObjectIdDetailGetRequest(server string, objectId string) (*http.Request, error) {
+// NewVolumeDetailRequest generates requests for VolumeDetail
+func NewVolumeDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9145,19 +9145,19 @@ func NewVolumeDetailV2VolumesObjectIdDetailGetRequest(server string, objectId st
 	return req, nil
 }
 
-// NewVolumeExtendV2VolumesObjectIdExtendPostRequest calls the generic VolumeExtendV2VolumesObjectIdExtendPost builder with application/json body
-func NewVolumeExtendV2VolumesObjectIdExtendPostRequest(server string, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody) (*http.Request, error) {
+// NewVolumeExtendRequest calls the generic VolumeExtend builder with application/json body
+func NewVolumeExtendRequest(server string, objectId string, body VolumeExtendJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewVolumeExtendV2VolumesObjectIdExtendPostRequestWithBody(server, objectId, "application/json", bodyReader)
+	return NewVolumeExtendRequestWithBody(server, objectId, "application/json", bodyReader)
 }
 
-// NewVolumeExtendV2VolumesObjectIdExtendPostRequestWithBody generates requests for VolumeExtendV2VolumesObjectIdExtendPost with any type of body
-func NewVolumeExtendV2VolumesObjectIdExtendPostRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
+// NewVolumeExtendRequestWithBody generates requests for VolumeExtend with any type of body
+func NewVolumeExtendRequestWithBody(server string, objectId string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9192,8 +9192,8 @@ func NewVolumeExtendV2VolumesObjectIdExtendPostRequestWithBody(server string, ob
 	return req, nil
 }
 
-// NewVrouterDeleteV2VroutersObjectIdDeleteRequest generates requests for VrouterDeleteV2VroutersObjectIdDelete
-func NewVrouterDeleteV2VroutersObjectIdDeleteRequest(server string, objectId string) (*http.Request, error) {
+// NewVrouterDeleteRequest generates requests for VrouterDelete
+func NewVrouterDeleteRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9226,8 +9226,8 @@ func NewVrouterDeleteV2VroutersObjectIdDeleteRequest(server string, objectId str
 	return req, nil
 }
 
-// NewVrouterDetailV2VroutersObjectIdGetRequest generates requests for VrouterDetailV2VroutersObjectIdGet
-func NewVrouterDetailV2VroutersObjectIdGetRequest(server string, objectId string) (*http.Request, error) {
+// NewVrouterDetailRequest generates requests for VrouterDetail
+func NewVrouterDetailRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9260,8 +9260,8 @@ func NewVrouterDetailV2VroutersObjectIdGetRequest(server string, objectId string
 	return req, nil
 }
 
-// NewVrouterStartV2VroutersObjectIdStartPostRequest generates requests for VrouterStartV2VroutersObjectIdStartPost
-func NewVrouterStartV2VroutersObjectIdStartPostRequest(server string, objectId string) (*http.Request, error) {
+// NewVrouterStartRequest generates requests for VrouterStart
+func NewVrouterStartRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9294,8 +9294,8 @@ func NewVrouterStartV2VroutersObjectIdStartPostRequest(server string, objectId s
 	return req, nil
 }
 
-// NewVrouterStopV2VroutersObjectIdStopPostRequest generates requests for VrouterStopV2VroutersObjectIdStopPost
-func NewVrouterStopV2VroutersObjectIdStopPostRequest(server string, objectId string) (*http.Request, error) {
+// NewVrouterStopRequest generates requests for VrouterStop
+func NewVrouterStopRequest(server string, objectId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9366,165 +9366,165 @@ func WithBaseURL(baseURL string) ClientOption {
 }
 
 type ClientWithResponsesInterface interface {
-	AddressDeleteV2AddressesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDeleteV2AddressesObjectIdDeleteResponse, error)
-	AddressAttachV2AddressesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error)
-	AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithResponse(ctx context.Context, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error)
-	AddressDetachV2AddressesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetachV2AddressesObjectIdDetachPostResponse, error)
-	AddressDetailV2AddressesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetailV2AddressesObjectIdDetailGetResponse, error)
-	AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse, error)
-	AddressEditPtrV2AddressesObjectIdPtrPutWithResponse(ctx context.Context, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error)
-	AccountBalanceV2BalanceGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountBalanceV2BalanceGetResponse, error)
-	DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithResponse(ctx context.Context, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error)
-	DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse, error)
-	DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse, error)
-	DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse, error)
-	DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDetailV2DbaasClustersObjectIdGetResponse, error)
-	DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithResponse(ctx context.Context, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error)
-	DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error)
-	DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse, error)
-	DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse, error)
-	DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse, error)
-	ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse, error)
-	ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithResponse(ctx context.Context, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error)
-	ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse, error)
-	DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error)
-	DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error)
-	DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse, error)
-	DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse, error)
-	DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse, error)
-	DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse, error)
-	ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error)
-	DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse, error)
-	DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse, error)
-	DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error)
-	KeypairDeleteV2KeypairsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDeleteV2KeypairsObjectIdDeleteResponse, error)
-	KeypairDetailV2KeypairsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDetailV2KeypairsObjectIdDetailGetResponse, error)
-	AvailableLicensesListV2LicensesGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AvailableLicensesListV2LicensesGetResponse, error)
-	LicenseDeleteV2LicensesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDeleteV2LicensesObjectIdDeleteResponse, error)
-	LicenseDetailsV2LicensesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDetailsV2LicensesObjectIdGetResponse, error)
-	LicenseUpdateV2LicensesObjectIdPatchWithResponse(ctx context.Context, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error)
-	AccountLimitsV2LimitsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountLimitsV2LimitsGetResponse, error)
-	AccountPatchLimitsV2LimitsPatchWithResponse(ctx context.Context, body AccountPatchLimitsV2LimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*AccountPatchLimitsV2LimitsPatchResponse, error)
-	AccountProjectsLimitsV2LimitsProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountProjectsLimitsV2LimitsProjectsGetResponse, error)
-	RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse, error)
-	RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDetailV2LoadbalancersRulesObjectIdGetResponse, error)
-	LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse, error)
-	LoadBalancerRenameV2LoadbalancersObjectIdPatchWithResponse(ctx context.Context, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error)
-	LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error)
-	LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse, error)
-	LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error)
-	RuleListV2LoadbalancersObjectIdRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleListV2LoadbalancersObjectIdRulesGetResponse, error)
-	RuleCreateV2LoadbalancersObjectIdRulesPostWithResponse(ctx context.Context, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error)
-	LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse, error)
-	LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse, error)
-	LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse, error)
-	LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse, error)
-	MaintenanceModeStatusV2MaintenanceModeGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MaintenanceModeStatusV2MaintenanceModeGetResponse, error)
-	ProjectListV2ProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ProjectListV2ProjectsGetResponse, error)
-	ProjectCreateV2ProjectsPostWithResponse(ctx context.Context, body ProjectCreateV2ProjectsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectCreateV2ProjectsPostResponse, error)
-	ProjectDeleteV2ProjectsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDeleteV2ProjectsObjectIdDeleteResponse, error)
-	ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error)
-	ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse, error)
-	AddressCreateV2ProjectsObjectIdAddressesPostWithResponse(ctx context.Context, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error)
-	ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse, error)
-	ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse, error)
-	DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse, error)
-	DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithResponse(ctx context.Context, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error)
-	ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse, error)
-	ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse, error)
-	ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse, error)
-	ProjectDetailV2ProjectsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDetailV2ProjectsObjectIdDetailGetResponse, error)
-	ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectImagesListV2ProjectsObjectIdImagesGetResponse, error)
-	KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeyPairsListV2ProjectsObjectIdKeypairsGetResponse, error)
-	ImportKeypairV2ProjectsObjectIdKeypairsPostWithResponse(ctx context.Context, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error)
-	GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithResponse(ctx context.Context, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody, reqEditors ...RequestEditorFn) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error)
-	ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse, error)
-	ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error)
-	LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse, error)
-	LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithResponse(ctx context.Context, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error)
-	ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse, error)
-	ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse, error)
-	NetworksListV2ProjectsObjectIdNetworksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*NetworksListV2ProjectsObjectIdNetworksGetResponse, error)
-	ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse, error)
-	ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRecipesV2ProjectsObjectIdRecipesGetResponse, error)
-	S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UsersListV2ProjectsObjectIdS3UsersGetResponse, error)
-	S3UserCreateV2ProjectsObjectIdS3UsersPostWithResponse(ctx context.Context, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error)
-	ProjectServerListV2ProjectsObjectIdServersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerListV2ProjectsObjectIdServersGetResponse, error)
-	ServerCreateV2ProjectsObjectIdServersPostWithResponse(ctx context.Context, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error)
-	ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse, error)
-	SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse, error)
-	ProjectStartV2ProjectsObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStartV2ProjectsObjectIdStartPostResponse, error)
-	ProjectStopV2ProjectsObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStopV2ProjectsObjectIdStopPostResponse, error)
-	ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse, error)
-	VolumeCreateV2ProjectsObjectIdVolumesPostWithResponse(ctx context.Context, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error)
-	ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse, error)
-	VrouterCreateV2ProjectsObjectIdVroutersPostWithResponse(ctx context.Context, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error)
-	S3UserDeleteV2S3UsersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDeleteV2S3UsersObjectIdDeleteResponse, error)
-	S3UserUpdateV2S3UsersObjectIdPatchWithResponse(ctx context.Context, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error)
-	S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse, error)
-	S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse, error)
-	S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDetailsV2S3UsersObjectIdDetailGetResponse, error)
-	S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithResponse(ctx context.Context, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error)
-	S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserSuspendV2S3UsersObjectIdSuspendPostResponse, error)
-	S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse, error)
-	ServerDeleteV2ServersObjectIdDeleteWithResponse(ctx context.Context, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerDeleteV2ServersObjectIdDeleteResponse, error)
-	ServerUpdateV2ServersObjectIdPatchWithResponse(ctx context.Context, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerUpdateV2ServersObjectIdPatchResponse, error)
-	ServerConsoleV2ServersObjectIdConsolePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerConsoleV2ServersObjectIdConsolePostResponse, error)
-	ServerDetailV2ServersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerDetailV2ServersObjectIdDetailGetResponse, error)
-	ServerLicensesV2ServersObjectIdLicensesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerLicensesV2ServersObjectIdLicensesGetResponse, error)
-	ServerAddLicenseV2ServersObjectIdLicensesPostWithResponse(ctx context.Context, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error)
-	ServerChangePasswordV2ServersObjectIdPasswordPostWithResponse(ctx context.Context, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error)
-	ServerRebootV2ServersObjectIdRebootPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRebootV2ServersObjectIdRebootPostResponse, error)
-	ServerRescueV2ServersObjectIdRescuePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRescueV2ServersObjectIdRescuePostResponse, error)
-	ServerResizeV2ServersObjectIdResizePostWithResponse(ctx context.Context, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerResizeV2ServersObjectIdResizePostResponse, error)
-	CreateServerSnapshotV2ServersObjectIdSnapshotPostWithResponse(ctx context.Context, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error)
-	ServerStartV2ServersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStartV2ServersObjectIdStartPostResponse, error)
-	ServerStopV2ServersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStopV2ServersObjectIdStopPostResponse, error)
-	SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDeleteV2SnapshotsObjectIdDeleteResponse, error)
-	SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse, error)
-	SnapshotRestoreV2SnapshotsObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error)
-	AccountStatV2StatGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountStatV2StatGetResponse, error)
-	VolumeDeleteV2VolumesObjectIdDeleteWithResponse(ctx context.Context, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error)
-	VolumeUpdateV2VolumesObjectIdPatchWithResponse(ctx context.Context, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error)
-	VolumeAttachV2VolumesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error)
-	VolumeDetachV2VolumesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error)
-	VolumeDetailV2VolumesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VolumeDetailV2VolumesObjectIdDetailGetResponse, error)
-	VolumeExtendV2VolumesObjectIdExtendPostWithResponse(ctx context.Context, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error)
-	VrouterDeleteV2VroutersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDeleteV2VroutersObjectIdDeleteResponse, error)
-	VrouterDetailV2VroutersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDetailV2VroutersObjectIdGetResponse, error)
-	VrouterStartV2VroutersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStartV2VroutersObjectIdStartPostResponse, error)
-	VrouterStopV2VroutersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStopV2VroutersObjectIdStopPostResponse, error)
+	AddressDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDeleteResponse, error)
+	AddressAttachWithResponse(ctx context.Context, objectId string, body AddressAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressAttachResponse, error)
+	AddressChangeBandwidthWithResponse(ctx context.Context, objectId string, body AddressChangeBandwidthJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthResponse, error)
+	AddressDetachWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetachResponse, error)
+	AddressDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetailResponse, error)
+	AddressSetPrimaryWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressSetPrimaryResponse, error)
+	AddressEditPtrWithResponse(ctx context.Context, objectId string, body AddressEditPtrJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressEditPtrResponse, error)
+	AccountBalanceWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountBalanceResponse, error)
+	DbaasBackupDeleteWithResponse(ctx context.Context, objectId string, body DbaasBackupDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteResponse, error)
+	DbaasBackupDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDetailResponse, error)
+	DbaasBackupDownloadWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDownloadResponse, error)
+	DbaasClusterDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDeleteResponse, error)
+	DbaasClusterDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDetailResponse, error)
+	DbaasClusterUpdateWithResponse(ctx context.Context, objectId string, body DbaasClusterUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateResponse, error)
+	DbaasClusterBackupWithResponse(ctx context.Context, objectId string, body DbaasClusterBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterBackupResponse, error)
+	DbaasClusterBackupDisableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupDisableResponse, error)
+	DbaasClusterBackupEnableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupEnableResponse, error)
+	DbaasClusterConfigWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterConfigResponse, error)
+	ClusterDbaasDatabasesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasDatabasesListResponse, error)
+	ClusterAddDatabaseWithResponse(ctx context.Context, objectId string, body ClusterAddDatabaseJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseResponse, error)
+	ClusterDbaasNodesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasNodesListResponse, error)
+	DbaasClusterResizeWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeResponse, error)
+	DbaasClusterResizeStorageWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeStorageJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageResponse, error)
+	DbaasClusterStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStartResponse, error)
+	DbaasClusterStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStopResponse, error)
+	DbaasDatabaseDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDeleteResponse, error)
+	DbaasDatabaseDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDetailResponse, error)
+	ClusterDatabaseBackupWithResponse(ctx context.Context, objectId string, body ClusterDatabaseBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupResponse, error)
+	DbaasDatabaseBackupDisableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupDisableResponse, error)
+	DbaasDatabaseBackupEnableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupEnableResponse, error)
+	DbaasRestoreAdminPasswordWithResponse(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordResponse, error)
+	KeypairDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDeleteResponse, error)
+	KeypairDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDetailResponse, error)
+	AvailableLicensesListWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AvailableLicensesListResponse, error)
+	LicenseDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDeleteResponse, error)
+	LicenseDetailsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDetailsResponse, error)
+	LicenseUpdateWithResponse(ctx context.Context, objectId string, body LicenseUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*LicenseUpdateResponse, error)
+	AccountLimitsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountLimitsResponse, error)
+	AccountPatchLimitsWithResponse(ctx context.Context, body AccountPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*AccountPatchLimitsResponse, error)
+	AccountProjectsLimitsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountProjectsLimitsResponse, error)
+	RuleDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDeleteResponse, error)
+	RuleDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDetailResponse, error)
+	LoadBalancerDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDeleteResponse, error)
+	LoadBalancerRenameWithResponse(ctx context.Context, objectId string, body LoadBalancerRenameJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerRenameResponse, error)
+	LoadBalancerUpdateWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateResponse, error)
+	LoadBalancerDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDetailResponse, error)
+	LoadBalancerUpdateHealthmonitorWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorResponse, error)
+	RuleListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleListResponse, error)
+	RuleCreateWithResponse(ctx context.Context, objectId string, body RuleCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*RuleCreateResponse, error)
+	LoadBalancerEnableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerEnableResponse, error)
+	LoadBalancerStatWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStatResponse, error)
+	LoadBalancerStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStopResponse, error)
+	LocalDiskDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LocalDiskDetailResponse, error)
+	MaintenanceModeStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MaintenanceModeStatusResponse, error)
+	ProjectListWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ProjectListResponse, error)
+	ProjectCreateWithResponse(ctx context.Context, body ProjectCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectCreateResponse, error)
+	ProjectDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDeleteResponse, error)
+	ProjectPatchDisplayNameDescriptionWithResponse(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionResponse, error)
+	ProjectAddressesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectAddressesListResponse, error)
+	AddressCreateWithResponse(ctx context.Context, objectId string, body AddressCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressCreateResponse, error)
+	ProjectConsumptionWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectConsumptionResponse, error)
+	ProjectBackupListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectBackupListResponse, error)
+	DbaasClustersListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClustersListResponse, error)
+	DbaasClusterCreateWithResponse(ctx context.Context, objectId string, body DbaasClusterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterCreateResponse, error)
+	ProjectDbaasDatabasesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatabasesListResponse, error)
+	ProjectDbaasDatastoresWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatastoresResponse, error)
+	ProjectDbaasConfigDepWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasConfigDepResponse, error)
+	ProjectDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDetailResponse, error)
+	ProjectImagesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectImagesListResponse, error)
+	KeyPairsListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeyPairsListResponse, error)
+	ImportKeypairWithResponse(ctx context.Context, objectId string, body ImportKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*ImportKeypairResponse, error)
+	GenerateKeypairWithResponse(ctx context.Context, objectId string, body GenerateKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*GenerateKeypairResponse, error)
+	ProjectLimitsListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLimitsListResponse, error)
+	ProjectPatchLimitsWithResponse(ctx context.Context, objectId string, body ProjectPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsResponse, error)
+	LoadBalancerListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerListResponse, error)
+	LoadBalancerCreateWithResponse(ctx context.Context, objectId string, body LoadBalancerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerCreateResponse, error)
+	ProjectRuleListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRuleListResponse, error)
+	ProjectLocalDisksListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLocalDisksListResponse, error)
+	NetworksListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*NetworksListResponse, error)
+	ProjectInfrastructureModuleConstantsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectInfrastructureModuleConstantsResponse, error)
+	ProjectRecipesWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRecipesResponse, error)
+	S3UsersListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UsersListResponse, error)
+	S3UserCreateWithResponse(ctx context.Context, objectId string, body S3UserCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserCreateResponse, error)
+	ProjectServerListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerListResponse, error)
+	ServerCreateWithResponse(ctx context.Context, objectId string, body ServerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerCreateResponse, error)
+	ProjectServerConfigDepWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerConfigDepResponse, error)
+	SnapshotsListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotsListResponse, error)
+	ProjectStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStartResponse, error)
+	ProjectStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStopResponse, error)
+	ProjectVolumesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVolumesListResponse, error)
+	VolumeCreateWithResponse(ctx context.Context, objectId string, body VolumeCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeCreateResponse, error)
+	ProjectVrouterListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVrouterListResponse, error)
+	VrouterCreateWithResponse(ctx context.Context, objectId string, body VrouterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*VrouterCreateResponse, error)
+	S3UserDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDeleteResponse, error)
+	S3UserUpdateWithResponse(ctx context.Context, objectId string, body S3UserUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateResponse, error)
+	S3GetUserKeysWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GetUserKeysResponse, error)
+	S3GenUserKeysWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GenUserKeysResponse, error)
+	S3UserDetailsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDetailsResponse, error)
+	S3UserUpdateQuotaWithResponse(ctx context.Context, objectId string, body S3UserUpdateQuotaJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaResponse, error)
+	S3UserSuspendWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserSuspendResponse, error)
+	S3UserUnsuspendWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserUnsuspendResponse, error)
+	ServerDeleteWithResponse(ctx context.Context, objectId string, body ServerDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerDeleteResponse, error)
+	ServerUpdateWithResponse(ctx context.Context, objectId string, body ServerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerUpdateResponse, error)
+	ServerConsoleWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerConsoleResponse, error)
+	ServerDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerDetailResponse, error)
+	ServerLicensesWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerLicensesResponse, error)
+	ServerAddLicenseWithResponse(ctx context.Context, objectId string, body ServerAddLicenseJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerAddLicenseResponse, error)
+	ServerChangePasswordWithResponse(ctx context.Context, objectId string, body ServerChangePasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerChangePasswordResponse, error)
+	ServerRebootWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRebootResponse, error)
+	ServerRescueWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRescueResponse, error)
+	ServerResizeWithResponse(ctx context.Context, objectId string, body ServerResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerResizeResponse, error)
+	CreateServerSnapshotWithResponse(ctx context.Context, objectId string, body CreateServerSnapshotJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateServerSnapshotResponse, error)
+	ServerStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStartResponse, error)
+	ServerStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStopResponse, error)
+	SnapshotDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDeleteResponse, error)
+	SnapshotDetailsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDetailsResponse, error)
+	SnapshotRestoreWithResponse(ctx context.Context, objectId string, body SnapshotRestoreJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapshotRestoreResponse, error)
+	AccountStatWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountStatResponse, error)
+	VolumeDeleteWithResponse(ctx context.Context, objectId string, body VolumeDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDeleteResponse, error)
+	VolumeUpdateWithResponse(ctx context.Context, objectId string, body VolumeUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeUpdateResponse, error)
+	VolumeAttachWithResponse(ctx context.Context, objectId string, body VolumeAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeAttachResponse, error)
+	VolumeDetachWithResponse(ctx context.Context, objectId string, body VolumeDetachJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDetachResponse, error)
+	VolumeDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VolumeDetailResponse, error)
+	VolumeExtendWithResponse(ctx context.Context, objectId string, body VolumeExtendJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeExtendResponse, error)
+	VrouterDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDeleteResponse, error)
+	VrouterDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDetailResponse, error)
+	VrouterStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStartResponse, error)
+	VrouterStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStopResponse, error)
 }
 
-func (c *ClientWithResponses) AddressDeleteV2AddressesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDeleteV2AddressesObjectIdDeleteResponse, error) {
-	rsp, err := c.AddressDeleteV2AddressesObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) AddressDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDeleteResponse, error) {
+	rsp, err := c.AddressDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressDeleteV2AddressesObjectIdDeleteResponse(rsp)
+	return ParseAddressDeleteResponse(rsp)
 }
 
-type AddressDeleteV2AddressesObjectIdDeleteResponse struct {
+type AddressDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r AddressDeleteV2AddressesObjectIdDeleteResponse) StatusCode() int {
+func (r AddressDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressDeleteV2AddressesObjectIdDeleteResponse(rsp *http.Response) (*AddressDeleteV2AddressesObjectIdDeleteResponse, error) {
+func ParseAddressDeleteResponse(rsp *http.Response) (*AddressDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressDeleteV2AddressesObjectIdDeleteResponse{
+	response := &AddressDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9548,36 +9548,36 @@ func ParseAddressDeleteV2AddressesObjectIdDeleteResponse(rsp *http.Response) (*A
 	return response, nil
 }
 
-func (c *ClientWithResponses) AddressAttachV2AddressesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body AddressAttachV2AddressesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error) {
-	rsp, err := c.AddressAttachV2AddressesObjectIdAttachPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) AddressAttachWithResponse(ctx context.Context, objectId string, body AddressAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressAttachResponse, error) {
+	rsp, err := c.AddressAttach(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp)
+	return ParseAddressAttachResponse(rsp)
 }
 
-type AddressAttachV2AddressesObjectIdAttachPostResponse struct {
+type AddressAttachResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r AddressAttachV2AddressesObjectIdAttachPostResponse) StatusCode() int {
+func (r AddressAttachResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp *http.Response) (*AddressAttachV2AddressesObjectIdAttachPostResponse, error) {
+func ParseAddressAttachResponse(rsp *http.Response) (*AddressAttachResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressAttachV2AddressesObjectIdAttachPostResponse{
+	response := &AddressAttachResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9604,36 +9604,36 @@ func ParseAddressAttachV2AddressesObjectIdAttachPostResponse(rsp *http.Response)
 	return response, nil
 }
 
-func (c *ClientWithResponses) AddressChangeBandwidthV2AddressesObjectIdBandwidthPostWithResponse(ctx context.Context, objectId string, body AddressChangeBandwidthV2AddressesObjectIdBandwidthPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error) {
-	rsp, err := c.AddressChangeBandwidthV2AddressesObjectIdBandwidthPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) AddressChangeBandwidthWithResponse(ctx context.Context, objectId string, body AddressChangeBandwidthJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressChangeBandwidthResponse, error) {
+	rsp, err := c.AddressChangeBandwidth(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp)
+	return ParseAddressChangeBandwidthResponse(rsp)
 }
 
-type AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse struct {
+type AddressChangeBandwidthResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse) StatusCode() int {
+func (r AddressChangeBandwidthResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp *http.Response) (*AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse, error) {
+func ParseAddressChangeBandwidthResponse(rsp *http.Response) (*AddressChangeBandwidthResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse{
+	response := &AddressChangeBandwidthResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9660,36 +9660,36 @@ func ParseAddressChangeBandwidthV2AddressesObjectIdBandwidthPostResponse(rsp *ht
 	return response, nil
 }
 
-func (c *ClientWithResponses) AddressDetachV2AddressesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetachV2AddressesObjectIdDetachPostResponse, error) {
-	rsp, err := c.AddressDetachV2AddressesObjectIdDetachPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) AddressDetachWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetachResponse, error) {
+	rsp, err := c.AddressDetach(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressDetachV2AddressesObjectIdDetachPostResponse(rsp)
+	return ParseAddressDetachResponse(rsp)
 }
 
-type AddressDetachV2AddressesObjectIdDetachPostResponse struct {
+type AddressDetachResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r AddressDetachV2AddressesObjectIdDetachPostResponse) StatusCode() int {
+func (r AddressDetachResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressDetachV2AddressesObjectIdDetachPostResponse(rsp *http.Response) (*AddressDetachV2AddressesObjectIdDetachPostResponse, error) {
+func ParseAddressDetachResponse(rsp *http.Response) (*AddressDetachResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressDetachV2AddressesObjectIdDetachPostResponse{
+	response := &AddressDetachResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9716,36 +9716,36 @@ func ParseAddressDetachV2AddressesObjectIdDetachPostResponse(rsp *http.Response)
 	return response, nil
 }
 
-func (c *ClientWithResponses) AddressDetailV2AddressesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetailV2AddressesObjectIdDetailGetResponse, error) {
-	rsp, err := c.AddressDetailV2AddressesObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) AddressDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressDetailResponse, error) {
+	rsp, err := c.AddressDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressDetailV2AddressesObjectIdDetailGetResponse(rsp)
+	return ParseAddressDetailResponse(rsp)
 }
 
-type AddressDetailV2AddressesObjectIdDetailGetResponse struct {
+type AddressDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *AddressDetailSchema
 	Error        *ApiError
 }
 
-func (r AddressDetailV2AddressesObjectIdDetailGetResponse) StatusCode() int {
+func (r AddressDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressDetailV2AddressesObjectIdDetailGetResponse(rsp *http.Response) (*AddressDetailV2AddressesObjectIdDetailGetResponse, error) {
+func ParseAddressDetailResponse(rsp *http.Response) (*AddressDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressDetailV2AddressesObjectIdDetailGetResponse{
+	response := &AddressDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9772,36 +9772,36 @@ func ParseAddressDetailV2AddressesObjectIdDetailGetResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) AddressSetPrimaryV2AddressesObjectIdPrimaryPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse, error) {
-	rsp, err := c.AddressSetPrimaryV2AddressesObjectIdPrimaryPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) AddressSetPrimaryWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*AddressSetPrimaryResponse, error) {
+	rsp, err := c.AddressSetPrimary(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse(rsp)
+	return ParseAddressSetPrimaryResponse(rsp)
 }
 
-type AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse struct {
+type AddressSetPrimaryResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse) StatusCode() int {
+func (r AddressSetPrimaryResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse(rsp *http.Response) (*AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse, error) {
+func ParseAddressSetPrimaryResponse(rsp *http.Response) (*AddressSetPrimaryResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse{
+	response := &AddressSetPrimaryResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9828,36 +9828,36 @@ func ParseAddressSetPrimaryV2AddressesObjectIdPrimaryPostResponse(rsp *http.Resp
 	return response, nil
 }
 
-func (c *ClientWithResponses) AddressEditPtrV2AddressesObjectIdPtrPutWithResponse(ctx context.Context, objectId string, body AddressEditPtrV2AddressesObjectIdPtrPutJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error) {
-	rsp, err := c.AddressEditPtrV2AddressesObjectIdPtrPut(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) AddressEditPtrWithResponse(ctx context.Context, objectId string, body AddressEditPtrJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressEditPtrResponse, error) {
+	rsp, err := c.AddressEditPtr(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp)
+	return ParseAddressEditPtrResponse(rsp)
 }
 
-type AddressEditPtrV2AddressesObjectIdPtrPutResponse struct {
+type AddressEditPtrResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r AddressEditPtrV2AddressesObjectIdPtrPutResponse) StatusCode() int {
+func (r AddressEditPtrResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp *http.Response) (*AddressEditPtrV2AddressesObjectIdPtrPutResponse, error) {
+func ParseAddressEditPtrResponse(rsp *http.Response) (*AddressEditPtrResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressEditPtrV2AddressesObjectIdPtrPutResponse{
+	response := &AddressEditPtrResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9884,36 +9884,36 @@ func ParseAddressEditPtrV2AddressesObjectIdPtrPutResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) AccountBalanceV2BalanceGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountBalanceV2BalanceGetResponse, error) {
-	rsp, err := c.AccountBalanceV2BalanceGet(ctx, reqEditors...)
+func (c *ClientWithResponses) AccountBalanceWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountBalanceResponse, error) {
+	rsp, err := c.AccountBalance(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAccountBalanceV2BalanceGetResponse(rsp)
+	return ParseAccountBalanceResponse(rsp)
 }
 
-type AccountBalanceV2BalanceGetResponse struct {
+type AccountBalanceResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedAccountBalanceSchema0cebb0e1
+	OK           *DetailedAccountBalanceSchema7c8cadbe
 	Error        *ApiError
 }
 
-func (r AccountBalanceV2BalanceGetResponse) StatusCode() int {
+func (r AccountBalanceResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAccountBalanceV2BalanceGetResponse(rsp *http.Response) (*AccountBalanceV2BalanceGetResponse, error) {
+func ParseAccountBalanceResponse(rsp *http.Response) (*AccountBalanceResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AccountBalanceV2BalanceGetResponse{
+	response := &AccountBalanceResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9940,35 +9940,35 @@ func ParseAccountBalanceV2BalanceGetResponse(rsp *http.Response) (*AccountBalanc
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteWithResponse(ctx context.Context, objectId string, body DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error) {
-	rsp, err := c.DbaasBackupDeleteV2DbaasBackupsObjectIdDelete(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) DbaasBackupDeleteWithResponse(ctx context.Context, objectId string, body DbaasBackupDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasBackupDeleteResponse, error) {
+	rsp, err := c.DbaasBackupDelete(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp)
+	return ParseDbaasBackupDeleteResponse(rsp)
 }
 
-type DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse struct {
+type DbaasBackupDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse) StatusCode() int {
+func (r DbaasBackupDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp *http.Response) (*DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse, error) {
+func ParseDbaasBackupDeleteResponse(rsp *http.Response) (*DbaasBackupDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse{
+	response := &DbaasBackupDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -9992,92 +9992,36 @@ func ParseDbaasBackupDeleteV2DbaasBackupsObjectIdDeleteResponse(rsp *http.Respon
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasBackupDetailV2DbaasBackupsObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse, error) {
-	rsp, err := c.DbaasBackupDetailV2DbaasBackupsObjectIdGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasBackupDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDetailResponse, error) {
+	rsp, err := c.DbaasBackupDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasBackupDetailV2DbaasBackupsObjectIdGetResponse(rsp)
+	return ParseDbaasBackupDetailResponse(rsp)
 }
 
-type DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse struct {
+type DbaasBackupDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedDbaasBackupSchemaFec792e7
+	OK           *DetailedDbaasBackupSchemaA094e18d
 	Error        *ApiError
 }
 
-func (r DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse) StatusCode() int {
+func (r DbaasBackupDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasBackupDetailV2DbaasBackupsObjectIdGetResponse(rsp *http.Response) (*DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse, error) {
+func ParseDbaasBackupDetailResponse(rsp *http.Response) (*DbaasBackupDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasBackupDetailV2DbaasBackupsObjectIdGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse, error) {
-	rsp, err := c.DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse(rsp)
-}
-
-type DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *DetailedBackupDownloadUrlSchema9bd1bd6a
-	Error        *ApiError
-}
-
-func (r DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse(rsp *http.Response) (*DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse{
+	response := &DbaasBackupDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10104,88 +10048,36 @@ func ParseDbaasBackupDownloadV2DbaasBackupsObjectIdDownloadPostResponse(rsp *htt
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterDeleteV2DbaasClustersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse, error) {
-	rsp, err := c.DbaasClusterDeleteV2DbaasClustersObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasBackupDownloadWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasBackupDownloadResponse, error) {
+	rsp, err := c.DbaasBackupDownload(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse(rsp)
+	return ParseDbaasBackupDownloadResponse(rsp)
 }
 
-type DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse struct {
+type DbaasBackupDownloadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	OK           *DetailedBackupDownloadUrlSchemaF78c6a4b
 	Error        *ApiError
 }
 
-func (r DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse) StatusCode() int {
+func (r DbaasBackupDownloadResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse(rsp *http.Response) (*DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse, error) {
+func ParseDbaasBackupDownloadResponse(rsp *http.Response) (*DbaasBackupDownloadResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterDeleteV2DbaasClustersObjectIdDeleteResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) DbaasClusterDetailV2DbaasClustersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDetailV2DbaasClustersObjectIdGetResponse, error) {
-	rsp, err := c.DbaasClusterDetailV2DbaasClustersObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse(rsp)
-}
-
-type DbaasClusterDetailV2DbaasClustersObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *DetailedDbaasClusterSchemaFb9d2327
-	Error        *ApiError
-}
-
-func (r DbaasClusterDetailV2DbaasClustersObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse(rsp *http.Response) (*DbaasClusterDetailV2DbaasClustersObjectIdGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DbaasClusterDetailV2DbaasClustersObjectIdGetResponse{
+	response := &DbaasBackupDownloadResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10212,36 +10104,144 @@ func ParseDbaasClusterDetailV2DbaasClustersObjectIdGetResponse(rsp *http.Respons
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterUpdateV2DbaasClustersObjectIdPatchWithResponse(ctx context.Context, objectId string, body DbaasClusterUpdateV2DbaasClustersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error) {
-	rsp, err := c.DbaasClusterUpdateV2DbaasClustersObjectIdPatch(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDeleteResponse, error) {
+	rsp, err := c.DbaasClusterDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp)
+	return ParseDbaasClusterDeleteResponse(rsp)
 }
 
-type DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse struct {
+type DbaasClusterDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r DbaasClusterDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseDbaasClusterDeleteResponse(rsp *http.Response) (*DbaasClusterDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DbaasClusterDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) DbaasClusterDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterDetailResponse, error) {
+	rsp, err := c.DbaasClusterDetail(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterDetailResponse(rsp)
+}
+
+type DbaasClusterDetailResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedDbaasClusterSchema2a4cf989
+	Error        *ApiError
+}
+
+func (r DbaasClusterDetailResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseDbaasClusterDetailResponse(rsp *http.Response) (*DbaasClusterDetailResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DbaasClusterDetailResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) DbaasClusterUpdateWithResponse(ctx context.Context, objectId string, body DbaasClusterUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterUpdateResponse, error) {
+	rsp, err := c.DbaasClusterUpdate(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasClusterUpdateResponse(rsp)
+}
+
+type DbaasClusterUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse) StatusCode() int {
+func (r DbaasClusterUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp *http.Response) (*DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse, error) {
+func ParseDbaasClusterUpdateResponse(rsp *http.Response) (*DbaasClusterUpdateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse{
+	response := &DbaasClusterUpdateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10268,36 +10268,36 @@ func ParseDbaasClusterUpdateV2DbaasClustersObjectIdPatchResponse(rsp *http.Respo
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error) {
-	rsp, err := c.DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterBackupWithResponse(ctx context.Context, objectId string, body DbaasClusterBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterBackupResponse, error) {
+	rsp, err := c.DbaasClusterBackup(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp)
+	return ParseDbaasClusterBackupResponse(rsp)
 }
 
-type DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse struct {
+type DbaasClusterBackupResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchema73385074
+	OK           *DetailedIdResponseSchema3c73bf68
 	Error        *ApiError
 }
 
-func (r DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse) StatusCode() int {
+func (r DbaasClusterBackupResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp *http.Response) (*DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse, error) {
+func ParseDbaasClusterBackupResponse(rsp *http.Response) (*DbaasClusterBackupResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse{
+	response := &DbaasClusterBackupResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10324,36 +10324,36 @@ func ParseDbaasClusterBackupV2DbaasClustersObjectIdBackupCreatePostResponse(rsp 
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse, error) {
-	rsp, err := c.DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterBackupDisableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupDisableResponse, error) {
+	rsp, err := c.DbaasClusterBackupDisable(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse(rsp)
+	return ParseDbaasClusterBackupDisableResponse(rsp)
 }
 
-type DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse struct {
+type DbaasClusterBackupDisableResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse) StatusCode() int {
+func (r DbaasClusterBackupDisableResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse(rsp *http.Response) (*DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse, error) {
+func ParseDbaasClusterBackupDisableResponse(rsp *http.Response) (*DbaasClusterBackupDisableResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostResponse{
+	response := &DbaasClusterBackupDisableResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10380,36 +10380,36 @@ func ParseDbaasClusterBackupDisableV2DbaasClustersObjectIdBackupDisablePostRespo
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse, error) {
-	rsp, err := c.DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterBackupEnableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterBackupEnableResponse, error) {
+	rsp, err := c.DbaasClusterBackupEnable(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse(rsp)
+	return ParseDbaasClusterBackupEnableResponse(rsp)
 }
 
-type DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse struct {
+type DbaasClusterBackupEnableResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse) StatusCode() int {
+func (r DbaasClusterBackupEnableResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse(rsp *http.Response) (*DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse, error) {
+func ParseDbaasClusterBackupEnableResponse(rsp *http.Response) (*DbaasClusterBackupEnableResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostResponse{
+	response := &DbaasClusterBackupEnableResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10436,36 +10436,36 @@ func ParseDbaasClusterBackupEnableV2DbaasClustersObjectIdBackupEnablePostRespons
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse, error) {
-	rsp, err := c.DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterConfigWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterConfigResponse, error) {
+	rsp, err := c.DbaasClusterConfig(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse(rsp)
+	return ParseDbaasClusterConfigResponse(rsp)
 }
 
-type DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse struct {
+type DbaasClusterConfigResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedDbaasClusterConfigSchema3488dcef
+	OK           *DetailedDbaasClusterConfigSchemaEdf28995
 	Error        *ApiError
 }
 
-func (r DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse) StatusCode() int {
+func (r DbaasClusterConfigResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse(rsp *http.Response) (*DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse, error) {
+func ParseDbaasClusterConfigResponse(rsp *http.Response) (*DbaasClusterConfigResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse{
+	response := &DbaasClusterConfigResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10492,36 +10492,36 @@ func ParseDbaasClusterConfigV2DbaasClustersObjectIdConfigurationGetResponse(rsp 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse, error) {
-	rsp, err := c.ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ClusterDbaasDatabasesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasDatabasesListResponse, error) {
+	rsp, err := c.ClusterDbaasDatabasesList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse(rsp)
+	return ParseClusterDbaasDatabasesListResponse(rsp)
 }
 
-type ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse struct {
+type ClusterDbaasDatabasesListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListDbaasDatababaseSchemaC48c1d98
+	OK           *ListDbaasDatababaseSchema66a062ec
 	Error        *ApiError
 }
 
-func (r ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse) StatusCode() int {
+func (r ClusterDbaasDatabasesListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse(rsp *http.Response) (*ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse, error) {
+func ParseClusterDbaasDatabasesListResponse(rsp *http.Response) (*ClusterDbaasDatabasesListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse{
+	response := &ClusterDbaasDatabasesListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10548,36 +10548,36 @@ func ParseClusterDbaasDatabasesListV2DbaasClustersObjectIdDatabasesGetResponse(r
 	return response, nil
 }
 
-func (c *ClientWithResponses) ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostWithResponse(ctx context.Context, objectId string, body ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error) {
-	rsp, err := c.ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ClusterAddDatabaseWithResponse(ctx context.Context, objectId string, body ClusterAddDatabaseJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterAddDatabaseResponse, error) {
+	rsp, err := c.ClusterAddDatabase(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp)
+	return ParseClusterAddDatabaseResponse(rsp)
 }
 
-type ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse struct {
+type ClusterAddDatabaseResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchema1035337f
+	OK           *DetailedIdResponseSchema8efd2784
 	Error        *ApiError
 }
 
-func (r ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse) StatusCode() int {
+func (r ClusterAddDatabaseResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp *http.Response) (*ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse, error) {
+func ParseClusterAddDatabaseResponse(rsp *http.Response) (*ClusterAddDatabaseResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse{
+	response := &ClusterAddDatabaseResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10604,36 +10604,36 @@ func ParseClusterAddDatabaseV2DbaasClustersObjectIdDatabasesPostResponse(rsp *ht
 	return response, nil
 }
 
-func (c *ClientWithResponses) ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse, error) {
-	rsp, err := c.ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ClusterDbaasNodesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ClusterDbaasNodesListResponse, error) {
+	rsp, err := c.ClusterDbaasNodesList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse(rsp)
+	return ParseClusterDbaasNodesListResponse(rsp)
 }
 
-type ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse struct {
+type ClusterDbaasNodesListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListDbaasNodeSchema25e9fcb0
+	OK           *ListDbaasNodeSchema3e7edb61
 	Error        *ApiError
 }
 
-func (r ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse) StatusCode() int {
+func (r ClusterDbaasNodesListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse(rsp *http.Response) (*ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse, error) {
+func ParseClusterDbaasNodesListResponse(rsp *http.Response) (*ClusterDbaasNodesListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse{
+	response := &ClusterDbaasNodesListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10660,36 +10660,36 @@ func ParseClusterDbaasNodesListV2DbaasClustersObjectIdNodesGetResponse(rsp *http
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error) {
-	rsp, err := c.DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterResizeWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeResponse, error) {
+	rsp, err := c.DbaasClusterResize(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(rsp)
+	return ParseDbaasClusterResizeResponse(rsp)
 }
 
-type DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse struct {
+type DbaasClusterResizeResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse) StatusCode() int {
+func (r DbaasClusterResizeResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(rsp *http.Response) (*DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse, error) {
+func ParseDbaasClusterResizeResponse(rsp *http.Response) (*DbaasClusterResizeResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse{
+	response := &DbaasClusterResizeResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10716,36 +10716,36 @@ func ParseDbaasClusterResizeV2DbaasClustersObjectIdResizeResourcesPostResponse(r
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error) {
-	rsp, err := c.DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterResizeStorageWithResponse(ctx context.Context, objectId string, body DbaasClusterResizeStorageJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterResizeStorageResponse, error) {
+	rsp, err := c.DbaasClusterResizeStorage(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse(rsp)
+	return ParseDbaasClusterResizeStorageResponse(rsp)
 }
 
-type DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse struct {
+type DbaasClusterResizeStorageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse) StatusCode() int {
+func (r DbaasClusterResizeStorageResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse(rsp *http.Response) (*DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse, error) {
+func ParseDbaasClusterResizeStorageResponse(rsp *http.Response) (*DbaasClusterResizeStorageResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostResponse{
+	response := &DbaasClusterResizeStorageResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10772,36 +10772,36 @@ func ParseDbaasClusterResizeStorageV2DbaasClustersObjectIdResizeStoragePostRespo
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterStartV2DbaasClustersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse, error) {
-	rsp, err := c.DbaasClusterStartV2DbaasClustersObjectIdStartPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStartResponse, error) {
+	rsp, err := c.DbaasClusterStart(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse(rsp)
+	return ParseDbaasClusterStartResponse(rsp)
 }
 
-type DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse struct {
+type DbaasClusterStartResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse) StatusCode() int {
+func (r DbaasClusterStartResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse(rsp *http.Response) (*DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse, error) {
+func ParseDbaasClusterStartResponse(rsp *http.Response) (*DbaasClusterStartResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterStartV2DbaasClustersObjectIdStartPostResponse{
+	response := &DbaasClusterStartResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10828,36 +10828,36 @@ func ParseDbaasClusterStartV2DbaasClustersObjectIdStartPostResponse(rsp *http.Re
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterStopV2DbaasClustersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse, error) {
-	rsp, err := c.DbaasClusterStopV2DbaasClustersObjectIdStopPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClusterStopResponse, error) {
+	rsp, err := c.DbaasClusterStop(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse(rsp)
+	return ParseDbaasClusterStopResponse(rsp)
 }
 
-type DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse struct {
+type DbaasClusterStopResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse) StatusCode() int {
+func (r DbaasClusterStopResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse(rsp *http.Response) (*DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse, error) {
+func ParseDbaasClusterStopResponse(rsp *http.Response) (*DbaasClusterStopResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterStopV2DbaasClustersObjectIdStopPostResponse{
+	response := &DbaasClusterStopResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10884,35 +10884,35 @@ func ParseDbaasClusterStopV2DbaasClustersObjectIdStopPostResponse(rsp *http.Resp
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse, error) {
-	rsp, err := c.DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasDatabaseDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDeleteResponse, error) {
+	rsp, err := c.DbaasDatabaseDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse(rsp)
+	return ParseDbaasDatabaseDeleteResponse(rsp)
 }
 
-type DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse struct {
+type DbaasDatabaseDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse) StatusCode() int {
+func (r DbaasDatabaseDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse(rsp *http.Response) (*DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse, error) {
+func ParseDbaasDatabaseDeleteResponse(rsp *http.Response) (*DbaasDatabaseDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse{
+	response := &DbaasDatabaseDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -10936,92 +10936,36 @@ func ParseDbaasDatabaseDeleteV2DbaasDatabasesObjectIdDeleteResponse(rsp *http.Re
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse, error) {
-	rsp, err := c.DbaasDatabaseDetailV2DbaasDatabasesObjectIdGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasDatabaseDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseDetailResponse, error) {
+	rsp, err := c.DbaasDatabaseDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse(rsp)
+	return ParseDbaasDatabaseDetailResponse(rsp)
 }
 
-type DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse struct {
+type DbaasDatabaseDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedDbaasDatababaseSchemaFf786256
+	OK           *DetailedDbaasDatababaseSchemaE6463f5e
 	Error        *ApiError
 }
 
-func (r DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse) StatusCode() int {
+func (r DbaasDatabaseDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse(rsp *http.Response) (*DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse, error) {
+func ParseDbaasDatabaseDetailResponse(rsp *http.Response) (*DbaasDatabaseDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasDatabaseDetailV2DbaasDatabasesObjectIdGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostWithResponse(ctx context.Context, objectId string, body ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error) {
-	rsp, err := c.ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(rsp)
-}
-
-type ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchema0a9b1941
-	Error        *ApiError
-}
-
-func (r ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(rsp *http.Response) (*ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse{
+	response := &DbaasDatabaseDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11048,36 +10992,92 @@ func ParseClusterDatabaseBackupV2DbaasDatabasesObjectIdBackupCreatePostResponse(
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse, error) {
-	rsp, err := c.DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ClusterDatabaseBackupWithResponse(ctx context.Context, objectId string, body ClusterDatabaseBackupJSONRequestBody, reqEditors ...RequestEditorFn) (*ClusterDatabaseBackupResponse, error) {
+	rsp, err := c.ClusterDatabaseBackup(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse(rsp)
+	return ParseClusterDatabaseBackupResponse(rsp)
 }
 
-type DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse struct {
+type ClusterDatabaseBackupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema696e1e75
+	Error        *ApiError
+}
+
+func (r ClusterDatabaseBackupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseClusterDatabaseBackupResponse(rsp *http.Response) (*ClusterDatabaseBackupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ClusterDatabaseBackupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) DbaasDatabaseBackupDisableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupDisableResponse, error) {
+	rsp, err := c.DbaasDatabaseBackupDisable(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDbaasDatabaseBackupDisableResponse(rsp)
+}
+
+type DbaasDatabaseBackupDisableResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse) StatusCode() int {
+func (r DbaasDatabaseBackupDisableResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse(rsp *http.Response) (*DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse, error) {
+func ParseDbaasDatabaseBackupDisableResponse(rsp *http.Response) (*DbaasDatabaseBackupDisableResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostResponse{
+	response := &DbaasDatabaseBackupDisableResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11104,36 +11104,36 @@ func ParseDbaasDatabaseBackupDisableV2DbaasDatabasesObjectIdBackupDisablePostRes
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse, error) {
-	rsp, err := c.DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasDatabaseBackupEnableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasDatabaseBackupEnableResponse, error) {
+	rsp, err := c.DbaasDatabaseBackupEnable(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse(rsp)
+	return ParseDbaasDatabaseBackupEnableResponse(rsp)
 }
 
-type DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse struct {
+type DbaasDatabaseBackupEnableResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse) StatusCode() int {
+func (r DbaasDatabaseBackupEnableResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse(rsp *http.Response) (*DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse, error) {
+func ParseDbaasDatabaseBackupEnableResponse(rsp *http.Response) (*DbaasDatabaseBackupEnableResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostResponse{
+	response := &DbaasDatabaseBackupEnableResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11160,36 +11160,36 @@ func ParseDbaasDatabaseBackupEnableV2DbaasDatabasesObjectIdBackupEnablePostRespo
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error) {
-	rsp, err := c.DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) DbaasRestoreAdminPasswordWithResponse(ctx context.Context, objectId string, body DbaasRestoreAdminPasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasRestoreAdminPasswordResponse, error) {
+	rsp, err := c.DbaasRestoreAdminPassword(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(rsp)
+	return ParseDbaasRestoreAdminPasswordResponse(rsp)
 }
 
-type DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse struct {
+type DbaasRestoreAdminPasswordResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse) StatusCode() int {
+func (r DbaasRestoreAdminPasswordResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(rsp *http.Response) (*DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse, error) {
+func ParseDbaasRestoreAdminPasswordResponse(rsp *http.Response) (*DbaasRestoreAdminPasswordResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse{
+	response := &DbaasRestoreAdminPasswordResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11216,35 +11216,35 @@ func ParseDbaasRestoreAdminPasswordV2DbaasDatabasesObjectIdRestorePostResponse(r
 	return response, nil
 }
 
-func (c *ClientWithResponses) KeypairDeleteV2KeypairsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDeleteV2KeypairsObjectIdDeleteResponse, error) {
-	rsp, err := c.KeypairDeleteV2KeypairsObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) KeypairDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDeleteResponse, error) {
+	rsp, err := c.KeypairDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse(rsp)
+	return ParseKeypairDeleteResponse(rsp)
 }
 
-type KeypairDeleteV2KeypairsObjectIdDeleteResponse struct {
+type KeypairDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r KeypairDeleteV2KeypairsObjectIdDeleteResponse) StatusCode() int {
+func (r KeypairDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse(rsp *http.Response) (*KeypairDeleteV2KeypairsObjectIdDeleteResponse, error) {
+func ParseKeypairDeleteResponse(rsp *http.Response) (*KeypairDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &KeypairDeleteV2KeypairsObjectIdDeleteResponse{
+	response := &KeypairDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11268,92 +11268,36 @@ func ParseKeypairDeleteV2KeypairsObjectIdDeleteResponse(rsp *http.Response) (*Ke
 	return response, nil
 }
 
-func (c *ClientWithResponses) KeypairDetailV2KeypairsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDetailV2KeypairsObjectIdDetailGetResponse, error) {
-	rsp, err := c.KeypairDetailV2KeypairsObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) KeypairDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeypairDetailResponse, error) {
+	rsp, err := c.KeypairDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseKeypairDetailV2KeypairsObjectIdDetailGetResponse(rsp)
+	return ParseKeypairDetailResponse(rsp)
 }
 
-type KeypairDetailV2KeypairsObjectIdDetailGetResponse struct {
+type KeypairDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedKeyPairSchema0db25129
+	OK           *DetailedKeyPairSchema75478e11
 	Error        *ApiError
 }
 
-func (r KeypairDetailV2KeypairsObjectIdDetailGetResponse) StatusCode() int {
+func (r KeypairDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseKeypairDetailV2KeypairsObjectIdDetailGetResponse(rsp *http.Response) (*KeypairDetailV2KeypairsObjectIdDetailGetResponse, error) {
+func ParseKeypairDetailResponse(rsp *http.Response) (*KeypairDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &KeypairDetailV2KeypairsObjectIdDetailGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) AvailableLicensesListV2LicensesGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AvailableLicensesListV2LicensesGetResponse, error) {
-	rsp, err := c.AvailableLicensesListV2LicensesGet(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseAvailableLicensesListV2LicensesGetResponse(rsp)
-}
-
-type AvailableLicensesListV2LicensesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *ListLicenseOfferSchema772e4362
-	Error        *ApiError
-}
-
-func (r AvailableLicensesListV2LicensesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseAvailableLicensesListV2LicensesGetResponse(rsp *http.Response) (*AvailableLicensesListV2LicensesGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &AvailableLicensesListV2LicensesGetResponse{
+	response := &KeypairDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11380,88 +11324,36 @@ func ParseAvailableLicensesListV2LicensesGetResponse(rsp *http.Response) (*Avail
 	return response, nil
 }
 
-func (c *ClientWithResponses) LicenseDeleteV2LicensesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDeleteV2LicensesObjectIdDeleteResponse, error) {
-	rsp, err := c.LicenseDeleteV2LicensesObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) AvailableLicensesListWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AvailableLicensesListResponse, error) {
+	rsp, err := c.AvailableLicensesList(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLicenseDeleteV2LicensesObjectIdDeleteResponse(rsp)
+	return ParseAvailableLicensesListResponse(rsp)
 }
 
-type LicenseDeleteV2LicensesObjectIdDeleteResponse struct {
+type AvailableLicensesListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	OK           *ListLicenseOfferSchema6e8e56e8
 	Error        *ApiError
 }
 
-func (r LicenseDeleteV2LicensesObjectIdDeleteResponse) StatusCode() int {
+func (r AvailableLicensesListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLicenseDeleteV2LicensesObjectIdDeleteResponse(rsp *http.Response) (*LicenseDeleteV2LicensesObjectIdDeleteResponse, error) {
+func ParseAvailableLicensesListResponse(rsp *http.Response) (*AvailableLicensesListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LicenseDeleteV2LicensesObjectIdDeleteResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) LicenseDetailsV2LicensesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDetailsV2LicensesObjectIdGetResponse, error) {
-	rsp, err := c.LicenseDetailsV2LicensesObjectIdGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLicenseDetailsV2LicensesObjectIdGetResponse(rsp)
-}
-
-type LicenseDetailsV2LicensesObjectIdGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *DetailedLicenseSchema806d7f04
-	Error        *ApiError
-}
-
-func (r LicenseDetailsV2LicensesObjectIdGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseLicenseDetailsV2LicensesObjectIdGetResponse(rsp *http.Response) (*LicenseDetailsV2LicensesObjectIdGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &LicenseDetailsV2LicensesObjectIdGetResponse{
+	response := &AvailableLicensesListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11488,36 +11380,144 @@ func ParseLicenseDetailsV2LicensesObjectIdGetResponse(rsp *http.Response) (*Lice
 	return response, nil
 }
 
-func (c *ClientWithResponses) LicenseUpdateV2LicensesObjectIdPatchWithResponse(ctx context.Context, objectId string, body LicenseUpdateV2LicensesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error) {
-	rsp, err := c.LicenseUpdateV2LicensesObjectIdPatch(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) LicenseDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDeleteResponse, error) {
+	rsp, err := c.LicenseDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp)
+	return ParseLicenseDeleteResponse(rsp)
 }
 
-type LicenseUpdateV2LicensesObjectIdPatchResponse struct {
+type LicenseDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r LicenseDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseLicenseDeleteResponse(rsp *http.Response) (*LicenseDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &LicenseDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) LicenseDetailsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LicenseDetailsResponse, error) {
+	rsp, err := c.LicenseDetails(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLicenseDetailsResponse(rsp)
+}
+
+type LicenseDetailsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedLicenseSchema197f98f0
+	Error        *ApiError
+}
+
+func (r LicenseDetailsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseLicenseDetailsResponse(rsp *http.Response) (*LicenseDetailsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &LicenseDetailsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) LicenseUpdateWithResponse(ctx context.Context, objectId string, body LicenseUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*LicenseUpdateResponse, error) {
+	rsp, err := c.LicenseUpdate(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLicenseUpdateResponse(rsp)
+}
+
+type LicenseUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r LicenseUpdateV2LicensesObjectIdPatchResponse) StatusCode() int {
+func (r LicenseUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp *http.Response) (*LicenseUpdateV2LicensesObjectIdPatchResponse, error) {
+func ParseLicenseUpdateResponse(rsp *http.Response) (*LicenseUpdateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LicenseUpdateV2LicensesObjectIdPatchResponse{
+	response := &LicenseUpdateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11544,36 +11544,36 @@ func ParseLicenseUpdateV2LicensesObjectIdPatchResponse(rsp *http.Response) (*Lic
 	return response, nil
 }
 
-func (c *ClientWithResponses) AccountLimitsV2LimitsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountLimitsV2LimitsGetResponse, error) {
-	rsp, err := c.AccountLimitsV2LimitsGet(ctx, reqEditors...)
+func (c *ClientWithResponses) AccountLimitsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountLimitsResponse, error) {
+	rsp, err := c.AccountLimits(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAccountLimitsV2LimitsGetResponse(rsp)
+	return ParseAccountLimitsResponse(rsp)
 }
 
-type AccountLimitsV2LimitsGetResponse struct {
+type AccountLimitsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *AccountLimitSchema
 	Error        *ApiError
 }
 
-func (r AccountLimitsV2LimitsGetResponse) StatusCode() int {
+func (r AccountLimitsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAccountLimitsV2LimitsGetResponse(rsp *http.Response) (*AccountLimitsV2LimitsGetResponse, error) {
+func ParseAccountLimitsResponse(rsp *http.Response) (*AccountLimitsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AccountLimitsV2LimitsGetResponse{
+	response := &AccountLimitsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11600,36 +11600,36 @@ func ParseAccountLimitsV2LimitsGetResponse(rsp *http.Response) (*AccountLimitsV2
 	return response, nil
 }
 
-func (c *ClientWithResponses) AccountPatchLimitsV2LimitsPatchWithResponse(ctx context.Context, body AccountPatchLimitsV2LimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*AccountPatchLimitsV2LimitsPatchResponse, error) {
-	rsp, err := c.AccountPatchLimitsV2LimitsPatch(ctx, body, reqEditors...)
+func (c *ClientWithResponses) AccountPatchLimitsWithResponse(ctx context.Context, body AccountPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*AccountPatchLimitsResponse, error) {
+	rsp, err := c.AccountPatchLimits(ctx, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAccountPatchLimitsV2LimitsPatchResponse(rsp)
+	return ParseAccountPatchLimitsResponse(rsp)
 }
 
-type AccountPatchLimitsV2LimitsPatchResponse struct {
+type AccountPatchLimitsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r AccountPatchLimitsV2LimitsPatchResponse) StatusCode() int {
+func (r AccountPatchLimitsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAccountPatchLimitsV2LimitsPatchResponse(rsp *http.Response) (*AccountPatchLimitsV2LimitsPatchResponse, error) {
+func ParseAccountPatchLimitsResponse(rsp *http.Response) (*AccountPatchLimitsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AccountPatchLimitsV2LimitsPatchResponse{
+	response := &AccountPatchLimitsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11656,36 +11656,36 @@ func ParseAccountPatchLimitsV2LimitsPatchResponse(rsp *http.Response) (*AccountP
 	return response, nil
 }
 
-func (c *ClientWithResponses) AccountProjectsLimitsV2LimitsProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountProjectsLimitsV2LimitsProjectsGetResponse, error) {
-	rsp, err := c.AccountProjectsLimitsV2LimitsProjectsGet(ctx, reqEditors...)
+func (c *ClientWithResponses) AccountProjectsLimitsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountProjectsLimitsResponse, error) {
+	rsp, err := c.AccountProjectsLimits(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAccountProjectsLimitsV2LimitsProjectsGetResponse(rsp)
+	return ParseAccountProjectsLimitsResponse(rsp)
 }
 
-type AccountProjectsLimitsV2LimitsProjectsGetResponse struct {
+type AccountProjectsLimitsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *AccountProjectLimitSchema
 	Error        *ApiError
 }
 
-func (r AccountProjectsLimitsV2LimitsProjectsGetResponse) StatusCode() int {
+func (r AccountProjectsLimitsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAccountProjectsLimitsV2LimitsProjectsGetResponse(rsp *http.Response) (*AccountProjectsLimitsV2LimitsProjectsGetResponse, error) {
+func ParseAccountProjectsLimitsResponse(rsp *http.Response) (*AccountProjectsLimitsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AccountProjectsLimitsV2LimitsProjectsGetResponse{
+	response := &AccountProjectsLimitsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11712,35 +11712,35 @@ func ParseAccountProjectsLimitsV2LimitsProjectsGetResponse(rsp *http.Response) (
 	return response, nil
 }
 
-func (c *ClientWithResponses) RuleDeleteV2LoadbalancersRulesObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse, error) {
-	rsp, err := c.RuleDeleteV2LoadbalancersRulesObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) RuleDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDeleteResponse, error) {
+	rsp, err := c.RuleDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse(rsp)
+	return ParseRuleDeleteResponse(rsp)
 }
 
-type RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse struct {
+type RuleDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse) StatusCode() int {
+func (r RuleDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse(rsp *http.Response) (*RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse, error) {
+func ParseRuleDeleteResponse(rsp *http.Response) (*RuleDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &RuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse{
+	response := &RuleDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11764,36 +11764,36 @@ func ParseRuleDeleteV2LoadbalancersRulesObjectIdDeleteResponse(rsp *http.Respons
 	return response, nil
 }
 
-func (c *ClientWithResponses) RuleDetailV2LoadbalancersRulesObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDetailV2LoadbalancersRulesObjectIdGetResponse, error) {
-	rsp, err := c.RuleDetailV2LoadbalancersRulesObjectIdGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) RuleDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleDetailResponse, error) {
+	rsp, err := c.RuleDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse(rsp)
+	return ParseRuleDetailResponse(rsp)
 }
 
-type RuleDetailV2LoadbalancersRulesObjectIdGetResponse struct {
+type RuleDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedRuleDetailResponseSchema63197e94
+	OK           *DetailedRuleDetailResponseSchema4139a827
 	Error        *ApiError
 }
 
-func (r RuleDetailV2LoadbalancersRulesObjectIdGetResponse) StatusCode() int {
+func (r RuleDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse(rsp *http.Response) (*RuleDetailV2LoadbalancersRulesObjectIdGetResponse, error) {
+func ParseRuleDetailResponse(rsp *http.Response) (*RuleDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &RuleDetailV2LoadbalancersRulesObjectIdGetResponse{
+	response := &RuleDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11820,35 +11820,35 @@ func ParseRuleDetailV2LoadbalancersRulesObjectIdGetResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerDeleteV2LoadbalancersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse, error) {
-	rsp, err := c.LoadBalancerDeleteV2LoadbalancersObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDeleteResponse, error) {
+	rsp, err := c.LoadBalancerDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse(rsp)
+	return ParseLoadBalancerDeleteResponse(rsp)
 }
 
-type LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse struct {
+type LoadBalancerDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse) StatusCode() int {
+func (r LoadBalancerDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse(rsp *http.Response) (*LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse, error) {
+func ParseLoadBalancerDeleteResponse(rsp *http.Response) (*LoadBalancerDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse{
+	response := &LoadBalancerDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11872,36 +11872,36 @@ func ParseLoadBalancerDeleteV2LoadbalancersObjectIdDeleteResponse(rsp *http.Resp
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerRenameV2LoadbalancersObjectIdPatchWithResponse(ctx context.Context, objectId string, body LoadBalancerRenameV2LoadbalancersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error) {
-	rsp, err := c.LoadBalancerRenameV2LoadbalancersObjectIdPatch(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerRenameWithResponse(ctx context.Context, objectId string, body LoadBalancerRenameJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerRenameResponse, error) {
+	rsp, err := c.LoadBalancerRename(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp)
+	return ParseLoadBalancerRenameResponse(rsp)
 }
 
-type LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse struct {
+type LoadBalancerRenameResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse) StatusCode() int {
+func (r LoadBalancerRenameResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp *http.Response) (*LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse, error) {
+func ParseLoadBalancerRenameResponse(rsp *http.Response) (*LoadBalancerRenameResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerRenameV2LoadbalancersObjectIdPatchResponse{
+	response := &LoadBalancerRenameResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11928,36 +11928,36 @@ func ParseLoadBalancerRenameV2LoadbalancersObjectIdPatchResponse(rsp *http.Respo
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error) {
-	rsp, err := c.LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerUpdateWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateResponse, error) {
+	rsp, err := c.LoadBalancerUpdate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp)
+	return ParseLoadBalancerUpdateResponse(rsp)
 }
 
-type LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse struct {
+type LoadBalancerUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse) StatusCode() int {
+func (r LoadBalancerUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp *http.Response) (*LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse, error) {
+func ParseLoadBalancerUpdateResponse(rsp *http.Response) (*LoadBalancerUpdateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse{
+	response := &LoadBalancerUpdateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -11984,36 +11984,36 @@ func ParseLoadBalancerUpdateV2LoadbalancersObjectIdAlgorithmPostResponse(rsp *ht
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerDetailV2LoadbalancersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse, error) {
-	rsp, err := c.LoadBalancerDetailV2LoadbalancersObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerDetailResponse, error) {
+	rsp, err := c.LoadBalancerDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse(rsp)
+	return ParseLoadBalancerDetailResponse(rsp)
 }
 
-type LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse struct {
+type LoadBalancerDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedLBDetailResponseSchema14754508
+	OK           *DetailedLBDetailResponseSchema722a18c9
 	Error        *ApiError
 }
 
-func (r LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse) StatusCode() int {
+func (r LoadBalancerDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse(rsp *http.Response) (*LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse, error) {
+func ParseLoadBalancerDetailResponse(rsp *http.Response) (*LoadBalancerDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse{
+	response := &LoadBalancerDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12040,204 +12040,36 @@ func ParseLoadBalancerDetailV2LoadbalancersObjectIdDetailGetResponse(rsp *http.R
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error) {
-	rsp, err := c.LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPut(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerUpdateHealthmonitorWithResponse(ctx context.Context, objectId string, body LoadBalancerUpdateHealthmonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerUpdateHealthmonitorResponse, error) {
+	rsp, err := c.LoadBalancerUpdateHealthmonitor(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse(rsp)
+	return ParseLoadBalancerUpdateHealthmonitorResponse(rsp)
 }
 
-type LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *interface{}
-	Error        *ApiError
-}
-
-func (r LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseLoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse(rsp *http.Response) (*LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &LoadBalancerUpdateHealthmonitorV2LoadbalancersObjectIdHealthmonitorPutResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) RuleListV2LoadbalancersObjectIdRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleListV2LoadbalancersObjectIdRulesGetResponse, error) {
-	rsp, err := c.RuleListV2LoadbalancersObjectIdRulesGet(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRuleListV2LoadbalancersObjectIdRulesGetResponse(rsp)
-}
-
-type RuleListV2LoadbalancersObjectIdRulesGetResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *ListRuleDetailResponseSchemaA17dbd98
-	Error        *ApiError
-}
-
-func (r RuleListV2LoadbalancersObjectIdRulesGetResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseRuleListV2LoadbalancersObjectIdRulesGetResponse(rsp *http.Response) (*RuleListV2LoadbalancersObjectIdRulesGetResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RuleListV2LoadbalancersObjectIdRulesGetResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) RuleCreateV2LoadbalancersObjectIdRulesPostWithResponse(ctx context.Context, objectId string, body RuleCreateV2LoadbalancersObjectIdRulesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error) {
-	rsp, err := c.RuleCreateV2LoadbalancersObjectIdRulesPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse(rsp)
-}
-
-type RuleCreateV2LoadbalancersObjectIdRulesPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchema8ae3c570
-	Error        *ApiError
-}
-
-func (r RuleCreateV2LoadbalancersObjectIdRulesPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseRuleCreateV2LoadbalancersObjectIdRulesPostResponse(rsp *http.Response) (*RuleCreateV2LoadbalancersObjectIdRulesPostResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &RuleCreateV2LoadbalancersObjectIdRulesPostResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) LoadBalancerEnableV2LoadbalancersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse, error) {
-	rsp, err := c.LoadBalancerEnableV2LoadbalancersObjectIdStartPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse(rsp)
-}
-
-type LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse struct {
+type LoadBalancerUpdateHealthmonitorResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse) StatusCode() int {
+func (r LoadBalancerUpdateHealthmonitorResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse(rsp *http.Response) (*LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse, error) {
+func ParseLoadBalancerUpdateHealthmonitorResponse(rsp *http.Response) (*LoadBalancerUpdateHealthmonitorResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse{
+	response := &LoadBalancerUpdateHealthmonitorResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12264,36 +12096,36 @@ func ParseLoadBalancerEnableV2LoadbalancersObjectIdStartPostResponse(rsp *http.R
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerStatV2LoadbalancersObjectIdStatGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse, error) {
-	rsp, err := c.LoadBalancerStatV2LoadbalancersObjectIdStatGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) RuleListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*RuleListResponse, error) {
+	rsp, err := c.RuleList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse(rsp)
+	return ParseRuleListResponse(rsp)
 }
 
-type LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse struct {
+type RuleListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedLbStatSchema79b0bf7e
+	OK           *ListRuleDetailResponseSchemaF5b6e92c
 	Error        *ApiError
 }
 
-func (r LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse) StatusCode() int {
+func (r RuleListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse(rsp *http.Response) (*LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse, error) {
+func ParseRuleListResponse(rsp *http.Response) (*RuleListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerStatV2LoadbalancersObjectIdStatGetResponse{
+	response := &RuleListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12320,36 +12152,92 @@ func ParseLoadBalancerStatV2LoadbalancersObjectIdStatGetResponse(rsp *http.Respo
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerStopV2LoadbalancersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse, error) {
-	rsp, err := c.LoadBalancerStopV2LoadbalancersObjectIdStopPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) RuleCreateWithResponse(ctx context.Context, objectId string, body RuleCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*RuleCreateResponse, error) {
+	rsp, err := c.RuleCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse(rsp)
+	return ParseRuleCreateResponse(rsp)
 }
 
-type LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse struct {
+type RuleCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedIdResponseSchema0aec132d
+	Error        *ApiError
+}
+
+func (r RuleCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseRuleCreateResponse(rsp *http.Response) (*RuleCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &RuleCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) LoadBalancerEnableWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerEnableResponse, error) {
+	rsp, err := c.LoadBalancerEnable(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerEnableResponse(rsp)
+}
+
+type LoadBalancerEnableResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse) StatusCode() int {
+func (r LoadBalancerEnableResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse(rsp *http.Response) (*LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse, error) {
+func ParseLoadBalancerEnableResponse(rsp *http.Response) (*LoadBalancerEnableResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerStopV2LoadbalancersObjectIdStopPostResponse{
+	response := &LoadBalancerEnableResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12376,36 +12264,148 @@ func ParseLoadBalancerStopV2LoadbalancersObjectIdStopPostResponse(rsp *http.Resp
 	return response, nil
 }
 
-func (c *ClientWithResponses) LocalDiskDetailV2LocalDisksObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse, error) {
-	rsp, err := c.LocalDiskDetailV2LocalDisksObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerStatWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStatResponse, error) {
+	rsp, err := c.LoadBalancerStat(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse(rsp)
+	return ParseLoadBalancerStatResponse(rsp)
 }
 
-type LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse struct {
+type LoadBalancerStatResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *DetailedLbStatSchemaEb895b37
+	Error        *ApiError
+}
+
+func (r LoadBalancerStatResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseLoadBalancerStatResponse(rsp *http.Response) (*LoadBalancerStatResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &LoadBalancerStatResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) LoadBalancerStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerStopResponse, error) {
+	rsp, err := c.LoadBalancerStop(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLoadBalancerStopResponse(rsp)
+}
+
+type LoadBalancerStopResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r LoadBalancerStopResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseLoadBalancerStopResponse(rsp *http.Response) (*LoadBalancerStopResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &LoadBalancerStopResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) LocalDiskDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LocalDiskDetailResponse, error) {
+	rsp, err := c.LocalDiskDetail(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLocalDiskDetailResponse(rsp)
+}
+
+type LocalDiskDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *LocalDiskDetail
 	Error        *ApiError
 }
 
-func (r LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse) StatusCode() int {
+func (r LocalDiskDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse(rsp *http.Response) (*LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse, error) {
+func ParseLocalDiskDetailResponse(rsp *http.Response) (*LocalDiskDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LocalDiskDetailV2LocalDisksObjectIdDetailGetResponse{
+	response := &LocalDiskDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12432,36 +12432,36 @@ func ParseLocalDiskDetailV2LocalDisksObjectIdDetailGetResponse(rsp *http.Respons
 	return response, nil
 }
 
-func (c *ClientWithResponses) MaintenanceModeStatusV2MaintenanceModeGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MaintenanceModeStatusV2MaintenanceModeGetResponse, error) {
-	rsp, err := c.MaintenanceModeStatusV2MaintenanceModeGet(ctx, reqEditors...)
+func (c *ClientWithResponses) MaintenanceModeStatusWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MaintenanceModeStatusResponse, error) {
+	rsp, err := c.MaintenanceModeStatus(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseMaintenanceModeStatusV2MaintenanceModeGetResponse(rsp)
+	return ParseMaintenanceModeStatusResponse(rsp)
 }
 
-type MaintenanceModeStatusV2MaintenanceModeGetResponse struct {
+type MaintenanceModeStatusResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *MaintenanceModeSchema
 	Error        *ApiError
 }
 
-func (r MaintenanceModeStatusV2MaintenanceModeGetResponse) StatusCode() int {
+func (r MaintenanceModeStatusResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseMaintenanceModeStatusV2MaintenanceModeGetResponse(rsp *http.Response) (*MaintenanceModeStatusV2MaintenanceModeGetResponse, error) {
+func ParseMaintenanceModeStatusResponse(rsp *http.Response) (*MaintenanceModeStatusResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &MaintenanceModeStatusV2MaintenanceModeGetResponse{
+	response := &MaintenanceModeStatusResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12488,36 +12488,36 @@ func ParseMaintenanceModeStatusV2MaintenanceModeGetResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectListV2ProjectsGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ProjectListV2ProjectsGetResponse, error) {
-	rsp, err := c.ProjectListV2ProjectsGet(ctx, reqEditors...)
+func (c *ClientWithResponses) ProjectListWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ProjectListResponse, error) {
+	rsp, err := c.ProjectList(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectListV2ProjectsGetResponse(rsp)
+	return ParseProjectListResponse(rsp)
 }
 
-type ProjectListV2ProjectsGetResponse struct {
+type ProjectListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *ProjectPagListSchema
 	Error        *ApiError
 }
 
-func (r ProjectListV2ProjectsGetResponse) StatusCode() int {
+func (r ProjectListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectListV2ProjectsGetResponse(rsp *http.Response) (*ProjectListV2ProjectsGetResponse, error) {
+func ParseProjectListResponse(rsp *http.Response) (*ProjectListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectListV2ProjectsGetResponse{
+	response := &ProjectListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12544,36 +12544,36 @@ func ParseProjectListV2ProjectsGetResponse(rsp *http.Response) (*ProjectListV2Pr
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectCreateV2ProjectsPostWithResponse(ctx context.Context, body ProjectCreateV2ProjectsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectCreateV2ProjectsPostResponse, error) {
-	rsp, err := c.ProjectCreateV2ProjectsPost(ctx, body, reqEditors...)
+func (c *ClientWithResponses) ProjectCreateWithResponse(ctx context.Context, body ProjectCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectCreateResponse, error) {
+	rsp, err := c.ProjectCreate(ctx, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectCreateV2ProjectsPostResponse(rsp)
+	return ParseProjectCreateResponse(rsp)
 }
 
-type ProjectCreateV2ProjectsPostResponse struct {
+type ProjectCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchemaA611f722
+	OK           *DetailedIdResponseSchemaDd5ee8b3
 	Error        *ApiError
 }
 
-func (r ProjectCreateV2ProjectsPostResponse) StatusCode() int {
+func (r ProjectCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectCreateV2ProjectsPostResponse(rsp *http.Response) (*ProjectCreateV2ProjectsPostResponse, error) {
+func ParseProjectCreateResponse(rsp *http.Response) (*ProjectCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectCreateV2ProjectsPostResponse{
+	response := &ProjectCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12600,35 +12600,35 @@ func ParseProjectCreateV2ProjectsPostResponse(rsp *http.Response) (*ProjectCreat
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectDeleteV2ProjectsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDeleteV2ProjectsObjectIdDeleteResponse, error) {
-	rsp, err := c.ProjectDeleteV2ProjectsObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDeleteResponse, error) {
+	rsp, err := c.ProjectDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectDeleteV2ProjectsObjectIdDeleteResponse(rsp)
+	return ParseProjectDeleteResponse(rsp)
 }
 
-type ProjectDeleteV2ProjectsObjectIdDeleteResponse struct {
+type ProjectDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r ProjectDeleteV2ProjectsObjectIdDeleteResponse) StatusCode() int {
+func (r ProjectDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectDeleteV2ProjectsObjectIdDeleteResponse(rsp *http.Response) (*ProjectDeleteV2ProjectsObjectIdDeleteResponse, error) {
+func ParseProjectDeleteResponse(rsp *http.Response) (*ProjectDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectDeleteV2ProjectsObjectIdDeleteResponse{
+	response := &ProjectDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12652,36 +12652,36 @@ func ParseProjectDeleteV2ProjectsObjectIdDeleteResponse(rsp *http.Response) (*Pr
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error) {
-	rsp, err := c.ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatch(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ProjectPatchDisplayNameDescriptionWithResponse(ctx context.Context, objectId string, body ProjectPatchDisplayNameDescriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchDisplayNameDescriptionResponse, error) {
+	rsp, err := c.ProjectPatchDisplayNameDescription(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp)
+	return ParseProjectPatchDisplayNameDescriptionResponse(rsp)
 }
 
-type ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse struct {
+type ProjectPatchDisplayNameDescriptionResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse) StatusCode() int {
+func (r ProjectPatchDisplayNameDescriptionResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp *http.Response) (*ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse, error) {
+func ParseProjectPatchDisplayNameDescriptionResponse(rsp *http.Response) (*ProjectPatchDisplayNameDescriptionResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse{
+	response := &ProjectPatchDisplayNameDescriptionResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12708,36 +12708,36 @@ func ParseProjectPatchDisplayNameDescriptionV2ProjectsObjectIdPatchResponse(rsp 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectAddressesListV2ProjectsObjectIdAddressesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse, error) {
-	rsp, err := c.ProjectAddressesListV2ProjectsObjectIdAddressesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectAddressesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectAddressesListResponse, error) {
+	rsp, err := c.ProjectAddressesList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse(rsp)
+	return ParseProjectAddressesListResponse(rsp)
 }
 
-type ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse struct {
+type ProjectAddressesListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagAddressSchema
 	Error        *ApiError
 }
 
-func (r ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse) StatusCode() int {
+func (r ProjectAddressesListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse(rsp *http.Response) (*ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse, error) {
+func ParseProjectAddressesListResponse(rsp *http.Response) (*ProjectAddressesListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectAddressesListV2ProjectsObjectIdAddressesGetResponse{
+	response := &ProjectAddressesListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12764,36 +12764,36 @@ func ParseProjectAddressesListV2ProjectsObjectIdAddressesGetResponse(rsp *http.R
 	return response, nil
 }
 
-func (c *ClientWithResponses) AddressCreateV2ProjectsObjectIdAddressesPostWithResponse(ctx context.Context, objectId string, body AddressCreateV2ProjectsObjectIdAddressesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error) {
-	rsp, err := c.AddressCreateV2ProjectsObjectIdAddressesPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) AddressCreateWithResponse(ctx context.Context, objectId string, body AddressCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*AddressCreateResponse, error) {
+	rsp, err := c.AddressCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp)
+	return ParseAddressCreateResponse(rsp)
 }
 
-type AddressCreateV2ProjectsObjectIdAddressesPostResponse struct {
+type AddressCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *AddressCreateSchema
 	Error        *ApiError
 }
 
-func (r AddressCreateV2ProjectsObjectIdAddressesPostResponse) StatusCode() int {
+func (r AddressCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp *http.Response) (*AddressCreateV2ProjectsObjectIdAddressesPostResponse, error) {
+func ParseAddressCreateResponse(rsp *http.Response) (*AddressCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AddressCreateV2ProjectsObjectIdAddressesPostResponse{
+	response := &AddressCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12820,36 +12820,36 @@ func ParseAddressCreateV2ProjectsObjectIdAddressesPostResponse(rsp *http.Respons
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectConsumptionV2ProjectsObjectIdConsumptionGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse, error) {
-	rsp, err := c.ProjectConsumptionV2ProjectsObjectIdConsumptionGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectConsumptionWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectConsumptionResponse, error) {
+	rsp, err := c.ProjectConsumption(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse(rsp)
+	return ParseProjectConsumptionResponse(rsp)
 }
 
-type ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse struct {
+type ProjectConsumptionResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *ConsumptionListSchema
 	Error        *ApiError
 }
 
-func (r ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse) StatusCode() int {
+func (r ProjectConsumptionResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse(rsp *http.Response) (*ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse, error) {
+func ParseProjectConsumptionResponse(rsp *http.Response) (*ProjectConsumptionResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse{
+	response := &ProjectConsumptionResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12876,36 +12876,36 @@ func ParseProjectConsumptionV2ProjectsObjectIdConsumptionGetResponse(rsp *http.R
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse, error) {
-	rsp, err := c.ProjectBackupListV2ProjectsObjectIdDbaasBackupsGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectBackupListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectBackupListResponse, error) {
+	rsp, err := c.ProjectBackupList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse(rsp)
+	return ParseProjectBackupListResponse(rsp)
 }
 
-type ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse struct {
+type ProjectBackupListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListDbaasBackupSchema55a05448
+	OK           *ListDbaasBackupSchema88abb12e
 	Error        *ApiError
 }
 
-func (r ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse) StatusCode() int {
+func (r ProjectBackupListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse(rsp *http.Response) (*ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse, error) {
+func ParseProjectBackupListResponse(rsp *http.Response) (*ProjectBackupListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse{
+	response := &ProjectBackupListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12932,36 +12932,36 @@ func ParseProjectBackupListV2ProjectsObjectIdDbaasBackupsGetResponse(rsp *http.R
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClustersListV2ProjectsObjectIdDbaasClustersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse, error) {
-	rsp, err := c.DbaasClustersListV2ProjectsObjectIdDbaasClustersGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) DbaasClustersListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*DbaasClustersListResponse, error) {
+	rsp, err := c.DbaasClustersList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse(rsp)
+	return ParseDbaasClustersListResponse(rsp)
 }
 
-type DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse struct {
+type DbaasClustersListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListDbaasClusterSchemaC7663de7
+	OK           *ListDbaasClusterSchemaF981f78f
 	Error        *ApiError
 }
 
-func (r DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse) StatusCode() int {
+func (r DbaasClustersListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse(rsp *http.Response) (*DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse, error) {
+func ParseDbaasClustersListResponse(rsp *http.Response) (*DbaasClustersListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse{
+	response := &DbaasClustersListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -12988,36 +12988,36 @@ func ParseDbaasClustersListV2ProjectsObjectIdDbaasClustersGetResponse(rsp *http.
 	return response, nil
 }
 
-func (c *ClientWithResponses) DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostWithResponse(ctx context.Context, objectId string, body DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error) {
-	rsp, err := c.DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) DbaasClusterCreateWithResponse(ctx context.Context, objectId string, body DbaasClusterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*DbaasClusterCreateResponse, error) {
+	rsp, err := c.DbaasClusterCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp)
+	return ParseDbaasClusterCreateResponse(rsp)
 }
 
-type DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse struct {
+type DbaasClusterCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchemaE6186b20
+	OK           *DetailedIdResponseSchemaEe532b76
 	Error        *ApiError
 }
 
-func (r DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse) StatusCode() int {
+func (r DbaasClusterCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp *http.Response) (*DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse, error) {
+func ParseDbaasClusterCreateResponse(rsp *http.Response) (*DbaasClusterCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &DbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse{
+	response := &DbaasClusterCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13044,36 +13044,36 @@ func ParseDbaasClusterCreateV2ProjectsObjectIdDbaasClustersPostResponse(rsp *htt
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse, error) {
-	rsp, err := c.ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectDbaasDatabasesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatabasesListResponse, error) {
+	rsp, err := c.ProjectDbaasDatabasesList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse(rsp)
+	return ParseProjectDbaasDatabasesListResponse(rsp)
 }
 
-type ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse struct {
+type ProjectDbaasDatabasesListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListDbaasDatababaseSchema4b64795b
+	OK           *ListDbaasDatababaseSchema8a7a8b6e
 	Error        *ApiError
 }
 
-func (r ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse) StatusCode() int {
+func (r ProjectDbaasDatabasesListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse(rsp *http.Response) (*ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse, error) {
+func ParseProjectDbaasDatabasesListResponse(rsp *http.Response) (*ProjectDbaasDatabasesListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse{
+	response := &ProjectDbaasDatabasesListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13100,36 +13100,36 @@ func ParseProjectDbaasDatabasesListV2ProjectsObjectIdDbaasDatabasesGetResponse(r
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse, error) {
-	rsp, err := c.ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectDbaasDatastoresWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasDatastoresResponse, error) {
+	rsp, err := c.ProjectDbaasDatastores(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse(rsp)
+	return ParseProjectDbaasDatastoresResponse(rsp)
 }
 
-type ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse struct {
+type ProjectDbaasDatastoresResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListDatastoreSchemaA76a7a1f
+	OK           *ListDatastoreSchema38dae804
 	Error        *ApiError
 }
 
-func (r ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse) StatusCode() int {
+func (r ProjectDbaasDatastoresResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse(rsp *http.Response) (*ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse, error) {
+func ParseProjectDbaasDatastoresResponse(rsp *http.Response) (*ProjectDbaasDatastoresResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse{
+	response := &ProjectDbaasDatastoresResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13156,36 +13156,36 @@ func ParseProjectDbaasDatastoresV2ProjectsObjectIdDbaasDatastoresGetResponse(rsp
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse, error) {
-	rsp, err := c.ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectDbaasConfigDepWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDbaasConfigDepResponse, error) {
+	rsp, err := c.ProjectDbaasConfigDep(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse(rsp)
+	return ParseProjectDbaasConfigDepResponse(rsp)
 }
 
-type ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse struct {
+type ProjectDbaasConfigDepResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagConfigDepSchema
 	Error        *ApiError
 }
 
-func (r ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse) StatusCode() int {
+func (r ProjectDbaasConfigDepResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse(rsp *http.Response) (*ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse, error) {
+func ParseProjectDbaasConfigDepResponse(rsp *http.Response) (*ProjectDbaasConfigDepResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetResponse{
+	response := &ProjectDbaasConfigDepResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13212,36 +13212,36 @@ func ParseProjectDbaasConfigDepV2ProjectsObjectIdDbaasRelatedResourcesGetRespons
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectDetailV2ProjectsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDetailV2ProjectsObjectIdDetailGetResponse, error) {
-	rsp, err := c.ProjectDetailV2ProjectsObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectDetailResponse, error) {
+	rsp, err := c.ProjectDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectDetailV2ProjectsObjectIdDetailGetResponse(rsp)
+	return ParseProjectDetailResponse(rsp)
 }
 
-type ProjectDetailV2ProjectsObjectIdDetailGetResponse struct {
+type ProjectDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedProjectDetailSchemaC7b06a50
+	OK           *DetailedProjectDetailSchema6750ad21
 	Error        *ApiError
 }
 
-func (r ProjectDetailV2ProjectsObjectIdDetailGetResponse) StatusCode() int {
+func (r ProjectDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectDetailV2ProjectsObjectIdDetailGetResponse(rsp *http.Response) (*ProjectDetailV2ProjectsObjectIdDetailGetResponse, error) {
+func ParseProjectDetailResponse(rsp *http.Response) (*ProjectDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectDetailV2ProjectsObjectIdDetailGetResponse{
+	response := &ProjectDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13268,36 +13268,36 @@ func ParseProjectDetailV2ProjectsObjectIdDetailGetResponse(rsp *http.Response) (
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectImagesListV2ProjectsObjectIdImagesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectImagesListV2ProjectsObjectIdImagesGetResponse, error) {
-	rsp, err := c.ProjectImagesListV2ProjectsObjectIdImagesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectImagesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectImagesListResponse, error) {
+	rsp, err := c.ProjectImagesList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse(rsp)
+	return ParseProjectImagesListResponse(rsp)
 }
 
-type ProjectImagesListV2ProjectsObjectIdImagesGetResponse struct {
+type ProjectImagesListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagImageSchema
 	Error        *ApiError
 }
 
-func (r ProjectImagesListV2ProjectsObjectIdImagesGetResponse) StatusCode() int {
+func (r ProjectImagesListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse(rsp *http.Response) (*ProjectImagesListV2ProjectsObjectIdImagesGetResponse, error) {
+func ParseProjectImagesListResponse(rsp *http.Response) (*ProjectImagesListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectImagesListV2ProjectsObjectIdImagesGetResponse{
+	response := &ProjectImagesListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13324,36 +13324,36 @@ func ParseProjectImagesListV2ProjectsObjectIdImagesGetResponse(rsp *http.Respons
 	return response, nil
 }
 
-func (c *ClientWithResponses) KeyPairsListV2ProjectsObjectIdKeypairsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeyPairsListV2ProjectsObjectIdKeypairsGetResponse, error) {
-	rsp, err := c.KeyPairsListV2ProjectsObjectIdKeypairsGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) KeyPairsListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*KeyPairsListResponse, error) {
+	rsp, err := c.KeyPairsList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse(rsp)
+	return ParseKeyPairsListResponse(rsp)
 }
 
-type KeyPairsListV2ProjectsObjectIdKeypairsGetResponse struct {
+type KeyPairsListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagKeyPairSchema
 	Error        *ApiError
 }
 
-func (r KeyPairsListV2ProjectsObjectIdKeypairsGetResponse) StatusCode() int {
+func (r KeyPairsListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse(rsp *http.Response) (*KeyPairsListV2ProjectsObjectIdKeypairsGetResponse, error) {
+func ParseKeyPairsListResponse(rsp *http.Response) (*KeyPairsListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &KeyPairsListV2ProjectsObjectIdKeypairsGetResponse{
+	response := &KeyPairsListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13380,36 +13380,36 @@ func ParseKeyPairsListV2ProjectsObjectIdKeypairsGetResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ImportKeypairV2ProjectsObjectIdKeypairsPostWithResponse(ctx context.Context, objectId string, body ImportKeypairV2ProjectsObjectIdKeypairsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error) {
-	rsp, err := c.ImportKeypairV2ProjectsObjectIdKeypairsPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ImportKeypairWithResponse(ctx context.Context, objectId string, body ImportKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*ImportKeypairResponse, error) {
+	rsp, err := c.ImportKeypair(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp)
+	return ParseImportKeypairResponse(rsp)
 }
 
-type ImportKeypairV2ProjectsObjectIdKeypairsPostResponse struct {
+type ImportKeypairResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedKeyPairSchema0db25129
+	OK           *DetailedKeyPairSchema75478e11
 	Error        *ApiError
 }
 
-func (r ImportKeypairV2ProjectsObjectIdKeypairsPostResponse) StatusCode() int {
+func (r ImportKeypairResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp *http.Response) (*ImportKeypairV2ProjectsObjectIdKeypairsPostResponse, error) {
+func ParseImportKeypairResponse(rsp *http.Response) (*ImportKeypairResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ImportKeypairV2ProjectsObjectIdKeypairsPostResponse{
+	response := &ImportKeypairResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13436,36 +13436,36 @@ func ParseImportKeypairV2ProjectsObjectIdKeypairsPostResponse(rsp *http.Response
 	return response, nil
 }
 
-func (c *ClientWithResponses) GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostWithResponse(ctx context.Context, objectId string, body GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostJSONRequestBody, reqEditors ...RequestEditorFn) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error) {
-	rsp, err := c.GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) GenerateKeypairWithResponse(ctx context.Context, objectId string, body GenerateKeypairJSONRequestBody, reqEditors ...RequestEditorFn) (*GenerateKeypairResponse, error) {
+	rsp, err := c.GenerateKeypair(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp)
+	return ParseGenerateKeypairResponse(rsp)
 }
 
-type GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse struct {
+type GenerateKeypairResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedGenerateKeyPairResultSchema7928ce50
+	OK           *DetailedGenerateKeyPairResultSchema147caebc
 	Error        *ApiError
 }
 
-func (r GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse) StatusCode() int {
+func (r GenerateKeypairResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp *http.Response) (*GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse, error) {
+func ParseGenerateKeypairResponse(rsp *http.Response) (*GenerateKeypairResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &GenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse{
+	response := &GenerateKeypairResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13492,36 +13492,36 @@ func ParseGenerateKeypairV2ProjectsObjectIdKeypairsGeneratePostResponse(rsp *htt
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectLimitsListV2ProjectsObjectIdLimitsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse, error) {
-	rsp, err := c.ProjectLimitsListV2ProjectsObjectIdLimitsGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectLimitsListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLimitsListResponse, error) {
+	rsp, err := c.ProjectLimitsList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse(rsp)
+	return ParseProjectLimitsListResponse(rsp)
 }
 
-type ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse struct {
+type ProjectLimitsListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagLimitSchema
 	Error        *ApiError
 }
 
-func (r ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse) StatusCode() int {
+func (r ProjectLimitsListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse(rsp *http.Response) (*ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse, error) {
+func ParseProjectLimitsListResponse(rsp *http.Response) (*ProjectLimitsListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectLimitsListV2ProjectsObjectIdLimitsGetResponse{
+	response := &ProjectLimitsListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13548,36 +13548,36 @@ func ParseProjectLimitsListV2ProjectsObjectIdLimitsGetResponse(rsp *http.Respons
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchWithResponse(ctx context.Context, objectId string, body ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error) {
-	rsp, err := c.ProjectPatchLimitsV2ProjectsObjectIdLimitsPatch(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ProjectPatchLimitsWithResponse(ctx context.Context, objectId string, body ProjectPatchLimitsJSONRequestBody, reqEditors ...RequestEditorFn) (*ProjectPatchLimitsResponse, error) {
+	rsp, err := c.ProjectPatchLimits(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp)
+	return ParseProjectPatchLimitsResponse(rsp)
 }
 
-type ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse struct {
+type ProjectPatchLimitsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse) StatusCode() int {
+func (r ProjectPatchLimitsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp *http.Response) (*ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse, error) {
+func ParseProjectPatchLimitsResponse(rsp *http.Response) (*ProjectPatchLimitsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse{
+	response := &ProjectPatchLimitsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13604,36 +13604,36 @@ func ParseProjectPatchLimitsV2ProjectsObjectIdLimitsPatchResponse(rsp *http.Resp
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerListV2ProjectsObjectIdLoadbalancersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse, error) {
-	rsp, err := c.LoadBalancerListV2ProjectsObjectIdLoadbalancersGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*LoadBalancerListResponse, error) {
+	rsp, err := c.LoadBalancerList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse(rsp)
+	return ParseLoadBalancerListResponse(rsp)
 }
 
-type LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse struct {
+type LoadBalancerListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListLBDetailResponseSchemaFfb0ce29
+	OK           *ListLBDetailResponseSchemaF07a3241
 	Error        *ApiError
 }
 
-func (r LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse) StatusCode() int {
+func (r LoadBalancerListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse(rsp *http.Response) (*LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse, error) {
+func ParseLoadBalancerListResponse(rsp *http.Response) (*LoadBalancerListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse{
+	response := &LoadBalancerListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13660,36 +13660,36 @@ func ParseLoadBalancerListV2ProjectsObjectIdLoadbalancersGetResponse(rsp *http.R
 	return response, nil
 }
 
-func (c *ClientWithResponses) LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostWithResponse(ctx context.Context, objectId string, body LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error) {
-	rsp, err := c.LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) LoadBalancerCreateWithResponse(ctx context.Context, objectId string, body LoadBalancerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*LoadBalancerCreateResponse, error) {
+	rsp, err := c.LoadBalancerCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp)
+	return ParseLoadBalancerCreateResponse(rsp)
 }
 
-type LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse struct {
+type LoadBalancerCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchema7e940415
+	OK           *DetailedIdResponseSchema78aae167
 	Error        *ApiError
 }
 
-func (r LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse) StatusCode() int {
+func (r LoadBalancerCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp *http.Response) (*LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse, error) {
+func ParseLoadBalancerCreateResponse(rsp *http.Response) (*LoadBalancerCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &LoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse{
+	response := &LoadBalancerCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13716,36 +13716,36 @@ func ParseLoadBalancerCreateV2ProjectsObjectIdLoadbalancersPostResponse(rsp *htt
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse, error) {
-	rsp, err := c.ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectRuleListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRuleListResponse, error) {
+	rsp, err := c.ProjectRuleList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse(rsp)
+	return ParseProjectRuleListResponse(rsp)
 }
 
-type ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse struct {
+type ProjectRuleListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListRuleDetailResponseSchema252f0553
+	OK           *ListRuleDetailResponseSchema63184eff
 	Error        *ApiError
 }
 
-func (r ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse) StatusCode() int {
+func (r ProjectRuleListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse(rsp *http.Response) (*ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse, error) {
+func ParseProjectRuleListResponse(rsp *http.Response) (*ProjectRuleListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse{
+	response := &ProjectRuleListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13772,36 +13772,36 @@ func ParseProjectRuleListV2ProjectsObjectIdLoadbalancersRulesGetResponse(rsp *ht
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse, error) {
-	rsp, err := c.ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectLocalDisksListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectLocalDisksListResponse, error) {
+	rsp, err := c.ProjectLocalDisksList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse(rsp)
+	return ParseProjectLocalDisksListResponse(rsp)
 }
 
-type ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse struct {
+type ProjectLocalDisksListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagLocalDiskListSchema
 	Error        *ApiError
 }
 
-func (r ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse) StatusCode() int {
+func (r ProjectLocalDisksListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse(rsp *http.Response) (*ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse, error) {
+func ParseProjectLocalDisksListResponse(rsp *http.Response) (*ProjectLocalDisksListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse{
+	response := &ProjectLocalDisksListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13828,36 +13828,36 @@ func ParseProjectLocalDisksListV2ProjectsObjectIdLocalDisksGetResponse(rsp *http
 	return response, nil
 }
 
-func (c *ClientWithResponses) NetworksListV2ProjectsObjectIdNetworksGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*NetworksListV2ProjectsObjectIdNetworksGetResponse, error) {
-	rsp, err := c.NetworksListV2ProjectsObjectIdNetworksGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) NetworksListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*NetworksListResponse, error) {
+	rsp, err := c.NetworksList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseNetworksListV2ProjectsObjectIdNetworksGetResponse(rsp)
+	return ParseNetworksListResponse(rsp)
 }
 
-type NetworksListV2ProjectsObjectIdNetworksGetResponse struct {
+type NetworksListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *NetworkPagSchema
 	Error        *ApiError
 }
 
-func (r NetworksListV2ProjectsObjectIdNetworksGetResponse) StatusCode() int {
+func (r NetworksListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseNetworksListV2ProjectsObjectIdNetworksGetResponse(rsp *http.Response) (*NetworksListV2ProjectsObjectIdNetworksGetResponse, error) {
+func ParseNetworksListResponse(rsp *http.Response) (*NetworksListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &NetworksListV2ProjectsObjectIdNetworksGetResponse{
+	response := &NetworksListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13884,36 +13884,36 @@ func ParseNetworksListV2ProjectsObjectIdNetworksGetResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse, error) {
-	rsp, err := c.ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectInfrastructureModuleConstantsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectInfrastructureModuleConstantsResponse, error) {
+	rsp, err := c.ProjectInfrastructureModuleConstants(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse(rsp)
+	return ParseProjectInfrastructureModuleConstantsResponse(rsp)
 }
 
-type ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse struct {
+type ProjectInfrastructureModuleConstantsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *InfrastructureModuleConstantsSchema
 	Error        *ApiError
 }
 
-func (r ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse) StatusCode() int {
+func (r ProjectInfrastructureModuleConstantsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse(rsp *http.Response) (*ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse, error) {
+func ParseProjectInfrastructureModuleConstantsResponse(rsp *http.Response) (*ProjectInfrastructureModuleConstantsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetResponse{
+	response := &ProjectInfrastructureModuleConstantsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13940,36 +13940,36 @@ func ParseProjectInfrastructureModuleConstantsV2ProjectsObjectIdParamsGetRespons
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectRecipesV2ProjectsObjectIdRecipesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRecipesV2ProjectsObjectIdRecipesGetResponse, error) {
-	rsp, err := c.ProjectRecipesV2ProjectsObjectIdRecipesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectRecipesWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectRecipesResponse, error) {
+	rsp, err := c.ProjectRecipes(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse(rsp)
+	return ParseProjectRecipesResponse(rsp)
 }
 
-type ProjectRecipesV2ProjectsObjectIdRecipesGetResponse struct {
+type ProjectRecipesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagRecipeSchema
 	Error        *ApiError
 }
 
-func (r ProjectRecipesV2ProjectsObjectIdRecipesGetResponse) StatusCode() int {
+func (r ProjectRecipesResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse(rsp *http.Response) (*ProjectRecipesV2ProjectsObjectIdRecipesGetResponse, error) {
+func ParseProjectRecipesResponse(rsp *http.Response) (*ProjectRecipesResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectRecipesV2ProjectsObjectIdRecipesGetResponse{
+	response := &ProjectRecipesResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -13996,36 +13996,36 @@ func ParseProjectRecipesV2ProjectsObjectIdRecipesGetResponse(rsp *http.Response)
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3UsersListV2ProjectsObjectIdS3UsersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UsersListV2ProjectsObjectIdS3UsersGetResponse, error) {
-	rsp, err := c.S3UsersListV2ProjectsObjectIdS3UsersGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) S3UsersListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UsersListResponse, error) {
+	rsp, err := c.S3UsersList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse(rsp)
+	return ParseS3UsersListResponse(rsp)
 }
 
-type S3UsersListV2ProjectsObjectIdS3UsersGetResponse struct {
+type S3UsersListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListS3UserSchemaB2f79585
+	OK           *ListS3UserSchema33ee8b7f
 	Error        *ApiError
 }
 
-func (r S3UsersListV2ProjectsObjectIdS3UsersGetResponse) StatusCode() int {
+func (r S3UsersListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse(rsp *http.Response) (*S3UsersListV2ProjectsObjectIdS3UsersGetResponse, error) {
+func ParseS3UsersListResponse(rsp *http.Response) (*S3UsersListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3UsersListV2ProjectsObjectIdS3UsersGetResponse{
+	response := &S3UsersListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14052,36 +14052,36 @@ func ParseS3UsersListV2ProjectsObjectIdS3UsersGetResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3UserCreateV2ProjectsObjectIdS3UsersPostWithResponse(ctx context.Context, objectId string, body S3UserCreateV2ProjectsObjectIdS3UsersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error) {
-	rsp, err := c.S3UserCreateV2ProjectsObjectIdS3UsersPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) S3UserCreateWithResponse(ctx context.Context, objectId string, body S3UserCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserCreateResponse, error) {
+	rsp, err := c.S3UserCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp)
+	return ParseS3UserCreateResponse(rsp)
 }
 
-type S3UserCreateV2ProjectsObjectIdS3UsersPostResponse struct {
+type S3UserCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchema0acd718c
+	OK           *DetailedIdResponseSchema09a874d7
 	Error        *ApiError
 }
 
-func (r S3UserCreateV2ProjectsObjectIdS3UsersPostResponse) StatusCode() int {
+func (r S3UserCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp *http.Response) (*S3UserCreateV2ProjectsObjectIdS3UsersPostResponse, error) {
+func ParseS3UserCreateResponse(rsp *http.Response) (*S3UserCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3UserCreateV2ProjectsObjectIdS3UsersPostResponse{
+	response := &S3UserCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14108,36 +14108,36 @@ func ParseS3UserCreateV2ProjectsObjectIdS3UsersPostResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectServerListV2ProjectsObjectIdServersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerListV2ProjectsObjectIdServersGetResponse, error) {
-	rsp, err := c.ProjectServerListV2ProjectsObjectIdServersGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectServerListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerListResponse, error) {
+	rsp, err := c.ProjectServerList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectServerListV2ProjectsObjectIdServersGetResponse(rsp)
+	return ParseProjectServerListResponse(rsp)
 }
 
-type ProjectServerListV2ProjectsObjectIdServersGetResponse struct {
+type ProjectServerListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagServersSchema
 	Error        *ApiError
 }
 
-func (r ProjectServerListV2ProjectsObjectIdServersGetResponse) StatusCode() int {
+func (r ProjectServerListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectServerListV2ProjectsObjectIdServersGetResponse(rsp *http.Response) (*ProjectServerListV2ProjectsObjectIdServersGetResponse, error) {
+func ParseProjectServerListResponse(rsp *http.Response) (*ProjectServerListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectServerListV2ProjectsObjectIdServersGetResponse{
+	response := &ProjectServerListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14164,36 +14164,36 @@ func ParseProjectServerListV2ProjectsObjectIdServersGetResponse(rsp *http.Respon
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerCreateV2ProjectsObjectIdServersPostWithResponse(ctx context.Context, objectId string, body ServerCreateV2ProjectsObjectIdServersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error) {
-	rsp, err := c.ServerCreateV2ProjectsObjectIdServersPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ServerCreateWithResponse(ctx context.Context, objectId string, body ServerCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerCreateResponse, error) {
+	rsp, err := c.ServerCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp)
+	return ParseServerCreateResponse(rsp)
 }
 
-type ServerCreateV2ProjectsObjectIdServersPostResponse struct {
+type ServerCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchemaA087d46f
+	OK           *DetailedIdResponseSchema1784c707
 	Error        *ApiError
 }
 
-func (r ServerCreateV2ProjectsObjectIdServersPostResponse) StatusCode() int {
+func (r ServerCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp *http.Response) (*ServerCreateV2ProjectsObjectIdServersPostResponse, error) {
+func ParseServerCreateResponse(rsp *http.Response) (*ServerCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerCreateV2ProjectsObjectIdServersPostResponse{
+	response := &ServerCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14220,36 +14220,36 @@ func ParseServerCreateV2ProjectsObjectIdServersPostResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse, error) {
-	rsp, err := c.ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectServerConfigDepWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectServerConfigDepResponse, error) {
+	rsp, err := c.ProjectServerConfigDep(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse(rsp)
+	return ParseProjectServerConfigDepResponse(rsp)
 }
 
-type ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse struct {
+type ProjectServerConfigDepResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagConfigDepSchema
 	Error        *ApiError
 }
 
-func (r ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse) StatusCode() int {
+func (r ProjectServerConfigDepResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse(rsp *http.Response) (*ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse, error) {
+func ParseProjectServerConfigDepResponse(rsp *http.Response) (*ProjectServerConfigDepResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResponse{
+	response := &ProjectServerConfigDepResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14276,36 +14276,36 @@ func ParseProjectServerConfigDepV2ProjectsObjectIdServersRelatedResourcesGetResp
 	return response, nil
 }
 
-func (c *ClientWithResponses) SnapshotsListV2ProjectsObjectIdSnapshotsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse, error) {
-	rsp, err := c.SnapshotsListV2ProjectsObjectIdSnapshotsGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) SnapshotsListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotsListResponse, error) {
+	rsp, err := c.SnapshotsList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse(rsp)
+	return ParseSnapshotsListResponse(rsp)
 }
 
-type SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse struct {
+type SnapshotsListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *SnapshotListSchema
 	Error        *ApiError
 }
 
-func (r SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse) StatusCode() int {
+func (r SnapshotsListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse(rsp *http.Response) (*SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse, error) {
+func ParseSnapshotsListResponse(rsp *http.Response) (*SnapshotsListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &SnapshotsListV2ProjectsObjectIdSnapshotsGetResponse{
+	response := &SnapshotsListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14332,36 +14332,36 @@ func ParseSnapshotsListV2ProjectsObjectIdSnapshotsGetResponse(rsp *http.Response
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectStartV2ProjectsObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStartV2ProjectsObjectIdStartPostResponse, error) {
-	rsp, err := c.ProjectStartV2ProjectsObjectIdStartPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStartResponse, error) {
+	rsp, err := c.ProjectStart(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectStartV2ProjectsObjectIdStartPostResponse(rsp)
+	return ParseProjectStartResponse(rsp)
 }
 
-type ProjectStartV2ProjectsObjectIdStartPostResponse struct {
+type ProjectStartResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ProjectStartV2ProjectsObjectIdStartPostResponse) StatusCode() int {
+func (r ProjectStartResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectStartV2ProjectsObjectIdStartPostResponse(rsp *http.Response) (*ProjectStartV2ProjectsObjectIdStartPostResponse, error) {
+func ParseProjectStartResponse(rsp *http.Response) (*ProjectStartResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectStartV2ProjectsObjectIdStartPostResponse{
+	response := &ProjectStartResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14388,36 +14388,36 @@ func ParseProjectStartV2ProjectsObjectIdStartPostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectStopV2ProjectsObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStopV2ProjectsObjectIdStopPostResponse, error) {
-	rsp, err := c.ProjectStopV2ProjectsObjectIdStopPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectStopResponse, error) {
+	rsp, err := c.ProjectStop(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectStopV2ProjectsObjectIdStopPostResponse(rsp)
+	return ParseProjectStopResponse(rsp)
 }
 
-type ProjectStopV2ProjectsObjectIdStopPostResponse struct {
+type ProjectStopResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ProjectStopV2ProjectsObjectIdStopPostResponse) StatusCode() int {
+func (r ProjectStopResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectStopV2ProjectsObjectIdStopPostResponse(rsp *http.Response) (*ProjectStopV2ProjectsObjectIdStopPostResponse, error) {
+func ParseProjectStopResponse(rsp *http.Response) (*ProjectStopResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectStopV2ProjectsObjectIdStopPostResponse{
+	response := &ProjectStopResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14444,36 +14444,36 @@ func ParseProjectStopV2ProjectsObjectIdStopPostResponse(rsp *http.Response) (*Pr
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectVolumesListV2ProjectsObjectIdVolumesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse, error) {
-	rsp, err := c.ProjectVolumesListV2ProjectsObjectIdVolumesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectVolumesListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVolumesListResponse, error) {
+	rsp, err := c.ProjectVolumesList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse(rsp)
+	return ParseProjectVolumesListResponse(rsp)
 }
 
-type ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse struct {
+type ProjectVolumesListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagVolumeSchema
 	Error        *ApiError
 }
 
-func (r ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse) StatusCode() int {
+func (r ProjectVolumesListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse(rsp *http.Response) (*ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse, error) {
+func ParseProjectVolumesListResponse(rsp *http.Response) (*ProjectVolumesListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectVolumesListV2ProjectsObjectIdVolumesGetResponse{
+	response := &ProjectVolumesListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14500,36 +14500,36 @@ func ParseProjectVolumesListV2ProjectsObjectIdVolumesGetResponse(rsp *http.Respo
 	return response, nil
 }
 
-func (c *ClientWithResponses) VolumeCreateV2ProjectsObjectIdVolumesPostWithResponse(ctx context.Context, objectId string, body VolumeCreateV2ProjectsObjectIdVolumesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error) {
-	rsp, err := c.VolumeCreateV2ProjectsObjectIdVolumesPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) VolumeCreateWithResponse(ctx context.Context, objectId string, body VolumeCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeCreateResponse, error) {
+	rsp, err := c.VolumeCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp)
+	return ParseVolumeCreateResponse(rsp)
 }
 
-type VolumeCreateV2ProjectsObjectIdVolumesPostResponse struct {
+type VolumeCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *VolumeCreateSchema
 	Error        *ApiError
 }
 
-func (r VolumeCreateV2ProjectsObjectIdVolumesPostResponse) StatusCode() int {
+func (r VolumeCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp *http.Response) (*VolumeCreateV2ProjectsObjectIdVolumesPostResponse, error) {
+func ParseVolumeCreateResponse(rsp *http.Response) (*VolumeCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VolumeCreateV2ProjectsObjectIdVolumesPostResponse{
+	response := &VolumeCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14556,36 +14556,36 @@ func ParseVolumeCreateV2ProjectsObjectIdVolumesPostResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ProjectVrouterListV2ProjectsObjectIdVroutersGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse, error) {
-	rsp, err := c.ProjectVrouterListV2ProjectsObjectIdVroutersGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ProjectVrouterListWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ProjectVrouterListResponse, error) {
+	rsp, err := c.ProjectVrouterList(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse(rsp)
+	return ParseProjectVrouterListResponse(rsp)
 }
 
-type ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse struct {
+type ProjectVrouterListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *PagVroutersSchema
 	Error        *ApiError
 }
 
-func (r ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse) StatusCode() int {
+func (r ProjectVrouterListResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse(rsp *http.Response) (*ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse, error) {
+func ParseProjectVrouterListResponse(rsp *http.Response) (*ProjectVrouterListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ProjectVrouterListV2ProjectsObjectIdVroutersGetResponse{
+	response := &ProjectVrouterListResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14612,36 +14612,36 @@ func ParseProjectVrouterListV2ProjectsObjectIdVroutersGetResponse(rsp *http.Resp
 	return response, nil
 }
 
-func (c *ClientWithResponses) VrouterCreateV2ProjectsObjectIdVroutersPostWithResponse(ctx context.Context, objectId string, body VrouterCreateV2ProjectsObjectIdVroutersPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error) {
-	rsp, err := c.VrouterCreateV2ProjectsObjectIdVroutersPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) VrouterCreateWithResponse(ctx context.Context, objectId string, body VrouterCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*VrouterCreateResponse, error) {
+	rsp, err := c.VrouterCreate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp)
+	return ParseVrouterCreateResponse(rsp)
 }
 
-type VrouterCreateV2ProjectsObjectIdVroutersPostResponse struct {
+type VrouterCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *VrouterCreateSchema
 	Error        *ApiError
 }
 
-func (r VrouterCreateV2ProjectsObjectIdVroutersPostResponse) StatusCode() int {
+func (r VrouterCreateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp *http.Response) (*VrouterCreateV2ProjectsObjectIdVroutersPostResponse, error) {
+func ParseVrouterCreateResponse(rsp *http.Response) (*VrouterCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VrouterCreateV2ProjectsObjectIdVroutersPostResponse{
+	response := &VrouterCreateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14668,35 +14668,35 @@ func ParseVrouterCreateV2ProjectsObjectIdVroutersPostResponse(rsp *http.Response
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3UserDeleteV2S3UsersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDeleteV2S3UsersObjectIdDeleteResponse, error) {
-	rsp, err := c.S3UserDeleteV2S3UsersObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) S3UserDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDeleteResponse, error) {
+	rsp, err := c.S3UserDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse(rsp)
+	return ParseS3UserDeleteResponse(rsp)
 }
 
-type S3UserDeleteV2S3UsersObjectIdDeleteResponse struct {
+type S3UserDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r S3UserDeleteV2S3UsersObjectIdDeleteResponse) StatusCode() int {
+func (r S3UserDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse(rsp *http.Response) (*S3UserDeleteV2S3UsersObjectIdDeleteResponse, error) {
+func ParseS3UserDeleteResponse(rsp *http.Response) (*S3UserDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3UserDeleteV2S3UsersObjectIdDeleteResponse{
+	response := &S3UserDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14720,36 +14720,36 @@ func ParseS3UserDeleteV2S3UsersObjectIdDeleteResponse(rsp *http.Response) (*S3Us
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3UserUpdateV2S3UsersObjectIdPatchWithResponse(ctx context.Context, objectId string, body S3UserUpdateV2S3UsersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error) {
-	rsp, err := c.S3UserUpdateV2S3UsersObjectIdPatch(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) S3UserUpdateWithResponse(ctx context.Context, objectId string, body S3UserUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateResponse, error) {
+	rsp, err := c.S3UserUpdate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp)
+	return ParseS3UserUpdateResponse(rsp)
 }
 
-type S3UserUpdateV2S3UsersObjectIdPatchResponse struct {
+type S3UserUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r S3UserUpdateV2S3UsersObjectIdPatchResponse) StatusCode() int {
+func (r S3UserUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp *http.Response) (*S3UserUpdateV2S3UsersObjectIdPatchResponse, error) {
+func ParseS3UserUpdateResponse(rsp *http.Response) (*S3UserUpdateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3UserUpdateV2S3UsersObjectIdPatchResponse{
+	response := &S3UserUpdateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14776,36 +14776,36 @@ func ParseS3UserUpdateV2S3UsersObjectIdPatchResponse(rsp *http.Response) (*S3Use
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3GetUserKeysV2S3UsersObjectIdCredentialsGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse, error) {
-	rsp, err := c.S3GetUserKeysV2S3UsersObjectIdCredentialsGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) S3GetUserKeysWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GetUserKeysResponse, error) {
+	rsp, err := c.S3GetUserKeys(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse(rsp)
+	return ParseS3GetUserKeysResponse(rsp)
 }
 
-type S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse struct {
+type S3GetUserKeysResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedS3UserKeysSchema79256a43
+	OK           *DetailedS3UserKeysSchema2d249d34
 	Error        *ApiError
 }
 
-func (r S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse) StatusCode() int {
+func (r S3GetUserKeysResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse(rsp *http.Response) (*S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse, error) {
+func ParseS3GetUserKeysResponse(rsp *http.Response) (*S3GetUserKeysResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse{
+	response := &S3GetUserKeysResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14832,36 +14832,36 @@ func ParseS3GetUserKeysV2S3UsersObjectIdCredentialsGetResponse(rsp *http.Respons
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3GenUserKeysV2S3UsersObjectIdCredentialsPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse, error) {
-	rsp, err := c.S3GenUserKeysV2S3UsersObjectIdCredentialsPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) S3GenUserKeysWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3GenUserKeysResponse, error) {
+	rsp, err := c.S3GenUserKeys(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse(rsp)
+	return ParseS3GenUserKeysResponse(rsp)
 }
 
-type S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse struct {
+type S3GenUserKeysResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedS3UserCreateKeysSchemaA2b3cc37
+	OK           *DetailedS3UserCreateKeysSchema996da7c3
 	Error        *ApiError
 }
 
-func (r S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse) StatusCode() int {
+func (r S3GenUserKeysResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse(rsp *http.Response) (*S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse, error) {
+func ParseS3GenUserKeysResponse(rsp *http.Response) (*S3GenUserKeysResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse{
+	response := &S3GenUserKeysResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14888,36 +14888,36 @@ func ParseS3GenUserKeysV2S3UsersObjectIdCredentialsPostResponse(rsp *http.Respon
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3UserDetailsV2S3UsersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDetailsV2S3UsersObjectIdDetailGetResponse, error) {
-	rsp, err := c.S3UserDetailsV2S3UsersObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) S3UserDetailsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserDetailsResponse, error) {
+	rsp, err := c.S3UserDetails(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse(rsp)
+	return ParseS3UserDetailsResponse(rsp)
 }
 
-type S3UserDetailsV2S3UsersObjectIdDetailGetResponse struct {
+type S3UserDetailsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedS3UserSchema251e8d08
+	OK           *DetailedS3UserSchemaDdd36844
 	Error        *ApiError
 }
 
-func (r S3UserDetailsV2S3UsersObjectIdDetailGetResponse) StatusCode() int {
+func (r S3UserDetailsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse(rsp *http.Response) (*S3UserDetailsV2S3UsersObjectIdDetailGetResponse, error) {
+func ParseS3UserDetailsResponse(rsp *http.Response) (*S3UserDetailsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3UserDetailsV2S3UsersObjectIdDetailGetResponse{
+	response := &S3UserDetailsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -14944,92 +14944,36 @@ func ParseS3UserDetailsV2S3UsersObjectIdDetailGetResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutWithResponse(ctx context.Context, objectId string, body S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error) {
-	rsp, err := c.S3UserUpdateQuotaV2S3UsersObjectIdQuotasPut(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) S3UserUpdateQuotaWithResponse(ctx context.Context, objectId string, body S3UserUpdateQuotaJSONRequestBody, reqEditors ...RequestEditorFn) (*S3UserUpdateQuotaResponse, error) {
+	rsp, err := c.S3UserUpdateQuota(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse(rsp)
+	return ParseS3UserUpdateQuotaResponse(rsp)
 }
 
-type S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *interface{}
-	Error        *ApiError
-}
-
-func (r S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseS3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse(rsp *http.Response) (*S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &S3UserUpdateQuotaV2S3UsersObjectIdQuotasPutResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) S3UserSuspendV2S3UsersObjectIdSuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserSuspendV2S3UsersObjectIdSuspendPostResponse, error) {
-	rsp, err := c.S3UserSuspendV2S3UsersObjectIdSuspendPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse(rsp)
-}
-
-type S3UserSuspendV2S3UsersObjectIdSuspendPostResponse struct {
+type S3UserUpdateQuotaResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r S3UserSuspendV2S3UsersObjectIdSuspendPostResponse) StatusCode() int {
+func (r S3UserUpdateQuotaResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse(rsp *http.Response) (*S3UserSuspendV2S3UsersObjectIdSuspendPostResponse, error) {
+func ParseS3UserUpdateQuotaResponse(rsp *http.Response) (*S3UserUpdateQuotaResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3UserSuspendV2S3UsersObjectIdSuspendPostResponse{
+	response := &S3UserUpdateQuotaResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15056,36 +15000,36 @@ func ParseS3UserSuspendV2S3UsersObjectIdSuspendPostResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse, error) {
-	rsp, err := c.S3UserUnsuspendV2S3UsersObjectIdUnsuspendPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) S3UserSuspendWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserSuspendResponse, error) {
+	rsp, err := c.S3UserSuspend(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse(rsp)
+	return ParseS3UserSuspendResponse(rsp)
 }
 
-type S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse struct {
+type S3UserSuspendResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse) StatusCode() int {
+func (r S3UserSuspendResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse(rsp *http.Response) (*S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse, error) {
+func ParseS3UserSuspendResponse(rsp *http.Response) (*S3UserSuspendResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &S3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse{
+	response := &S3UserSuspendResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15112,88 +15056,36 @@ func ParseS3UserUnsuspendV2S3UsersObjectIdUnsuspendPostResponse(rsp *http.Respon
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerDeleteV2ServersObjectIdDeleteWithResponse(ctx context.Context, objectId string, body ServerDeleteV2ServersObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerDeleteV2ServersObjectIdDeleteResponse, error) {
-	rsp, err := c.ServerDeleteV2ServersObjectIdDelete(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) S3UserUnsuspendWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*S3UserUnsuspendResponse, error) {
+	rsp, err := c.S3UserUnsuspend(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerDeleteV2ServersObjectIdDeleteResponse(rsp)
+	return ParseS3UserUnsuspendResponse(rsp)
 }
 
-type ServerDeleteV2ServersObjectIdDeleteResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	Error        *ApiError
-}
-
-func (r ServerDeleteV2ServersObjectIdDeleteResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseServerDeleteV2ServersObjectIdDeleteResponse(rsp *http.Response) (*ServerDeleteV2ServersObjectIdDeleteResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ServerDeleteV2ServersObjectIdDeleteResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) ServerUpdateV2ServersObjectIdPatchWithResponse(ctx context.Context, objectId string, body ServerUpdateV2ServersObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerUpdateV2ServersObjectIdPatchResponse, error) {
-	rsp, err := c.ServerUpdateV2ServersObjectIdPatch(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerUpdateV2ServersObjectIdPatchResponse(rsp)
-}
-
-type ServerUpdateV2ServersObjectIdPatchResponse struct {
+type S3UserUnsuspendResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ServerUpdateV2ServersObjectIdPatchResponse) StatusCode() int {
+func (r S3UserUnsuspendResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerUpdateV2ServersObjectIdPatchResponse(rsp *http.Response) (*ServerUpdateV2ServersObjectIdPatchResponse, error) {
+func ParseS3UserUnsuspendResponse(rsp *http.Response) (*S3UserUnsuspendResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerUpdateV2ServersObjectIdPatchResponse{
+	response := &S3UserUnsuspendResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15220,36 +15112,144 @@ func ParseServerUpdateV2ServersObjectIdPatchResponse(rsp *http.Response) (*Serve
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerConsoleV2ServersObjectIdConsolePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerConsoleV2ServersObjectIdConsolePostResponse, error) {
-	rsp, err := c.ServerConsoleV2ServersObjectIdConsolePost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ServerDeleteWithResponse(ctx context.Context, objectId string, body ServerDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerDeleteResponse, error) {
+	rsp, err := c.ServerDelete(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerConsoleV2ServersObjectIdConsolePostResponse(rsp)
+	return ParseServerDeleteResponse(rsp)
 }
 
-type ServerConsoleV2ServersObjectIdConsolePostResponse struct {
+type ServerDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	Error        *ApiError
+}
+
+func (r ServerDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseServerDeleteResponse(rsp *http.Response) (*ServerDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ServerDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) ServerUpdateWithResponse(ctx context.Context, objectId string, body ServerUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerUpdateResponse, error) {
+	rsp, err := c.ServerUpdate(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerUpdateResponse(rsp)
+}
+
+type ServerUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseServerUpdateResponse(rsp *http.Response) (*ServerUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ServerUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) ServerConsoleWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerConsoleResponse, error) {
+	rsp, err := c.ServerConsole(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseServerConsoleResponse(rsp)
+}
+
+type ServerConsoleResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *ServerConsoleSchema
 	Error        *ApiError
 }
 
-func (r ServerConsoleV2ServersObjectIdConsolePostResponse) StatusCode() int {
+func (r ServerConsoleResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerConsoleV2ServersObjectIdConsolePostResponse(rsp *http.Response) (*ServerConsoleV2ServersObjectIdConsolePostResponse, error) {
+func ParseServerConsoleResponse(rsp *http.Response) (*ServerConsoleResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerConsoleV2ServersObjectIdConsolePostResponse{
+	response := &ServerConsoleResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15276,36 +15276,36 @@ func ParseServerConsoleV2ServersObjectIdConsolePostResponse(rsp *http.Response) 
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerDetailV2ServersObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerDetailV2ServersObjectIdDetailGetResponse, error) {
-	rsp, err := c.ServerDetailV2ServersObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ServerDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerDetailResponse, error) {
+	rsp, err := c.ServerDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerDetailV2ServersObjectIdDetailGetResponse(rsp)
+	return ParseServerDetailResponse(rsp)
 }
 
-type ServerDetailV2ServersObjectIdDetailGetResponse struct {
+type ServerDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *ServerDetailSchema
 	Error        *ApiError
 }
 
-func (r ServerDetailV2ServersObjectIdDetailGetResponse) StatusCode() int {
+func (r ServerDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerDetailV2ServersObjectIdDetailGetResponse(rsp *http.Response) (*ServerDetailV2ServersObjectIdDetailGetResponse, error) {
+func ParseServerDetailResponse(rsp *http.Response) (*ServerDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerDetailV2ServersObjectIdDetailGetResponse{
+	response := &ServerDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15332,36 +15332,36 @@ func ParseServerDetailV2ServersObjectIdDetailGetResponse(rsp *http.Response) (*S
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerLicensesV2ServersObjectIdLicensesGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerLicensesV2ServersObjectIdLicensesGetResponse, error) {
-	rsp, err := c.ServerLicensesV2ServersObjectIdLicensesGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ServerLicensesWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerLicensesResponse, error) {
+	rsp, err := c.ServerLicenses(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerLicensesV2ServersObjectIdLicensesGetResponse(rsp)
+	return ParseServerLicensesResponse(rsp)
 }
 
-type ServerLicensesV2ServersObjectIdLicensesGetResponse struct {
+type ServerLicensesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *ListLicenseSchema8c57589c
+	OK           *ListLicenseSchema976458bc
 	Error        *ApiError
 }
 
-func (r ServerLicensesV2ServersObjectIdLicensesGetResponse) StatusCode() int {
+func (r ServerLicensesResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerLicensesV2ServersObjectIdLicensesGetResponse(rsp *http.Response) (*ServerLicensesV2ServersObjectIdLicensesGetResponse, error) {
+func ParseServerLicensesResponse(rsp *http.Response) (*ServerLicensesResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerLicensesV2ServersObjectIdLicensesGetResponse{
+	response := &ServerLicensesResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15388,36 +15388,36 @@ func ParseServerLicensesV2ServersObjectIdLicensesGetResponse(rsp *http.Response)
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerAddLicenseV2ServersObjectIdLicensesPostWithResponse(ctx context.Context, objectId string, body ServerAddLicenseV2ServersObjectIdLicensesPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error) {
-	rsp, err := c.ServerAddLicenseV2ServersObjectIdLicensesPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ServerAddLicenseWithResponse(ctx context.Context, objectId string, body ServerAddLicenseJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerAddLicenseResponse, error) {
+	rsp, err := c.ServerAddLicense(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp)
+	return ParseServerAddLicenseResponse(rsp)
 }
 
-type ServerAddLicenseV2ServersObjectIdLicensesPostResponse struct {
+type ServerAddLicenseResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	OK           *DetailedIdResponseSchemaC0672ad4
+	OK           *DetailedIdResponseSchema8fbfe237
 	Error        *ApiError
 }
 
-func (r ServerAddLicenseV2ServersObjectIdLicensesPostResponse) StatusCode() int {
+func (r ServerAddLicenseResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp *http.Response) (*ServerAddLicenseV2ServersObjectIdLicensesPostResponse, error) {
+func ParseServerAddLicenseResponse(rsp *http.Response) (*ServerAddLicenseResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerAddLicenseV2ServersObjectIdLicensesPostResponse{
+	response := &ServerAddLicenseResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15444,92 +15444,36 @@ func ParseServerAddLicenseV2ServersObjectIdLicensesPostResponse(rsp *http.Respon
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerChangePasswordV2ServersObjectIdPasswordPostWithResponse(ctx context.Context, objectId string, body ServerChangePasswordV2ServersObjectIdPasswordPostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error) {
-	rsp, err := c.ServerChangePasswordV2ServersObjectIdPasswordPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ServerChangePasswordWithResponse(ctx context.Context, objectId string, body ServerChangePasswordJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerChangePasswordResponse, error) {
+	rsp, err := c.ServerChangePassword(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse(rsp)
+	return ParseServerChangePasswordResponse(rsp)
 }
 
-type ServerChangePasswordV2ServersObjectIdPasswordPostResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *interface{}
-	Error        *ApiError
-}
-
-func (r ServerChangePasswordV2ServersObjectIdPasswordPostResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseServerChangePasswordV2ServersObjectIdPasswordPostResponse(rsp *http.Response) (*ServerChangePasswordV2ServersObjectIdPasswordPostResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ServerChangePasswordV2ServersObjectIdPasswordPostResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) ServerRebootV2ServersObjectIdRebootPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRebootV2ServersObjectIdRebootPostResponse, error) {
-	rsp, err := c.ServerRebootV2ServersObjectIdRebootPost(ctx, objectId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseServerRebootV2ServersObjectIdRebootPostResponse(rsp)
-}
-
-type ServerRebootV2ServersObjectIdRebootPostResponse struct {
+type ServerChangePasswordResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ServerRebootV2ServersObjectIdRebootPostResponse) StatusCode() int {
+func (r ServerChangePasswordResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerRebootV2ServersObjectIdRebootPostResponse(rsp *http.Response) (*ServerRebootV2ServersObjectIdRebootPostResponse, error) {
+func ParseServerChangePasswordResponse(rsp *http.Response) (*ServerChangePasswordResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerRebootV2ServersObjectIdRebootPostResponse{
+	response := &ServerChangePasswordResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15556,36 +15500,36 @@ func ParseServerRebootV2ServersObjectIdRebootPostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerRescueV2ServersObjectIdRescuePostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRescueV2ServersObjectIdRescuePostResponse, error) {
-	rsp, err := c.ServerRescueV2ServersObjectIdRescuePost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ServerRebootWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRebootResponse, error) {
+	rsp, err := c.ServerReboot(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerRescueV2ServersObjectIdRescuePostResponse(rsp)
+	return ParseServerRebootResponse(rsp)
 }
 
-type ServerRescueV2ServersObjectIdRescuePostResponse struct {
+type ServerRebootResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ServerRescueV2ServersObjectIdRescuePostResponse) StatusCode() int {
+func (r ServerRebootResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerRescueV2ServersObjectIdRescuePostResponse(rsp *http.Response) (*ServerRescueV2ServersObjectIdRescuePostResponse, error) {
+func ParseServerRebootResponse(rsp *http.Response) (*ServerRebootResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerRescueV2ServersObjectIdRescuePostResponse{
+	response := &ServerRebootResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15612,36 +15556,36 @@ func ParseServerRescueV2ServersObjectIdRescuePostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerResizeV2ServersObjectIdResizePostWithResponse(ctx context.Context, objectId string, body ServerResizeV2ServersObjectIdResizePostJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerResizeV2ServersObjectIdResizePostResponse, error) {
-	rsp, err := c.ServerResizeV2ServersObjectIdResizePost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ServerRescueWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerRescueResponse, error) {
+	rsp, err := c.ServerRescue(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerResizeV2ServersObjectIdResizePostResponse(rsp)
+	return ParseServerRescueResponse(rsp)
 }
 
-type ServerResizeV2ServersObjectIdResizePostResponse struct {
+type ServerRescueResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ServerResizeV2ServersObjectIdResizePostResponse) StatusCode() int {
+func (r ServerRescueResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerResizeV2ServersObjectIdResizePostResponse(rsp *http.Response) (*ServerResizeV2ServersObjectIdResizePostResponse, error) {
+func ParseServerRescueResponse(rsp *http.Response) (*ServerRescueResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerResizeV2ServersObjectIdResizePostResponse{
+	response := &ServerRescueResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15668,36 +15612,92 @@ func ParseServerResizeV2ServersObjectIdResizePostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) CreateServerSnapshotV2ServersObjectIdSnapshotPostWithResponse(ctx context.Context, objectId string, body CreateServerSnapshotV2ServersObjectIdSnapshotPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error) {
-	rsp, err := c.CreateServerSnapshotV2ServersObjectIdSnapshotPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) ServerResizeWithResponse(ctx context.Context, objectId string, body ServerResizeJSONRequestBody, reqEditors ...RequestEditorFn) (*ServerResizeResponse, error) {
+	rsp, err := c.ServerResize(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp)
+	return ParseServerResizeResponse(rsp)
 }
 
-type CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse struct {
+type ServerResizeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r ServerResizeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseServerResizeResponse(rsp *http.Response) (*ServerResizeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ServerResizeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) CreateServerSnapshotWithResponse(ctx context.Context, objectId string, body CreateServerSnapshotJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateServerSnapshotResponse, error) {
+	rsp, err := c.CreateServerSnapshot(ctx, objectId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateServerSnapshotResponse(rsp)
+}
+
+type CreateServerSnapshotResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *SnapshotCreateSchema
 	Error        *ApiError
 }
 
-func (r CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse) StatusCode() int {
+func (r CreateServerSnapshotResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp *http.Response) (*CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse, error) {
+func ParseCreateServerSnapshotResponse(rsp *http.Response) (*CreateServerSnapshotResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &CreateServerSnapshotV2ServersObjectIdSnapshotPostResponse{
+	response := &CreateServerSnapshotResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15724,36 +15724,36 @@ func ParseCreateServerSnapshotV2ServersObjectIdSnapshotPostResponse(rsp *http.Re
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerStartV2ServersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStartV2ServersObjectIdStartPostResponse, error) {
-	rsp, err := c.ServerStartV2ServersObjectIdStartPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ServerStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStartResponse, error) {
+	rsp, err := c.ServerStart(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerStartV2ServersObjectIdStartPostResponse(rsp)
+	return ParseServerStartResponse(rsp)
 }
 
-type ServerStartV2ServersObjectIdStartPostResponse struct {
+type ServerStartResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ServerStartV2ServersObjectIdStartPostResponse) StatusCode() int {
+func (r ServerStartResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerStartV2ServersObjectIdStartPostResponse(rsp *http.Response) (*ServerStartV2ServersObjectIdStartPostResponse, error) {
+func ParseServerStartResponse(rsp *http.Response) (*ServerStartResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerStartV2ServersObjectIdStartPostResponse{
+	response := &ServerStartResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15780,36 +15780,36 @@ func ParseServerStartV2ServersObjectIdStartPostResponse(rsp *http.Response) (*Se
 	return response, nil
 }
 
-func (c *ClientWithResponses) ServerStopV2ServersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStopV2ServersObjectIdStopPostResponse, error) {
-	rsp, err := c.ServerStopV2ServersObjectIdStopPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) ServerStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*ServerStopResponse, error) {
+	rsp, err := c.ServerStop(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseServerStopV2ServersObjectIdStopPostResponse(rsp)
+	return ParseServerStopResponse(rsp)
 }
 
-type ServerStopV2ServersObjectIdStopPostResponse struct {
+type ServerStopResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r ServerStopV2ServersObjectIdStopPostResponse) StatusCode() int {
+func (r ServerStopResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseServerStopV2ServersObjectIdStopPostResponse(rsp *http.Response) (*ServerStopV2ServersObjectIdStopPostResponse, error) {
+func ParseServerStopResponse(rsp *http.Response) (*ServerStopResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &ServerStopV2ServersObjectIdStopPostResponse{
+	response := &ServerStopResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15836,35 +15836,35 @@ func ParseServerStopV2ServersObjectIdStopPostResponse(rsp *http.Response) (*Serv
 	return response, nil
 }
 
-func (c *ClientWithResponses) SnapshotDeleteV2SnapshotsObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDeleteV2SnapshotsObjectIdDeleteResponse, error) {
-	rsp, err := c.SnapshotDeleteV2SnapshotsObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) SnapshotDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDeleteResponse, error) {
+	rsp, err := c.SnapshotDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse(rsp)
+	return ParseSnapshotDeleteResponse(rsp)
 }
 
-type SnapshotDeleteV2SnapshotsObjectIdDeleteResponse struct {
+type SnapshotDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r SnapshotDeleteV2SnapshotsObjectIdDeleteResponse) StatusCode() int {
+func (r SnapshotDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse(rsp *http.Response) (*SnapshotDeleteV2SnapshotsObjectIdDeleteResponse, error) {
+func ParseSnapshotDeleteResponse(rsp *http.Response) (*SnapshotDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &SnapshotDeleteV2SnapshotsObjectIdDeleteResponse{
+	response := &SnapshotDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15888,36 +15888,36 @@ func ParseSnapshotDeleteV2SnapshotsObjectIdDeleteResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) SnapshotDetailsV2SnapshotsObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse, error) {
-	rsp, err := c.SnapshotDetailsV2SnapshotsObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) SnapshotDetailsWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*SnapshotDetailsResponse, error) {
+	rsp, err := c.SnapshotDetails(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse(rsp)
+	return ParseSnapshotDetailsResponse(rsp)
 }
 
-type SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse struct {
+type SnapshotDetailsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *SnapshotDetailSchema
 	Error        *ApiError
 }
 
-func (r SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse) StatusCode() int {
+func (r SnapshotDetailsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse(rsp *http.Response) (*SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse, error) {
+func ParseSnapshotDetailsResponse(rsp *http.Response) (*SnapshotDetailsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &SnapshotDetailsV2SnapshotsObjectIdDetailGetResponse{
+	response := &SnapshotDetailsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -15944,36 +15944,36 @@ func ParseSnapshotDetailsV2SnapshotsObjectIdDetailGetResponse(rsp *http.Response
 	return response, nil
 }
 
-func (c *ClientWithResponses) SnapshotRestoreV2SnapshotsObjectIdRestorePostWithResponse(ctx context.Context, objectId string, body SnapshotRestoreV2SnapshotsObjectIdRestorePostJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error) {
-	rsp, err := c.SnapshotRestoreV2SnapshotsObjectIdRestorePost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) SnapshotRestoreWithResponse(ctx context.Context, objectId string, body SnapshotRestoreJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapshotRestoreResponse, error) {
+	rsp, err := c.SnapshotRestore(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp)
+	return ParseSnapshotRestoreResponse(rsp)
 }
 
-type SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse struct {
+type SnapshotRestoreResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *SnapshotRestoreSchema
 	Error        *ApiError
 }
 
-func (r SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse) StatusCode() int {
+func (r SnapshotRestoreResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp *http.Response) (*SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse, error) {
+func ParseSnapshotRestoreResponse(rsp *http.Response) (*SnapshotRestoreResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &SnapshotRestoreV2SnapshotsObjectIdRestorePostResponse{
+	response := &SnapshotRestoreResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16000,36 +16000,36 @@ func ParseSnapshotRestoreV2SnapshotsObjectIdRestorePostResponse(rsp *http.Respon
 	return response, nil
 }
 
-func (c *ClientWithResponses) AccountStatV2StatGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountStatV2StatGetResponse, error) {
-	rsp, err := c.AccountStatV2StatGet(ctx, reqEditors...)
+func (c *ClientWithResponses) AccountStatWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*AccountStatResponse, error) {
+	rsp, err := c.AccountStat(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseAccountStatV2StatGetResponse(rsp)
+	return ParseAccountStatResponse(rsp)
 }
 
-type AccountStatV2StatGetResponse struct {
+type AccountStatResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *AccountStatSchema
 	Error        *ApiError
 }
 
-func (r AccountStatV2StatGetResponse) StatusCode() int {
+func (r AccountStatResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseAccountStatV2StatGetResponse(rsp *http.Response) (*AccountStatV2StatGetResponse, error) {
+func ParseAccountStatResponse(rsp *http.Response) (*AccountStatResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &AccountStatV2StatGetResponse{
+	response := &AccountStatResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16056,35 +16056,35 @@ func ParseAccountStatV2StatGetResponse(rsp *http.Response) (*AccountStatV2StatGe
 	return response, nil
 }
 
-func (c *ClientWithResponses) VolumeDeleteV2VolumesObjectIdDeleteWithResponse(ctx context.Context, objectId string, body VolumeDeleteV2VolumesObjectIdDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error) {
-	rsp, err := c.VolumeDeleteV2VolumesObjectIdDelete(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) VolumeDeleteWithResponse(ctx context.Context, objectId string, body VolumeDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDeleteResponse, error) {
+	rsp, err := c.VolumeDelete(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp)
+	return ParseVolumeDeleteResponse(rsp)
 }
 
-type VolumeDeleteV2VolumesObjectIdDeleteResponse struct {
+type VolumeDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r VolumeDeleteV2VolumesObjectIdDeleteResponse) StatusCode() int {
+func (r VolumeDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp *http.Response) (*VolumeDeleteV2VolumesObjectIdDeleteResponse, error) {
+func ParseVolumeDeleteResponse(rsp *http.Response) (*VolumeDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VolumeDeleteV2VolumesObjectIdDeleteResponse{
+	response := &VolumeDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16108,92 +16108,36 @@ func ParseVolumeDeleteV2VolumesObjectIdDeleteResponse(rsp *http.Response) (*Volu
 	return response, nil
 }
 
-func (c *ClientWithResponses) VolumeUpdateV2VolumesObjectIdPatchWithResponse(ctx context.Context, objectId string, body VolumeUpdateV2VolumesObjectIdPatchJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error) {
-	rsp, err := c.VolumeUpdateV2VolumesObjectIdPatch(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) VolumeUpdateWithResponse(ctx context.Context, objectId string, body VolumeUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeUpdateResponse, error) {
+	rsp, err := c.VolumeUpdate(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVolumeUpdateV2VolumesObjectIdPatchResponse(rsp)
+	return ParseVolumeUpdateResponse(rsp)
 }
 
-type VolumeUpdateV2VolumesObjectIdPatchResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	OK           *interface{}
-	Error        *ApiError
-}
-
-func (r VolumeUpdateV2VolumesObjectIdPatchResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-func ParseVolumeUpdateV2VolumesObjectIdPatchResponse(rsp *http.Response) (*VolumeUpdateV2VolumesObjectIdPatchResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &VolumeUpdateV2VolumesObjectIdPatchResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	status := rsp.StatusCode
-	contentType := rsp.Header.Get("Content-Type")
-
-	if strings.Contains(contentType, "json") {
-		if status >= 200 && status < 300 {
-			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
-				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
-			}
-		} else if status >= 400 {
-			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
-				response.Error = &ApiError{
-					Message:     "failed to unmarshal error response",
-					Description: string(bodyBytes),
-					Code:        status,
-				}
-			}
-		}
-	}
-
-	return response, nil
-}
-
-func (c *ClientWithResponses) VolumeAttachV2VolumesObjectIdAttachPostWithResponse(ctx context.Context, objectId string, body VolumeAttachV2VolumesObjectIdAttachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error) {
-	rsp, err := c.VolumeAttachV2VolumesObjectIdAttachPost(ctx, objectId, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp)
-}
-
-type VolumeAttachV2VolumesObjectIdAttachPostResponse struct {
+type VolumeUpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r VolumeAttachV2VolumesObjectIdAttachPostResponse) StatusCode() int {
+func (r VolumeUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp *http.Response) (*VolumeAttachV2VolumesObjectIdAttachPostResponse, error) {
+func ParseVolumeUpdateResponse(rsp *http.Response) (*VolumeUpdateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VolumeAttachV2VolumesObjectIdAttachPostResponse{
+	response := &VolumeUpdateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16220,36 +16164,36 @@ func ParseVolumeAttachV2VolumesObjectIdAttachPostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) VolumeDetachV2VolumesObjectIdDetachPostWithResponse(ctx context.Context, objectId string, body VolumeDetachV2VolumesObjectIdDetachPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error) {
-	rsp, err := c.VolumeDetachV2VolumesObjectIdDetachPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) VolumeAttachWithResponse(ctx context.Context, objectId string, body VolumeAttachJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeAttachResponse, error) {
+	rsp, err := c.VolumeAttach(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp)
+	return ParseVolumeAttachResponse(rsp)
 }
 
-type VolumeDetachV2VolumesObjectIdDetachPostResponse struct {
+type VolumeAttachResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r VolumeDetachV2VolumesObjectIdDetachPostResponse) StatusCode() int {
+func (r VolumeAttachResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp *http.Response) (*VolumeDetachV2VolumesObjectIdDetachPostResponse, error) {
+func ParseVolumeAttachResponse(rsp *http.Response) (*VolumeAttachResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VolumeDetachV2VolumesObjectIdDetachPostResponse{
+	response := &VolumeAttachResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16276,36 +16220,92 @@ func ParseVolumeDetachV2VolumesObjectIdDetachPostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) VolumeDetailV2VolumesObjectIdDetailGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VolumeDetailV2VolumesObjectIdDetailGetResponse, error) {
-	rsp, err := c.VolumeDetailV2VolumesObjectIdDetailGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) VolumeDetachWithResponse(ctx context.Context, objectId string, body VolumeDetachJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeDetachResponse, error) {
+	rsp, err := c.VolumeDetach(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVolumeDetailV2VolumesObjectIdDetailGetResponse(rsp)
+	return ParseVolumeDetachResponse(rsp)
 }
 
-type VolumeDetailV2VolumesObjectIdDetailGetResponse struct {
+type VolumeDetachResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	OK           *interface{}
+	Error        *ApiError
+}
+
+func (r VolumeDetachResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+func ParseVolumeDetachResponse(rsp *http.Response) (*VolumeDetachResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VolumeDetachResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	status := rsp.StatusCode
+	contentType := rsp.Header.Get("Content-Type")
+
+	if strings.Contains(contentType, "json") {
+		if status >= 200 && status < 300 {
+			if err := json.Unmarshal(bodyBytes, &response.OK); err != nil {
+				return nil, fmt.Errorf("failed to unmarshal success response: %w", err)
+			}
+		} else if status >= 400 {
+			if err := json.Unmarshal(bodyBytes, &response.Error); err != nil {
+				response.Error = &ApiError{
+					Message:     "failed to unmarshal error response",
+					Description: string(bodyBytes),
+					Code:        status,
+				}
+			}
+		}
+	}
+
+	return response, nil
+}
+
+func (c *ClientWithResponses) VolumeDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VolumeDetailResponse, error) {
+	rsp, err := c.VolumeDetail(ctx, objectId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVolumeDetailResponse(rsp)
+}
+
+type VolumeDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *VolumeDetailSchema
 	Error        *ApiError
 }
 
-func (r VolumeDetailV2VolumesObjectIdDetailGetResponse) StatusCode() int {
+func (r VolumeDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVolumeDetailV2VolumesObjectIdDetailGetResponse(rsp *http.Response) (*VolumeDetailV2VolumesObjectIdDetailGetResponse, error) {
+func ParseVolumeDetailResponse(rsp *http.Response) (*VolumeDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VolumeDetailV2VolumesObjectIdDetailGetResponse{
+	response := &VolumeDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16332,36 +16332,36 @@ func ParseVolumeDetailV2VolumesObjectIdDetailGetResponse(rsp *http.Response) (*V
 	return response, nil
 }
 
-func (c *ClientWithResponses) VolumeExtendV2VolumesObjectIdExtendPostWithResponse(ctx context.Context, objectId string, body VolumeExtendV2VolumesObjectIdExtendPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error) {
-	rsp, err := c.VolumeExtendV2VolumesObjectIdExtendPost(ctx, objectId, body, reqEditors...)
+func (c *ClientWithResponses) VolumeExtendWithResponse(ctx context.Context, objectId string, body VolumeExtendJSONRequestBody, reqEditors ...RequestEditorFn) (*VolumeExtendResponse, error) {
+	rsp, err := c.VolumeExtend(ctx, objectId, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp)
+	return ParseVolumeExtendResponse(rsp)
 }
 
-type VolumeExtendV2VolumesObjectIdExtendPostResponse struct {
+type VolumeExtendResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r VolumeExtendV2VolumesObjectIdExtendPostResponse) StatusCode() int {
+func (r VolumeExtendResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp *http.Response) (*VolumeExtendV2VolumesObjectIdExtendPostResponse, error) {
+func ParseVolumeExtendResponse(rsp *http.Response) (*VolumeExtendResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VolumeExtendV2VolumesObjectIdExtendPostResponse{
+	response := &VolumeExtendResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16388,35 +16388,35 @@ func ParseVolumeExtendV2VolumesObjectIdExtendPostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) VrouterDeleteV2VroutersObjectIdDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDeleteV2VroutersObjectIdDeleteResponse, error) {
-	rsp, err := c.VrouterDeleteV2VroutersObjectIdDelete(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) VrouterDeleteWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDeleteResponse, error) {
+	rsp, err := c.VrouterDelete(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVrouterDeleteV2VroutersObjectIdDeleteResponse(rsp)
+	return ParseVrouterDeleteResponse(rsp)
 }
 
-type VrouterDeleteV2VroutersObjectIdDeleteResponse struct {
+type VrouterDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	Error        *ApiError
 }
 
-func (r VrouterDeleteV2VroutersObjectIdDeleteResponse) StatusCode() int {
+func (r VrouterDeleteResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVrouterDeleteV2VroutersObjectIdDeleteResponse(rsp *http.Response) (*VrouterDeleteV2VroutersObjectIdDeleteResponse, error) {
+func ParseVrouterDeleteResponse(rsp *http.Response) (*VrouterDeleteResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VrouterDeleteV2VroutersObjectIdDeleteResponse{
+	response := &VrouterDeleteResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16440,36 +16440,36 @@ func ParseVrouterDeleteV2VroutersObjectIdDeleteResponse(rsp *http.Response) (*Vr
 	return response, nil
 }
 
-func (c *ClientWithResponses) VrouterDetailV2VroutersObjectIdGetWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDetailV2VroutersObjectIdGetResponse, error) {
-	rsp, err := c.VrouterDetailV2VroutersObjectIdGet(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) VrouterDetailWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterDetailResponse, error) {
+	rsp, err := c.VrouterDetail(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVrouterDetailV2VroutersObjectIdGetResponse(rsp)
+	return ParseVrouterDetailResponse(rsp)
 }
 
-type VrouterDetailV2VroutersObjectIdGetResponse struct {
+type VrouterDetailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *VrouterDetailSchema
 	Error        *ApiError
 }
 
-func (r VrouterDetailV2VroutersObjectIdGetResponse) StatusCode() int {
+func (r VrouterDetailResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVrouterDetailV2VroutersObjectIdGetResponse(rsp *http.Response) (*VrouterDetailV2VroutersObjectIdGetResponse, error) {
+func ParseVrouterDetailResponse(rsp *http.Response) (*VrouterDetailResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VrouterDetailV2VroutersObjectIdGetResponse{
+	response := &VrouterDetailResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16496,36 +16496,36 @@ func ParseVrouterDetailV2VroutersObjectIdGetResponse(rsp *http.Response) (*Vrout
 	return response, nil
 }
 
-func (c *ClientWithResponses) VrouterStartV2VroutersObjectIdStartPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStartV2VroutersObjectIdStartPostResponse, error) {
-	rsp, err := c.VrouterStartV2VroutersObjectIdStartPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) VrouterStartWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStartResponse, error) {
+	rsp, err := c.VrouterStart(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVrouterStartV2VroutersObjectIdStartPostResponse(rsp)
+	return ParseVrouterStartResponse(rsp)
 }
 
-type VrouterStartV2VroutersObjectIdStartPostResponse struct {
+type VrouterStartResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r VrouterStartV2VroutersObjectIdStartPostResponse) StatusCode() int {
+func (r VrouterStartResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVrouterStartV2VroutersObjectIdStartPostResponse(rsp *http.Response) (*VrouterStartV2VroutersObjectIdStartPostResponse, error) {
+func ParseVrouterStartResponse(rsp *http.Response) (*VrouterStartResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VrouterStartV2VroutersObjectIdStartPostResponse{
+	response := &VrouterStartResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16552,36 +16552,36 @@ func ParseVrouterStartV2VroutersObjectIdStartPostResponse(rsp *http.Response) (*
 	return response, nil
 }
 
-func (c *ClientWithResponses) VrouterStopV2VroutersObjectIdStopPostWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStopV2VroutersObjectIdStopPostResponse, error) {
-	rsp, err := c.VrouterStopV2VroutersObjectIdStopPost(ctx, objectId, reqEditors...)
+func (c *ClientWithResponses) VrouterStopWithResponse(ctx context.Context, objectId string, reqEditors ...RequestEditorFn) (*VrouterStopResponse, error) {
+	rsp, err := c.VrouterStop(ctx, objectId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp)
+	return ParseVrouterStopResponse(rsp)
 }
 
-type VrouterStopV2VroutersObjectIdStopPostResponse struct {
+type VrouterStopResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	OK           *interface{}
 	Error        *ApiError
 }
 
-func (r VrouterStopV2VroutersObjectIdStopPostResponse) StatusCode() int {
+func (r VrouterStopResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
 }
 
-func ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp *http.Response) (*VrouterStopV2VroutersObjectIdStopPostResponse, error) {
+func ParseVrouterStopResponse(rsp *http.Response) (*VrouterStopResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &VrouterStopV2VroutersObjectIdStopPostResponse{
+	response := &VrouterStopResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -16613,208 +16613,198 @@ func ParseVrouterStopV2VroutersObjectIdStopPostResponse(rsp *http.Response) (*Vr
 // const string: with thousands of chunks the chained `+` fold is several
 // times slower for the Go compiler than parsing a slice literal.
 var swaggerSpec = []string{
-	"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",
+	"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",
 }
 
 // decodeSpec returns the embedded OpenAPI spec as raw JSON bytes,
